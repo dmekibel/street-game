@@ -73,6 +73,12 @@
   .act:active, .round:active { transform: translateY(2px) scale(.96); box-shadow: none; }
   .round { width: 76px; height: 76px; border-radius: 38px; background: radial-gradient(circle at 35% 30%, #ffd27a, #d88a1a);
     border: 2px solid #fff8; display: flex; align-items: center; justify-content: center; position: relative; box-shadow: 0 3px 0 #0008; }
+  .moveRow { display: flex; gap: 10px; }
+  .round.mv { width: 64px; height: 64px; font: 800 13px system-ui; color: #3a1c08; display: flex; align-items: center; justify-content: center; }
+  .round.jump { background: radial-gradient(circle at 35% 30%, #a8f0e0, #35b09a); }
+  .round.mv.on { background: radial-gradient(circle at 35% 30%, #ffb0c8, #ff5c8a); }
+  #stam { position: fixed; left: 50%; bottom: calc(var(--sb) + 8px); width: 120px; height: 7px; margin-left: -60px; border-radius: 4px; background: rgba(0,0,0,.35); opacity: 0; transition: opacity .3s; pointer-events: none; }
+  #stamFill { height: 100%; width: 100%; border-radius: 4px; background: #ffb800; }
   .round svg { width: 36px; height: 36px; }
   .round .badge { position: absolute; top: -4px; right: -4px; min-width: 24px; height: 24px; border-radius: 12px; background: #111;
     border: 2px solid #fff; font-size: 13px; font-weight: 800; display: flex; align-items: center; justify-content: center; padding: 0 4px; box-sizing: border-box; }
@@ -125,7 +131,7 @@
   .sclose { font-size: 18px; padding: 12px; border-radius: 12px; border: 0; background: #f2ede2; color: #111; font-weight: 800; }
   .hidden { display: none !important; }
 </style>
-  <script type="module" crossorigin src="./assets/index-B0abSReV.js"></script>
+  <script type="module" crossorigin src="./assets/index-CTZwrdhf.js"></script>
 </head>
 <body>
 <div id="hud">
@@ -143,7 +149,8 @@
 <div id="bubbles"></div>
 <div id="toast"></div>
 <div id="stick"><div id="knob"></div></div>
-<div id="thumbs"><div id="acts"></div><div class="round hidden" id="drinkBtn"></div></div>
+<div id="thumbs"><div id="acts"></div><div class="round hidden" id="drinkBtn"></div><div class="moveRow"><div class="round mv" id="runBtn">RUN</div><div class="round mv jump" id="jumpBtn">JUMP</div></div></div>
+<div id="stam"><div id="stamFill"></div></div>
 <div id="dbg" class="hidden"></div>
 <div id="shopPanel" class="hidden"></div>
 <div id="fade"></div>
