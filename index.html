@@ -131,13 +131,8 @@
   .dopt.dim { opacity: .75; }
   body.talking #stick, body.talking #thumbs { display: none; }
   .act.tooSober { min-height: 44px; font-size: 14px; background: #555a; border-style: dashed; }
-  #viewCube { position: fixed; left: calc(var(--sl) + 10px); top: calc(var(--st) + 250px); width: 48px; height: 48px; perspective: 160px; z-index: 30; touch-action: none; cursor: grab; }
-  #cubeIn { position: absolute; left: 10px; top: 10px; width: 28px; height: 28px; transform-style: preserve-3d; }
-  #cubeIn i { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font: 800 6px system-ui; font-style: normal; color: #fff;
-    background: rgba(50,52,64,.8); border: 1px solid #fffb; backface-visibility: hidden; }
-  #cubeIn .f { transform: translateZ(14px); } #cubeIn .b { transform: rotateY(180deg) translateZ(14px); }
-  #cubeIn .l { transform: rotateY(-90deg) translateZ(14px); } #cubeIn .r { transform: rotateY(90deg) translateZ(14px); }
-  #cubeIn .t { transform: rotateX(90deg) translateZ(14px); background: rgba(80,84,100,.85); }
+  #minimap { position: fixed; right: calc(var(--sr) + 10px); top: calc(var(--st) + 96px); width: 92px; height: 92px; box-sizing: border-box; border-radius: 50%;
+    border: 4px solid #4a5060; box-shadow: 0 0 0 3px #1a1420, 0 4px 0 3px #0005; background: #23262c; z-index: 30; touch-action: none; }
   #camReset { position: fixed; left: calc(var(--sl) + 62px); top: calc(var(--st) + 252px); width: 44px; height: 44px; z-index: 30; display: flex; align-items: center; justify-content: center; border-radius: 22px; background: #0006; }
   .bubble { position: fixed; transform: translate(-50%, -100%); max-width: 190px; padding: 6px 10px; border-radius: 12px;
     background: #fffdf4; color: #1a1a1a; font-weight: 700; font-size: 14px; line-height: 1.2; text-align: center;
@@ -203,7 +198,7 @@
   #goals { display: none; }
   body.goalsOpen #goals { display: block; background: #2a2633e0; border: 3px solid var(--ink); border-radius: 12px; padding: 6px 8px; width: max-content; }
   /* ---------- polish pass: title screen over a live dusk scene ---------- */
-  body.title #hud, body.title #viewCube, body.title #camReset, body.title #stick, body.title #thumbs, body.title #stam,
+  body.title #hud, body.title #minimap, body.title #camReset, body.title #stick, body.title #thumbs, body.title #stam,
   body.title #toast, body.title #skipTut, body.title #bubbles, body.title #dbg { display: none !important; }
   body.title #screen { background: linear-gradient(#0000 0 55%, #1a142099 75%, #1a1420dd); justify-content: space-between;
     padding: calc(var(--st) + 36px) 20px calc(var(--sb) + 22px); }
@@ -222,7 +217,7 @@
   .seedbox { display: flex; align-items: center; gap: 6px; background: var(--slate); border: 3px solid var(--ink); border-radius: 14px; padding: 0 8px; font-weight: 800; font-size: 13px; color: #cfc8dc; }
   #screen .seedbox input { width: 100%; min-width: 0; background: transparent; border: 0; color: #fff; font: 800 16px ui-monospace, monospace; padding: 10px 0; text-align: left; }
 </style>
-  <script type="module" crossorigin src="./assets/index-BhwnKZsr.js"></script>
+  <script type="module" crossorigin src="./assets/index-BHaC6B7K.js"></script>
 </head>
 <body>
 <div id="hud">
@@ -238,7 +233,7 @@
   <div id="goals"></div>
 </div>
 <div id="bubbles"></div>
-<div id="viewCube" title="Drag to orbit and tilt"><div id="cubeIn"><i class="f">BACK</i><i class="b">FRONT</i><i class="l">L</i><i class="r">R</i><i class="t">TOP</i></div></div>
+<canvas id="minimap" aria-label="Mini map"></canvas>
 <div class="tbtn" id="camReset" title="Reset camera"></div>
 <div id="dlg" class="hidden"><div id="dlgName"></div><div id="dlgText"></div><div id="dlgOpts"></div></div>
 <div id="toast"></div>
