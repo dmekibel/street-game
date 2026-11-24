@@ -72,8 +72,8 @@ async function vox(n){const d=await (await fetch(`models/hero-vox${n}.json`)).js
   d.v.forEach((v,i)=>{M.makeTranslation((v[0]-cx+.5)*s,(v[1]+.5)*s,(v[2]-cz+.5)*s);im.setMatrixAt(i,M);C.setRGB(v[3]/255,v[4]/255,v[5]/255,THREE.SRGBColorSpace);im.setColorAt(i,C);});
   const grp=new THREE.Group();grp.add(im);return grp;}
 heroes.vox40=await vox(40);heroes.vox64=await vox(64);
-const { rigHero } = await import('./rig.js');
-const RG=rigHero((await new GLTFLoader().loadAsync('models/hero-trellis.glb')).scene); heroes.rigged=RG.group;
+const { rigHero } = await import('./rig2.js');
+const RG=rigHero((await new GLTFLoader().loadAsync('models/hero-tpose.glb')).scene); heroes.rigged=RG.group;
 Object.values(heroes).forEach(h=>{h.visible=false;rig.add(h);});
 
 const MODES=[['rigged','3D rigged'],['mesh','3D still'],['sprite','Sprite']];

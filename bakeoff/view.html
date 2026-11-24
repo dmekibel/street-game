@@ -1,0 +1,14 @@
+<!doctype html><html><head><meta charset="utf-8"><title>view</title>
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"}}</script></head>
+<body style="margin:0;background:#9ab"><canvas id="c" width="800" height="300"></canvas>
+<script type="module">
+import * as THREE from 'three'; import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
+const f=new URLSearchParams(location.search).get('f')||'hero-tpose-tsr.glb';
+const r=new THREE.WebGLRenderer({canvas:document.getElementById('c'),antialias:true}); r.setClearColor(0x99aabb);
+const q=new URLSearchParams(location.search); const g0=(await new GLTFLoader().loadAsync(f)).scene; g0.rotation.x=parseFloat(q.get('rx')||0); const g=new THREE.Group(); g.add(g0); g.updateMatrixWorld(true); const b=new THREE.Box3().setFromObject(g); const s=1/(b.max.y-b.min.y); g.scale.setScalar(s); g.updateMatrixWorld(true); const c=new THREE.Box3().setFromObject(g).getCenter(new THREE.Vector3()); g.position.sub(c);
+g.traverse(o=>{if(o.isMesh){o.material=new THREE.MeshLambertMaterial({vertexColors:!!o.geometry.attributes.color, map:o.material.map||null});}});
+const sc=new THREE.Scene(); sc.add(new THREE.HemisphereLight(0xffffff,0x887766,2.2)); const d=new THREE.DirectionalLight(0xffffff,1.5); d.position.set(1,2,3); sc.add(d); sc.add(g);
+const cam=new THREE.PerspectiveCamera(30,1,.1,10); r.setScissorTest(true);
+[0,Math.PI/2,Math.PI,-Math.PI/4].forEach((a,i)=>{cam.position.set(Math.sin(a)*2.6,.5,Math.cos(a)*2.6); cam.lookAt(0,0,0); r.setViewport(i*200,0,200,300); r.setScissor(i*200,0,200,300); cam.aspect=200/300; cam.updateProjectionMatrix(); r.render(sc,cam);});
+document.title='done';
+</script></body></html>
