@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Hero Bake-off</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
+<style>
+:root{--ink:#1b1622;--slate:#2b2735;--gold:#ffc93c;--green:#4fbf5a;--orange:#ff8a3d;--pink:#ff5ca8;--cream:#fff4dc;--px:'Press Start 2P',ui-monospace,Menlo,monospace;color-scheme:dark}
+html,body{margin:0;height:100%;background:var(--ink);color:var(--cream);overflow:hidden}
+body{font-family:var(--px);-webkit-user-select:none;user-select:none;touch-action:none}
+#wrap{position:fixed;inset:0;display:grid;place-items:center}
+#cv{image-rendering:pixelated;display:block}
+.hud{position:fixed;display:flex;gap:6px}
+#top{top:calc(8px + env(safe-area-inset-top,0px));left:max(8px,env(safe-area-inset-left,0px));right:max(8px,env(safe-area-inset-right,0px));justify-content:space-between;align-items:center;pointer-events:none}
+.chip{background:var(--slate);border:3px solid var(--ink);box-shadow:0 3px 0 var(--ink);padding:6px 8px;font-size:10px;border-radius:6px}
+.bar{width:84px;height:12px;background:var(--slate);border:3px solid var(--ink);border-radius:4px;overflow:hidden}.bar b{display:block;height:100%;width:0;background:var(--gold)}
+#pick{top:calc(48px + env(safe-area-inset-top,0px));left:50%;transform:translateX(-50%);flex-wrap:wrap;justify-content:center;max-width:96vw}
+.btn{font-family:var(--px);font-size:10px;color:var(--ink);background:var(--cream);border:3px solid var(--ink);border-radius:8px;padding:9px 10px;min-height:40px;box-shadow:0 3px 0 var(--ink);cursor:pointer}
+.btn[aria-pressed="true"]{background:var(--gold)}
+.btn.drink{background:var(--orange)}.btn.act{background:var(--green)}.btn.dance{background:var(--pink)}
+#acts{right:max(10px,env(safe-area-inset-right,0px));bottom:calc(14px + env(safe-area-inset-bottom,0px));flex-direction:column;align-items:flex-end}
+#say{left:50%;transform:translateX(-50%);top:calc(100px + env(safe-area-inset-top,0px));max-width:min(86vw,340px);text-align:center;pointer-events:none}
+#say span{background:var(--cream);color:var(--ink);border:3px solid var(--ink);border-radius:8px;padding:7px 9px;font-size:9px;line-height:1.6;box-shadow:0 3px 0 var(--ink)}
+#stick{position:fixed;left:max(18px,env(safe-area-inset-left,0px));bottom:calc(18px + env(safe-area-inset-bottom,0px));width:120px;height:120px;border-radius:50%;background:rgba(43,39,53,.72);border:4px solid var(--ink);box-shadow:inset 0 0 0 4px rgba(255,244,220,.12),0 4px 0 var(--ink);touch-action:none}
+#knob{position:absolute;left:50%;top:50%;width:54px;height:54px;margin:-27px 0 0 -27px;border-radius:50%;background:var(--gold);border:4px solid var(--ink);box-shadow:inset -4px -5px 0 rgba(0,0,0,.18),0 3px 0 var(--ink)}
+#label{left:50%;transform:translateX(-50%);bottom:calc(150px + env(safe-area-inset-bottom,0px));font-size:9px;opacity:.9;text-shadow:2px 2px 0 var(--ink);pointer-events:none;white-space:nowrap}
+</style>
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"}}</script>
+</head>
+<body>
+<div id="wrap"><canvas id="cv" width="320" height="569"></canvas></div>
+<div class="hud" id="top"><div style="display:flex;gap:6px"><div class="chip" id="money">$0</div><div class="chip" id="bottles">0 bottles</div></div><div class="bar"><b id="buzzFill"></b></div></div>
+<div class="hud" id="pick" role="group" aria-label="Which hero"></div>
+<div class="hud" id="say" hidden><span id="sayText"></span></div>
+<div class="hud" id="label"></div>
+<div class="hud" id="acts"></div>
+<div id="stick" aria-label="Move"><div id="knob"></div></div>
+
+<script type="module">
+import * as THREE from 'three';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+
+const W=640,H=1138,CW=320,CH=569,SOBER_SAT=0.45;
+const cv=document.getElementById('cv'),ctx=cv.getContext('2d');
+const off=document.createElement('canvas');off.width=CW;off.height=CH;const o=off.getContext('2d');
+const IMG={};
+await Promise.all(['bg-sober.jpg','bg-drunk.jpg','walk1.png','walk2.png','beg.png','pickup.png','sit.png','cart.png','bench.png','recycle.png'].map(n=>new Promise(r=>{const i=new Image();i.onload=r;i.onerror=r;i.src='img/'+n;IMG[n.split('.')[0]]=i;})));
+
+// ---------- the 3D hero, rendered live into a small transparent canvas ----------
+const HR={w:96,h:128};
+const gl=new THREE.WebGLRenderer({alpha:true,antialias:false,preserveDrawingBuffer:true});
+gl.setPixelRatio(1);gl.setSize(HR.w,HR.h,false);gl.setClearColor(0x000000,0);
+gl.outputColorSpace=THREE.SRGBColorSpace;
+const scene=new THREE.Scene();
+const cam=new THREE.PerspectiveCamera(18,HR.w/HR.h,.1,50);
+cam.position.set(0,2.15,4.1);cam.lookAt(0,.5,0);           // high three-quarter, like the pictures
+const hemi=new THREE.HemisphereLight(0xdfeaff,0x6b5a4a,1.6);scene.add(hemi);
+const sun=new THREE.DirectionalLight(0xfff2dc,2.2);sun.position.set(-2,4,3);scene.add(sun);
+const lamp=new THREE.PointLight(0xffa040,0,6,1.2);lamp.position.set(-1.2,1.6,1);scene.add(lamp);
+const rig=new THREE.Group();scene.add(rig);
+const heroes={};
+// TRELLIS mesh
+const glb=await new GLTFLoader().loadAsync('models/hero-trellis.glb');
+const mesh=glb.scene; mesh.traverse(m=>{if(m.isMesh){m.material.roughness=1;m.material.metalness=0;if(m.material.map){m.material.map.magFilter=THREE.NearestFilter;m.material.map.minFilter=THREE.NearestFilter;}}});
+{const b=new THREE.Box3().setFromObject(mesh);const s=1/(b.max.y-b.min.y);mesh.scale.setScalar(s);const b2=new THREE.Box3().setFromObject(mesh);mesh.position.y-=b2.min.y;}
+heroes.mesh=mesh;
+// voxels
+async function vox(n){const d=await (await fetch(`models/hero-vox${n}.json`)).json();const s=1/d.size[1];
+  const g=new THREE.BoxGeometry(s,s,s);const m=new THREE.MeshLambertMaterial();const im=new THREE.InstancedMesh(g,m,d.v.length);
+  const M=new THREE.Matrix4(),C=new THREE.Color();const cx=d.size[0]/2,cz=d.size[2]/2;
+  d.v.forEach((v,i)=>{M.makeTranslation((v[0]-cx+.5)*s,(v[1]+.5)*s,(v[2]-cz+.5)*s);im.setMatrixAt(i,M);C.setRGB(v[3]/255,v[4]/255,v[5]/255,THREE.SRGBColorSpace);im.setColorAt(i,C);});
+  const grp=new THREE.Group();grp.add(im);return grp;}
+heroes.vox40=await vox(40);heroes.vox64=await vox(64);
+Object.values(heroes).forEach(h=>{h.visible=false;rig.add(h);});
+
+const MODES=[['sprite','Sprite'],['mesh','3D'],['vox64','Voxel fine'],['vox40','Voxel chunky']];
+let mode='mesh';
+const pick=document.getElementById('pick');
+MODES.forEach(([k,l])=>{const b=document.createElement('button');b.className='btn';b.textContent=l;b.dataset.k=k;b.onclick=()=>{mode=k;sync();};pick.appendChild(b);});
+function sync(){pick.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.k===mode));Object.entries(heroes).forEach(([k,h])=>h.visible=k===mode);
+  document.getElementById('label').textContent=({sprite:'Flat picture cut from your sheet',mesh:'Real 3D model (TRELLIS, free)',vox64:'Voxels from the 3D model, fine',vox40:'Voxels from the 3D model, chunky'})[mode];}
+sync();
+
+// ---------- the corner ----------
+const WALK=[[0,600],[178,618],[311,706],[613,804],[640,812],[640,1138],[400,1138],[0,752]];
+const inside=(x,y)=>{let c=false;for(let i=0,j=WALK.length-1;i<WALK.length;j=i++){const[xi,yi]=WALK[i],[xj,yj]=WALK[j];if(((yi>y)!==(yj>y))&&(x<(xj-xi)*(y-yi)/(yj-yi)+xi))c=!c;}return c;};
+const PROPS=[{img:'bench',x:291,y:897,w:206},{img:'cart',x:428,y:950,w:212},{img:'recycle',x:575,y:876,w:62}];
+const STORE={x:470,y:840};
+let bottles=[{x:120,y:780},{x:250,y:1040},{x:600,y:1010}];
+const st={x:520,y:1000,ang:0,money:0,bottles:0,beers:0,buzz:0,pose:'idle',poseT:0,t:0,walkT:0,sit:false,mix:0};
+const hScale=y=>.62+.38*Math.min(1,Math.max(0,(y-600)/350));
+const HERO_H=176; const FACE_OFF=Math.PI;
+
+function say(t){const s=document.getElementById('say');document.getElementById('sayText').textContent=t;s.hidden=false;clearTimeout(say.k);say.k=setTimeout(()=>s.hidden=true,2400);}
+const near=(a,r)=>Math.hypot(st.x-a.x,st.y-a.y)<r;
+function buttons(){const a=document.getElementById('acts');a.innerHTML='';const add=(l,c,f)=>{const b=document.createElement('button');b.className='btn '+c;b.textContent=l;b.onclick=()=>{f();buttons();};a.appendChild(b);};
+  const wasted=st.buzz>=22;
+  if(near(PROPS[2],90)&&st.bottles>0)add('Recycle','act',()=>{st.money+=st.bottles;say('+$'+st.bottles+'. Ka-ching.');st.bottles=0;});
+  if(near(STORE,110))add('Beer $3','act',()=>{if(st.money>=3){st.money-=3;st.beers++;say('One cold one.');}else say('Three bucks. You have '+st.money+'.');});
+  if(near(PROPS[0],120)&&!st.sit)add('Sit','act',()=>{st.sit=true;st.x=PROPS[0].x;st.y=PROPS[0].y-4;});
+  if(wasted)add('Dance','dance',()=>{st.pose='dance';st.poseT=2.4;st.sit=false;});
+  if(st.beers>0)add('Drink','drink',()=>{st.beers--;st.buzz=Math.min(100,st.buzz+38);st.pose='swig';st.poseT=1;say('Here we go.');});
+  document.getElementById('money').textContent='$'+st.money;document.getElementById('bottles').textContent=st.bottles+' bottles';}
+
+// ---------- thumb stick ----------
+const stick=document.getElementById('stick'),knob=document.getElementById('knob');let sv={x:0,y:0},sid=null;
+function stickMove(e){const r=stick.getBoundingClientRect();let dx=e.clientX-(r.left+r.width/2),dy=e.clientY-(r.top+r.height/2);const d=Math.hypot(dx,dy),m=46;if(d>m){dx*=m/d;dy*=m/d;}knob.style.transform=`translate(${dx}px,${dy}px)`;sv={x:dx/m,y:dy/m};}
+stick.addEventListener('pointerdown',e=>{sid=e.pointerId;stick.setPointerCapture(sid);stickMove(e);st.sit=false;});
+stick.addEventListener('pointermove',e=>{if(e.pointerId===sid)stickMove(e);});
+const end=e=>{if(e.pointerId===sid){sid=null;sv={x:0,y:0};knob.style.transform='';}};stick.addEventListener('pointerup',end);stick.addEventListener('pointercancel',end);
+const keys={};addEventListener('keydown',e=>keys[e.key.toLowerCase()]=true);addEventListener('keyup',e=>keys[e.key.toLowerCase()]=false);
+
+function fit(){const s=Math.min(innerWidth/CW,innerHeight/CH);cv.style.width=Math.floor(CW*s)+'px';cv.style.height=Math.floor(CH*s)+'px';}addEventListener('resize',fit);fit();
+
+function sprite(img,x,y,h,flip){if(!img||!img.width)return;const s=h/img.height,w=img.width*s;o.save();o.translate(Math.round(x/2),Math.round(y/2));if(flip<0)o.scale(-1,1);o.drawImage(img,Math.round(-w/4),Math.round(-h/2),Math.round(w/2),Math.round(h/2));o.restore();}
+function bottle(x,y){ // plain glass bottle, drawn in pixels, small twinkle
+  const X=Math.round(x/2),Y=Math.round(y/2);o.fillStyle='#2c6b3f';o.fillRect(X-2,Y-9,5,8);o.fillRect(X-1,Y-13,3,4);o.fillStyle='#6fb37f';o.fillRect(X-1,Y-8,1,5);
+  if(Math.sin(st.t*4+x)>.6){o.fillStyle='#fff';o.fillRect(X+2,Y-14,1,1);o.fillRect(X+1,Y-13,3,1);o.fillRect(X+2,Y-12,1,1);}}
+
+let last=0;
+function frame(ts){const dt=Math.min(.05,(ts-last)/1000||0);last=ts;st.t+=dt;
+  st.mix+=(Math.min(1,st.buzz/40)-st.mix)*Math.min(1,dt*1.4);const wasted=st.buzz>=22;
+  let mx=sv.x,my=sv.y;if(keys['arrowleft']||keys.a)mx=-1;if(keys['arrowright']||keys.d)mx=1;if(keys['arrowup']||keys.w)my=-1;if(keys['arrowdown']||keys.s)my=1;
+  const mag=Math.min(1,Math.hypot(mx,my));let moving=false;
+  if(mag>.15&&st.pose!=='swig'){st.sit=false;const sp=(wasted?120:150)*hScale(st.y)*mag;let nx=st.x+mx/(Math.hypot(mx,my)||1)*sp*dt,ny=st.y+my/(Math.hypot(mx,my)||1)*sp*dt;
+    if(wasted){nx+=Math.sin(st.t*3.1)*22*dt*st.mix;}
+    if(inside(nx,ny)){st.x=nx;st.y=ny;}else if(inside(nx,st.y))st.x=nx;else if(inside(st.x,ny))st.y=ny;
+    moving=true;st.ang=Math.atan2(mx,my);}
+  if(moving)st.walkT+=dt;
+  bottles=bottles.filter(b=>{if(Math.hypot(b.x-st.x,b.y-st.y)<46){st.bottles++;st.pose='pickup';st.poseT=.45;buttons();return false;}return true;});
+  if(st.poseT>0){st.poseT-=dt;if(st.poseT<=0)st.pose='idle';}
+  if(st.buzz>0)st.buzz=Math.max(0,st.buzz-dt*.9);
+  if(Math.floor(st.t*4)!==Math.floor((st.t-dt)*4))buttons();
+
+  o.setTransform(1,0,0,1,0,0);o.clearRect(0,0,CW,CH);o.imageSmoothingEnabled=true;o.imageSmoothingQuality='high';
+  const z=1+.14*st.mix,rot=Math.sin(st.t*.6)*.02*st.mix;o.save();
+  const fx=st.x/2,fy=(st.y-90)/2;o.translate(CW/2,CH/2);o.rotate(rot);o.scale(z,z);o.translate(-CW/2-(fx-CW/2)*(z-1)/z,-CH/2-(fy-CH/2)*(z-1)/z);
+  o.drawImage(IMG['bg-sober'],0,0,CW,CH);if(st.mix>.01){o.globalAlpha=st.mix;o.drawImage(IMG['bg-drunk'],0,0,CW,CH);o.globalAlpha=1;}
+  const things=[];
+  PROPS.forEach(p=>things.push({y:p.y,d:()=>{const im=IMG[p.img];o.save();if(st.mix>.05)o.filter=`brightness(${1-.42*st.mix}) sepia(${.35*st.mix}) saturate(${1+.4*st.mix})`;sprite(im,p.x,p.y,p.w*im.height/im.width,1);o.restore();}}));
+  bottles.forEach(b=>things.push({y:b.y,d:()=>bottle(b.x,b.y)}));
+  things.push({y:st.y,d:()=>{const s=hScale(st.y),h=HERO_H*s;
+    o.fillStyle=`rgba(20,10,30,${.3+.1*st.mix})`;o.beginPath();o.ellipse(Math.round(st.x/2),Math.round(st.y/2),Math.round(h*.13),Math.round(h*.035),0,0,7);o.fill();
+    if(mode==='sprite'){let img=IMG.beg,hh=h,by=0;if(st.sit){img=IMG.sit;hh=h*.66;}else if(st.pose==='pickup'){img=IMG.pickup;hh=h*.9;}else if(moving||st.pose==='dance'){img=(Math.floor((st.walkT+st.t*(st.pose==='dance'))*6)%2)?IMG.walk1:IMG.walk2;by=-Math.abs(Math.sin(st.walkT*12))*3;}
+      o.save();if(st.mix>.05)o.filter=`brightness(${1-.3*st.mix}) sepia(${.25*st.mix})`;sprite(img,st.x,st.y+by,hh,Math.sin(st.ang)<0?-1:1);o.restore();}
+    else{ // live 3D render, lit for sober or drunk, then drawn into the same pixel grid
+      rig.rotation.y=st.ang+FACE_OFF;const bob=moving?Math.abs(Math.sin(st.walkT*11))*.03:0;rig.position.y=bob+(st.pose==='dance'?Math.abs(Math.sin(st.t*9))*.08:0);
+      rig.rotation.z=(moving?Math.sin(st.walkT*11)*.06:0)+(wasted?Math.sin(st.t*2.2)*.09*st.mix:0);rig.rotation.x=st.pose==='pickup'?.35:st.sit?-.15:0;
+      hemi.color.setRGB(.87-.45*st.mix,.92-.6*st.mix,1-.35*st.mix);hemi.groundColor.setRGB(.42-.1*st.mix,.35-.15*st.mix,.29+.1*st.mix);hemi.intensity=2.4-.9*st.mix;
+      sun.intensity=3.0*(1-st.mix)+.3;lamp.intensity=6*st.mix;
+      gl.render(scene,cam);const hh=h*1.28;const ww=hh*HR.w/HR.h;
+      o.save();o.imageSmoothingEnabled=false;o.drawImage(gl.domElement,Math.round(st.x/2-ww/4),Math.round(st.y/2-hh/2+hh*.06),Math.round(ww/2),Math.round(hh/2));o.restore();}
+  }});
+  things.sort((a,b)=>a.y-b.y).forEach(t=>t.d());o.restore();
+  ctx.imageSmoothingEnabled=false;ctx.filter=`saturate(${(SOBER_SAT+(1.05-SOBER_SAT)*st.mix).toFixed(3)})`;ctx.drawImage(off,0,0);ctx.filter='none';
+  document.getElementById('buzzFill').style.width=Math.min(100,st.buzz)+'%';
+  requestAnimationFrame(frame);}
+window.__bo={st,setMode:m=>{mode=m;sync();}};
+buttons();say('Pick a hero at the top. Walk with the stick.');requestAnimationFrame(frame);
+</script>
+</body>
+</html>
