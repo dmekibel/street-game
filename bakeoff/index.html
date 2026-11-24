@@ -72,14 +72,16 @@ async function vox(n){const d=await (await fetch(`models/hero-vox${n}.json`)).js
   d.v.forEach((v,i)=>{M.makeTranslation((v[0]-cx+.5)*s,(v[1]+.5)*s,(v[2]-cz+.5)*s);im.setMatrixAt(i,M);C.setRGB(v[3]/255,v[4]/255,v[5]/255,THREE.SRGBColorSpace);im.setColorAt(i,C);});
   const grp=new THREE.Group();grp.add(im);return grp;}
 heroes.vox40=await vox(40);heroes.vox64=await vox(64);
+const { rigHero } = await import('./rig.js');
+const RG=rigHero((await new GLTFLoader().loadAsync('models/hero-trellis.glb')).scene); heroes.rigged=RG.group;
 Object.values(heroes).forEach(h=>{h.visible=false;rig.add(h);});
 
-const MODES=[['sprite','Sprite'],['mesh','3D'],['vox64','Voxel fine'],['vox40','Voxel chunky']];
-let mode='mesh';
+const MODES=[['rigged','3D rigged'],['mesh','3D still'],['sprite','Sprite']];
+let mode='rigged';
 const pick=document.getElementById('pick');
 MODES.forEach(([k,l])=>{const b=document.createElement('button');b.className='btn';b.textContent=l;b.dataset.k=k;b.onclick=()=>{mode=k;sync();};pick.appendChild(b);});
 function sync(){pick.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.k===mode));Object.entries(heroes).forEach(([k,h])=>h.visible=k===mode);
-  document.getElementById('label').textContent=({sprite:'Flat picture cut from your sheet',mesh:'Real 3D model (TRELLIS, free)',vox64:'Voxels from the 3D model, fine',vox40:'Voxels from the 3D model, chunky'})[mode];}
+  document.getElementById('label').textContent=({rigged:'Your 3D hero with a skeleton: walks, drinks, sits, dances',sprite:'Flat picture cut from your sheet',mesh:'Real 3D model, no skeleton',vox64:'Voxels from the 3D model, fine',vox40:'Voxels from the 3D model, chunky'})[mode];}
 sync();
 
 // ---------- the corner ----------
@@ -119,7 +121,7 @@ function bottle(x,y){ // plain glass bottle, drawn in pixels, small twinkle
   if(Math.sin(st.t*4+x)>.6){o.fillStyle='#fff';o.fillRect(X+2,Y-14,1,1);o.fillRect(X+1,Y-13,3,1);o.fillRect(X+2,Y-12,1,1);}}
 
 let last=0;
-function frame(ts){const dt=Math.min(.05,(ts-last)/1000||0);last=ts;st.t+=dt;
+function frame(ts){if(window.__freeze){requestAnimationFrame(frame);return;}const dt=Math.min(.05,(ts-last)/1000||0);last=ts;st.t+=dt;
   st.mix+=(Math.min(1,st.buzz/40)-st.mix)*Math.min(1,dt*1.4);const wasted=st.buzz>=22;
   let mx=sv.x,my=sv.y;if(keys['arrowleft']||keys.a)mx=-1;if(keys['arrowright']||keys.d)mx=1;if(keys['arrowup']||keys.w)my=-1;if(keys['arrowdown']||keys.s)my=1;
   const mag=Math.min(1,Math.hypot(mx,my));let moving=false;
@@ -149,6 +151,10 @@ function frame(ts){const dt=Math.min(.05,(ts-last)/1000||0);last=ts;st.t+=dt;
       rig.rotation.z=(moving?Math.sin(st.walkT*11)*.06:0)+(wasted?Math.sin(st.t*2.2)*.09*st.mix:0);rig.rotation.x=st.pose==='pickup'?.35:st.sit?-.15:0;
       hemi.color.setRGB(.87-.45*st.mix,.92-.6*st.mix,1-.35*st.mix);hemi.groundColor.setRGB(.42-.1*st.mix,.35-.15*st.mix,.29+.1*st.mix);hemi.intensity=2.4-.9*st.mix;
       sun.intensity=3.0*(1-st.mix)+.3;lamp.intensity=6*st.mix;
+      if(mode==='rigged'){ rig.rotation.x=0; rig.rotation.z=0; rig.position.y=0;
+        const act=st.sit?'sit':st.pose==='swig'?'swig':st.pose==='pickup'?'pickup':st.pose==='dance'?'dance':'idle';
+        const actT=st.pose==='swig'?1-st.poseT/1:st.pose==='pickup'?1-st.poseT/.45:0;
+        RG.pose({t:st.t,walk:moving?mag:0,walkT:st.walkT,drunk:st.mix,act,actT}); }
       gl.render(scene,cam);const hh=h*1.28;const ww=hh*HR.w/HR.h;
       o.save();o.imageSmoothingEnabled=false;o.drawImage(gl.domElement,Math.round(st.x/2-ww/4),Math.round(st.y/2-hh/2+hh*.06),Math.round(ww/2),Math.round(hh/2));o.restore();}
   }});
@@ -156,7 +162,7 @@ function frame(ts){const dt=Math.min(.05,(ts-last)/1000||0);last=ts;st.t+=dt;
   ctx.imageSmoothingEnabled=false;ctx.filter=`saturate(${(SOBER_SAT+(1.05-SOBER_SAT)*st.mix).toFixed(3)})`;ctx.drawImage(off,0,0);ctx.filter='none';
   document.getElementById('buzzFill').style.width=Math.min(100,st.buzz)+'%';
   requestAnimationFrame(frame);}
-window.__bo={st,setMode:m=>{mode=m;sync();}};
+window.__bo={st,gl,RG,cam,scene,rig,setMode:m=>{mode=m;sync();}};
 buttons();say('Pick a hero at the top. Walk with the stick.');requestAnimationFrame(frame);
 </script>
 </body>
