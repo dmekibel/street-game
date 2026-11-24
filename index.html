@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="theme-color" content="#111" />
-<title>Street grey box</title>
+<title>Street prototype</title>
 <style>
   :root { --st: env(safe-area-inset-top, 0px); --sb: env(safe-area-inset-bottom, 0px); --sl: env(safe-area-inset-left, 0px); --sr: env(safe-area-inset-right, 0px); }
   html, body { margin: 0; height: 100%; overflow: hidden; background: #111; color: #f4f0e8;
@@ -48,7 +48,7 @@
   .chip.bump { animation: bump .35s; }
   @keyframes bump { 40% { transform: scale(1.35); } }
 
-  #toast { position: fixed; top: calc(var(--st) + 150px); left: 16px; right: 16px; text-align: center; font-size: 17px; font-weight: 600;
+  #toast { position: fixed; top: calc(var(--st) + 215px); left: 16px; right: 16px; text-align: center; font-size: 17px; font-weight: 600;
     pointer-events: none; text-shadow: 0 1px 3px #000, 0 0 8px #000; opacity: 0; transition: opacity .3s; }
   #toast.on { opacity: 1; }
   .float { position: fixed; pointer-events: none; font-weight: 900; font-size: 22px; text-shadow: 0 2px 0 #000, 0 0 6px #000;
@@ -91,25 +91,61 @@
   #fade { position: fixed; inset: 0; background: #000; opacity: 0; pointer-events: none; transition: opacity 3s; }
   #dbg { position: fixed; left: calc(var(--sl) + 6px); bottom: calc(var(--sb) + 170px); font: 11px/1.3 ui-monospace, monospace;
     background: #000a; padding: 4px 6px; border-radius: 6px; pointer-events: none; white-space: pre; }
+  /* ---------- 2b-1: goals, bubbles, begging lines, stores ---------- */
+  #meters { grid-template-columns: 1fr 1fr 1fr; }
+  .chip.txt { font-size: 12px; padding: 3px 8px; }
+  #goals { margin-top: 6px; font-size: 12.5px; line-height: 1.35; text-shadow: 0 1px 2px #000; max-width: 70%; }
+  .goal .box { display: inline-block; width: 11px; height: 11px; border: 1.5px solid #fffc; border-radius: 3px; margin-right: 6px;
+    font-size: 10px; line-height: 11px; text-align: center; vertical-align: -1px; }
+  .goal.done { opacity: .6; text-decoration: line-through; }
+  .goal.done .box { background: #5fd07a; border-color: #5fd07a; color: #000; }
+  #bubbles { position: fixed; inset: 0; pointer-events: none; }
+  .bubble { position: fixed; transform: translate(-50%, -100%); max-width: 190px; padding: 6px 10px; border-radius: 12px;
+    background: #fffdf4; color: #1a1a1a; font-weight: 700; font-size: 14px; line-height: 1.2; text-align: center;
+    box-shadow: 0 2px 0 #0006; white-space: normal; }
+  .bubble::after { content: ''; position: absolute; left: 50%; bottom: -7px; margin-left: -7px; border: 7px solid transparent; border-bottom: 0; border-top-color: #fffdf4; }
+  .bubble.me { background: #dff1ff; } .bubble.me::after { border-top-color: #dff1ff; }
+  .bubble.give { background: #fff2a8; } .bubble.give::after { border-top-color: #fff2a8; }
+  .bubble.mad { background: #ffd0d0; color: #6a0000; } .bubble.mad::after { border-top-color: #ffd0d0; }
+  .act.line { min-height: 44px; font-size: 16px; padding: 0 14px; background: #20304acc; }
+  .act.line.first { min-height: 50px; font-size: 17px; }
+  .act.beg { background: linear-gradient(135deg, #3a6ad8, #2a9a8a); }
+  .round.wine { background: radial-gradient(circle at 35% 30%, #ff9ab8, #a02050); }
+  #shopPanel { position: fixed; left: 12px; right: 12px; top: calc(var(--st) + 70px); bottom: calc(var(--sb) + 20px); max-width: 440px; margin: 0 auto;
+    background: #1d1a17f2; border: 2px solid #fff3; border-radius: 18px; padding: 14px; display: flex; flex-direction: column; gap: 8px; box-sizing: border-box; }
+  .shead { display: flex; justify-content: space-between; align-items: center; font-size: 20px; }
+  .smoney { display: flex; gap: 4px; align-items: center; font-weight: 800; } .smoney svg { width: 18px; height: 18px; }
+  .sgreet { opacity: .7; font-style: italic; }
+  .slist { flex: 1; overflow-y: auto; display: flex; flex-direction: column; gap: 6px; }
+  .srow { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 9px 12px; background: #fff1; border-radius: 12px; border: 1px solid #fff2; }
+  .srow:active { background: #fff3; }
+  .srow.poor { opacity: .45; }
+  .sname { font-weight: 800; } .snote { font-size: 12px; opacity: .75; }
+  .sbuy { font-weight: 900; font-size: 18px; color: #ffd84a; min-width: 40px; text-align: right; }
+  .sclose { font-size: 18px; padding: 12px; border-radius: 12px; border: 0; background: #f2ede2; color: #111; font-weight: 800; }
   .hidden { display: none !important; }
 </style>
-  <script type="module" crossorigin src="./assets/index-kLg4ioIM.js"></script>
+  <script type="module" crossorigin src="./assets/index-D4T63tx9.js"></script>
 </head>
 <body>
 <div id="hud">
   <div id="skyrow">
     <div id="dayno">1</div>
     <div id="sky"><div class="track"></div><div class="tick" style="left:60%"></div><div class="tick end" style="left:calc(100% - 2px)"></div><div id="sun"></div></div>
+    <div class="tbtn" id="centerBtn"></div>
     <div class="tbtn" id="viewBtn"></div>
     <div class="tbtn" id="pauseBtn"></div>
   </div>
   <div id="meters"></div>
   <div id="chips"></div>
+  <div id="goals"></div>
 </div>
+<div id="bubbles"></div>
 <div id="toast"></div>
 <div id="stick"><div id="knob"></div></div>
 <div id="thumbs"><div id="acts"></div><div class="round hidden" id="drinkBtn"></div></div>
 <div id="dbg" class="hidden"></div>
+<div id="shopPanel" class="hidden"></div>
 <div id="fade"></div>
 <div id="screen"></div>
 </body>
