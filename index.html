@@ -6,6 +6,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="theme-color" content="#111" />
 <title>Street prototype</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 8 8%22%3E%3Crect width=%228%22 height=%228%22 fill=%22%231a1420%22/%3E%3Crect x=%222%22 y=%221%22 width=%224%22 height=%223%22 fill=%22%23d8342c%22/%3E%3C/svg%3E">
 <style>
   :root { --st: env(safe-area-inset-top, 0px); --sb: env(safe-area-inset-bottom, 0px); --sl: env(safe-area-inset-left, 0px); --sr: env(safe-area-inset-right, 0px); }
   html, body { margin: 0; height: 100%; overflow: hidden; background: #111; color: #f4f0e8;
@@ -162,14 +163,73 @@
   .sbuy { font-weight: 900; font-size: 18px; color: #ffd84a; min-width: 40px; text-align: right; }
   .sclose { font-size: 18px; padding: 12px; border-radius: 12px; border: 0; background: #f2ede2; color: #111; font-weight: 800; }
   .hidden { display: none !important; }
+
+  /* ---------- polish pass: UI kit (U05/U15): slate, thick dark outline, chunky gold/green, hard pixel edges ---------- */
+  :root { --ink: #1a1420; --slate: #3b3646; --slate2: #2a2633; --gold: #f2c14e; --gold2: #b27a22; --green: #5bb544; --orange: #f08a2c; }
+  html, body { font-family: "Trebuchet MS", "Arial Rounded MT Bold", system-ui, sans-serif; -webkit-font-smoothing: none; }
+  #stick { width: 132px; height: 132px; border-radius: 50%; box-sizing: border-box; border: 6px solid var(--gold);
+    background: radial-gradient(circle, var(--slate) 0 52%, var(--slate2) 53% 100%);
+    box-shadow: 0 0 0 3px var(--ink), inset 0 0 0 3px var(--ink), 0 6px 0 var(--ink); }
+  #stick::before { content: ''; position: absolute; inset: 6px; pointer-events: none;
+    background:
+      conic-gradient(from 135deg at 50% 9px, transparent 0 90deg, transparent 0) ,
+      linear-gradient(var(--gold), var(--gold)) 50% 4px / 10px 6px no-repeat,
+      linear-gradient(var(--gold), var(--gold)) 50% calc(100% - 4px) / 10px 6px no-repeat,
+      linear-gradient(var(--gold), var(--gold)) 4px 50% / 6px 10px no-repeat,
+      linear-gradient(var(--gold), var(--gold)) calc(100% - 4px) 50% / 6px 10px no-repeat; }
+  #knob { left: 32px; top: 32px; width: 56px; height: 56px; border-radius: 50%; box-sizing: border-box; border: 3px solid var(--ink);
+    background: radial-gradient(circle at 40% 35%, #ffe7a0 0 22%, var(--gold) 23% 62%, var(--gold2) 63%);
+    box-shadow: inset 0 -5px 0 #9a6418, 0 4px 0 var(--ink); }
+  .tbtn { background: var(--slate); border: 3px solid var(--ink); border-radius: 12px; box-shadow: inset 0 0 0 2px #ffffff22, 0 3px 0 var(--ink); }
+  .tbtn:active { background: #565066; }
+  .act { background: var(--slate); border: 3px solid var(--ink); border-radius: 16px; box-shadow: inset 0 0 0 2px #ffffff26, 0 4px 0 var(--ink);
+    text-shadow: 0 2px 0 var(--ink); letter-spacing: .02em; }
+  .act.first { background: var(--green); border-color: var(--ink); box-shadow: inset 0 -5px 0 #3a8a2c, inset 0 0 0 2px #ffffff40, 0 4px 0 var(--ink); }
+  .act.whimsy { background: #e0559e; border-color: var(--ink); }
+  .act.beg { background: var(--orange); }
+  .act.moreBtn { min-width: 44px; min-height: 44px; padding: 0 12px; font-size: 22px; }
+  #acts:not(.more) .act:not(:last-child):not(.moreBtn) { display: none; }
+  .round { border: 3px solid var(--ink); box-shadow: inset 0 -5px 0 #0003, inset 0 0 0 2px #ffffff40, 0 4px 0 var(--ink);
+    background: var(--gold); }
+  .round.mv { width: 50px; height: 50px; font: 800 11px "Trebuchet MS", system-ui; color: var(--ink); background: var(--gold); }
+  .round.jump { background: #4fc0b0; }
+  .round.mv.on { background: #ff6a96; }
+  .round.wine { background: #c0306a; } .round.mix { background: #3a7bff; }
+  #drinkBtn { background: #8a5cff; }
+  .round .badge { background: #f4e6c8; color: var(--ink); border: 3px solid var(--ink); }
+  .meter .track { background: var(--slate2); border: 2px solid var(--ink); border-radius: 4px; }
+  .meter .fill { border-radius: 2px; }
+  .chip { background: var(--slate); border: 2px solid var(--ink); }
+  #goals { display: none; }
+  body.goalsOpen #goals { display: block; background: #2a2633e0; border: 3px solid var(--ink); border-radius: 12px; padding: 6px 8px; width: max-content; }
+  /* ---------- polish pass: title screen over a live dusk scene ---------- */
+  body.title #hud, body.title #viewCube, body.title #camReset, body.title #stick, body.title #thumbs, body.title #stam,
+  body.title #toast, body.title #skipTut, body.title #bubbles, body.title #dbg { display: none !important; }
+  body.title #screen { background: linear-gradient(#0000 0 55%, #1a142099 75%, #1a1420dd); justify-content: space-between;
+    padding: calc(var(--st) + 36px) 20px calc(var(--sb) + 22px); }
+  .logo { font: 900 64px/1 "Arial Black", Impact, system-ui; letter-spacing: .06em; color: #ffd84a;
+    text-shadow: 4px 0 0 var(--ink), -4px 0 0 var(--ink), 0 4px 0 var(--ink), 0 -4px 0 var(--ink), 4px 4px 0 var(--ink), -4px 4px 0 var(--ink), 4px -4px 0 var(--ink), -4px -4px 0 var(--ink), 0 10px 0 #c0306a, 4px 10px 0 var(--ink), -4px 10px 0 var(--ink), 0 14px 0 var(--ink); }
+  .tag { margin-top: 18px; font-weight: 800; font-size: 15px; color: #fff; text-shadow: 0 2px 0 var(--ink); }
+  .tmenu { display: flex; flex-direction: column; gap: 12px; align-items: center; width: 100%; max-width: 340px; }
+  #screen .kbtn { display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; min-height: 58px; border-radius: 16px;
+    border: 3px solid var(--ink); color: #fff; font: 900 21px "Trebuchet MS", system-ui; text-shadow: 0 2px 0 var(--ink);
+    box-shadow: inset 0 -6px 0 #0003, inset 0 0 0 2px #ffffff40, 0 5px 0 var(--ink); background: var(--green); padding: 0 14px; }
+  #screen .kbtn.orange { background: var(--orange); } #screen .kbtn.gold { background: var(--gold); color: var(--ink); text-shadow: none; }
+  #screen .kbtn.slate { background: var(--slate); font-size: 16px; min-height: 46px; }
+  #screen .kbtn:active { transform: translateY(3px); box-shadow: inset 0 -6px 0 #0003, 0 2px 0 var(--ink); }
+  .trow { display: flex; gap: 10px; width: 100%; }
+  .trow > * { flex: 1; }
+  .seedbox { display: flex; align-items: center; gap: 6px; background: var(--slate); border: 3px solid var(--ink); border-radius: 14px; padding: 0 8px; font-weight: 800; font-size: 13px; color: #cfc8dc; }
+  #screen .seedbox input { width: 100%; min-width: 0; background: transparent; border: 0; color: #fff; font: 800 16px ui-monospace, monospace; padding: 10px 0; text-align: left; }
 </style>
-  <script type="module" crossorigin src="./assets/index-Dsq_i627.js"></script>
+  <script type="module" crossorigin src="./assets/index-BhwnKZsr.js"></script>
 </head>
 <body>
 <div id="hud">
   <div id="skyrow">
     <div id="dayno">1</div>
     <div id="sky"><div class="track"></div><div class="tick" style="left:60%"></div><div class="tick end" style="left:calc(100% - 2px)"></div><div id="sun"></div></div>
+    <div class="tbtn" id="goalsBtn" aria-label="Goals"><svg viewBox="0 0 8 8" width="22" height="22" shape-rendering="crispEdges"><path fill="#1a1420" d="M1 0h6v8H1z"/><path fill="#f4e6c8" d="M2 1h4v6H2z"/><path fill="#5bb544" d="M2 4h1v1h1v-1h1v-1h1v1h-1v1h-1v1h-1v-1h-1z"/></svg></div>
     <div class="tbtn" id="viewBtn"></div>
     <div class="tbtn" id="pauseBtn"></div>
   </div>
