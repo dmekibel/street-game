@@ -137,7 +137,7 @@
   /* Speech bubbles: a round blob with an outline that pops in. --bb is the fill. main.ts places it (src/bubbleplace.ts)
      and sets --tail, so the tail points at the head from above (default) or from the side (.left / .right). */
   .bubble { --bb: #fffdf4; --bo: #2a1b2e; --tail: 50%; position: fixed; left: 0; top: 0; transform-origin: var(--tail) calc(100% + 10px); box-sizing: border-box;
-    min-width: 64px; max-width: 150px; padding: 12px 15px 13px; border-radius: 50% / 46%; text-wrap: balance;
+    min-width: 56px; max-width: 164px; padding: 8px 13px 9px; border-radius: 22px; text-wrap: balance;
     background: var(--bb); color: #2a1b2e; border: 3px solid var(--bo); font-weight: 800; font-size: 14px; line-height: 1.2; text-align: center;
     box-shadow: 0 3px 0 #0005; white-space: normal; animation: bubblePop .28s cubic-bezier(.3, 1.6, .5, 1) both; }
   .bubble::before, .bubble::after { content: ''; position: absolute; left: var(--tail); border-style: solid; border-color: transparent; border-bottom: 0; }
