@@ -134,13 +134,18 @@
   #minimap { position: fixed; right: calc(var(--sr) + 10px); top: calc(var(--st) + 96px); width: 92px; height: 92px; box-sizing: border-box; border-radius: 50%;
     border: 4px solid #4a5060; box-shadow: 0 0 0 3px #1a1420, 0 4px 0 3px #0005; background: #23262c; z-index: 30; touch-action: none; }
   #camReset { position: fixed; left: calc(var(--sl) + 62px); top: calc(var(--st) + 252px); width: 44px; height: 44px; z-index: 30; display: flex; align-items: center; justify-content: center; border-radius: 22px; background: #0006; }
-  .bubble { position: fixed; transform: translate(-50%, -100%); max-width: 190px; padding: 6px 10px; border-radius: 12px;
-    background: #fffdf4; color: #1a1a1a; font-weight: 700; font-size: 14px; line-height: 1.2; text-align: center;
-    box-shadow: 0 2px 0 #0006; white-space: normal; }
-  .bubble::after { content: ''; position: absolute; left: 50%; bottom: -7px; margin-left: -7px; border: 7px solid transparent; border-bottom: 0; border-top-color: #fffdf4; }
-  .bubble.me { background: #dff1ff; } .bubble.me::after { border-top-color: #dff1ff; }
-  .bubble.give { background: #fff2a8; } .bubble.give::after { border-top-color: #fff2a8; }
-  .bubble.mad { background: #ffd0d0; color: #6a0000; } .bubble.mad::after { border-top-color: #ffd0d0; }
+  /* Speech bubbles: round, outlined, and they pop in. --bb is the fill; the tail is drawn twice (outline, then fill). */
+  .bubble { --bb: #fffdf4; --bo: #2a1b2e; position: fixed; translate: -50% calc(-100% - 9px); transform-origin: 50% calc(100% + 9px); max-width: 170px; padding: 7px 12px 8px; border-radius: 18px;
+    background: var(--bb); color: #2a1b2e; border: 3px solid var(--bo); font-weight: 800; font-size: 14px; line-height: 1.2; text-align: center;
+    box-shadow: 0 3px 0 #0005; white-space: normal; animation: bubblePop .28s cubic-bezier(.3, 1.6, .5, 1) both; }
+  .bubble::before, .bubble::after { content: ''; position: absolute; left: 50%; border-style: solid; border-color: transparent; border-bottom: 0; }
+  .bubble::before { bottom: -11px; margin-left: -9px; border-width: 10px 9px 0; border-top-color: var(--bo); }
+  .bubble::after { bottom: -6px; margin-left: -6px; border-width: 7px 6px 0; border-top-color: var(--bb); }
+  .bubble.me { --bb: #e3f3ff; }
+  .bubble.give { --bb: #fff2a8; }
+  .bubble.mad { --bb: #ffd6d6; color: #6a0000; }
+  @keyframes bubblePop { from { scale: .3; opacity: 0; } to { scale: 1; } }
+  @media (prefers-reduced-motion: reduce) { .bubble { animation: none; } }
   .act.line { min-height: 44px; font-size: 16px; padding: 0 14px; background: #20304acc; }
   .act.line.first { min-height: 50px; font-size: 17px; }
   .act.beg { background: linear-gradient(135deg, #3a6ad8, #2a9a8a); }
@@ -192,6 +197,13 @@
   .round.wine { background: #c0306a; } .round.mix { background: #3a7bff; }
   #drinkBtn { background: #8a5cff; }
   #drinkBtn { flex-direction: column; gap: 0; } #drinkBtn svg { width: 30px; height: 30px; }
+  /* item buttons (2026-11-25): USE, EAT, DRINK side by side, each labelled */
+  .itemRow { display: flex; gap: 8px; justify-content: flex-end; margin-bottom: 8px; }
+  .round.ibtn { width: 64px; height: 64px; flex-direction: column; gap: 0; } .round.ibtn svg { width: 26px; height: 26px; }
+  #eatBtn { background: #e8772e; } #useBtn { background: #2f9e8a; }
+  .ibtn .dlabel { font: 900 12px "Trebuchet MS", system-ui; color: #fff; letter-spacing: .5px; margin-top: -1px; text-shadow: 0 1px 0 #1a1420, 1px 0 0 #1a1420, -1px 0 0 #1a1420, 0 -1px 0 #1a1420; }
+  .ibtn .dsub { position: absolute; bottom: -13px; left: 50%; transform: translateX(-50%); white-space: nowrap; font: 800 10px "Trebuchet MS", system-ui; color: #fff;
+    background: #1a1420cc; padding: 1px 5px; border-radius: 6px; pointer-events: none; }
   #drinkBtn .dlabel { font: 900 12px "Trebuchet MS", system-ui; color: #fff; letter-spacing: .5px; margin-top: -3px; text-shadow: 0 1px 0 #1a1420, 1px 0 0 #1a1420, -1px 0 0 #1a1420, 0 -1px 0 #1a1420; }
   .round .badge { background: #f4e6c8; color: var(--ink); border: 3px solid var(--ink); }
   .meter .track { background: var(--slate2); border: 2px solid var(--ink); border-radius: 4px; }
@@ -219,7 +231,7 @@
   .seedbox { display: flex; align-items: center; gap: 6px; background: var(--slate); border: 3px solid var(--ink); border-radius: 14px; padding: 0 8px; font-weight: 800; font-size: 13px; color: #cfc8dc; }
   #screen .seedbox input { width: 100%; min-width: 0; background: transparent; border: 0; color: #fff; font: 800 16px ui-monospace, monospace; padding: 10px 0; text-align: left; }
 </style>
-  <script type="module" crossorigin src="./assets/index-Bhqditni.js"></script>
+  <script type="module" crossorigin src="./assets/index-BZwVQeIm.js"></script>
 </head>
 <body>
 <div id="hud">
@@ -240,7 +252,7 @@
 <div id="dlg" class="hidden"><div id="dlgName"></div><div id="dlgText"></div><div id="dlgOpts"></div></div>
 <div id="toast"></div>
 <div id="stick"><div id="knob"></div></div>
-<div id="thumbs"><div id="acts"></div><div class="round hidden" id="drinkBtn"></div><div class="moveRow"><div class="round mv" id="runBtn">RUN</div><div class="round mv jump" id="jumpBtn">JUMP</div></div></div>
+<div id="thumbs"><div id="acts"></div><div class="itemRow"><div class="round hidden ibtn" id="useBtn"></div><div class="round hidden ibtn" id="eatBtn"></div><div class="round hidden ibtn" id="drinkBtn"></div></div><div class="moveRow"><div class="round mv" id="runBtn">RUN</div><div class="round mv jump" id="jumpBtn">JUMP</div></div></div>
 <div id="stam"><div id="stamFill"></div></div>
 <div id="dbg" class="hidden"></div>
 <div id="fpsBig" class="hidden"></div>
