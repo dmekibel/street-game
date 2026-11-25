@@ -163,6 +163,25 @@
   .sbuy { font-weight: 900; font-size: 18px; color: #ffd84a; min-width: 40px; text-align: right; }
   .sclose { font-size: 18px; padding: 12px; border-radius: 12px; border: 0; background: #f2ede2; color: #111; font-weight: 800; }
   .hidden { display: none !important; }
+  /* stats panel (2026-11-25): tap the meters */
+  #meters { pointer-events: auto; cursor: pointer; }
+  #statsPanel { position: fixed; inset: 0; z-index: 60; background: #0008; touch-action: pan-y; }
+  #statsPanel .stbox { position: absolute; left: calc(var(--sl) + 10px); right: calc(var(--sr) + 10px); top: calc(var(--st) + 52px); max-height: calc(100% - var(--st) - var(--sb) - 70px);
+    max-width: 520px; margin: 0 auto; overflow-y: auto; box-sizing: border-box; padding: 10px 12px 12px; background: #2a2633f4; border: 3px solid #1a1420;
+    border-radius: 14px; box-shadow: 0 6px 0 #1a1420; display: flex; flex-direction: column; gap: 8px; -webkit-overflow-scrolling: touch; }
+  .sthead { display: flex; justify-content: space-between; align-items: baseline; font: 900 18px "Trebuchet MS", system-ui; text-shadow: 0 2px 0 #1a1420; }
+  .sthead span { font: 700 12px "Trebuchet MS", system-ui; opacity: .7; text-shadow: none; }
+  .strow { background: #ffffff10; border: 2px solid #1a1420; border-radius: 10px; padding: 7px 9px; }
+  .strow.low { border-color: #ff6a6a; }
+  .sttop { display: flex; align-items: center; gap: 7px; }
+  .sttop .ic { width: 22px; height: 22px; flex: none; } .sttop .ic svg { width: 22px; height: 22px; }
+  .sttop b { font-size: 16px; min-width: 88px; }
+  .sttop .track { flex: 1; height: 12px; background: #2a2633; border: 2px solid #1a1420; border-radius: 4px; overflow: hidden; }
+  .sttop .fill { height: 100%; border-radius: 2px; }
+  .stnum { font: 900 16px ui-monospace, monospace; min-width: 30px; text-align: right; }
+  .sttrend { font-size: 12px; font-weight: 800; margin: 3px 0 2px 29px; opacity: .85; }
+  .sttrend.rising { color: #8be07a; } .sttrend.falling { color: #ff9a8a; }
+  .stexp { font-size: 13.5px; line-height: 1.35; margin-left: 29px; opacity: .92; }
 
   /* ---------- polish pass: UI kit (U05/U15): slate, thick dark outline, chunky gold/green, hard pixel edges ---------- */
   :root { --ink: #1a1420; --slate: #3b3646; --slate2: #2a2633; --gold: #f2c14e; --gold2: #b27a22; --green: #5bb544; --orange: #f08a2c; }
@@ -231,7 +250,7 @@
   .seedbox { display: flex; align-items: center; gap: 6px; background: var(--slate); border: 3px solid var(--ink); border-radius: 14px; padding: 0 8px; font-weight: 800; font-size: 13px; color: #cfc8dc; }
   #screen .seedbox input { width: 100%; min-width: 0; background: transparent; border: 0; color: #fff; font: 800 16px ui-monospace, monospace; padding: 10px 0; text-align: left; }
 </style>
-  <script type="module" crossorigin src="./assets/index-BZwVQeIm.js"></script>
+  <script type="module" crossorigin src="./assets/index-DHEfGJfZ.js"></script>
 </head>
 <body>
 <div id="hud">
