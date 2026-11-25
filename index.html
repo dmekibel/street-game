@@ -269,7 +269,7 @@
   body.goalsOpen #goals { display: block; background: #2a2633e0; border: 3px solid var(--ink); border-radius: 12px; padding: 6px 8px; width: max-content; }
   /* ---------- polish pass: title screen over a live dusk scene ---------- */
   body.title #hud, body.title #minimap, body.title #camReset, body.title #stick, body.title #thumbs, body.title #stam,
-  body.title #toast, body.title #skipTut, body.title #bubbles, body.title #thinks, body.title #todo, body.title #dbg { display: none !important; }
+  body.title #toast, body.title #skipTut, body.title #bubbles, body.title #talk, body.title #todo, body.title #dbg { display: none !important; }
   body.title #screen { background: linear-gradient(#0000 0 55%, #1a142099 75%, #1a1420dd); justify-content: space-between;
     padding: calc(var(--st) + 36px) 20px calc(var(--sb) + 22px); }
   .logo { font: 900 64px/1 "Arial Black", Impact, system-ui; letter-spacing: .06em; color: #ffd84a;
@@ -286,8 +286,61 @@
   .trow > * { flex: 1; }
   .seedbox { display: flex; align-items: center; gap: 6px; background: var(--slate); border: 3px solid var(--ink); border-radius: 14px; padding: 0 8px; font-weight: 800; font-size: 13px; color: #cfc8dc; }
   #screen .seedbox input { width: 100%; min-width: 0; background: transparent; border: 0; color: #fff; font: 800 16px ui-monospace, monospace; padding: 10px 0; text-align: left; }
+  /* L173 (2026-11-25): the talk choices sit in the thumb zone, under the plain Ask, as labelled tiles (they used to float round his head). */
+  #talk { display: flex; gap: 8px; justify-content: flex-end; }
+  #talk:empty { display: none; }
+  .tpill { position: relative; width: 66px; height: 58px; box-sizing: border-box; border-radius: 14px; border: 3px solid var(--ink); background: #f4ecd8; color: var(--ink);
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1px; padding: 0 2px; box-shadow: inset 0 -4px 0 #0002, 0 4px 0 var(--ink);
+    animation: bubblePop .28s cubic-bezier(.3, 1.6, .5, 1) both; touch-action: manipulation; }
+  .tpill:active { transform: translateY(2px) scale(.96); box-shadow: none; }
+  .tpill .em { font-size: 22px; line-height: 1; }
+  .tpill small { font: 900 10.5px "Trebuchet MS", system-ui; white-space: nowrap; letter-spacing: .01em; }
+  .tpill .hint { position: absolute; right: -6px; top: -7px; font: 900 13px system-ui; font-style: normal; color: #ff5a8a; background: #fff; border: 2px solid var(--ink);
+    border-radius: 50%; width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; }
+
+  /* ---------- L171 (2026-11-25): landscape phones. Portrait is untouched: everything here is inside this query. ---------- */
+  @media (orientation: landscape) and (max-height: 560px) {
+    #hud { right: auto; width: 430px; max-width: calc(100vw - var(--sl) - var(--sr) - 130px); box-sizing: border-box;
+      padding: calc(var(--st) + 5px) 10px 6px calc(var(--sl) + 8px); display: grid; grid-template-columns: 112px 1fr; grid-template-areas: "meters sky" "meters chips";
+      column-gap: 12px; align-items: start; background: linear-gradient(90deg, #000a, #0007 70%, #0000); border-bottom-right-radius: 16px; }
+    #skyrow { grid-area: sky; gap: 6px; }
+    #skyrow .tbtn { width: 34px; height: 34px; }
+    #sky { height: 26px; }
+    #meters { grid-area: meters; grid-template-columns: 1fr; gap: 2px; margin-top: 1px; }
+    .meter { gap: 4px; } .meter .ic { width: 12px; height: 12px; } .meter .ic svg { width: 12px; height: 12px; }
+    .meter .track { height: 7px; border-width: 2px; }
+    #chips { grid-area: chips; margin-top: 4px; gap: 6px; }
+    .chip { font-size: 13px; padding: 1px 7px 1px 5px; } .chip svg { width: 14px; height: 14px; }
+    body.goalsOpen #goals { position: fixed; left: auto; right: calc(var(--sr) + 118px); top: calc(var(--st) + 6px); margin: 0; max-width: 230px; }
+    #minimap { top: calc(var(--st) + 8px); right: calc(var(--sr) + 10px); width: 88px; height: 88px; }
+    #camReset { left: calc(var(--sl) + 162px); top: auto; bottom: calc(var(--sb) + 26px); }
+    #stick { left: calc(var(--sl) + 14px); bottom: calc(var(--sb) + 14px); }
+    #thumbs { right: calc(var(--sr) + 12px); bottom: calc(var(--sb) + 14px); gap: 8px; max-width: 50%; }
+    #acts { gap: 8px; }
+    #acts.more { flex-direction: row-reverse; flex-wrap: wrap-reverse; justify-content: flex-start; max-width: 46vw; }
+    .act { min-height: 48px; font-size: 17px; } .act.first { min-height: 56px; }
+    /* the talk tiles stand beside the button column, low, under the right thumb */
+    #talk { position: absolute; right: calc(100% + 10px); bottom: 0; flex-direction: column-reverse; gap: 8px; }
+    .tpill { width: 118px; height: 46px; flex-direction: row; justify-content: flex-start; gap: 6px; padding: 0 10px; }
+    .tpill small { font-size: 12.5px; }
+    #toast { top: calc(var(--st) + 92px); left: calc(var(--sl) + 180px); right: calc(var(--sr) + 180px); }
+    #todo { top: calc(var(--st) + 92px); left: calc(var(--sl) + 10px); }
+    #skipTut { left: auto; right: calc(var(--sr) + 108px); top: calc(var(--st) + 8px); }
+    #fpsBig { top: calc(var(--st) + 104px); }
+    #cityhud { left: calc(var(--sl) + 216px) !important; bottom: calc(var(--sb) + 14px) !important; max-width: 30% !important; }
+    #comboHud { top: calc(var(--st) + 96px) !important; }
+  }
+  /* L175 (2026-11-25): a full panel is open (shop, bag, stats, city map, pause, obituary): the play HUD steps away
+     and the panel is opaque and on top. main.ts syncPanelClass() sets body.panel; __sg.overlapCheck() tests it. */
+  body.panel #hud, body.panel #minimap, body.panel #camReset, body.panel #skipTut, body.panel #goals, body.panel #cityhud,
+  body.panel #thumbs, body.panel #stick, body.panel #stam, body.panel #toast, body.panel #bubbles, body.panel #todo,
+  body.panel #combo, body.panel #comboHud, body.panel #dlg, body.panel .float, body.panel #fpsBig { visibility: hidden !important; pointer-events: none !important; }
+  body.panel #shopPanel { z-index: 80; background: #1d1a17; }
+  body.panel #statsPanel { z-index: 80; background: #000c; } body.panel #statsPanel .stbox { background: #2a2633; }
+  body.panel #cityMap { z-index: 80; background: rgb(16,12,22) !important; }
+  body.panel #screen { z-index: 85; background: #111; }
 </style>
-  <script type="module" crossorigin src="./assets/index-xr11oXDJ.js"></script>
+  <script type="module" crossorigin src="./assets/index-BFfbVr0o.js"></script>
 </head>
 <body>
 <div id="hud">
@@ -305,11 +358,10 @@
 <div id="bubbles"></div>
 <canvas id="minimap" aria-label="Mini map"></canvas>
 <div class="tbtn" id="camReset" title="Reset camera"></div>
-<div id="thinks"></div>
 <div id="todo" class="hidden"></div>
 <div id="toast"></div>
 <div id="stick"><div id="knob"></div></div>
-<div id="thumbs"><div id="acts"></div><div class="itemRow"><div class="round hidden ibtn" id="useBtn"></div><div class="round hidden ibtn" id="eatBtn"></div><div class="round hidden ibtn" id="drinkBtn"></div></div><div class="moveRow"><div class="round mv" id="runBtn">RUN</div><div class="round mv jump" id="jumpBtn">JUMP</div></div></div>
+<div id="thumbs"><div id="acts"></div><div id="talk"></div><div class="itemRow"><div class="round hidden ibtn" id="useBtn"></div><div class="round hidden ibtn" id="eatBtn"></div><div class="round hidden ibtn" id="drinkBtn"></div></div><div class="moveRow"><div class="round mv" id="runBtn">RUN</div><div class="round mv jump" id="jumpBtn">JUMP</div></div></div>
 <div id="stam"><div id="stamFill"></div></div>
 <div id="dbg" class="hidden"></div>
 <div id="fpsBig" class="hidden"></div>
