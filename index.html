@@ -134,13 +134,21 @@
   #minimap { position: fixed; right: calc(var(--sr) + 10px); top: calc(var(--st) + 96px); width: 92px; height: 92px; box-sizing: border-box; border-radius: 50%;
     border: 4px solid #4a5060; box-shadow: 0 0 0 3px #1a1420, 0 4px 0 3px #0005; background: #23262c; z-index: 30; touch-action: none; }
   #camReset { position: fixed; left: calc(var(--sl) + 62px); top: calc(var(--st) + 252px); width: 44px; height: 44px; z-index: 30; display: flex; align-items: center; justify-content: center; border-radius: 22px; background: #0006; }
-  /* Speech bubbles: round, outlined, and they pop in. --bb is the fill; the tail is drawn twice (outline, then fill). */
-  .bubble { --bb: #fffdf4; --bo: #2a1b2e; position: fixed; translate: -50% calc(-100% - 9px); transform-origin: 50% calc(100% + 9px); max-width: 170px; padding: 7px 12px 8px; border-radius: 18px;
+  /* Speech bubbles: a round blob with an outline that pops in. --bb is the fill. main.ts places it (src/bubbleplace.ts)
+     and sets --tail, so the tail points at the head from above (default) or from the side (.left / .right). */
+  .bubble { --bb: #fffdf4; --bo: #2a1b2e; --tail: 50%; position: fixed; left: 0; top: 0; transform-origin: var(--tail) calc(100% + 10px); box-sizing: border-box;
+    min-width: 64px; max-width: 150px; padding: 12px 15px 13px; border-radius: 50% / 46%; text-wrap: balance;
     background: var(--bb); color: #2a1b2e; border: 3px solid var(--bo); font-weight: 800; font-size: 14px; line-height: 1.2; text-align: center;
     box-shadow: 0 3px 0 #0005; white-space: normal; animation: bubblePop .28s cubic-bezier(.3, 1.6, .5, 1) both; }
-  .bubble::before, .bubble::after { content: ''; position: absolute; left: 50%; border-style: solid; border-color: transparent; border-bottom: 0; }
+  .bubble::before, .bubble::after { content: ''; position: absolute; left: var(--tail); border-style: solid; border-color: transparent; border-bottom: 0; }
   .bubble::before { bottom: -11px; margin-left: -9px; border-width: 10px 9px 0; border-top-color: var(--bo); }
   .bubble::after { bottom: -6px; margin-left: -6px; border-width: 7px 6px 0; border-top-color: var(--bb); }
+  .bubble.left, .bubble.right { transform-origin: 50% var(--tail); }
+  .bubble.left::before, .bubble.left::after, .bubble.right::before, .bubble.right::after { top: var(--tail); bottom: auto; margin-left: 0; border: solid transparent; }
+  .bubble.right::before { left: -11px; margin-top: -9px; border-width: 9px 10px 9px 0; border-right-color: var(--bo); }
+  .bubble.right::after { left: -6px; margin-top: -6px; border-width: 6px 7px 6px 0; border-right-color: var(--bb); }
+  .bubble.left::before { left: auto; right: -11px; margin-top: -9px; border-width: 9px 0 9px 10px; border-left-color: var(--bo); }
+  .bubble.left::after { left: auto; right: -6px; margin-top: -6px; border-width: 6px 0 6px 7px; border-left-color: var(--bb); }
   .bubble.me { --bb: #e3f3ff; }
   .bubble.give { --bb: #fff2a8; }
   .bubble.mad { --bb: #ffd6d6; color: #6a0000; }
@@ -250,7 +258,7 @@
   .seedbox { display: flex; align-items: center; gap: 6px; background: var(--slate); border: 3px solid var(--ink); border-radius: 14px; padding: 0 8px; font-weight: 800; font-size: 13px; color: #cfc8dc; }
   #screen .seedbox input { width: 100%; min-width: 0; background: transparent; border: 0; color: #fff; font: 800 16px ui-monospace, monospace; padding: 10px 0; text-align: left; }
 </style>
-  <script type="module" crossorigin src="./assets/index-DHEfGJfZ.js"></script>
+  <script type="module" crossorigin src="./assets/index-kbP_4TcH.js"></script>
 </head>
 <body>
 <div id="hud">
