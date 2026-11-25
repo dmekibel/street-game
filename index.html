@@ -4,6 +4,11 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-mobile-web-app-title" content="Street" />
+<link rel="manifest" href="manifest.webmanifest" />
+<link rel="apple-touch-icon" href="icon-180.png" />
 <meta name="theme-color" content="#111" />
 <title>Street prototype</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 8 8%22%3E%3Crect width=%228%22 height=%228%22 fill=%22%231a1420%22/%3E%3Crect x=%222%22 y=%221%22 width=%224%22 height=%223%22 fill=%22%23d8342c%22/%3E%3C/svg%3E">
@@ -95,7 +100,8 @@
   #screen button.alt { background: #3a3a3a; color: #eee; font-size: 16px; }
   #screen button.go { background: linear-gradient(135deg, #ffd27a, #ff7aa8); }
   #book { font-size: 13px; opacity: .8; }
-  #fade { position: fixed; inset: 0; background: #000; opacity: 0; pointer-events: none; transition: opacity 3s; }
+  #fade { position: fixed; inset: 0; background: #000; opacity: 0; pointer-events: none; transition: opacity 3s; z-index: 65; }
+  #screen { z-index: 70; } /* Build A: the obituary and pause screens sit above the mini map and HUD bits */
   #dbg { position: fixed; left: calc(var(--sl) + 6px); bottom: calc(var(--sb) + 170px); font: 11px/1.3 ui-monospace, monospace;
     background: #000a; padding: 4px 6px; border-radius: 6px; pointer-events: none; white-space: pre; }
   /* Integration pass: a big FPS readout David can read on the phone (top right, under the sky row). */
@@ -150,6 +156,29 @@
   .bubble.left::before { left: auto; right: -11px; margin-top: -9px; border-width: 9px 0 9px 10px; border-left-color: var(--bo); }
   .bubble.left::after { left: auto; right: -6px; margin-top: -6px; border-width: 6px 0 6px 7px; border-left-color: var(--bb); }
   .bubble.me { --bb: #e3f3ff; }
+  .bubble .who { display: block; font: 900 10px system-ui; letter-spacing: .06em; text-transform: uppercase; color: #7a5a2a; margin-bottom: 1px; }
+  /* Build A (L165, sketch U17): optional thought bubbles around his head. Tap one, or just use the plain Ask. */
+  #thinks { position: fixed; inset: 0; pointer-events: none; z-index: 34; }
+  .think { position: absolute; left: 0; top: 0; width: 64px; display: flex; flex-direction: column; align-items: center; pointer-events: none; animation: bubblePop .28s cubic-bezier(.3, 1.6, .5, 1) both; }
+  .think button { pointer-events: auto; width: 54px; height: 54px; border-radius: 50%; border: 3px solid #2a1b2e; background: #fffdf4; font-size: 26px; line-height: 1; padding: 0;
+    box-shadow: 0 3px 0 #0005; display: flex; align-items: center; justify-content: center; }
+  .think button:active { transform: translateY(2px); box-shadow: 0 1px 0 #0005; }
+  .think small { margin-top: 3px; font: 800 11px "Trebuchet MS", system-ui; color: #fff; background: #1a1420cc; padding: 1px 6px; border-radius: 7px; white-space: nowrap; }
+  .think .hint { position: absolute; right: 0; top: -2px; font: 900 13px system-ui; font-style: normal; color: #ff5a8a; background: #fff; border: 2px solid #2a1b2e; border-radius: 50%; width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; }
+  /* Build A: the whimsy to-do list while wasted */
+  #todo { position: fixed; left: calc(var(--sl) + 10px); top: calc(var(--st) + 308px); z-index: 25; pointer-events: none; background: #2a1b3ae0; border: 3px solid #1a1420; border-radius: 12px;
+    padding: 5px 9px; font: 800 12px "Trebuchet MS", system-ui; color: #fff; max-width: 150px; }
+  #todo.hidden { display: none; }
+  #todo b { color: #ff8ae0; font-size: 11px; letter-spacing: .04em; text-transform: uppercase; }
+  #todo .td { display: flex; justify-content: space-between; gap: 8px; } #todo .td span { opacity: .7; font-weight: 600; }
+  @media (max-height: 500px) { #todo { top: calc(var(--st) + 120px); left: calc(var(--sl) + 170px); } }
+  /* Build A: the obituary card */
+  .obit { background: #f4ecd8; color: #2a1b2e; border: 3px solid #1a1420; border-radius: 14px; padding: 14px 16px; max-width: 320px; width: 100%; box-sizing: border-box; text-align: left; box-shadow: 0 5px 0 #1a1420; }
+  .obitHead { font: 900 13px system-ui; letter-spacing: .14em; text-transform: uppercase; color: #7a6a58; text-align: center; }
+  .obitDays { font: 900 24px "Trebuchet MS", system-ui; text-align: center; margin: 2px 0 10px; }
+  .obitRow { margin: 6px 0; font-size: 15px; font-weight: 600; } .obitRow b { display: block; font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: #8a7a66; }
+  .obitRow.save { background: #fff6c8; border-radius: 8px; padding: 6px 8px; }
+  .obitSmall { margin-top: 8px; font-size: 11px; color: #8a7a66; text-align: center; }
   .bubble.give { --bb: #fff2a8; }
   .bubble.mad { --bb: #ffd6d6; color: #6a0000; }
   @keyframes bubblePop { from { scale: .3; opacity: 0; } to { scale: 1; } }
@@ -240,7 +269,7 @@
   body.goalsOpen #goals { display: block; background: #2a2633e0; border: 3px solid var(--ink); border-radius: 12px; padding: 6px 8px; width: max-content; }
   /* ---------- polish pass: title screen over a live dusk scene ---------- */
   body.title #hud, body.title #minimap, body.title #camReset, body.title #stick, body.title #thumbs, body.title #stam,
-  body.title #toast, body.title #skipTut, body.title #bubbles, body.title #dbg { display: none !important; }
+  body.title #toast, body.title #skipTut, body.title #bubbles, body.title #thinks, body.title #todo, body.title #dbg { display: none !important; }
   body.title #screen { background: linear-gradient(#0000 0 55%, #1a142099 75%, #1a1420dd); justify-content: space-between;
     padding: calc(var(--st) + 36px) 20px calc(var(--sb) + 22px); }
   .logo { font: 900 64px/1 "Arial Black", Impact, system-ui; letter-spacing: .06em; color: #ffd84a;
@@ -258,7 +287,7 @@
   .seedbox { display: flex; align-items: center; gap: 6px; background: var(--slate); border: 3px solid var(--ink); border-radius: 14px; padding: 0 8px; font-weight: 800; font-size: 13px; color: #cfc8dc; }
   #screen .seedbox input { width: 100%; min-width: 0; background: transparent; border: 0; color: #fff; font: 800 16px ui-monospace, monospace; padding: 10px 0; text-align: left; }
 </style>
-  <script type="module" crossorigin src="./assets/index-kbP_4TcH.js"></script>
+  <script type="module" crossorigin src="./assets/index-xr11oXDJ.js"></script>
 </head>
 <body>
 <div id="hud">
@@ -276,7 +305,8 @@
 <div id="bubbles"></div>
 <canvas id="minimap" aria-label="Mini map"></canvas>
 <div class="tbtn" id="camReset" title="Reset camera"></div>
-<div id="dlg" class="hidden"><div id="dlgName"></div><div id="dlgText"></div><div id="dlgOpts"></div></div>
+<div id="thinks"></div>
+<div id="todo" class="hidden"></div>
 <div id="toast"></div>
 <div id="stick"><div id="knob"></div></div>
 <div id="thumbs"><div id="acts"></div><div class="itemRow"><div class="round hidden ibtn" id="useBtn"></div><div class="round hidden ibtn" id="eatBtn"></div><div class="round hidden ibtn" id="drinkBtn"></div></div><div class="moveRow"><div class="round mv" id="runBtn">RUN</div><div class="round mv jump" id="jumpBtn">JUMP</div></div></div>
