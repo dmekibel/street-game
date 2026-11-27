@@ -34,6 +34,10 @@
    "file": "smokes.glb"
   },
   {
+   "name": "umbrella",
+   "file": "umbrella.glb"
+  },
+  {
    "name": "wine",
    "file": "wine.glb"
   }

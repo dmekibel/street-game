@@ -1,0 +1,262 @@
+{
+"sidewalk": [
+"sidewalk",
+0.25
+],
+"plaza": [
+"plaza",
+0.25
+],
+"ft_stone": [
+"ft_stone",
+0.25
+],
+"grass": [
+"grass",
+0.25
+],
+"asphalt": [
+"asphalt",
+0.25
+],
+"tree_round_a": [
+"tree_round_a",
+1
+],
+"bench": [
+"bench",
+1
+],
+"lamp_boston": [
+"lamp_boston",
+1
+],
+"tree_round_b": [
+"tree_round_b",
+1
+],
+"tree_round_c": [
+"tree_round_c",
+1
+],
+"t_paint": [
+"t_paint",
+1
+],
+"river_wall": [
+"river_wall",
+1
+],
+"balustrade": [
+"balustrade",
+1
+],
+"bridge_stone": [
+"bridge_stone",
+1
+],
+"w_shopgreen": [
+"w_shopgreen",
+1
+],
+"t_leaf": [
+"t_leaf",
+1
+],
+"r_roofgrey": [
+"r_roofgrey",
+1
+],
+"hotdog_mascot": [
+"hotdog_mascot",
+1
+],
+"w_rose": [
+"w_rose",
+1
+],
+"t_mauve": [
+"t_mauve",
+1
+],
+"r_roofdk": [
+"r_roofdk",
+1
+],
+"w_slate": [
+"w_slate",
+1
+],
+"t_steel": [
+"t_steel",
+1
+],
+"w_mauve": [
+"w_mauve",
+1
+],
+"t_lilac": [
+"t_lilac",
+1
+],
+"w_grey": [
+"w_grey",
+1
+],
+"t_stone": [
+"t_stone",
+1
+],
+"w_tan": [
+"w_tan",
+1
+],
+"food_truck": [
+"food_truck",
+1
+],
+"w_wine": [
+"w_wine",
+1
+],
+"t_rose": [
+"t_rose",
+1
+],
+"w_brick": [
+"w_brick",
+1
+],
+"lot": [
+"lot",
+0.25
+],
+"lot_wall": [
+"lot_wall",
+1
+],
+"car_sedan_white_False": [
+"car_sedan_white_False",
+1
+],
+"car_compact_red_False": [
+"car_compact_red_False",
+1
+],
+"car_van_blue_dk_False": [
+"car_van_blue_dk_False",
+1
+],
+"car_taxi_False": [
+"car_taxi_False",
+1
+],
+"car_compact_blue_False": [
+"car_compact_blue_False",
+1
+],
+"car_sedan_red_False": [
+"car_sedan_red_False",
+1
+],
+"car_van_white_False": [
+"car_van_white_False",
+1
+],
+"w_redbrick": [
+"w_redbrick",
+1
+],
+"w_brownstone": [
+"w_brownstone",
+1
+],
+"r_slate": [
+"r_slate",
+1
+],
+"w_redbrick2": [
+"w_redbrick2",
+1
+],
+"w_lilac": [
+"w_lilac",
+1
+],
+"w_sage": [
+"w_sage",
+1
+],
+"w_pinkgrey": [
+"w_pinkgrey",
+1
+],
+"w_umber": [
+"w_umber",
+1
+],
+"bin_trash": [
+"bin_trash",
+1
+],
+"bin_recycle": [
+"bin_recycle",
+1
+],
+"planter_flowers_mustard": [
+"planter_flowers_mustard",
+1
+],
+"planter_flowers_pink": [
+"planter_flowers_pink",
+1
+],
+"hydrant": [
+"hydrant",
+1
+],
+"newsbox": [
+"newsbox",
+1
+],
+"newsbox_red": [
+"newsbox_red",
+1
+],
+"newsbox_green_md": [
+"newsbox_green_md",
+1
+],
+"bus_shelter": [
+"bus_shelter",
+1
+],
+"traffic_light": [
+"traffic_light",
+1
+],
+"road_sign_green_dk": [
+"road_sign_green_dk",
+1
+],
+"road_sign_red": [
+"road_sign_red",
+1
+],
+"bollard": [
+"bollard",
+1
+],
+"t_sign": [
+"t_sign",
+1
+],
+"car_sedan_blue_dk_False": [
+"car_sedan_blue_dk_False",
+1
+],
+"car_sedan_blue_False": [
+"car_sedan_blue_False",
+1
+]
+}

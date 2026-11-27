@@ -1,0 +1,162 @@
+{
+ "made": "2026-11-27, Tripo image-to-model (HD v3.1) from crops of visuals/keyframes/places/B02, fitted in Blender (art/props-tripo/scripts/fit.py)",
+ "units": "metres, +y up, feet on y=0",
+ "loader": "src/propmodels.ts",
+ "props": {
+  "bench": {
+   "file": "bench.glb",
+   "desc": "B02 park bench, 1.8 m long, seat top 0.45 m, faces +z",
+   "min": [
+    -0.9,
+    0,
+    -0.296
+   ],
+   "max": [
+    0.9,
+    1.046,
+    0.296
+   ],
+   "kb": 112
+  },
+  "lamp": {
+   "file": "lamp.glb",
+   "desc": "B02 black Boston lamp post, 3.6 m",
+   "min": [
+    -0.263,
+    0.003,
+    -0.256
+   ],
+   "max": [
+    0.265,
+    3.601,
+    0.257
+   ],
+   "kb": 54
+  },
+  "fountain": {
+   "file": "fountain.glb",
+   "desc": "B02 Brewer fountain, basin 5.4 m across (collider: 2.7 m disc in corner.ts)",
+   "min": [
+    -2.7,
+    0,
+    -2.697
+   ],
+   "max": [
+    2.7,
+    1.799,
+    2.697
+   ],
+   "kb": 193
+  },
+  "gazebo": {
+   "file": "gazebo.glb",
+   "desc": "B02 white-column bandstand, 8 m across (the corner's bandstand footprint)",
+   "min": [
+    -3.559,
+    0,
+    -4
+   ],
+   "max": [
+    3.559,
+    6.576,
+    4
+   ],
+   "kb": 209
+  },
+  "statehouse": {
+   "file": "statehouse.glb",
+   "desc": "B02 gold-dome State House, 15 m wide, on Beacon Hill",
+   "min": [
+    -7.5,
+    0,
+    -7.743
+   ],
+   "max": [
+    7.5,
+    27.682,
+    7.743
+   ],
+   "kb": 281
+  },
+  "steeple": {
+   "file": "steeple.glb",
+   "desc": "B02 Park Street Church belfry and spire, 4 m wide, 13 m tall, sits on the corner's brick tower at y 11",
+   "min": [
+    -1.762,
+    0,
+    -2
+   ],
+   "max": [
+    1.762,
+    13.133,
+    2
+   ],
+   "kb": 125
+  },
+  "duck": {
+   "file": "duck.glb",
+   "desc": "B02 mallard, 0.4 m, faces +z",
+   "min": [
+    -0.086,
+    0,
+    -0.2
+   ],
+   "max": [
+    0.086,
+    0.371,
+    0.2
+   ],
+   "kb": 74
+  },
+  "frog": {
+   "file": "frog.glb",
+   "desc": "B02 frog, 0.28 m",
+   "min": [
+    -0.138,
+    0,
+    -0.14
+   ],
+   "max": [
+    0.138,
+    0.404,
+    0.14
+   ],
+   "kb": 66
+  },
+  "squirrel": {
+   "file": "squirrel.glb",
+   "desc": "B02 red squirrel, 0.4 m",
+   "min": [
+    -0.2,
+    0,
+    -0.083
+   ],
+   "max": [
+    0.2,
+    0.235,
+    0.083
+   ],
+   "kb": 60
+  },
+  "pigeon": {
+   "file": "pigeon.glb",
+   "desc": "B02 pigeon, 0.3 m, head toward -z",
+   "min": [
+    -0.065,
+    0,
+    -0.15
+   ],
+   "max": [
+    0.065,
+    0.26,
+    0.15
+   ],
+   "kb": 71
+  }
+ },
+ "not_made": {
+  "hotdog_cart": "no clean crop in the refs (B01 has a pretzel cart with a vendor in it, cut by the frame); needs David's prop sheet",
+  "newsbox_mailbox": "not in any ref; needs David's prop sheet",
+  "shopping_cart": "not in any ref; needs David's prop sheet"
+ }
+}
