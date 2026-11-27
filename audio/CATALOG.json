@@ -1457,7 +1457,8 @@
         "speech-bubble",
         "hero"
       ],
-      "note": "play 1 random blip per 2-3 letters of bubble text, pitch +-8%"
+      "note": "play 1 random blip per 2-3 letters of bubble text, pitch +-8%; play at rate 0.72 (blips came out high, 2026-11-27)",
+      "rate": 0.72
     },
     {
       "id": "voice_man",
@@ -1469,11 +1470,8 @@
         "voices/man/man_04.mp3",
         "voices/man/man_05.mp3",
         "voices/man/man_06.mp3",
-        "voices/man/man_07.mp3",
-        "voices/man/man_08.mp3",
         "voices/man/man_09.mp3",
         "voices/man/man_10.mp3",
-        "voices/man/man_11.mp3",
         "voices/man/man_12.mp3"
       ],
       "length": null,
@@ -1487,21 +1485,18 @@
         "speech-bubble",
         "man"
       ],
-      "note": "play 1 random blip per 2-3 letters of bubble text, pitch +-8%"
+      "note": "play 1 random blip per 2-3 letters of bubble text, pitch +-8%; play at rate 0.75 (blips came out high, 2026-11-27)",
+      "rate": 0.75
     },
     {
       "id": "voice_oldman",
-      "file": "voices/oldman/oldman_01.mp3",
+      "file": "voices/oldman/oldman_02.mp3",
       "files": [
-        "voices/oldman/oldman_01.mp3",
         "voices/oldman/oldman_02.mp3",
-        "voices/oldman/oldman_03.mp3",
         "voices/oldman/oldman_04.mp3",
-        "voices/oldman/oldman_05.mp3",
         "voices/oldman/oldman_06.mp3",
         "voices/oldman/oldman_07.mp3",
         "voices/oldman/oldman_08.mp3",
-        "voices/oldman/oldman_09.mp3",
         "voices/oldman/oldman_10.mp3",
         "voices/oldman/oldman_11.mp3",
         "voices/oldman/oldman_12.mp3"
@@ -1517,7 +1512,8 @@
         "speech-bubble",
         "oldman"
       ],
-      "note": "play 1 random blip per 2-3 letters of bubble text, pitch +-8%"
+      "note": "play 1 random blip per 2-3 letters of bubble text, pitch +-8%; play at rate 0.85 (blips came out high, 2026-11-27)",
+      "rate": 0.85
     },
     {
       "id": "voice_partner",
