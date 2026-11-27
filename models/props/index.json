@@ -158,5 +158,43 @@
   "hotdog_cart": "no clean crop in the refs (B01 has a pretzel cart with a vendor in it, cut by the frame); needs David's prop sheet",
   "newsbox_mailbox": "not in any ref; needs David's prop sheet",
   "shopping_cart": "not in any ref; needs David's prop sheet"
+ },
+ "streetprops2": {
+  "made": "2026-11-27, props round 2 (David: 'props ok 500'). Tripo HD v3.1 from clean crops of art/props-sheet-2026-11-27/propsheet-1.png and art/props-sheet2-2026-11-27/propsheet-2.png (art/props2-tripo/), the rest free in Blender (art/pipeline/build_props2.py, vertex colours).",
+  "placement": "src/streetprops.ts (data, colliders), src/streetpropsview.ts (one merged mesh per 24 m chunk, one shared atlas material)",
+  "tripo": [
+   "hotdog",
+   "bikerack",
+   "cafe",
+   "hydrant",
+   "phonebooth",
+   "busstop",
+   "foodtruck",
+   "vending"
+  ],
+  "blender": [
+   "cart",
+   "loadedcart",
+   "newsbox",
+   "mailbox",
+   "bin_green",
+   "bin_blue",
+   "planter",
+   "cone",
+   "barrier",
+   "boxes",
+   "cardbed",
+   "pallets",
+   "dumpster",
+   "signpole",
+   "atm",
+   "scaffold",
+   "kiosk"
+  ],
+  "storage_feature": {
+   "note": "pockets -> plastic bag -> backpack -> shopping cart: the cart models, metres, +y up, long axis x, handle at +x",
+   "empty": "cart.glb",
+   "loaded": "loadedcart.glb"
+  }
  }
 }
