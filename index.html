@@ -1,14 +1,14 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta name="build" content="1795813254">
+  <meta name="build" content="1795813884">
   <script>
   // Never stuck on an old copy (David, 2026-11-27: "It hasn't updated on my phone"): deploy.sh stamps this page and
   // version.json with the same build id; a cached page with an older id reloads once, fresh.
   (function () {
     try {
       var mine = document.querySelector('meta[name=build]').content;
-      if (mine === '1795813254') return; // dev server
+      if (mine === '1795813884') return; // dev server
       fetch('version.json?t=' + Date.now(), { cache: 'no-store' }).then(function (r) { return r.json(); }).then(function (v) {
         if (v && v.build && v.build !== mine && sessionStorage.getItem('sgReloaded') !== v.build) {
           sessionStorage.setItem('sgReloaded', v.build);
@@ -465,7 +465,7 @@
   }
 </style>
 <!-- UI kit (2026-11-27): one look for every screen; loaded after the inline styles so it wins. src/ui/kit.css -->
-  <script type="module" crossorigin src="./assets/main-B08bD69X.js"></script>
+  <script type="module" crossorigin src="./assets/main-B73huax5.js"></script>
   <link rel="modulepreload" crossorigin href="./assets/hero3d-DCc1niaS.js">
   <link rel="stylesheet" crossorigin href="./assets/main-BBNLzmYs.css">
 </head>
