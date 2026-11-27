@@ -363,6 +363,10 @@
   .ctag { position: fixed; left: 0; top: 0; z-index: 25; pointer-events: none; font: 900 11px system-ui; letter-spacing: .04em; padding: 2px 6px; border-radius: 8px;
     background: #1a1420cc; color: #ffe9b0; border: 1px solid #fff4; white-space: nowrap; }
   .ctag.partner { color: #9fdcff; }
+  /* beta: the role colour is the tag itself (the sober grade greys out any tint on the body): host orange, guest blue */
+  .ctag.r-host, .ctag.r-guest { color: #fff; font-size: 13px; padding: 3px 9px; border: 2px solid #fff; box-shadow: 0 2px 0 #0009; text-shadow: 0 1px 0 #0008; }
+  .ctag.r-host { background: #f07a1a; } .ctag.r-guest { background: #2f8cff; }
+  .ctag.r-host::after, .ctag.r-guest::after { content: ''; position: absolute; left: 50%; bottom: -8px; margin-left: -6px; border: 6px solid transparent; border-bottom: 0; border-top-color: #fff; }
   #coEmote { position: fixed; z-index: 30; left: calc(var(--sl) + 168px); bottom: calc(var(--sb) + 26px); width: 52px; height: 52px; border-radius: 26px; font-size: 24px; background: #1c1c1ccc; }
   #coWheel { position: fixed; z-index: 31; left: calc(var(--sl) + 18px); bottom: calc(var(--sb) + 92px); display: grid; grid-template-columns: 1fr 1fr; gap: 8px; width: min(300px, calc(100vw - 36px)); }
   #coWheel.hidden { display: none; }
@@ -378,7 +382,7 @@
     #coChip { top: calc(var(--st) + 100px); }
   }
 </style>
-  <script type="module" crossorigin src="./assets/main-B2MtRCbH.js"></script>
+  <script type="module" crossorigin src="./assets/main-769dkwoh.js"></script>
   <link rel="modulepreload" crossorigin href="./assets/hero3d-CJ36fARK.js">
 </head>
 <body>
