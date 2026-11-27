@@ -358,6 +358,11 @@
   .coopStatus.err { color: #ff9a8a; }
   .coopNote { font-size: 14px; color: #ff9a8a; text-align: center; font-weight: 700; }
   #screen .kbtn[disabled] { opacity: .45; }
+  .charRow { display: flex; gap: 8px; justify-content: center; width: 100%; }
+  #screen .charCard { flex: 1 1 0; min-width: 0; max-width: 160px; min-height: 44px; padding: 4px 8px; border-radius: 12px; border: 3px solid #ffffff30; background: #1c1824e6; color: #fff;
+    font: 800 15px system-ui; display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 6px; box-shadow: none; }
+  #screen .charCard b { font-size: 15px; color: #fff; }
+  #screen .charCard.on { border-color: #ffd84a; background: #4a3612f0; }
   #coopUi { display: none; }
   body.coop:not(.title) #coopUi { display: block; }
   .ctag { position: fixed; left: 0; top: 0; z-index: 25; pointer-events: none; font: 900 11px system-ui; letter-spacing: .04em; padding: 2px 6px; border-radius: 8px;
@@ -382,8 +387,8 @@
     #coChip { top: calc(var(--st) + 100px); }
   }
 </style>
-  <script type="module" crossorigin src="./assets/main-CbTBuYg4.js"></script>
-  <link rel="modulepreload" crossorigin href="./assets/hero3d-CEB8tRlU.js">
+  <script type="module" crossorigin src="./assets/main-BDus3ZS9.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/hero3d-ewoXl0BM.js">
 </head>
 <body>
 <div id="hud">
