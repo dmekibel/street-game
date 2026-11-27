@@ -1,0 +1,67 @@
+{
+ "note": "Crowd pass test list (load with ?castidx=index.next.json). index.json is the live one.",
+ "cast": [
+  {
+   "id": "rookie",
+   "file": "rookie.glb",
+   "skip": [
+    "sob"
+   ]
+  },
+  {
+   "id": "nurse",
+   "file": "nurse.glb",
+   "skip": [
+    "frightened",
+    "sob"
+   ]
+  },
+  {
+   "id": "suit",
+   "file": "suit.glb",
+   "skip": [
+    "frightened"
+   ]
+  },
+  {
+   "id": "tourist",
+   "file": "tourist.glb"
+  },
+  {
+   "id": "donutcop",
+   "file": "donutcop.glb",
+   "skip": [
+    "sob"
+   ]
+  },
+  {
+   "id": "oldtimer",
+   "file": "oldtimer.glb"
+  },
+  {
+   "id": "whistlecop",
+   "file": "whistlecop.glb",
+   "skip": [
+    "sob"
+   ]
+  },
+  {
+   "id": "puffer",
+   "file": "puffer.glb"
+  },
+  {
+   "id": "redcoat",
+   "file": "redcoat.glb",
+   "skip": [
+    "frightened"
+   ]
+  },
+  {
+   "id": "oldman",
+   "file": "oldman.glb",
+   "skip": [
+    "sob"
+   ]
+  }
+ ]
+}
