@@ -74,7 +74,7 @@
     background: #1c1c1ccc; border: 2px solid #fff6; color: #fff; border-radius: 27px; font-size: 18px; font-weight: 800;
     box-shadow: 0 3px 0 #0008; }
   .act.first { min-height: 64px; border-radius: 32px; font-size: 20px; border-color: #fff; }
-  .act.whimsy { background: linear-gradient(135deg, #ff5fb4, #a65cff); border-color: #ffd0f0; }
+  /* .act.whimsy: the hot-pink pill was replaced by the kit's gold whimsy tile (L262, src/ui/kit.css) */
   .act.dim { opacity: .45; }
   .act:active, .round:active { transform: translateY(2px) scale(.96); box-shadow: none; }
   .round { width: 76px; height: 76px; border-radius: 38px; background: radial-gradient(circle at 35% 30%, #ffd27a, #d88a1a);
@@ -241,7 +241,6 @@
   .act { background: var(--slate); border: 3px solid var(--ink); border-radius: 16px; box-shadow: inset 0 0 0 2px #ffffff26, 0 4px 0 var(--ink);
     text-shadow: 0 2px 0 var(--ink); letter-spacing: .02em; }
   .act.first { background: var(--green); border-color: var(--ink); box-shadow: inset 0 -5px 0 #3a8a2c, inset 0 0 0 2px #ffffff40, 0 4px 0 var(--ink); }
-  .act.whimsy { background: #e0559e; border-color: var(--ink); }
   .act.beg { background: var(--orange); }
   .act.moreBtn { min-width: 44px; min-height: 44px; padding: 0 12px; font-size: 22px; }
   #acts:not(.more) .act:not(:last-child):not(.moreBtn) { display: none; }
@@ -387,8 +386,10 @@
     #coChip { top: calc(var(--st) + 100px); }
   }
 </style>
-  <script type="module" crossorigin src="./assets/main-CDjAqhMo.js"></script>
-  <link rel="modulepreload" crossorigin href="./assets/hero3d-ewoXl0BM.js">
+<!-- UI kit (2026-11-27): one look for every screen; loaded after the inline styles so it wins. src/ui/kit.css -->
+  <script type="module" crossorigin src="./assets/main-8RvzvUIS.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/hero3d-C2rPR-7B.js">
+  <link rel="stylesheet" crossorigin href="./assets/main-vprXT9xX.css">
 </head>
 <body>
 <div id="hud">

@@ -1,1 +1,7 @@
-{"note":"Which player models exist (players.ts reads this first so a missing file never shows a 404). Add david.glb / gf.glb here when they land.","files":[]}
+{
+ "note": "Which player models exist (players.ts reads this first so a missing file never shows a 404). Add david.glb / gf.glb here when they land.",
+ "files": [
+  "david.glb",
+  "gf.glb"
+ ]
+}
