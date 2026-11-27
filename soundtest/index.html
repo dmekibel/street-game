@@ -158,7 +158,7 @@ async function startScene(name, ids, gains, loop = true) {
   for (const id of ids) {
     const s = c.createBufferSource(); s.buffer = b[id]; s.loop = loop;
     const g = c.createGain(); g.gain.value = (gains[id] ?? 1) * vol(id);
-    s.connect(g); g.connect(out); s.start(t); nodes[id] = { src: s, gain: g };
+    s.connect(g); g.connect(out); s.start(t, (byId[id] && byId[id].offset) || 0); nodes[id] = { src: s, gain: g };
   }
   scene = { name, nodes, out };
   dropOtherMusic(ids);

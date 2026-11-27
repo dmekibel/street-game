@@ -1,1574 +1,1583 @@
 {
- "version": 1,
- "base": "audio/",
- "note": "file paths are relative to the audio/ folder; volume = suggested 0-1 gain",
- "sounds": [
-  {
-   "id": "amb_bar_street",
-   "file": "ambience/amb_bar_street.mp3",
-   "length": 30.0,
-   "loop": true,
-   "category": "ambience",
-   "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
-   "licence": "ElevenLabs paid-plan output, commercial use allowed",
-   "volume": 0.6,
-   "tags": [
-    "bar",
-    "night",
-    "chatter"
-   ]
-  },
-  {
-   "id": "amb_harbour",
-   "file": "ambience/amb_harbour.mp3",
-   "length": 30.0,
-   "loop": true,
-   "category": "ambience",
-   "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
-   "licence": "ElevenLabs paid-plan output, commercial use allowed",
-   "volume": 0.6,
-   "tags": [
-    "river",
-    "harbour",
-    "waterfront"
-   ]
-  },
-  {
-   "id": "amb_park",
-   "file": "ambience/amb_park.mp3",
-   "length": 30.0,
-   "loop": true,
-   "category": "ambience",
-   "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
-   "licence": "ElevenLabs paid-plan output, commercial use allowed",
-   "volume": 0.6,
-   "tags": [
-    "park",
-    "birds",
-    "morning"
-   ]
-  },
-  {
-   "id": "amb_rain",
-   "file": "ambience/amb_rain.mp3",
-   "length": 30.0,
-   "loop": true,
-   "category": "ambience",
-   "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
-   "licence": "ElevenLabs paid-plan output, commercial use allowed",
-   "volume": 0.6,
-   "tags": [
-    "rain",
-    "weather"
-   ]
-  },
-  {
-   "id": "amb_street_day",
-   "file": "ambience/amb_street_day.mp3",
-   "length": 30.0,
-   "loop": true,
-   "category": "ambience",
-   "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
-   "licence": "ElevenLabs paid-plan output, commercial use allowed",
-   "volume": 0.6,
-   "tags": [
-    "day",
-    "street",
-    "downtown"
-   ]
-  },
-  {
-   "id": "amb_street_night",
-   "file": "ambience/amb_street_night.mp3",
-   "length": 30.0,
-   "loop": true,
-   "category": "ambience",
-   "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
-   "licence": "ElevenLabs paid-plan output, commercial use allowed",
-   "volume": 0.6,
-   "tags": [
-    "night",
-    "street"
-   ]
-  },
-  {
-   "id": "amb_traffic_far",
-   "file": "ambience/amb_traffic_far.mp3",
-   "length": 30.0,
-   "loop": true,
-   "category": "ambience",
-   "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
-   "licence": "ElevenLabs paid-plan output, commercial use allowed",
-   "volume": 0.6,
-   "tags": [
-    "alley",
-    "traffic",
-    "distant"
-   ]
-  },
-  {
-   "id": "band_bass",
-   "file": "music/band_bass.mp3",
-   "length": 103.74,
-   "loop": true,
-   "category": "music",
-   "group": "theme",
-   "source": "ElevenLabs Eleven Music (music_v2_5) + ElevenLabs stem separation, David's Creator plan",
-   "licence": "Eleven Music terms: Creator = online/offline commercial use except film/TV/radio/Studio Games; an Indie Game (<$500k revenue) is allowed; no attribution required",
-   "emotion": "playful",
-   "style": "street-jazz",
-   "tags": [
-    "theme",
-    "main"
-   ],
-   "volume": 1.0,
-   "layer": "band-2-bass"
-  },
-  {
-   "id": "band_drums",
-   "file": "music/band_drums.mp3",
-   "length": 103.74,
-   "loop": true,
-   "category": "music",
-   "group": "theme",
-   "source": "ElevenLabs Eleven Music (music_v2_5) + ElevenLabs stem separation, David's Creator plan",
-   "licence": "Eleven Music terms: Creator = online/offline commercial use except film/TV/radio/Studio Games; an Indie Game (<$500k revenue) is allowed; no attribution required",
-   "emotion": "playful",
-   "style": "street-jazz",
-   "tags": [
-    "theme",
-    "main"
-   ],
-   "volume": 1.0,
-   "layer": "band-1-drums"
-  },
-  {
-   "id": "band_horns",
-   "file": "music/band_horns.mp3",
-   "length": 103.74,
-   "loop": true,
-   "category": "music",
-   "group": "theme",
-   "source": "ElevenLabs Eleven Music (music_v2_5) + ElevenLabs stem separation, David's Creator plan",
-   "licence": "Eleven Music terms: Creator = online/offline commercial use except film/TV/radio/Studio Games; an Indie Game (<$500k revenue) is allowed; no attribution required",
-   "emotion": "playful",
-   "style": "street-jazz",
-   "tags": [
-    "theme",
-    "main"
-   ],
-   "volume": 1.0,
-   "layer": "band-4-horns"
-  },
-  {
-   "id": "band_keys",
-   "file": "music/band_keys.mp3",
-   "length": 103.74,
-   "loop": true,
-   "category": "music",
-   "group": "theme",
-   "source": "ElevenLabs Eleven Music (music_v2_5) + ElevenLabs stem separation, David's Creator plan",
-   "licence": "Eleven Music terms: Creator = online/offline commercial use except film/TV/radio/Studio Games; an Indie Game (<$500k revenue) is allowed; no attribution required",
-   "emotion": "playful",
-   "style": "street-jazz",
-   "tags": [
-    "theme",
-    "main"
-   ],
-   "volume": 1.0,
-   "layer": "band-3-keys"
-  },
-  {
-   "id": "cue_death",
-   "file": "music/cue_death.mp3",
-   "length": 8.01,
-   "loop": false,
-   "category": "music",
-   "source": "ElevenLabs Eleven Music (music_v2_5), David's Creator plan",
-   "licence": "Eleven Music terms: Creator = online/offline commercial use except film/TV/radio/Studio Games; an Indie Game (<$500k revenue) is allowed; no attribution required",
-   "volume": 0.85,
-   "emotion": "grief",
-   "style": "lone-guitar",
-   "tags": [
-    "death",
-    "obituary"
-   ]
-  },
-  {
-   "id": "cue_first_swig",
-   "file": "music/cue_first_swig.mp3",
-   "length": 5.06,
-   "loop": false,
-   "category": "music",
-   "source": "ElevenLabs Eleven Music (music_v2_5), David's Creator plan",
-   "licence": "Eleven Music terms: Creator = online/offline commercial use except film/TV/radio/Studio Games; an Indie Game (<$500k revenue) is allowed; no attribution required",
-   "volume": 0.9,
-   "emotion": "joy",
-   "style": "street-jazz",
-   "tags": [
-    "sting",
-    "first-drink"
-   ]
-  },
-  {
-   "id": "cue_grief_funeral",
-   "file": "music/cue_grief_funeral.mp3",
-   "length": 26.86,
-   "loop": false,
-   "category": "music",
-   "source": "ElevenLabs Eleven Music (music_v2_5), David's Creator plan",
-   "licence": "Eleven Music terms: Creator = online/offline commercial use except film/TV/radio/Studio Games; an Indie Game (<$500k revenue) is allowed; no attribution required",
-   "volume": 0.85,
-   "emotion": "grief",
-   "style": "lone-guitar",
-   "tags": [
-    "funeral",
-    "obituary",
-    "memorial"
-   ]
-  },
-  {
-   "id": "cue_hope_revive",
-   "file": "music/cue_hope_revive.mp3",
-   "length": 14.77,
-   "loop": false,
-   "category": "music",
-   "source": "ElevenLabs Eleven Music (music_v2_5), David's Creator plan",
-   "licence": "Eleven Music terms: Creator = online/offline commercial use except film/TV/radio/Studio Games; an Indie Game (<$500k revenue) is allowed; no attribution required",
-   "volume": 0.85,
-   "emotion": "hope",
-   "style": "dream-piano",
-   "tags": [
-    "revive",
-    "partner"
-   ]
-  },
-  {
-   "id": "cue_memory",
-   "file": "music/cue_memory.mp3",
-   "length": 19.43,
-   "loop": false,
-   "category": "music",
-   "source": "ElevenLabs Eleven Music (music_v2_5), David's Creator plan",
-   "licence": "Eleven Music terms: Creator = online/offline commercial use except film/TV/radio/Studio Games; an Indie Game (<$500k revenue) is allowed; no attribution required",
-   "volume": 0.8,
-   "emotion": "nostalgic",
-   "style": "dream-piano",
-   "tags": [
-    "memory",
-    "city-remembers"
-   ]
-  },
-  {
-   "id": "cue_whimsy_peak",
-   "file": "music/cue_whimsy_peak.mp3",
-   "length": 14.63,
-   "loop": false,
-   "category": "music",
-   "source": "ElevenLabs Eleven Music (music_v2_5), David's Creator plan",
-   "licence": "Eleven Music terms: Creator = online/offline commercial use except film/TV/radio/Studio Games; an Indie Game (<$500k revenue) is allowed; no attribution required",
-   "volume": 0.9,
-   "emotion": "euphoric",
-   "style": "street-jazz",
-   "tags": [
-    "celebration",
-    "whimsy-max"
-   ]
-  },
-  {
-   "id": "duet_grief",
-   "file": "music/duet_grief.mp3",
-   "length": 56.0,
-   "loop": true,
-   "category": "music",
-   "group": "leitmotif-grief",
-   "source": "ElevenLabs Eleven Music (music_v2_5) + ElevenLabs stem separation, David's Creator plan",
-   "licence": "Eleven Music terms: Creator = online/offline commercial use except film/TV/radio/Studio Games; an Indie Game (<$500k revenue) is allowed; no attribution required",
-   "emotion": "grief",
-   "style": "dream-piano",
-   "tags": [
-    "leitmotif",
-    "couple",
-    "grief"
-   ],
-   "volume": 0.8,
-   "layer": "duet"
-  },
-  {
-   "id": "duet_hope",
-   "file": "music/duet_hope.mp3",
-   "length": 64.28,
-   "loop": true,
-   "category": "music",
-   "group": "leitmotif-hope",
-   "source": "ElevenLabs Eleven Music (music_v2_5) + ElevenLabs stem separation, David's Creator plan",
-   "licence": "Eleven Music terms: Creator = online/offline commercial use except film/TV/radio/Studio Games; an Indie Game (<$500k revenue) is allowed; no attribution required",
-   "emotion": "hope",
-   "style": "dream-piano",
-   "tags": [
-    "leitmotif",
-    "couple",
-    "hope"
-   ],
-   "volume": 0.8,
-   "layer": "duet"
-  },
-  {
-   "id": "duet_tender",
-   "file": "music/duet_tender.mp3",
-   "length": 71.06,
-   "loop": true,
-   "category": "music",
-   "group": "leitmotif-tender",
-   "source": "ElevenLabs Eleven Music (music_v2_5) + ElevenLabs stem separation, David's Creator plan",
-   "licence": "Eleven Music terms: Creator = online/offline commercial use except film/TV/radio/Studio Games; an Indie Game (<$500k revenue) is allowed; no attribution required",
-   "emotion": "tender",
-   "style": "dream-piano",
-   "tags": [
-    "leitmotif",
-    "couple",
-    "tender"
-   ],
-   "volume": 0.8,
-   "layer": "duet"
-  },
-  {
-   "id": "hers_grief",
-   "file": "music/hers_grief.mp3",
-   "length": 56.0,
-   "loop": true,
-   "category": "music",
-   "group": "leitmotif-grief",
-   "source": "ElevenLabs Eleven Music (music_v2_5) + ElevenLabs stem separation, David's Creator plan",
-   "licence": "Eleven Music terms: Creator = online/offline commercial use except film/TV/radio/Studio Games; an Indie Game (<$500k revenue) is allowed; no attribution required",
-   "emotion": "grief",
-   "style": "dream-piano",
-   "tags": [
-    "leitmotif",
-    "couple",
-    "grief"
-   ],
-   "volume": 0.8,
-   "layer": "her-piano"
-  },
-  {
-   "id": "hers_hope",
-   "file": "music/hers_hope.mp3",
-   "length": 64.28,
-   "loop": true,
-   "category": "music",
-   "group": "leitmotif-hope",
-   "source": "ElevenLabs Eleven Music (music_v2_5) + ElevenLabs stem separation, David's Creator plan",
-   "licence": "Eleven Music terms: Creator = online/offline commercial use except film/TV/radio/Studio Games; an Indie Game (<$500k revenue) is allowed; no attribution required",
-   "emotion": "hope",
-   "style": "dream-piano",
-   "tags": [
-    "leitmotif",
-    "couple",
-    "hope"
-   ],
-   "volume": 0.8,
-   "layer": "her-piano"
-  },
-  {
-   "id": "hers_tender",
-   "file": "music/hers_tender.mp3",
-   "length": 71.06,
-   "loop": true,
-   "category": "music",
-   "group": "leitmotif-tender",
-   "source": "ElevenLabs Eleven Music (music_v2_5) + ElevenLabs stem separation, David's Creator plan",
-   "licence": "Eleven Music terms: Creator = online/offline commercial use except film/TV/radio/Studio Games; an Indie Game (<$500k revenue) is allowed; no attribution required",
-   "emotion": "tender",
-   "style": "dream-piano",
-   "tags": [
-    "leitmotif",
-    "couple",
-    "tender"
-   ],
-   "volume": 0.8,
-   "layer": "her-piano"
-  },
-  {
-   "id": "his_grief",
-   "file": "music/his_grief.mp3",
-   "length": 56.0,
-   "loop": true,
-   "category": "music",
-   "group": "leitmotif-grief",
-   "source": "ElevenLabs Eleven Music (music_v2_5) + ElevenLabs stem separation, David's Creator plan",
-   "licence": "Eleven Music terms: Creator = online/offline commercial use except film/TV/radio/Studio Games; an Indie Game (<$500k revenue) is allowed; no attribution required",
-   "emotion": "grief",
-   "style": "dream-piano",
-   "tags": [
-    "leitmotif",
-    "couple",
-    "grief"
-   ],
-   "volume": 0.8,
-   "layer": "his-guitar"
-  },
-  {
-   "id": "his_hope",
-   "file": "music/his_hope.mp3",
-   "length": 64.28,
-   "loop": true,
-   "category": "music",
-   "group": "leitmotif-hope",
-   "source": "ElevenLabs Eleven Music (music_v2_5) + ElevenLabs stem separation, David's Creator plan",
-   "licence": "Eleven Music terms: Creator = online/offline commercial use except film/TV/radio/Studio Games; an Indie Game (<$500k revenue) is allowed; no attribution required",
-   "emotion": "hope",
-   "style": "dream-piano",
-   "tags": [
-    "leitmotif",
-    "couple",
-    "hope"
-   ],
-   "volume": 0.8,
-   "layer": "his-guitar"
-  },
-  {
-   "id": "his_tender",
-   "file": "music/his_tender.mp3",
-   "length": 71.06,
-   "loop": true,
-   "category": "music",
-   "group": "leitmotif-tender",
-   "source": "ElevenLabs Eleven Music (music_v2_5) + ElevenLabs stem separation, David's Creator plan",
-   "licence": "Eleven Music terms: Creator = online/offline commercial use except film/TV/radio/Studio Games; an Indie Game (<$500k revenue) is allowed; no attribution required",
-   "emotion": "tender",
-   "style": "dream-piano",
-   "tags": [
-    "leitmotif",
-    "couple",
-    "tender"
-   ],
-   "volume": 0.8,
-   "layer": "his-guitar"
-  },
-  {
-   "id": "mood_bittersweet",
-   "file": "music/mood_bittersweet.mp3",
-   "length": 74.99,
-   "loop": true,
-   "category": "music",
-   "source": "ElevenLabs Eleven Music (music_v2_5), David's Creator plan",
-   "licence": "Eleven Music terms: Creator = online/offline commercial use except film/TV/radio/Studio Games; an Indie Game (<$500k revenue) is allowed; no attribution required",
-   "volume": 0.8,
-   "emotion": "bittersweet",
-   "style": "lone-guitar",
-   "tags": [
-    "dusk",
-    "golden-hour",
-    "comedown"
-   ]
-  },
-  {
-   "id": "mood_calm",
-   "file": "music/mood_calm.mp3",
-   "length": 88.98,
-   "loop": true,
-   "category": "music",
-   "source": "ElevenLabs Eleven Music (music_v2_5), David's Creator plan",
-   "licence": "Eleven Music terms: Creator = online/offline commercial use except film/TV/radio/Studio Games; an Indie Game (<$500k revenue) is allowed; no attribution required",
-   "volume": 0.75,
-   "emotion": "calm",
-   "style": "calm-piano",
-   "tags": [
-    "explore",
-    "early-morning",
-    "calm-night"
-   ]
-  },
-  {
-   "id": "mood_euphoric",
-   "file": "music/mood_euphoric.mp3",
-   "length": 65.0,
-   "loop": true,
-   "category": "music",
-   "source": "ElevenLabs Eleven Music (music_v2_5), David's Creator plan",
-   "licence": "Eleven Music terms: Creator = online/offline commercial use except film/TV/radio/Studio Games; an Indie Game (<$500k revenue) is allowed; no attribution required",
-   "volume": 0.85,
-   "emotion": "euphoric",
-   "style": "street-jazz",
-   "tags": [
-    "parade",
-    "whimsy-peak",
-    "band"
-   ]
-  },
-  {
-   "id": "mood_hope",
-   "file": "music/mood_hope.mp3",
-   "length": 65.71,
-   "loop": true,
-   "category": "music",
-   "source": "ElevenLabs Eleven Music (music_v2_5), David's Creator plan",
-   "licence": "Eleven Music terms: Creator = online/offline commercial use except film/TV/radio/Studio Games; an Indie Game (<$500k revenue) is allowed; no attribution required",
-   "volume": 0.8,
-   "emotion": "hope",
-   "style": "dream-piano",
-   "tags": [
-    "kindness",
-    "sharing",
-    "warmth"
-   ]
-  },
-  {
-   "id": "mood_melancholy",
-   "file": "music/mood_melancholy.mp3",
-   "length": 71.83,
-   "loop": true,
-   "category": "music",
-   "source": "ElevenLabs Eleven Music (music_v2_5), David's Creator plan",
-   "licence": "Eleven Music terms: Creator = online/offline commercial use except film/TV/radio/Studio Games; an Indie Game (<$500k revenue) is allowed; no attribution required",
-   "volume": 0.8,
-   "emotion": "melancholy",
-   "style": "lone-guitar",
-   "tags": [
-    "morning",
-    "hangover",
-    "rain",
-    "alone"
-   ]
-  },
-  {
-   "id": "mood_tender",
-   "file": "music/mood_tender.mp3",
-   "length": 82.89,
-   "loop": true,
-   "category": "music",
-   "source": "ElevenLabs Eleven Music (music_v2_5), David's Creator plan",
-   "licence": "Eleven Music terms: Creator = online/offline commercial use except film/TV/radio/Studio Games; an Indie Game (<$500k revenue) is allowed; no attribution required",
-   "volume": 0.75,
-   "emotion": "tender",
-   "style": "dream-piano",
-   "tags": [
-    "bench",
-    "night",
-    "couple",
-    "blanket"
-   ]
-  },
-  {
-   "id": "mood_tension",
-   "file": "music/mood_tension.mp3",
-   "length": 69.09,
-   "loop": true,
-   "category": "music",
-   "source": "ElevenLabs Eleven Music (music_v2_5), David's Creator plan",
-   "licence": "Eleven Music terms: Creator = online/offline commercial use except film/TV/radio/Studio Games; an Indie Game (<$500k revenue) is allowed; no attribution required",
-   "volume": 0.8,
-   "emotion": "tension",
-   "style": "street-jazz",
-   "tags": [
-    "chase",
-    "cops",
-    "fight",
-    "traffic"
-   ]
-  },
-  {
-   "id": "mood_whimsy",
-   "file": "music/mood_whimsy.mp3",
-   "length": 56.24,
-   "loop": true,
-   "category": "music",
-   "source": "ElevenLabs Eleven Music (music_v2_5), David's Creator plan",
-   "licence": "Eleven Music terms: Creator = online/offline commercial use except film/TV/radio/Studio Games; an Indie Game (<$500k revenue) is allowed; no attribution required",
-   "volume": 0.8,
-   "emotion": "whimsical",
-   "style": "dream-piano",
-   "tags": [
-    "whimsy",
-    "drunk",
-    "sharing-a-bottle"
-   ]
-  },
-  {
-   "id": "texture_lone_guitar",
-   "file": "music/texture_lone_guitar.mp3",
-   "length": 54.93,
-   "loop": true,
-   "category": "music",
-   "source": "ElevenLabs Eleven Music (music_v2_5), David's Creator plan",
-   "licence": "Eleven Music terms: Creator = online/offline commercial use except film/TV/radio/Studio Games; an Indie Game (<$500k revenue) is allowed; no attribution required",
-   "volume": 0.5,
-   "emotion": "lonely",
-   "style": "lone-guitar",
-   "tags": [
-    "texture",
-    "layer",
-    "under-theme"
-   ]
-  },
-  {
-   "id": "theme_drunk",
-   "file": "music/theme_drunk.mp3",
-   "length": 103.74,
-   "loop": true,
-   "category": "music",
-   "group": "theme",
-   "source": "ElevenLabs Eleven Music (music_v2_5) + ElevenLabs stem separation, David's Creator plan",
-   "licence": "Eleven Music terms: Creator = online/offline commercial use except film/TV/radio/Studio Games; an Indie Game (<$500k revenue) is allowed; no attribution required",
-   "emotion": "playful",
-   "style": "street-jazz",
-   "tags": [
-    "theme",
-    "main"
-   ],
-   "volume": 0.85,
-   "layer": "drunk"
-  },
-  {
-   "id": "theme_night",
-   "file": "music/theme_night.mp3",
-   "length": 81.65,
-   "loop": true,
-   "category": "music",
-   "source": "ElevenLabs Eleven Music (music_v2_5), David's Creator plan",
-   "licence": "Eleven Music terms: Creator = online/offline commercial use except film/TV/radio/Studio Games; an Indie Game (<$500k revenue) is allowed; no attribution required",
-   "volume": 0.8,
-   "emotion": "lonely",
-   "style": "lone-guitar",
-   "tags": [
-    "night",
-    "walk",
-    "theme"
-   ]
-  },
-  {
-   "id": "theme_sober",
-   "file": "music/theme_sober.mp3",
-   "length": 103.74,
-   "loop": true,
-   "category": "music",
-   "group": "theme",
-   "source": "ElevenLabs Eleven Music (music_v2_5) + ElevenLabs stem separation, David's Creator plan",
-   "licence": "Eleven Music terms: Creator = online/offline commercial use except film/TV/radio/Studio Games; an Indie Game (<$500k revenue) is allowed; no attribution required",
-   "emotion": "playful",
-   "style": "street-jazz",
-   "tags": [
-    "theme",
-    "main"
-   ],
-   "volume": 0.8,
-   "layer": "sober",
-   "note": "piano only (the drunk mix's own piano), lifted 2 dB"
-  },
-  {
-   "id": "theme_tipsy",
-   "file": "music/theme_tipsy.mp3",
-   "length": 103.74,
-   "loop": true,
-   "category": "music",
-   "group": "theme",
-   "source": "ElevenLabs Eleven Music (music_v2_5) + ElevenLabs stem separation, David's Creator plan",
-   "licence": "Eleven Music terms: Creator = online/offline commercial use except film/TV/radio/Studio Games; an Indie Game (<$500k revenue) is allowed; no attribution required",
-   "emotion": "playful",
-   "style": "street-jazz",
-   "tags": [
-    "theme",
-    "main"
-   ],
-   "volume": 0.85,
-   "layer": "tipsy"
-  },
-  {
-   "id": "applause",
-   "file": "sfx/applause.mp3",
-   "length": 3.4,
-   "loop": false,
-   "category": "sfx",
-   "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
-   "licence": "ElevenLabs paid-plan output, commercial use allowed",
-   "volume": 0.8,
-   "tags": [
-    "applause"
-   ]
-  },
-  {
-   "id": "bin_knock",
-   "file": "sfx/bin_knock.mp3",
-   "length": 2.2,
-   "loop": false,
-   "category": "sfx",
-   "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
-   "licence": "ElevenLabs paid-plan output, commercial use allowed",
-   "volume": 0.8,
-   "tags": [
-    "bin"
-   ]
-  },
-  {
-   "id": "boo",
-   "file": "sfx/boo.mp3",
-   "length": 1.0,
-   "loop": false,
-   "category": "sfx",
-   "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
-   "licence": "ElevenLabs paid-plan output, commercial use allowed",
-   "volume": 0.8,
-   "tags": [
-    "boo"
-   ]
-  },
-  {
-   "id": "bottle_clink",
-   "file": "sfx/bottle_clink.mp3",
-   "length": 0.57,
-   "loop": false,
-   "category": "sfx",
-   "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
-   "licence": "ElevenLabs paid-plan output, commercial use allowed",
-   "volume": 0.8,
-   "tags": [
-    "bottle"
-   ]
-  },
-  {
-   "id": "bottle_clink_2",
-   "file": "sfx/bottle_clink_2.mp3",
-   "length": 0.64,
-   "loop": false,
-   "category": "sfx",
-   "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
-   "licence": "ElevenLabs paid-plan output, commercial use allowed",
-   "volume": 0.8,
-   "tags": [
-    "bottle"
-   ]
-  },
-  {
-   "id": "bottle_pickup",
-   "file": "sfx/bottle_pickup.mp3",
-   "length": 0.39,
-   "loop": false,
-   "category": "sfx",
-   "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
-   "licence": "ElevenLabs paid-plan output, commercial use allowed",
-   "volume": 0.8,
-   "tags": [
-    "bottle"
-   ]
-  },
-  {
-   "id": "cans_recycle",
-   "file": "sfx/cans_recycle.mp3",
-   "length": 1.53,
-   "loop": false,
-   "category": "sfx",
-   "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
-   "licence": "ElevenLabs paid-plan output, commercial use allowed",
-   "volume": 0.8,
-   "tags": [
-    "cans"
-   ]
-  },
-  {
-   "id": "car_horn",
-   "file": "sfx/car_horn.mp3",
-   "length": 1.2,
-   "loop": false,
-   "category": "sfx",
-   "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
-   "licence": "ElevenLabs paid-plan output, commercial use allowed",
-   "volume": 0.8,
-   "tags": [
-    "car"
-   ]
-  },
-  {
-   "id": "cart_rattle",
-   "file": "sfx/cart_rattle.mp3",
-   "length": 4.0,
-   "loop": true,
-   "category": "sfx",
-   "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
-   "licence": "ElevenLabs paid-plan output, commercial use allowed",
-   "volume": 0.5,
-   "tags": [
-    "cart"
-   ]
-  },
-  {
-   "id": "cash_register",
-   "file": "sfx/cash_register.mp3",
-   "length": 1.6,
-   "loop": false,
-   "category": "sfx",
-   "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
-   "licence": "ElevenLabs paid-plan output, commercial use allowed",
-   "volume": 0.8,
-   "tags": [
-    "cash"
-   ]
-  },
-  {
-   "id": "cloth_rustle",
-   "file": "sfx/cloth_rustle.mp3",
-   "length": 0.64,
-   "loop": false,
-   "category": "sfx",
-   "source": "Kenney kenney-rpg-audio (CC0) via Kenney's own OpenGameArt upload",
-   "licence": "CC0 1.0 (Kenney, kenney.nl); credit optional",
-   "volume": 0.7,
-   "tags": [
-    "sfx"
-   ]
-  },
-  {
-   "id": "coin_single",
-   "file": "sfx/coin_single.mp3",
-   "length": 0.62,
-   "loop": false,
-   "category": "sfx",
-   "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
-   "licence": "ElevenLabs paid-plan output, commercial use allowed",
-   "volume": 0.8,
-   "tags": [
-    "coin"
-   ]
-  },
-  {
-   "id": "coins_several",
-   "file": "sfx/coins_several.mp3",
-   "length": 0.76,
-   "loop": false,
-   "category": "sfx",
-   "source": "Kenney kenney-rpg-audio (CC0) via Kenney's own OpenGameArt upload",
-   "licence": "CC0 1.0 (Kenney, kenney.nl); credit optional",
-   "volume": 0.7,
-   "tags": [
-    "sfx"
-   ]
-  },
-  {
-   "id": "coins_several_2",
-   "file": "sfx/coins_several_2.mp3",
-   "length": 0.33,
-   "loop": false,
-   "category": "sfx",
-   "source": "Kenney kenney-rpg-audio (CC0) via Kenney's own OpenGameArt upload",
-   "licence": "CC0 1.0 (Kenney, kenney.nl); credit optional",
-   "volume": 0.7,
-   "tags": [
-    "sfx"
-   ]
-  },
-  {
-   "id": "cop_hey",
-   "file": "sfx/cop_hey.mp3",
-   "length": 0.88,
-   "loop": false,
-   "category": "sfx",
-   "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
-   "licence": "ElevenLabs paid-plan output, commercial use allowed",
-   "volume": 0.8,
-   "tags": [
-    "cop"
-   ]
-  },
-  {
-   "id": "crowd_gasp",
-   "file": "sfx/crowd_gasp.mp3",
-   "length": 1.3,
-   "loop": false,
-   "category": "sfx",
-   "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
-   "licence": "ElevenLabs paid-plan output, commercial use allowed",
-   "volume": 0.8,
-   "tags": [
-    "crowd"
-   ]
-  },
-  {
-   "id": "crowd_laugh",
-   "file": "sfx/crowd_laugh.mp3",
-   "length": 2.87,
-   "loop": false,
-   "category": "sfx",
-   "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
-   "licence": "ElevenLabs paid-plan output, commercial use allowed",
-   "volume": 0.8,
-   "tags": [
-    "crowd"
-   ]
-  },
-  {
-   "id": "dog_bark",
-   "file": "sfx/dog_bark.mp3",
-   "length": 0.96,
-   "loop": false,
-   "category": "sfx",
-   "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
-   "licence": "ElevenLabs paid-plan output, commercial use allowed",
-   "volume": 0.8,
-   "tags": [
-    "dog"
-   ]
-  },
-  {
-   "id": "door_bell",
-   "file": "sfx/door_bell.mp3",
-   "length": 1.38,
-   "loop": false,
-   "category": "sfx",
-   "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
-   "licence": "ElevenLabs paid-plan output, commercial use allowed",
-   "volume": 0.8,
-   "tags": [
-    "door"
-   ]
-  },
-  {
-   "id": "door_close",
-   "file": "sfx/door_close.mp3",
-   "length": 0.68,
-   "loop": false,
-   "category": "sfx",
-   "source": "Kenney kenney-rpg-audio (CC0) via Kenney's own OpenGameArt upload",
-   "licence": "CC0 1.0 (Kenney, kenney.nl); credit optional",
-   "volume": 0.7,
-   "tags": [
-    "sfx"
-   ]
-  },
-  {
-   "id": "door_open",
-   "file": "sfx/door_open.mp3",
-   "length": 0.92,
-   "loop": false,
-   "category": "sfx",
-   "source": "Kenney kenney-rpg-audio (CC0) via Kenney's own OpenGameArt upload",
-   "licence": "CC0 1.0 (Kenney, kenney.nl); credit optional",
-   "volume": 0.7,
-   "tags": [
-    "sfx"
-   ]
-  },
-  {
-   "id": "eat",
-   "file": "sfx/eat.mp3",
-   "length": 1.57,
-   "loop": false,
-   "category": "sfx",
-   "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
-   "licence": "ElevenLabs paid-plan output, commercial use allowed",
-   "volume": 0.8,
-   "tags": [
-    "eat"
-   ]
-  },
-  {
-   "id": "emote_pop",
-   "file": "sfx/emote_pop.mp3",
-   "length": 0.26,
-   "loop": false,
-   "category": "sfx",
-   "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
-   "licence": "ElevenLabs paid-plan output, commercial use allowed",
-   "volume": 0.8,
-   "tags": [
-    "emote"
-   ]
-  },
-  {
-   "id": "fall_thud",
-   "file": "sfx/fall_thud.mp3",
-   "length": 0.57,
-   "loop": false,
-   "category": "sfx",
-   "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
-   "licence": "ElevenLabs paid-plan output, commercial use allowed",
-   "volume": 0.8,
-   "tags": [
-    "fall"
-   ]
-  },
-  {
-   "id": "footstep_pavement_1",
-   "file": "sfx/footstep_pavement_1.mp3",
-   "length": 0.24,
-   "loop": false,
-   "category": "sfx",
-   "source": "Kenney kenney-rpg-audio (CC0) via Kenney's own OpenGameArt upload",
-   "licence": "CC0 1.0 (Kenney, kenney.nl); credit optional",
-   "volume": 0.7,
-   "tags": [
-    "sfx"
-   ]
-  },
-  {
-   "id": "footstep_pavement_2",
-   "file": "sfx/footstep_pavement_2.mp3",
-   "length": 0.28,
-   "loop": false,
-   "category": "sfx",
-   "source": "Kenney kenney-rpg-audio (CC0) via Kenney's own OpenGameArt upload",
-   "licence": "CC0 1.0 (Kenney, kenney.nl); credit optional",
-   "volume": 0.7,
-   "tags": [
-    "sfx"
-   ]
-  },
-  {
-   "id": "footstep_pavement_3",
-   "file": "sfx/footstep_pavement_3.mp3",
-   "length": 0.24,
-   "loop": false,
-   "category": "sfx",
-   "source": "Kenney kenney-rpg-audio (CC0) via Kenney's own OpenGameArt upload",
-   "licence": "CC0 1.0 (Kenney, kenney.nl); credit optional",
-   "volume": 0.7,
-   "tags": [
-    "sfx"
-   ]
-  },
-  {
-   "id": "footstep_pavement_4",
-   "file": "sfx/footstep_pavement_4.mp3",
-   "length": 0.27,
-   "loop": false,
-   "category": "sfx",
-   "source": "Kenney kenney-rpg-audio (CC0) via Kenney's own OpenGameArt upload",
-   "licence": "CC0 1.0 (Kenney, kenney.nl); credit optional",
-   "volume": 0.7,
-   "tags": [
-    "sfx"
-   ]
-  },
-  {
-   "id": "footsteps_grass",
-   "file": "sfx/footsteps_grass.mp3",
-   "length": 3.0,
-   "loop": true,
-   "category": "sfx",
-   "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
-   "licence": "ElevenLabs paid-plan output, commercial use allowed",
-   "volume": 0.5,
-   "tags": [
-    "footsteps"
-   ]
-  },
-  {
-   "id": "give_item",
-   "file": "sfx/give_item.mp3",
-   "length": 0.8,
-   "loop": false,
-   "category": "sfx",
-   "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
-   "licence": "ElevenLabs paid-plan output, commercial use allowed",
-   "volume": 0.8,
-   "tags": [
-    "give"
-   ]
-  },
-  {
-   "id": "glass_smash",
-   "file": "sfx/glass_smash.mp3",
-   "length": 1.2,
-   "loop": false,
-   "category": "sfx",
-   "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
-   "licence": "ElevenLabs paid-plan output, commercial use allowed",
-   "volume": 0.8,
-   "tags": [
-    "glass"
-   ]
-  },
-  {
-   "id": "gulp",
-   "file": "sfx/gulp.mp3",
-   "length": 1.6,
-   "loop": false,
-   "category": "sfx",
-   "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
-   "licence": "ElevenLabs paid-plan output, commercial use allowed",
-   "volume": 0.8,
-   "tags": [
-    "gulp"
-   ]
-  },
-  {
-   "id": "gulp_2",
-   "file": "sfx/gulp_2.mp3",
-   "length": 0.64,
-   "loop": false,
-   "category": "sfx",
-   "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
-   "licence": "ElevenLabs paid-plan output, commercial use allowed",
-   "volume": 0.8,
-   "tags": [
-    "gulp"
-   ]
-  },
-  {
-   "id": "jump",
-   "file": "sfx/jump.mp3",
-   "length": 0.6,
-   "loop": false,
-   "category": "sfx",
-   "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
-   "licence": "ElevenLabs paid-plan output, commercial use allowed",
-   "volume": 0.8,
-   "tags": [
-    "jump"
-   ]
-  },
-  {
-   "id": "land",
-   "file": "sfx/land.mp3",
-   "length": 0.29,
-   "loop": false,
-   "category": "sfx",
-   "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
-   "licence": "ElevenLabs paid-plan output, commercial use allowed",
-   "volume": 0.8,
-   "tags": [
-    "land"
-   ]
-  },
-  {
-   "id": "levelup",
-   "file": "sfx/levelup.mp3",
-   "length": 1.76,
-   "loop": false,
-   "category": "sfx",
-   "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
-   "licence": "ElevenLabs paid-plan output, commercial use allowed",
-   "volume": 0.8,
-   "tags": [
-    "levelup"
-   ]
-  },
-  {
-   "id": "metal_click",
-   "file": "sfx/metal_click.mp3",
-   "length": 0.41,
-   "loop": false,
-   "category": "sfx",
-   "source": "Kenney kenney-rpg-audio (CC0) via Kenney's own OpenGameArt upload",
-   "licence": "CC0 1.0 (Kenney, kenney.nl); credit optional",
-   "volume": 0.7,
-   "tags": [
-    "sfx"
-   ]
-  },
-  {
-   "id": "pigeons_coo",
-   "file": "sfx/pigeons_coo.mp3",
-   "length": 4.0,
-   "loop": true,
-   "category": "sfx",
-   "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
-   "licence": "ElevenLabs paid-plan output, commercial use allowed",
-   "volume": 0.5,
-   "tags": [
-    "pigeons"
-   ]
-  },
-  {
-   "id": "pigeons_flap",
-   "file": "sfx/pigeons_flap.mp3",
-   "length": 1.5,
-   "loop": false,
-   "category": "sfx",
-   "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
-   "licence": "ElevenLabs paid-plan output, commercial use allowed",
-   "volume": 0.8,
-   "tags": [
-    "pigeons"
-   ]
-  },
-  {
-   "id": "police_whistle",
-   "file": "sfx/police_whistle.mp3",
-   "length": 1.2,
-   "loop": false,
-   "category": "sfx",
-   "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
-   "licence": "ElevenLabs paid-plan output, commercial use allowed",
-   "volume": 0.8,
-   "tags": [
-    "police"
-   ]
-  },
-  {
-   "id": "running_pavement",
-   "file": "sfx/running_pavement.mp3",
-   "length": 3.0,
-   "loop": true,
-   "category": "sfx",
-   "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
-   "licence": "ElevenLabs paid-plan output, commercial use allowed",
-   "volume": 0.5,
-   "tags": [
-    "running"
-   ]
-  },
-  {
-   "id": "siren_distant",
-   "file": "sfx/siren_distant.mp3",
-   "length": 5.82,
-   "loop": false,
-   "category": "sfx",
-   "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
-   "licence": "ElevenLabs paid-plan output, commercial use allowed",
-   "volume": 0.8,
-   "tags": [
-    "siren"
-   ]
-  },
-  {
-   "id": "slap",
-   "file": "sfx/slap.mp3",
-   "length": 0.6,
-   "loop": false,
-   "category": "sfx",
-   "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
-   "licence": "ElevenLabs paid-plan output, commercial use allowed",
-   "volume": 0.8,
-   "tags": [
-    "slap"
-   ]
-  },
-  {
-   "id": "tinnitus",
-   "file": "sfx/tinnitus.mp3",
-   "length": 8.0,
-   "loop": true,
-   "category": "sfx",
-   "source": "synthesised (numpy sine, 6.2 kHz beating pair)",
-   "licence": "own work",
-   "volume": 0.08,
-   "tags": [
-    "hangover"
-   ],
-   "emotion": "hangover"
-  },
-  {
-   "id": "emote_pop_soft",
-   "file": "ui/emote_pop_soft.mp3",
-   "length": 0.1,
-   "loop": false,
-   "category": "ui",
-   "source": "Kenney kenney-interface-sounds (CC0) via Kenney's own OpenGameArt upload",
-   "licence": "CC0 1.0 (Kenney, kenney.nl); credit optional",
-   "volume": 0.6,
-   "tags": [
-    "ui"
-   ]
-  },
-  {
-   "id": "ui_back",
-   "file": "ui/ui_back.mp3",
-   "length": 0.09,
-   "loop": false,
-   "category": "ui",
-   "source": "Kenney kenney-interface-sounds (CC0) via Kenney's own OpenGameArt upload",
-   "licence": "CC0 1.0 (Kenney, kenney.nl); credit optional",
-   "volume": 0.6,
-   "tags": [
-    "ui"
-   ]
-  },
-  {
-   "id": "ui_close",
-   "file": "ui/ui_close.mp3",
-   "length": 0.31,
-   "loop": false,
-   "category": "ui",
-   "source": "Kenney kenney-interface-sounds (CC0) via Kenney's own OpenGameArt upload",
-   "licence": "CC0 1.0 (Kenney, kenney.nl); credit optional",
-   "volume": 0.6,
-   "tags": [
-    "ui"
-   ]
-  },
-  {
-   "id": "ui_confirm",
-   "file": "ui/ui_confirm.mp3",
-   "length": 0.54,
-   "loop": false,
-   "category": "ui",
-   "source": "Kenney kenney-interface-sounds (CC0) via Kenney's own OpenGameArt upload",
-   "licence": "CC0 1.0 (Kenney, kenney.nl); credit optional",
-   "volume": 0.6,
-   "tags": [
-    "ui"
-   ]
-  },
-  {
-   "id": "ui_error",
-   "file": "ui/ui_error.mp3",
-   "length": 0.1,
-   "loop": false,
-   "category": "ui",
-   "source": "Kenney kenney-interface-sounds (CC0) via Kenney's own OpenGameArt upload",
-   "licence": "CC0 1.0 (Kenney, kenney.nl); credit optional",
-   "volume": 0.6,
-   "tags": [
-    "ui"
-   ]
-  },
-  {
-   "id": "ui_notify",
-   "file": "ui/ui_notify.mp3",
-   "length": 0.12,
-   "loop": false,
-   "category": "ui",
-   "source": "Kenney kenney-interface-sounds (CC0) via Kenney's own OpenGameArt upload",
-   "licence": "CC0 1.0 (Kenney, kenney.nl); credit optional",
-   "volume": 0.6,
-   "tags": [
-    "ui"
-   ]
-  },
-  {
-   "id": "ui_open",
-   "file": "ui/ui_open.mp3",
-   "length": 0.31,
-   "loop": false,
-   "category": "ui",
-   "source": "Kenney kenney-interface-sounds (CC0) via Kenney's own OpenGameArt upload",
-   "licence": "CC0 1.0 (Kenney, kenney.nl); credit optional",
-   "volume": 0.6,
-   "tags": [
-    "ui"
-   ]
-  },
-  {
-   "id": "ui_select",
-   "file": "ui/ui_select.mp3",
-   "length": 0.04,
-   "loop": false,
-   "category": "ui",
-   "source": "Kenney kenney-interface-sounds (CC0) via Kenney's own OpenGameArt upload",
-   "licence": "CC0 1.0 (Kenney, kenney.nl); credit optional",
-   "volume": 0.6,
-   "tags": [
-    "ui"
-   ]
-  },
-  {
-   "id": "ui_tap",
-   "file": "ui/ui_tap.mp3",
-   "length": 0.01,
-   "loop": false,
-   "category": "ui",
-   "source": "Kenney kenney-interface-sounds (CC0) via Kenney's own OpenGameArt upload",
-   "licence": "CC0 1.0 (Kenney, kenney.nl); credit optional",
-   "volume": 0.6,
-   "tags": [
-    "ui"
-   ]
-  },
-  {
-   "id": "ui_tick",
-   "file": "ui/ui_tick.mp3",
-   "length": 0.02,
-   "loop": false,
-   "category": "ui",
-   "source": "Kenney kenney-interface-sounds (CC0) via Kenney's own OpenGameArt upload",
-   "licence": "CC0 1.0 (Kenney, kenney.nl); credit optional",
-   "volume": 0.6,
-   "tags": [
-    "ui"
-   ]
-  },
-  {
-   "id": "ui_toggle",
-   "file": "ui/ui_toggle.mp3",
-   "length": 0.14,
-   "loop": false,
-   "category": "ui",
-   "source": "Kenney kenney-interface-sounds (CC0) via Kenney's own OpenGameArt upload",
-   "licence": "CC0 1.0 (Kenney, kenney.nl); credit optional",
-   "volume": 0.6,
-   "tags": [
-    "ui"
-   ]
-  },
-  {
-   "id": "voice_cop",
-   "file": "voices/cop/cop_01.mp3",
-   "files": [
-    "voices/cop/cop_01.mp3",
-    "voices/cop/cop_02.mp3",
-    "voices/cop/cop_03.mp3",
-    "voices/cop/cop_04.mp3",
-    "voices/cop/cop_05.mp3",
-    "voices/cop/cop_06.mp3",
-    "voices/cop/cop_07.mp3",
-    "voices/cop/cop_08.mp3",
-    "voices/cop/cop_09.mp3",
-    "voices/cop/cop_10.mp3",
-    "voices/cop/cop_11.mp3",
-    "voices/cop/cop_12.mp3"
-   ],
-   "length": null,
-   "loop": false,
-   "category": "voice",
-   "source": "ElevenLabs Sound Effects (gibberish babble prompt), sliced into blips here",
-   "licence": "ElevenLabs paid-plan output, commercial use allowed",
-   "volume": 0.7,
-   "tags": [
-    "mumble",
-    "speech-bubble",
-    "cop"
-   ],
-   "note": "play 1 random blip per 2-3 letters of bubble text, pitch +-8%"
-  },
-  {
-   "id": "voice_hero",
-   "file": "voices/hero/hero_01.mp3",
-   "files": [
-    "voices/hero/hero_01.mp3",
-    "voices/hero/hero_02.mp3",
-    "voices/hero/hero_03.mp3",
-    "voices/hero/hero_04.mp3",
-    "voices/hero/hero_05.mp3",
-    "voices/hero/hero_06.mp3",
-    "voices/hero/hero_07.mp3",
-    "voices/hero/hero_08.mp3",
-    "voices/hero/hero_09.mp3",
-    "voices/hero/hero_10.mp3",
-    "voices/hero/hero_11.mp3",
-    "voices/hero/hero_12.mp3"
-   ],
-   "length": null,
-   "loop": false,
-   "category": "voice",
-   "source": "ElevenLabs Sound Effects (gibberish babble prompt), sliced into blips here",
-   "licence": "ElevenLabs paid-plan output, commercial use allowed",
-   "volume": 0.7,
-   "tags": [
-    "mumble",
-    "speech-bubble",
-    "hero"
-   ],
-   "note": "play 1 random blip per 2-3 letters of bubble text, pitch +-8%"
-  },
-  {
-   "id": "voice_man",
-   "file": "voices/man/man_01.mp3",
-   "files": [
-    "voices/man/man_01.mp3",
-    "voices/man/man_02.mp3",
-    "voices/man/man_03.mp3",
-    "voices/man/man_04.mp3",
-    "voices/man/man_05.mp3",
-    "voices/man/man_06.mp3",
-    "voices/man/man_07.mp3",
-    "voices/man/man_08.mp3",
-    "voices/man/man_09.mp3",
-    "voices/man/man_10.mp3",
-    "voices/man/man_11.mp3",
-    "voices/man/man_12.mp3"
-   ],
-   "length": null,
-   "loop": false,
-   "category": "voice",
-   "source": "ElevenLabs Sound Effects (gibberish babble prompt), sliced into blips here",
-   "licence": "ElevenLabs paid-plan output, commercial use allowed",
-   "volume": 0.7,
-   "tags": [
-    "mumble",
-    "speech-bubble",
-    "man"
-   ],
-   "note": "play 1 random blip per 2-3 letters of bubble text, pitch +-8%"
-  },
-  {
-   "id": "voice_oldman",
-   "file": "voices/oldman/oldman_01.mp3",
-   "files": [
-    "voices/oldman/oldman_01.mp3",
-    "voices/oldman/oldman_02.mp3",
-    "voices/oldman/oldman_03.mp3",
-    "voices/oldman/oldman_04.mp3",
-    "voices/oldman/oldman_05.mp3",
-    "voices/oldman/oldman_06.mp3",
-    "voices/oldman/oldman_07.mp3",
-    "voices/oldman/oldman_08.mp3",
-    "voices/oldman/oldman_09.mp3",
-    "voices/oldman/oldman_10.mp3",
-    "voices/oldman/oldman_11.mp3",
-    "voices/oldman/oldman_12.mp3"
-   ],
-   "length": null,
-   "loop": false,
-   "category": "voice",
-   "source": "ElevenLabs Sound Effects (gibberish babble prompt), sliced into blips here",
-   "licence": "ElevenLabs paid-plan output, commercial use allowed",
-   "volume": 0.7,
-   "tags": [
-    "mumble",
-    "speech-bubble",
-    "oldman"
-   ],
-   "note": "play 1 random blip per 2-3 letters of bubble text, pitch +-8%"
-  },
-  {
-   "id": "voice_partner",
-   "file": "voices/partner/partner_01.mp3",
-   "files": [
-    "voices/partner/partner_01.mp3",
-    "voices/partner/partner_02.mp3",
-    "voices/partner/partner_03.mp3",
-    "voices/partner/partner_04.mp3",
-    "voices/partner/partner_05.mp3",
-    "voices/partner/partner_06.mp3",
-    "voices/partner/partner_07.mp3",
-    "voices/partner/partner_08.mp3",
-    "voices/partner/partner_09.mp3",
-    "voices/partner/partner_10.mp3",
-    "voices/partner/partner_11.mp3",
-    "voices/partner/partner_12.mp3"
-   ],
-   "length": null,
-   "loop": false,
-   "category": "voice",
-   "source": "ElevenLabs Sound Effects (gibberish babble prompt), sliced into blips here",
-   "licence": "ElevenLabs paid-plan output, commercial use allowed",
-   "volume": 0.7,
-   "tags": [
-    "mumble",
-    "speech-bubble",
-    "partner"
-   ],
-   "note": "play 1 random blip per 2-3 letters of bubble text, pitch +-8%"
-  },
-  {
-   "id": "voice_woman",
-   "file": "voices/woman/woman_01.mp3",
-   "files": [
-    "voices/woman/woman_01.mp3",
-    "voices/woman/woman_02.mp3",
-    "voices/woman/woman_03.mp3",
-    "voices/woman/woman_04.mp3",
-    "voices/woman/woman_05.mp3",
-    "voices/woman/woman_06.mp3",
-    "voices/woman/woman_07.mp3",
-    "voices/woman/woman_08.mp3",
-    "voices/woman/woman_09.mp3",
-    "voices/woman/woman_10.mp3",
-    "voices/woman/woman_11.mp3",
-    "voices/woman/woman_12.mp3"
-   ],
-   "length": null,
-   "loop": false,
-   "category": "voice",
-   "source": "ElevenLabs Sound Effects (gibberish babble prompt), sliced into blips here",
-   "licence": "ElevenLabs paid-plan output, commercial use allowed",
-   "volume": 0.7,
-   "tags": [
-    "mumble",
-    "speech-bubble",
-    "woman"
-   ],
-   "note": "play 1 random blip per 2-3 letters of bubble text, pitch +-8%"
-  }
- ]
+  "version": 1,
+  "base": "audio/",
+  "note": "file paths are relative to the audio/ folder; volume = suggested 0-1 gain",
+  "sounds": [
+    {
+      "id": "amb_bar_street",
+      "file": "ambience/amb_bar_street.mp3",
+      "length": 30.0,
+      "loop": true,
+      "category": "ambience",
+      "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
+      "licence": "ElevenLabs paid-plan output, commercial use allowed",
+      "volume": 0.6,
+      "tags": [
+        "bar",
+        "night",
+        "chatter"
+      ]
+    },
+    {
+      "id": "amb_harbour",
+      "file": "ambience/amb_harbour.mp3",
+      "length": 30.0,
+      "loop": true,
+      "category": "ambience",
+      "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
+      "licence": "ElevenLabs paid-plan output, commercial use allowed",
+      "volume": 0.6,
+      "tags": [
+        "river",
+        "harbour",
+        "waterfront"
+      ]
+    },
+    {
+      "id": "amb_park",
+      "file": "ambience/amb_park.mp3",
+      "length": 30.0,
+      "loop": true,
+      "category": "ambience",
+      "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
+      "licence": "ElevenLabs paid-plan output, commercial use allowed",
+      "volume": 0.6,
+      "tags": [
+        "park",
+        "birds",
+        "morning"
+      ]
+    },
+    {
+      "id": "amb_rain",
+      "file": "ambience/amb_rain.mp3",
+      "length": 30.0,
+      "loop": true,
+      "category": "ambience",
+      "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
+      "licence": "ElevenLabs paid-plan output, commercial use allowed",
+      "volume": 0.6,
+      "tags": [
+        "rain",
+        "weather"
+      ]
+    },
+    {
+      "id": "amb_street_day",
+      "file": "ambience/amb_street_day.mp3",
+      "length": 30.0,
+      "loop": true,
+      "category": "ambience",
+      "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
+      "licence": "ElevenLabs paid-plan output, commercial use allowed",
+      "volume": 0.6,
+      "tags": [
+        "day",
+        "street",
+        "downtown"
+      ]
+    },
+    {
+      "id": "amb_street_night",
+      "file": "ambience/amb_street_night.mp3",
+      "length": 30.0,
+      "loop": true,
+      "category": "ambience",
+      "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
+      "licence": "ElevenLabs paid-plan output, commercial use allowed",
+      "volume": 0.6,
+      "tags": [
+        "night",
+        "street"
+      ]
+    },
+    {
+      "id": "amb_traffic_far",
+      "file": "ambience/amb_traffic_far.mp3",
+      "length": 30.0,
+      "loop": true,
+      "category": "ambience",
+      "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
+      "licence": "ElevenLabs paid-plan output, commercial use allowed",
+      "volume": 0.6,
+      "tags": [
+        "alley",
+        "traffic",
+        "distant"
+      ]
+    },
+    {
+      "id": "band_bass",
+      "file": "music/band_bass.mp3",
+      "length": 103.74,
+      "loop": true,
+      "category": "music",
+      "group": "theme",
+      "source": "ElevenLabs Eleven Music (music_v2_5) + ElevenLabs stem separation, David's Creator plan",
+      "licence": "Eleven Music terms: Creator = online/offline commercial use except film/TV/radio/Studio Games; an Indie Game (<$500k revenue) is allowed; no attribution required",
+      "emotion": "playful",
+      "style": "street-jazz",
+      "tags": [
+        "theme",
+        "main"
+      ],
+      "volume": 1.0,
+      "layer": "band-2-bass"
+    },
+    {
+      "id": "band_drums",
+      "file": "music/band_drums.mp3",
+      "length": 103.74,
+      "loop": true,
+      "category": "music",
+      "group": "theme",
+      "source": "ElevenLabs Eleven Music (music_v2_5) + ElevenLabs stem separation, David's Creator plan",
+      "licence": "Eleven Music terms: Creator = online/offline commercial use except film/TV/radio/Studio Games; an Indie Game (<$500k revenue) is allowed; no attribution required",
+      "emotion": "playful",
+      "style": "street-jazz",
+      "tags": [
+        "theme",
+        "main"
+      ],
+      "volume": 1.0,
+      "layer": "band-1-drums"
+    },
+    {
+      "id": "band_horns",
+      "file": "music/band_horns.mp3",
+      "length": 103.74,
+      "loop": true,
+      "category": "music",
+      "group": "theme",
+      "source": "ElevenLabs Eleven Music (music_v2_5) + ElevenLabs stem separation, David's Creator plan",
+      "licence": "Eleven Music terms: Creator = online/offline commercial use except film/TV/radio/Studio Games; an Indie Game (<$500k revenue) is allowed; no attribution required",
+      "emotion": "playful",
+      "style": "street-jazz",
+      "tags": [
+        "theme",
+        "main"
+      ],
+      "volume": 1.0,
+      "layer": "band-4-horns"
+    },
+    {
+      "id": "band_keys",
+      "file": "music/band_keys.mp3",
+      "length": 103.74,
+      "loop": true,
+      "category": "music",
+      "group": "theme",
+      "source": "ElevenLabs Eleven Music (music_v2_5) + ElevenLabs stem separation, David's Creator plan",
+      "licence": "Eleven Music terms: Creator = online/offline commercial use except film/TV/radio/Studio Games; an Indie Game (<$500k revenue) is allowed; no attribution required",
+      "emotion": "playful",
+      "style": "street-jazz",
+      "tags": [
+        "theme",
+        "main"
+      ],
+      "volume": 1.0,
+      "layer": "band-3-keys"
+    },
+    {
+      "id": "cue_death",
+      "file": "music/cue_death.mp3",
+      "length": 8.01,
+      "loop": false,
+      "category": "music",
+      "source": "ElevenLabs Eleven Music (music_v2_5), David's Creator plan",
+      "licence": "Eleven Music terms: Creator = online/offline commercial use except film/TV/radio/Studio Games; an Indie Game (<$500k revenue) is allowed; no attribution required",
+      "volume": 0.85,
+      "emotion": "grief",
+      "style": "lone-guitar",
+      "tags": [
+        "death",
+        "obituary"
+      ]
+    },
+    {
+      "id": "cue_first_swig",
+      "file": "music/cue_first_swig.mp3",
+      "length": 5.06,
+      "loop": false,
+      "category": "music",
+      "source": "ElevenLabs Eleven Music (music_v2_5), David's Creator plan",
+      "licence": "Eleven Music terms: Creator = online/offline commercial use except film/TV/radio/Studio Games; an Indie Game (<$500k revenue) is allowed; no attribution required",
+      "volume": 0.9,
+      "emotion": "joy",
+      "style": "street-jazz",
+      "tags": [
+        "sting",
+        "first-drink"
+      ]
+    },
+    {
+      "id": "cue_grief_funeral",
+      "file": "music/cue_grief_funeral.mp3",
+      "length": 26.86,
+      "loop": false,
+      "category": "music",
+      "source": "ElevenLabs Eleven Music (music_v2_5), David's Creator plan",
+      "licence": "Eleven Music terms: Creator = online/offline commercial use except film/TV/radio/Studio Games; an Indie Game (<$500k revenue) is allowed; no attribution required",
+      "volume": 0.85,
+      "emotion": "grief",
+      "style": "lone-guitar",
+      "tags": [
+        "funeral",
+        "obituary",
+        "memorial"
+      ]
+    },
+    {
+      "id": "cue_hope_revive",
+      "file": "music/cue_hope_revive.mp3",
+      "length": 14.77,
+      "loop": false,
+      "category": "music",
+      "source": "ElevenLabs Eleven Music (music_v2_5), David's Creator plan",
+      "licence": "Eleven Music terms: Creator = online/offline commercial use except film/TV/radio/Studio Games; an Indie Game (<$500k revenue) is allowed; no attribution required",
+      "volume": 0.85,
+      "emotion": "hope",
+      "style": "dream-piano",
+      "tags": [
+        "revive",
+        "partner"
+      ]
+    },
+    {
+      "id": "cue_memory",
+      "file": "music/cue_memory.mp3",
+      "length": 19.43,
+      "loop": false,
+      "category": "music",
+      "source": "ElevenLabs Eleven Music (music_v2_5), David's Creator plan",
+      "licence": "Eleven Music terms: Creator = online/offline commercial use except film/TV/radio/Studio Games; an Indie Game (<$500k revenue) is allowed; no attribution required",
+      "volume": 0.8,
+      "emotion": "nostalgic",
+      "style": "dream-piano",
+      "tags": [
+        "memory",
+        "city-remembers"
+      ]
+    },
+    {
+      "id": "cue_whimsy_peak",
+      "file": "music/cue_whimsy_peak.mp3",
+      "length": 14.63,
+      "loop": false,
+      "category": "music",
+      "source": "ElevenLabs Eleven Music (music_v2_5), David's Creator plan",
+      "licence": "Eleven Music terms: Creator = online/offline commercial use except film/TV/radio/Studio Games; an Indie Game (<$500k revenue) is allowed; no attribution required",
+      "volume": 0.9,
+      "emotion": "euphoric",
+      "style": "street-jazz",
+      "tags": [
+        "celebration",
+        "whimsy-max"
+      ]
+    },
+    {
+      "id": "duet_grief",
+      "file": "music/duet_grief.mp3",
+      "length": 56.0,
+      "loop": true,
+      "category": "music",
+      "group": "leitmotif-grief",
+      "source": "ElevenLabs Eleven Music (music_v2_5) + ElevenLabs stem separation, David's Creator plan",
+      "licence": "Eleven Music terms: Creator = online/offline commercial use except film/TV/radio/Studio Games; an Indie Game (<$500k revenue) is allowed; no attribution required",
+      "emotion": "grief",
+      "style": "dream-piano",
+      "tags": [
+        "leitmotif",
+        "couple",
+        "grief"
+      ],
+      "volume": 0.8,
+      "layer": "duet",
+      "offset": 7
+    },
+    {
+      "id": "duet_hope",
+      "file": "music/duet_hope.mp3",
+      "length": 64.28,
+      "loop": true,
+      "category": "music",
+      "group": "leitmotif-hope",
+      "source": "ElevenLabs Eleven Music (music_v2_5) + ElevenLabs stem separation, David's Creator plan",
+      "licence": "Eleven Music terms: Creator = online/offline commercial use except film/TV/radio/Studio Games; an Indie Game (<$500k revenue) is allowed; no attribution required",
+      "emotion": "hope",
+      "style": "dream-piano",
+      "tags": [
+        "leitmotif",
+        "couple",
+        "hope"
+      ],
+      "volume": 0.8,
+      "layer": "duet",
+      "offset": 22
+    },
+    {
+      "id": "duet_tender",
+      "file": "music/duet_tender.mp3",
+      "length": 71.06,
+      "loop": true,
+      "category": "music",
+      "group": "leitmotif-tender",
+      "source": "ElevenLabs Eleven Music (music_v2_5) + ElevenLabs stem separation, David's Creator plan",
+      "licence": "Eleven Music terms: Creator = online/offline commercial use except film/TV/radio/Studio Games; an Indie Game (<$500k revenue) is allowed; no attribution required",
+      "emotion": "tender",
+      "style": "dream-piano",
+      "tags": [
+        "leitmotif",
+        "couple",
+        "tender"
+      ],
+      "volume": 0.8,
+      "layer": "duet",
+      "offset": 18
+    },
+    {
+      "id": "hers_grief",
+      "file": "music/hers_grief.mp3",
+      "length": 56.0,
+      "loop": true,
+      "category": "music",
+      "group": "leitmotif-grief",
+      "source": "ElevenLabs Eleven Music (music_v2_5) + ElevenLabs stem separation, David's Creator plan",
+      "licence": "Eleven Music terms: Creator = online/offline commercial use except film/TV/radio/Studio Games; an Indie Game (<$500k revenue) is allowed; no attribution required",
+      "emotion": "grief",
+      "style": "dream-piano",
+      "tags": [
+        "leitmotif",
+        "couple",
+        "grief"
+      ],
+      "volume": 0.8,
+      "layer": "her-piano",
+      "offset": 7
+    },
+    {
+      "id": "hers_hope",
+      "file": "music/hers_hope.mp3",
+      "length": 64.28,
+      "loop": true,
+      "category": "music",
+      "group": "leitmotif-hope",
+      "source": "ElevenLabs Eleven Music (music_v2_5) + ElevenLabs stem separation, David's Creator plan",
+      "licence": "Eleven Music terms: Creator = online/offline commercial use except film/TV/radio/Studio Games; an Indie Game (<$500k revenue) is allowed; no attribution required",
+      "emotion": "hope",
+      "style": "dream-piano",
+      "tags": [
+        "leitmotif",
+        "couple",
+        "hope"
+      ],
+      "volume": 0.8,
+      "layer": "her-piano",
+      "offset": 22
+    },
+    {
+      "id": "hers_tender",
+      "file": "music/hers_tender.mp3",
+      "length": 71.06,
+      "loop": true,
+      "category": "music",
+      "group": "leitmotif-tender",
+      "source": "ElevenLabs Eleven Music (music_v2_5) + ElevenLabs stem separation, David's Creator plan",
+      "licence": "Eleven Music terms: Creator = online/offline commercial use except film/TV/radio/Studio Games; an Indie Game (<$500k revenue) is allowed; no attribution required",
+      "emotion": "tender",
+      "style": "dream-piano",
+      "tags": [
+        "leitmotif",
+        "couple",
+        "tender"
+      ],
+      "volume": 0.8,
+      "layer": "her-piano",
+      "offset": 18
+    },
+    {
+      "id": "his_grief",
+      "file": "music/his_grief.mp3",
+      "length": 56.0,
+      "loop": true,
+      "category": "music",
+      "group": "leitmotif-grief",
+      "source": "ElevenLabs Eleven Music (music_v2_5) + ElevenLabs stem separation, David's Creator plan",
+      "licence": "Eleven Music terms: Creator = online/offline commercial use except film/TV/radio/Studio Games; an Indie Game (<$500k revenue) is allowed; no attribution required",
+      "emotion": "grief",
+      "style": "dream-piano",
+      "tags": [
+        "leitmotif",
+        "couple",
+        "grief"
+      ],
+      "volume": 0.8,
+      "layer": "his-guitar",
+      "offset": 7
+    },
+    {
+      "id": "his_hope",
+      "file": "music/his_hope.mp3",
+      "length": 64.28,
+      "loop": true,
+      "category": "music",
+      "group": "leitmotif-hope",
+      "source": "ElevenLabs Eleven Music (music_v2_5) + ElevenLabs stem separation, David's Creator plan",
+      "licence": "Eleven Music terms: Creator = online/offline commercial use except film/TV/radio/Studio Games; an Indie Game (<$500k revenue) is allowed; no attribution required",
+      "emotion": "hope",
+      "style": "dream-piano",
+      "tags": [
+        "leitmotif",
+        "couple",
+        "hope"
+      ],
+      "volume": 0.8,
+      "layer": "his-guitar",
+      "offset": 22
+    },
+    {
+      "id": "his_tender",
+      "file": "music/his_tender.mp3",
+      "length": 71.06,
+      "loop": true,
+      "category": "music",
+      "group": "leitmotif-tender",
+      "source": "ElevenLabs Eleven Music (music_v2_5) + ElevenLabs stem separation, David's Creator plan",
+      "licence": "Eleven Music terms: Creator = online/offline commercial use except film/TV/radio/Studio Games; an Indie Game (<$500k revenue) is allowed; no attribution required",
+      "emotion": "tender",
+      "style": "dream-piano",
+      "tags": [
+        "leitmotif",
+        "couple",
+        "tender"
+      ],
+      "volume": 0.8,
+      "layer": "his-guitar",
+      "offset": 18
+    },
+    {
+      "id": "mood_bittersweet",
+      "file": "music/mood_bittersweet.mp3",
+      "length": 74.99,
+      "loop": true,
+      "category": "music",
+      "source": "ElevenLabs Eleven Music (music_v2_5), David's Creator plan",
+      "licence": "Eleven Music terms: Creator = online/offline commercial use except film/TV/radio/Studio Games; an Indie Game (<$500k revenue) is allowed; no attribution required",
+      "volume": 0.8,
+      "emotion": "bittersweet",
+      "style": "lone-guitar",
+      "tags": [
+        "dusk",
+        "golden-hour",
+        "comedown"
+      ]
+    },
+    {
+      "id": "mood_calm",
+      "file": "music/mood_calm.mp3",
+      "length": 88.98,
+      "loop": true,
+      "category": "music",
+      "source": "ElevenLabs Eleven Music (music_v2_5), David's Creator plan",
+      "licence": "Eleven Music terms: Creator = online/offline commercial use except film/TV/radio/Studio Games; an Indie Game (<$500k revenue) is allowed; no attribution required",
+      "volume": 0.75,
+      "emotion": "calm",
+      "style": "calm-piano",
+      "tags": [
+        "explore",
+        "early-morning",
+        "calm-night"
+      ]
+    },
+    {
+      "id": "mood_euphoric",
+      "file": "music/mood_euphoric.mp3",
+      "length": 65.0,
+      "loop": true,
+      "category": "music",
+      "source": "ElevenLabs Eleven Music (music_v2_5), David's Creator plan",
+      "licence": "Eleven Music terms: Creator = online/offline commercial use except film/TV/radio/Studio Games; an Indie Game (<$500k revenue) is allowed; no attribution required",
+      "volume": 0.85,
+      "emotion": "euphoric",
+      "style": "street-jazz",
+      "tags": [
+        "parade",
+        "whimsy-peak",
+        "band"
+      ]
+    },
+    {
+      "id": "mood_hope",
+      "file": "music/mood_hope.mp3",
+      "length": 65.71,
+      "loop": true,
+      "category": "music",
+      "source": "ElevenLabs Eleven Music (music_v2_5), David's Creator plan",
+      "licence": "Eleven Music terms: Creator = online/offline commercial use except film/TV/radio/Studio Games; an Indie Game (<$500k revenue) is allowed; no attribution required",
+      "volume": 0.8,
+      "emotion": "hope",
+      "style": "dream-piano",
+      "tags": [
+        "kindness",
+        "sharing",
+        "warmth"
+      ]
+    },
+    {
+      "id": "mood_melancholy",
+      "file": "music/mood_melancholy.mp3",
+      "length": 71.83,
+      "loop": true,
+      "category": "music",
+      "source": "ElevenLabs Eleven Music (music_v2_5), David's Creator plan",
+      "licence": "Eleven Music terms: Creator = online/offline commercial use except film/TV/radio/Studio Games; an Indie Game (<$500k revenue) is allowed; no attribution required",
+      "volume": 0.8,
+      "emotion": "melancholy",
+      "style": "lone-guitar",
+      "tags": [
+        "morning",
+        "hangover",
+        "rain",
+        "alone"
+      ]
+    },
+    {
+      "id": "mood_tender",
+      "file": "music/mood_tender.mp3",
+      "length": 82.89,
+      "loop": true,
+      "category": "music",
+      "source": "ElevenLabs Eleven Music (music_v2_5), David's Creator plan",
+      "licence": "Eleven Music terms: Creator = online/offline commercial use except film/TV/radio/Studio Games; an Indie Game (<$500k revenue) is allowed; no attribution required",
+      "volume": 0.75,
+      "emotion": "tender",
+      "style": "dream-piano",
+      "tags": [
+        "bench",
+        "night",
+        "couple",
+        "blanket"
+      ]
+    },
+    {
+      "id": "mood_tension",
+      "file": "music/mood_tension.mp3",
+      "length": 69.09,
+      "loop": true,
+      "category": "music",
+      "source": "ElevenLabs Eleven Music (music_v2_5), David's Creator plan",
+      "licence": "Eleven Music terms: Creator = online/offline commercial use except film/TV/radio/Studio Games; an Indie Game (<$500k revenue) is allowed; no attribution required",
+      "volume": 0.8,
+      "emotion": "tension",
+      "style": "street-jazz",
+      "tags": [
+        "chase",
+        "cops",
+        "fight",
+        "traffic"
+      ]
+    },
+    {
+      "id": "mood_whimsy",
+      "file": "music/mood_whimsy.mp3",
+      "length": 56.24,
+      "loop": true,
+      "category": "music",
+      "source": "ElevenLabs Eleven Music (music_v2_5), David's Creator plan",
+      "licence": "Eleven Music terms: Creator = online/offline commercial use except film/TV/radio/Studio Games; an Indie Game (<$500k revenue) is allowed; no attribution required",
+      "volume": 0.8,
+      "emotion": "whimsical",
+      "style": "dream-piano",
+      "tags": [
+        "whimsy",
+        "drunk",
+        "sharing-a-bottle"
+      ]
+    },
+    {
+      "id": "texture_lone_guitar",
+      "file": "music/texture_lone_guitar.mp3",
+      "length": 54.93,
+      "loop": true,
+      "category": "music",
+      "source": "ElevenLabs Eleven Music (music_v2_5), David's Creator plan",
+      "licence": "Eleven Music terms: Creator = online/offline commercial use except film/TV/radio/Studio Games; an Indie Game (<$500k revenue) is allowed; no attribution required",
+      "volume": 0.5,
+      "emotion": "lonely",
+      "style": "lone-guitar",
+      "tags": [
+        "texture",
+        "layer",
+        "under-theme"
+      ]
+    },
+    {
+      "id": "theme_drunk",
+      "file": "music/theme_drunk.mp3",
+      "length": 103.74,
+      "loop": true,
+      "category": "music",
+      "group": "theme",
+      "source": "ElevenLabs Eleven Music (music_v2_5) + ElevenLabs stem separation, David's Creator plan",
+      "licence": "Eleven Music terms: Creator = online/offline commercial use except film/TV/radio/Studio Games; an Indie Game (<$500k revenue) is allowed; no attribution required",
+      "emotion": "playful",
+      "style": "street-jazz",
+      "tags": [
+        "theme",
+        "main"
+      ],
+      "volume": 0.85,
+      "layer": "drunk"
+    },
+    {
+      "id": "theme_night",
+      "file": "music/theme_night.mp3",
+      "length": 81.65,
+      "loop": true,
+      "category": "music",
+      "source": "ElevenLabs Eleven Music (music_v2_5), David's Creator plan",
+      "licence": "Eleven Music terms: Creator = online/offline commercial use except film/TV/radio/Studio Games; an Indie Game (<$500k revenue) is allowed; no attribution required",
+      "volume": 0.8,
+      "emotion": "lonely",
+      "style": "lone-guitar",
+      "tags": [
+        "night",
+        "walk",
+        "theme"
+      ]
+    },
+    {
+      "id": "theme_sober",
+      "file": "music/theme_sober.mp3",
+      "length": 103.74,
+      "loop": true,
+      "category": "music",
+      "group": "theme",
+      "source": "ElevenLabs Eleven Music (music_v2_5) + ElevenLabs stem separation, David's Creator plan",
+      "licence": "Eleven Music terms: Creator = online/offline commercial use except film/TV/radio/Studio Games; an Indie Game (<$500k revenue) is allowed; no attribution required",
+      "emotion": "playful",
+      "style": "street-jazz",
+      "tags": [
+        "theme",
+        "main"
+      ],
+      "volume": 0.8,
+      "layer": "sober",
+      "note": "piano only (the drunk mix's own piano), lifted 2 dB"
+    },
+    {
+      "id": "theme_tipsy",
+      "file": "music/theme_tipsy.mp3",
+      "length": 103.74,
+      "loop": true,
+      "category": "music",
+      "group": "theme",
+      "source": "ElevenLabs Eleven Music (music_v2_5) + ElevenLabs stem separation, David's Creator plan",
+      "licence": "Eleven Music terms: Creator = online/offline commercial use except film/TV/radio/Studio Games; an Indie Game (<$500k revenue) is allowed; no attribution required",
+      "emotion": "playful",
+      "style": "street-jazz",
+      "tags": [
+        "theme",
+        "main"
+      ],
+      "volume": 0.85,
+      "layer": "tipsy"
+    },
+    {
+      "id": "applause",
+      "file": "sfx/applause.mp3",
+      "length": 3.4,
+      "loop": false,
+      "category": "sfx",
+      "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
+      "licence": "ElevenLabs paid-plan output, commercial use allowed",
+      "volume": 0.8,
+      "tags": [
+        "applause"
+      ]
+    },
+    {
+      "id": "bin_knock",
+      "file": "sfx/bin_knock.mp3",
+      "length": 2.2,
+      "loop": false,
+      "category": "sfx",
+      "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
+      "licence": "ElevenLabs paid-plan output, commercial use allowed",
+      "volume": 0.8,
+      "tags": [
+        "bin"
+      ]
+    },
+    {
+      "id": "boo",
+      "file": "sfx/boo.mp3",
+      "length": 1.0,
+      "loop": false,
+      "category": "sfx",
+      "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
+      "licence": "ElevenLabs paid-plan output, commercial use allowed",
+      "volume": 0.8,
+      "tags": [
+        "boo"
+      ]
+    },
+    {
+      "id": "bottle_clink",
+      "file": "sfx/bottle_clink.mp3",
+      "length": 0.57,
+      "loop": false,
+      "category": "sfx",
+      "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
+      "licence": "ElevenLabs paid-plan output, commercial use allowed",
+      "volume": 0.8,
+      "tags": [
+        "bottle"
+      ]
+    },
+    {
+      "id": "bottle_clink_2",
+      "file": "sfx/bottle_clink_2.mp3",
+      "length": 0.64,
+      "loop": false,
+      "category": "sfx",
+      "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
+      "licence": "ElevenLabs paid-plan output, commercial use allowed",
+      "volume": 0.8,
+      "tags": [
+        "bottle"
+      ]
+    },
+    {
+      "id": "bottle_pickup",
+      "file": "sfx/bottle_pickup.mp3",
+      "length": 0.39,
+      "loop": false,
+      "category": "sfx",
+      "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
+      "licence": "ElevenLabs paid-plan output, commercial use allowed",
+      "volume": 0.8,
+      "tags": [
+        "bottle"
+      ]
+    },
+    {
+      "id": "cans_recycle",
+      "file": "sfx/cans_recycle.mp3",
+      "length": 1.53,
+      "loop": false,
+      "category": "sfx",
+      "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
+      "licence": "ElevenLabs paid-plan output, commercial use allowed",
+      "volume": 0.8,
+      "tags": [
+        "cans"
+      ]
+    },
+    {
+      "id": "car_horn",
+      "file": "sfx/car_horn.mp3",
+      "length": 1.2,
+      "loop": false,
+      "category": "sfx",
+      "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
+      "licence": "ElevenLabs paid-plan output, commercial use allowed",
+      "volume": 0.8,
+      "tags": [
+        "car"
+      ]
+    },
+    {
+      "id": "cart_rattle",
+      "file": "sfx/cart_rattle.mp3",
+      "length": 4.0,
+      "loop": true,
+      "category": "sfx",
+      "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
+      "licence": "ElevenLabs paid-plan output, commercial use allowed",
+      "volume": 0.5,
+      "tags": [
+        "cart"
+      ]
+    },
+    {
+      "id": "cash_register",
+      "file": "sfx/cash_register.mp3",
+      "length": 1.6,
+      "loop": false,
+      "category": "sfx",
+      "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
+      "licence": "ElevenLabs paid-plan output, commercial use allowed",
+      "volume": 0.8,
+      "tags": [
+        "cash"
+      ]
+    },
+    {
+      "id": "cloth_rustle",
+      "file": "sfx/cloth_rustle.mp3",
+      "length": 0.64,
+      "loop": false,
+      "category": "sfx",
+      "source": "Kenney kenney-rpg-audio (CC0) via Kenney's own OpenGameArt upload",
+      "licence": "CC0 1.0 (Kenney, kenney.nl); credit optional",
+      "volume": 0.7,
+      "tags": [
+        "sfx"
+      ]
+    },
+    {
+      "id": "coin_single",
+      "file": "sfx/coin_single.mp3",
+      "length": 0.62,
+      "loop": false,
+      "category": "sfx",
+      "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
+      "licence": "ElevenLabs paid-plan output, commercial use allowed",
+      "volume": 0.8,
+      "tags": [
+        "coin"
+      ]
+    },
+    {
+      "id": "coins_several",
+      "file": "sfx/coins_several.mp3",
+      "length": 0.76,
+      "loop": false,
+      "category": "sfx",
+      "source": "Kenney kenney-rpg-audio (CC0) via Kenney's own OpenGameArt upload",
+      "licence": "CC0 1.0 (Kenney, kenney.nl); credit optional",
+      "volume": 0.7,
+      "tags": [
+        "sfx"
+      ]
+    },
+    {
+      "id": "coins_several_2",
+      "file": "sfx/coins_several_2.mp3",
+      "length": 0.33,
+      "loop": false,
+      "category": "sfx",
+      "source": "Kenney kenney-rpg-audio (CC0) via Kenney's own OpenGameArt upload",
+      "licence": "CC0 1.0 (Kenney, kenney.nl); credit optional",
+      "volume": 0.7,
+      "tags": [
+        "sfx"
+      ]
+    },
+    {
+      "id": "cop_hey",
+      "file": "sfx/cop_hey.mp3",
+      "length": 0.88,
+      "loop": false,
+      "category": "sfx",
+      "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
+      "licence": "ElevenLabs paid-plan output, commercial use allowed",
+      "volume": 0.8,
+      "tags": [
+        "cop"
+      ]
+    },
+    {
+      "id": "crowd_gasp",
+      "file": "sfx/crowd_gasp.mp3",
+      "length": 1.3,
+      "loop": false,
+      "category": "sfx",
+      "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
+      "licence": "ElevenLabs paid-plan output, commercial use allowed",
+      "volume": 0.8,
+      "tags": [
+        "crowd"
+      ]
+    },
+    {
+      "id": "crowd_laugh",
+      "file": "sfx/crowd_laugh.mp3",
+      "length": 2.87,
+      "loop": false,
+      "category": "sfx",
+      "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
+      "licence": "ElevenLabs paid-plan output, commercial use allowed",
+      "volume": 0.8,
+      "tags": [
+        "crowd"
+      ]
+    },
+    {
+      "id": "dog_bark",
+      "file": "sfx/dog_bark.mp3",
+      "length": 0.96,
+      "loop": false,
+      "category": "sfx",
+      "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
+      "licence": "ElevenLabs paid-plan output, commercial use allowed",
+      "volume": 0.8,
+      "tags": [
+        "dog"
+      ]
+    },
+    {
+      "id": "door_bell",
+      "file": "sfx/door_bell.mp3",
+      "length": 1.38,
+      "loop": false,
+      "category": "sfx",
+      "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
+      "licence": "ElevenLabs paid-plan output, commercial use allowed",
+      "volume": 0.8,
+      "tags": [
+        "door"
+      ]
+    },
+    {
+      "id": "door_close",
+      "file": "sfx/door_close.mp3",
+      "length": 0.68,
+      "loop": false,
+      "category": "sfx",
+      "source": "Kenney kenney-rpg-audio (CC0) via Kenney's own OpenGameArt upload",
+      "licence": "CC0 1.0 (Kenney, kenney.nl); credit optional",
+      "volume": 0.7,
+      "tags": [
+        "sfx"
+      ]
+    },
+    {
+      "id": "door_open",
+      "file": "sfx/door_open.mp3",
+      "length": 0.92,
+      "loop": false,
+      "category": "sfx",
+      "source": "Kenney kenney-rpg-audio (CC0) via Kenney's own OpenGameArt upload",
+      "licence": "CC0 1.0 (Kenney, kenney.nl); credit optional",
+      "volume": 0.7,
+      "tags": [
+        "sfx"
+      ]
+    },
+    {
+      "id": "eat",
+      "file": "sfx/eat.mp3",
+      "length": 1.57,
+      "loop": false,
+      "category": "sfx",
+      "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
+      "licence": "ElevenLabs paid-plan output, commercial use allowed",
+      "volume": 0.8,
+      "tags": [
+        "eat"
+      ]
+    },
+    {
+      "id": "emote_pop",
+      "file": "sfx/emote_pop.mp3",
+      "length": 0.26,
+      "loop": false,
+      "category": "sfx",
+      "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
+      "licence": "ElevenLabs paid-plan output, commercial use allowed",
+      "volume": 0.8,
+      "tags": [
+        "emote"
+      ]
+    },
+    {
+      "id": "fall_thud",
+      "file": "sfx/fall_thud.mp3",
+      "length": 0.57,
+      "loop": false,
+      "category": "sfx",
+      "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
+      "licence": "ElevenLabs paid-plan output, commercial use allowed",
+      "volume": 0.8,
+      "tags": [
+        "fall"
+      ]
+    },
+    {
+      "id": "footstep_pavement_1",
+      "file": "sfx/footstep_pavement_1.mp3",
+      "length": 0.24,
+      "loop": false,
+      "category": "sfx",
+      "source": "Kenney kenney-rpg-audio (CC0) via Kenney's own OpenGameArt upload",
+      "licence": "CC0 1.0 (Kenney, kenney.nl); credit optional",
+      "volume": 0.7,
+      "tags": [
+        "sfx"
+      ]
+    },
+    {
+      "id": "footstep_pavement_2",
+      "file": "sfx/footstep_pavement_2.mp3",
+      "length": 0.28,
+      "loop": false,
+      "category": "sfx",
+      "source": "Kenney kenney-rpg-audio (CC0) via Kenney's own OpenGameArt upload",
+      "licence": "CC0 1.0 (Kenney, kenney.nl); credit optional",
+      "volume": 0.7,
+      "tags": [
+        "sfx"
+      ]
+    },
+    {
+      "id": "footstep_pavement_3",
+      "file": "sfx/footstep_pavement_3.mp3",
+      "length": 0.24,
+      "loop": false,
+      "category": "sfx",
+      "source": "Kenney kenney-rpg-audio (CC0) via Kenney's own OpenGameArt upload",
+      "licence": "CC0 1.0 (Kenney, kenney.nl); credit optional",
+      "volume": 0.7,
+      "tags": [
+        "sfx"
+      ]
+    },
+    {
+      "id": "footstep_pavement_4",
+      "file": "sfx/footstep_pavement_4.mp3",
+      "length": 0.27,
+      "loop": false,
+      "category": "sfx",
+      "source": "Kenney kenney-rpg-audio (CC0) via Kenney's own OpenGameArt upload",
+      "licence": "CC0 1.0 (Kenney, kenney.nl); credit optional",
+      "volume": 0.7,
+      "tags": [
+        "sfx"
+      ]
+    },
+    {
+      "id": "footsteps_grass",
+      "file": "sfx/footsteps_grass.mp3",
+      "length": 3.0,
+      "loop": true,
+      "category": "sfx",
+      "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
+      "licence": "ElevenLabs paid-plan output, commercial use allowed",
+      "volume": 0.5,
+      "tags": [
+        "footsteps"
+      ]
+    },
+    {
+      "id": "give_item",
+      "file": "sfx/give_item.mp3",
+      "length": 0.8,
+      "loop": false,
+      "category": "sfx",
+      "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
+      "licence": "ElevenLabs paid-plan output, commercial use allowed",
+      "volume": 0.8,
+      "tags": [
+        "give"
+      ]
+    },
+    {
+      "id": "glass_smash",
+      "file": "sfx/glass_smash.mp3",
+      "length": 1.2,
+      "loop": false,
+      "category": "sfx",
+      "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
+      "licence": "ElevenLabs paid-plan output, commercial use allowed",
+      "volume": 0.8,
+      "tags": [
+        "glass"
+      ]
+    },
+    {
+      "id": "gulp",
+      "file": "sfx/gulp.mp3",
+      "length": 1.6,
+      "loop": false,
+      "category": "sfx",
+      "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
+      "licence": "ElevenLabs paid-plan output, commercial use allowed",
+      "volume": 0.8,
+      "tags": [
+        "gulp"
+      ]
+    },
+    {
+      "id": "gulp_2",
+      "file": "sfx/gulp_2.mp3",
+      "length": 0.64,
+      "loop": false,
+      "category": "sfx",
+      "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
+      "licence": "ElevenLabs paid-plan output, commercial use allowed",
+      "volume": 0.8,
+      "tags": [
+        "gulp"
+      ]
+    },
+    {
+      "id": "jump",
+      "file": "sfx/jump.mp3",
+      "length": 0.6,
+      "loop": false,
+      "category": "sfx",
+      "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
+      "licence": "ElevenLabs paid-plan output, commercial use allowed",
+      "volume": 0.8,
+      "tags": [
+        "jump"
+      ]
+    },
+    {
+      "id": "land",
+      "file": "sfx/land.mp3",
+      "length": 0.29,
+      "loop": false,
+      "category": "sfx",
+      "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
+      "licence": "ElevenLabs paid-plan output, commercial use allowed",
+      "volume": 0.8,
+      "tags": [
+        "land"
+      ]
+    },
+    {
+      "id": "levelup",
+      "file": "sfx/levelup.mp3",
+      "length": 1.76,
+      "loop": false,
+      "category": "sfx",
+      "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
+      "licence": "ElevenLabs paid-plan output, commercial use allowed",
+      "volume": 0.8,
+      "tags": [
+        "levelup"
+      ]
+    },
+    {
+      "id": "metal_click",
+      "file": "sfx/metal_click.mp3",
+      "length": 0.41,
+      "loop": false,
+      "category": "sfx",
+      "source": "Kenney kenney-rpg-audio (CC0) via Kenney's own OpenGameArt upload",
+      "licence": "CC0 1.0 (Kenney, kenney.nl); credit optional",
+      "volume": 0.7,
+      "tags": [
+        "sfx"
+      ]
+    },
+    {
+      "id": "pigeons_coo",
+      "file": "sfx/pigeons_coo.mp3",
+      "length": 4.0,
+      "loop": true,
+      "category": "sfx",
+      "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
+      "licence": "ElevenLabs paid-plan output, commercial use allowed",
+      "volume": 0.5,
+      "tags": [
+        "pigeons"
+      ]
+    },
+    {
+      "id": "pigeons_flap",
+      "file": "sfx/pigeons_flap.mp3",
+      "length": 1.5,
+      "loop": false,
+      "category": "sfx",
+      "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
+      "licence": "ElevenLabs paid-plan output, commercial use allowed",
+      "volume": 0.8,
+      "tags": [
+        "pigeons"
+      ]
+    },
+    {
+      "id": "police_whistle",
+      "file": "sfx/police_whistle.mp3",
+      "length": 1.2,
+      "loop": false,
+      "category": "sfx",
+      "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
+      "licence": "ElevenLabs paid-plan output, commercial use allowed",
+      "volume": 0.8,
+      "tags": [
+        "police"
+      ]
+    },
+    {
+      "id": "running_pavement",
+      "file": "sfx/running_pavement.mp3",
+      "length": 3.0,
+      "loop": true,
+      "category": "sfx",
+      "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
+      "licence": "ElevenLabs paid-plan output, commercial use allowed",
+      "volume": 0.5,
+      "tags": [
+        "running"
+      ]
+    },
+    {
+      "id": "siren_distant",
+      "file": "sfx/siren_distant.mp3",
+      "length": 5.82,
+      "loop": false,
+      "category": "sfx",
+      "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
+      "licence": "ElevenLabs paid-plan output, commercial use allowed",
+      "volume": 0.8,
+      "tags": [
+        "siren"
+      ]
+    },
+    {
+      "id": "slap",
+      "file": "sfx/slap.mp3",
+      "length": 0.6,
+      "loop": false,
+      "category": "sfx",
+      "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
+      "licence": "ElevenLabs paid-plan output, commercial use allowed",
+      "volume": 0.8,
+      "tags": [
+        "slap"
+      ]
+    },
+    {
+      "id": "tinnitus",
+      "file": "sfx/tinnitus.mp3",
+      "length": 8.0,
+      "loop": true,
+      "category": "sfx",
+      "source": "synthesised (numpy sine, 6.2 kHz beating pair)",
+      "licence": "own work",
+      "volume": 0.08,
+      "tags": [
+        "hangover"
+      ],
+      "emotion": "hangover"
+    },
+    {
+      "id": "emote_pop_soft",
+      "file": "ui/emote_pop_soft.mp3",
+      "length": 0.1,
+      "loop": false,
+      "category": "ui",
+      "source": "Kenney kenney-interface-sounds (CC0) via Kenney's own OpenGameArt upload",
+      "licence": "CC0 1.0 (Kenney, kenney.nl); credit optional",
+      "volume": 0.6,
+      "tags": [
+        "ui"
+      ]
+    },
+    {
+      "id": "ui_back",
+      "file": "ui/ui_back.mp3",
+      "length": 0.09,
+      "loop": false,
+      "category": "ui",
+      "source": "Kenney kenney-interface-sounds (CC0) via Kenney's own OpenGameArt upload",
+      "licence": "CC0 1.0 (Kenney, kenney.nl); credit optional",
+      "volume": 0.6,
+      "tags": [
+        "ui"
+      ]
+    },
+    {
+      "id": "ui_close",
+      "file": "ui/ui_close.mp3",
+      "length": 0.31,
+      "loop": false,
+      "category": "ui",
+      "source": "Kenney kenney-interface-sounds (CC0) via Kenney's own OpenGameArt upload",
+      "licence": "CC0 1.0 (Kenney, kenney.nl); credit optional",
+      "volume": 0.6,
+      "tags": [
+        "ui"
+      ]
+    },
+    {
+      "id": "ui_confirm",
+      "file": "ui/ui_confirm.mp3",
+      "length": 0.54,
+      "loop": false,
+      "category": "ui",
+      "source": "Kenney kenney-interface-sounds (CC0) via Kenney's own OpenGameArt upload",
+      "licence": "CC0 1.0 (Kenney, kenney.nl); credit optional",
+      "volume": 0.6,
+      "tags": [
+        "ui"
+      ]
+    },
+    {
+      "id": "ui_error",
+      "file": "ui/ui_error.mp3",
+      "length": 0.1,
+      "loop": false,
+      "category": "ui",
+      "source": "Kenney kenney-interface-sounds (CC0) via Kenney's own OpenGameArt upload",
+      "licence": "CC0 1.0 (Kenney, kenney.nl); credit optional",
+      "volume": 0.6,
+      "tags": [
+        "ui"
+      ]
+    },
+    {
+      "id": "ui_notify",
+      "file": "ui/ui_notify.mp3",
+      "length": 0.12,
+      "loop": false,
+      "category": "ui",
+      "source": "Kenney kenney-interface-sounds (CC0) via Kenney's own OpenGameArt upload",
+      "licence": "CC0 1.0 (Kenney, kenney.nl); credit optional",
+      "volume": 0.6,
+      "tags": [
+        "ui"
+      ]
+    },
+    {
+      "id": "ui_open",
+      "file": "ui/ui_open.mp3",
+      "length": 0.31,
+      "loop": false,
+      "category": "ui",
+      "source": "Kenney kenney-interface-sounds (CC0) via Kenney's own OpenGameArt upload",
+      "licence": "CC0 1.0 (Kenney, kenney.nl); credit optional",
+      "volume": 0.6,
+      "tags": [
+        "ui"
+      ]
+    },
+    {
+      "id": "ui_select",
+      "file": "ui/ui_select.mp3",
+      "length": 0.04,
+      "loop": false,
+      "category": "ui",
+      "source": "Kenney kenney-interface-sounds (CC0) via Kenney's own OpenGameArt upload",
+      "licence": "CC0 1.0 (Kenney, kenney.nl); credit optional",
+      "volume": 0.6,
+      "tags": [
+        "ui"
+      ]
+    },
+    {
+      "id": "ui_tap",
+      "file": "ui/ui_tap.mp3",
+      "length": 0.01,
+      "loop": false,
+      "category": "ui",
+      "source": "Kenney kenney-interface-sounds (CC0) via Kenney's own OpenGameArt upload",
+      "licence": "CC0 1.0 (Kenney, kenney.nl); credit optional",
+      "volume": 0.6,
+      "tags": [
+        "ui"
+      ]
+    },
+    {
+      "id": "ui_tick",
+      "file": "ui/ui_tick.mp3",
+      "length": 0.02,
+      "loop": false,
+      "category": "ui",
+      "source": "Kenney kenney-interface-sounds (CC0) via Kenney's own OpenGameArt upload",
+      "licence": "CC0 1.0 (Kenney, kenney.nl); credit optional",
+      "volume": 0.6,
+      "tags": [
+        "ui"
+      ]
+    },
+    {
+      "id": "ui_toggle",
+      "file": "ui/ui_toggle.mp3",
+      "length": 0.14,
+      "loop": false,
+      "category": "ui",
+      "source": "Kenney kenney-interface-sounds (CC0) via Kenney's own OpenGameArt upload",
+      "licence": "CC0 1.0 (Kenney, kenney.nl); credit optional",
+      "volume": 0.6,
+      "tags": [
+        "ui"
+      ]
+    },
+    {
+      "id": "voice_cop",
+      "file": "voices/cop/cop_01.mp3",
+      "files": [
+        "voices/cop/cop_01.mp3",
+        "voices/cop/cop_02.mp3",
+        "voices/cop/cop_03.mp3",
+        "voices/cop/cop_04.mp3",
+        "voices/cop/cop_05.mp3",
+        "voices/cop/cop_06.mp3",
+        "voices/cop/cop_07.mp3",
+        "voices/cop/cop_08.mp3",
+        "voices/cop/cop_09.mp3",
+        "voices/cop/cop_10.mp3",
+        "voices/cop/cop_11.mp3",
+        "voices/cop/cop_12.mp3"
+      ],
+      "length": null,
+      "loop": false,
+      "category": "voice",
+      "source": "ElevenLabs Sound Effects (gibberish babble prompt), sliced into blips here",
+      "licence": "ElevenLabs paid-plan output, commercial use allowed",
+      "volume": 0.7,
+      "tags": [
+        "mumble",
+        "speech-bubble",
+        "cop"
+      ],
+      "note": "play 1 random blip per 2-3 letters of bubble text, pitch +-8%"
+    },
+    {
+      "id": "voice_hero",
+      "file": "voices/hero/hero_01.mp3",
+      "files": [
+        "voices/hero/hero_01.mp3",
+        "voices/hero/hero_02.mp3",
+        "voices/hero/hero_03.mp3",
+        "voices/hero/hero_04.mp3",
+        "voices/hero/hero_05.mp3",
+        "voices/hero/hero_06.mp3",
+        "voices/hero/hero_07.mp3",
+        "voices/hero/hero_08.mp3",
+        "voices/hero/hero_09.mp3",
+        "voices/hero/hero_10.mp3",
+        "voices/hero/hero_11.mp3",
+        "voices/hero/hero_12.mp3"
+      ],
+      "length": null,
+      "loop": false,
+      "category": "voice",
+      "source": "ElevenLabs Sound Effects (gibberish babble prompt), sliced into blips here",
+      "licence": "ElevenLabs paid-plan output, commercial use allowed",
+      "volume": 0.7,
+      "tags": [
+        "mumble",
+        "speech-bubble",
+        "hero"
+      ],
+      "note": "play 1 random blip per 2-3 letters of bubble text, pitch +-8%"
+    },
+    {
+      "id": "voice_man",
+      "file": "voices/man/man_01.mp3",
+      "files": [
+        "voices/man/man_01.mp3",
+        "voices/man/man_02.mp3",
+        "voices/man/man_03.mp3",
+        "voices/man/man_04.mp3",
+        "voices/man/man_05.mp3",
+        "voices/man/man_06.mp3",
+        "voices/man/man_07.mp3",
+        "voices/man/man_08.mp3",
+        "voices/man/man_09.mp3",
+        "voices/man/man_10.mp3",
+        "voices/man/man_11.mp3",
+        "voices/man/man_12.mp3"
+      ],
+      "length": null,
+      "loop": false,
+      "category": "voice",
+      "source": "ElevenLabs Sound Effects (gibberish babble prompt), sliced into blips here",
+      "licence": "ElevenLabs paid-plan output, commercial use allowed",
+      "volume": 0.7,
+      "tags": [
+        "mumble",
+        "speech-bubble",
+        "man"
+      ],
+      "note": "play 1 random blip per 2-3 letters of bubble text, pitch +-8%"
+    },
+    {
+      "id": "voice_oldman",
+      "file": "voices/oldman/oldman_01.mp3",
+      "files": [
+        "voices/oldman/oldman_01.mp3",
+        "voices/oldman/oldman_02.mp3",
+        "voices/oldman/oldman_03.mp3",
+        "voices/oldman/oldman_04.mp3",
+        "voices/oldman/oldman_05.mp3",
+        "voices/oldman/oldman_06.mp3",
+        "voices/oldman/oldman_07.mp3",
+        "voices/oldman/oldman_08.mp3",
+        "voices/oldman/oldman_09.mp3",
+        "voices/oldman/oldman_10.mp3",
+        "voices/oldman/oldman_11.mp3",
+        "voices/oldman/oldman_12.mp3"
+      ],
+      "length": null,
+      "loop": false,
+      "category": "voice",
+      "source": "ElevenLabs Sound Effects (gibberish babble prompt), sliced into blips here",
+      "licence": "ElevenLabs paid-plan output, commercial use allowed",
+      "volume": 0.7,
+      "tags": [
+        "mumble",
+        "speech-bubble",
+        "oldman"
+      ],
+      "note": "play 1 random blip per 2-3 letters of bubble text, pitch +-8%"
+    },
+    {
+      "id": "voice_partner",
+      "file": "voices/partner/partner_01.mp3",
+      "files": [
+        "voices/partner/partner_01.mp3",
+        "voices/partner/partner_02.mp3",
+        "voices/partner/partner_03.mp3",
+        "voices/partner/partner_04.mp3",
+        "voices/partner/partner_05.mp3",
+        "voices/partner/partner_06.mp3",
+        "voices/partner/partner_07.mp3",
+        "voices/partner/partner_08.mp3",
+        "voices/partner/partner_09.mp3",
+        "voices/partner/partner_10.mp3",
+        "voices/partner/partner_11.mp3",
+        "voices/partner/partner_12.mp3"
+      ],
+      "length": null,
+      "loop": false,
+      "category": "voice",
+      "source": "ElevenLabs Sound Effects (gibberish babble prompt), sliced into blips here",
+      "licence": "ElevenLabs paid-plan output, commercial use allowed",
+      "volume": 0.7,
+      "tags": [
+        "mumble",
+        "speech-bubble",
+        "partner"
+      ],
+      "note": "play 1 random blip per 2-3 letters of bubble text, pitch +-8%"
+    },
+    {
+      "id": "voice_woman",
+      "file": "voices/woman/woman_01.mp3",
+      "files": [
+        "voices/woman/woman_01.mp3",
+        "voices/woman/woman_02.mp3",
+        "voices/woman/woman_03.mp3",
+        "voices/woman/woman_04.mp3",
+        "voices/woman/woman_05.mp3",
+        "voices/woman/woman_06.mp3",
+        "voices/woman/woman_07.mp3",
+        "voices/woman/woman_08.mp3",
+        "voices/woman/woman_09.mp3",
+        "voices/woman/woman_10.mp3",
+        "voices/woman/woman_11.mp3",
+        "voices/woman/woman_12.mp3"
+      ],
+      "length": null,
+      "loop": false,
+      "category": "voice",
+      "source": "ElevenLabs Sound Effects (gibberish babble prompt), sliced into blips here",
+      "licence": "ElevenLabs paid-plan output, commercial use allowed",
+      "volume": 0.7,
+      "tags": [
+        "mumble",
+        "speech-bubble",
+        "woman"
+      ],
+      "note": "play 1 random blip per 2-3 letters of bubble text, pitch +-8%"
+    }
+  ]
 }
