@@ -1,5 +1,5 @@
 {
- "note": "Crowd pass test list (load with ?castidx=index.next.json). index.json is the live one.",
+ "note": "Crowd pass (2026-11-27): the cast models castview.ts loads. skip = clip roles that put a hand through that body (tests/castglb.test.ts enforces it). Delete this file to go back to the box people.",
  "cast": [
   {
    "id": "rookie",

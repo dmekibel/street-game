@@ -1427,7 +1427,8 @@
         "speech-bubble",
         "cop"
       ],
-      "note": "play 1 random blip per 2-3 letters of bubble text, pitch +-8%"
+      "note": "play 1 random blip per 2-3 letters of bubble text, pitch +-8%",
+      "rate": 0.9
     },
     {
       "id": "voice_hero",
@@ -1458,7 +1459,7 @@
         "hero"
       ],
       "note": "play 1 random blip per 2-3 letters of bubble text, pitch +-8%; play at rate 0.72 (blips came out high, 2026-11-27)",
-      "rate": 0.72
+      "rate": 0.62
     },
     {
       "id": "voice_man",
@@ -1486,7 +1487,7 @@
         "man"
       ],
       "note": "play 1 random blip per 2-3 letters of bubble text, pitch +-8%; play at rate 0.75 (blips came out high, 2026-11-27)",
-      "rate": 0.75
+      "rate": 0.68
     },
     {
       "id": "voice_oldman",
