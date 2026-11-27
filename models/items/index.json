@@ -1,0 +1,41 @@
+{
+ "note": "David's item pictures as 3D props (Tripo, cleaned in Blender: art/items-2026-11-27/). One mesh each, real size in metres, on y=0, facing +z. itemmodels.ts reads this first.",
+ "items": [
+  {
+   "name": "beer",
+   "file": "beer.glb"
+  },
+  {
+   "name": "chips",
+   "file": "chips.glb"
+  },
+  {
+   "name": "guitar",
+   "file": "guitar.glb"
+  },
+  {
+   "name": "hotdog",
+   "file": "hotdog.glb"
+  },
+  {
+   "name": "lighter",
+   "file": "lighter.glb"
+  },
+  {
+   "name": "sandwich",
+   "file": "sandwich.glb"
+  },
+  {
+   "name": "scratch",
+   "file": "scratch.glb"
+  },
+  {
+   "name": "smokes",
+   "file": "smokes.glb"
+  },
+  {
+   "name": "wine",
+   "file": "wine.glb"
+  }
+ ]
+}
