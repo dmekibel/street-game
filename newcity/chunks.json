@@ -13,8 +13,8 @@
     -64,
     0
    ],
-   "tris": 5720,
-   "materials": 22,
+   "tris": 2704,
+   "materials": 19,
    "parts": [
     "building",
     "ground",
@@ -32,13 +32,11 @@
     0,
     64
    ],
-   "tris": 2496,
-   "materials": 23,
+   "tris": 4820,
+   "materials": 11,
    "parts": [
-    "building",
     "ground",
     "lamp",
-    "prop",
     "tree"
    ]
   },
@@ -51,40 +49,8 @@
     64,
     128
    ],
-   "tris": 12,
-   "materials": 1,
-   "parts": [
-    "building"
-   ]
-  },
-  {
-   "key": "-1_2",
-   "file": "chunk_-1_2.glb",
-   "bounds": [
-    -64,
-    0,
-    128,
-    192
-   ],
-   "tris": 778,
-   "materials": 6,
-   "parts": [
-    "building",
-    "ground",
-    "statehouse"
-   ]
-  },
-  {
-   "key": "-1_4",
-   "file": "chunk_-1_4.glb",
-   "bounds": [
-    -64,
-    0,
-    256,
-    320
-   ],
-   "tris": 12,
-   "materials": 1,
+   "tris": 332,
+   "materials": 13,
    "parts": [
     "building"
    ]
@@ -98,7 +64,7 @@
     -64,
     0
    ],
-   "tris": 3372,
+   "tris": 3172,
    "materials": 18,
    "parts": [
     "building",
@@ -117,12 +83,12 @@
     0,
     64
    ],
-   "tris": 1968,
-   "materials": 18,
+   "tris": 2160,
+   "materials": 11,
    "parts": [
-    "building",
     "ground",
     "lamp",
+    "prop",
     "tree"
    ]
   },
@@ -135,8 +101,8 @@
     64,
     128
    ],
-   "tris": 1052,
-   "materials": 13,
+   "tris": 628,
+   "materials": 14,
    "parts": [
     "building",
     "ground",
@@ -152,28 +118,11 @@
     128,
     192
    ],
-   "tris": 318,
-   "materials": 11,
+   "tris": 296,
+   "materials": 3,
    "parts": [
-    "building",
-    "chapel",
     "ground",
     "lamp"
-   ]
-  },
-  {
-   "key": "-3_4",
-   "file": "chunk_-3_4.glb",
-   "bounds": [
-    -192,
-    -128,
-    256,
-    320
-   ],
-   "tris": 12,
-   "materials": 1,
-   "parts": [
-    "building"
    ]
   },
   {
@@ -185,16 +134,14 @@
     -64,
     0
    ],
-   "tris": 7384,
-   "materials": 25,
+   "tris": 3042,
+   "materials": 20,
    "parts": [
     "building",
-    "fountain",
     "ground",
+    "kiosk",
     "lamp",
-    "prop",
-    "tree",
-    "water"
+    "tree"
    ]
   },
   {
@@ -206,11 +153,12 @@
     0,
     64
    ],
-   "tris": 7260,
-   "materials": 27,
+   "tris": 8618,
+   "materials": 24,
    "parts": [
     "bench",
     "building",
+    "fountain",
     "gazebo",
     "ground",
     "island",
@@ -232,9 +180,10 @@
     64,
     128
    ],
-   "tris": 400,
-   "materials": 3,
+   "tris": 664,
+   "materials": 13,
    "parts": [
+    "building",
     "ground",
     "lamp"
    ]
@@ -248,7 +197,7 @@
     128,
     192
    ],
-   "tris": 52,
+   "tris": 296,
    "materials": 3,
    "parts": [
     "ground",
@@ -281,12 +230,44 @@
     0,
     64
    ],
-   "tris": 672,
-   "materials": 12,
+   "tris": 700,
+   "materials": 13,
    "parts": [
     "building",
     "ground",
     "lamp"
+   ]
+  },
+  {
+   "key": "1_1",
+   "file": "chunk_1_1.glb",
+   "bounds": [
+    64,
+    128,
+    64,
+    128
+   ],
+   "tris": 564,
+   "materials": 13,
+   "parts": [
+    "building",
+    "ground"
+   ]
+  },
+  {
+   "key": "1_2",
+   "file": "chunk_1_2.glb",
+   "bounds": [
+    64,
+    128,
+    128,
+    192
+   ],
+   "tris": 306,
+   "materials": 8,
+   "parts": [
+    "building",
+    "chapel"
    ]
   },
   {
@@ -298,7 +279,7 @@
     -64,
     0
    ],
-   "tris": 340,
+   "tris": 572,
    "materials": 10,
    "parts": [
     "building",
@@ -315,11 +296,90 @@
     0,
     64
    ],
-   "tris": 116,
-   "materials": 3,
+   "tris": 244,
+   "materials": 4,
    "parts": [
+    "building",
     "ground",
     "lamp"
+   ]
+  },
+  {
+   "key": "2_1",
+   "file": "chunk_2_1.glb",
+   "bounds": [
+    128,
+    192,
+    64,
+    128
+   ],
+   "tris": 524,
+   "materials": 12,
+   "parts": [
+    "building",
+    "ground",
+    "statehouse"
+   ]
+  },
+  {
+   "key": "2_2",
+   "file": "chunk_2_2.glb",
+   "bounds": [
+    128,
+    192,
+    128,
+    192
+   ],
+   "tris": 566,
+   "materials": 7,
+   "parts": [
+    "building",
+    "statehouse"
+   ]
+  },
+  {
+   "key": "2_4",
+   "file": "chunk_2_4.glb",
+   "bounds": [
+    128,
+    192,
+    256,
+    320
+   ],
+   "tris": 12,
+   "materials": 1,
+   "parts": [
+    "building"
+   ]
+  },
+  {
+   "key": "3_3",
+   "file": "chunk_3_3.glb",
+   "bounds": [
+    192,
+    256,
+    192,
+    256
+   ],
+   "tris": 84,
+   "materials": 1,
+   "parts": [
+    "building"
+   ]
+  },
+  {
+   "key": "3_4",
+   "file": "chunk_3_4.glb",
+   "bounds": [
+    192,
+    256,
+    256,
+    320
+   ],
+   "tris": 12,
+   "materials": 1,
+   "parts": [
+    "building"
    ]
   },
   {
@@ -336,8 +396,8 @@
    "key": "skyline",
    "file": "chunk_skyline.glb",
    "bounds": null,
-   "tris": 132,
-   "materials": 5,
+   "tris": 108,
+   "materials": 6,
    "parts": [
     "building"
    ]
@@ -367,8 +427,8 @@
      "id": "beacon_n0",
      "kind": "building",
      "pos": [
-      -81.5,
-      45.5
+      -101.0,
+      70.5
      ],
      "rotY": 180.0,
      "backdrop": false,
@@ -380,8 +440,8 @@
      "id": "beacon_n1",
      "kind": "building",
      "pos": [
-      -73.0,
-      45.5
+      -92.5,
+      70.5
      ],
      "rotY": 180.0,
      "backdrop": false,
@@ -393,8 +453,8 @@
      "id": "beacon_n2",
      "kind": "building",
      "pos": [
-      -64.0,
-      45.5
+      -83.5,
+      70.5
      ],
      "rotY": 180.0,
      "backdrop": false,
@@ -406,8 +466,8 @@
      "id": "beacon_n3",
      "kind": "building",
      "pos": [
-      -55.5,
-      45.5
+      -75.0,
+      70.5
      ],
      "rotY": 180.0,
      "backdrop": false,
@@ -419,8 +479,8 @@
      "id": "beacon_n4",
      "kind": "building",
      "pos": [
-      -47.5,
-      45.5
+      -67.0,
+      70.5
      ],
      "rotY": 180.0,
      "backdrop": false,
@@ -432,34 +492,34 @@
      "id": "beacon_n5",
      "kind": "building",
      "pos": [
-      -39.0,
-      45.5
+      -58.5,
+      70.5
      ],
      "rotY": 180.0,
      "backdrop": false,
      "near": "art/kit/beacon_n5.glb",
      "far": "art/kit/beacon_n5_far.glb",
-     "h": 10.14
+     "h": 13.54
     },
     {
      "id": "beacon_n6",
      "kind": "building",
      "pos": [
-      -29.5,
-      45.5
+      -49.0,
+      70.5
      ],
      "rotY": 180.0,
      "backdrop": false,
      "near": "art/kit/beacon_n6.glb",
      "far": "art/kit/beacon_n6_far.glb",
-     "h": 10.14
+     "h": 12.05
     },
     {
      "id": "beacon_n7",
      "kind": "building",
      "pos": [
-      -20.0,
-      45.5
+      -39.5,
+      70.5
      ],
      "rotY": 180.0,
      "backdrop": false,
@@ -471,8 +531,8 @@
      "id": "beacon_n8",
      "kind": "building",
      "pos": [
-      -11.5,
-      45.5
+      -31.0,
+      70.5
      ],
      "rotY": 180.0,
      "backdrop": false,
@@ -484,8 +544,8 @@
      "id": "beacon_n9",
      "kind": "building",
      "pos": [
-      -3.5,
-      45.5
+      -23.0,
+      70.5
      ],
      "rotY": 180.0,
      "backdrop": false,
@@ -497,8 +557,8 @@
      "id": "beacon_n10",
      "kind": "building",
      "pos": [
-      5.0,
-      45.5
+      -14.5,
+      70.5
      ],
      "rotY": 180.0,
      "backdrop": false,
@@ -510,8 +570,8 @@
      "id": "beacon_n11",
      "kind": "building",
      "pos": [
-      14.0,
-      45.5
+      -5.5,
+      70.5
      ],
      "rotY": 180.0,
      "backdrop": false,
@@ -523,8 +583,8 @@
      "id": "beacon_n12",
      "kind": "building",
      "pos": [
-      22.5,
-      45.5
+      3.0,
+      70.5
      ],
      "rotY": 180.0,
      "backdrop": false,
@@ -536,8 +596,8 @@
      "id": "beacon_n13",
      "kind": "building",
      "pos": [
-      31.0,
-      45.5
+      11.5,
+      70.5
      ],
      "rotY": 180.0,
      "backdrop": false,
@@ -549,60 +609,86 @@
      "id": "beacon_n14",
      "kind": "building",
      "pos": [
-      38.75,
-      45.5
+      20.5,
+      70.5
      ],
      "rotY": 180.0,
      "backdrop": false,
      "near": "art/kit/beacon_n14.glb",
      "far": "art/kit/beacon_n14_far.glb",
-     "h": 15.5
+     "h": 10.14
+    },
+    {
+     "id": "beacon_n15",
+     "kind": "building",
+     "pos": [
+      29.0,
+      70.5
+     ],
+     "rotY": 180.0,
+     "backdrop": false,
+     "near": "art/kit/beacon_n15.glb",
+     "far": "art/kit/beacon_n15_far.glb",
+     "h": 10.14
+    },
+    {
+     "id": "beacon_n16",
+     "kind": "building",
+     "pos": [
+      37.0,
+      70.5
+     ],
+     "rotY": 180.0,
+     "backdrop": false,
+     "near": "art/kit/beacon_n16.glb",
+     "far": "art/kit/beacon_n16_far.glb",
+     "h": 10.14
     },
     {
      "id": "lane_w0",
      "kind": "building",
      "pos": [
-      -101.75,
-      58.5
+      106.5,
+      83.5
      ],
      "rotY": 90.0,
      "backdrop": false,
      "near": "art/kit/lane_w0.glb",
      "far": "art/kit/lane_w0_far.glb",
-     "h": 15.19
+     "h": 15.45
     },
     {
      "id": "lane_e0",
      "kind": "building",
      "pos": [
-      -80.0,
-      58.5
+      130.5,
+      83.5
      ],
      "rotY": -90.0,
      "backdrop": false,
      "near": "art/kit/lane_e0.glb",
      "far": "art/kit/lane_e0_far.glb",
-     "h": 15.45
+     "h": 15.07
     },
     {
      "id": "lane_w1",
      "kind": "building",
      "pos": [
-      -101.75,
-      67.5
+      106.5,
+      92.5
      ],
      "rotY": 90.0,
      "backdrop": false,
      "near": "art/kit/lane_w1.glb",
      "far": "art/kit/lane_w1_far.glb",
-     "h": 15.19
+     "h": 15.45
     },
     {
      "id": "lane_e1",
      "kind": "building",
      "pos": [
-      -80.0,
-      67.5
+      130.5,
+      92.5
      ],
      "rotY": -90.0,
      "backdrop": false,
@@ -614,21 +700,21 @@
      "id": "lane_w2",
      "kind": "building",
      "pos": [
-      -101.75,
-      76.5
+      106.5,
+      101.5
      ],
      "rotY": 90.0,
      "backdrop": false,
      "near": "art/kit/lane_w2.glb",
      "far": "art/kit/lane_w2_far.glb",
-     "h": 15.19
+     "h": 15.07
     },
     {
      "id": "lane_e2",
      "kind": "building",
      "pos": [
-      -80.0,
-      76.5
+      130.5,
+      101.5
      ],
      "rotY": -90.0,
      "backdrop": false,
@@ -640,21 +726,21 @@
      "id": "lane_w3",
      "kind": "building",
      "pos": [
-      -101.75,
-      85.5
+      106.5,
+      110.5
      ],
      "rotY": 90.0,
      "backdrop": false,
      "near": "art/kit/lane_w3.glb",
      "far": "art/kit/lane_w3_far.glb",
-     "h": 15.07
+     "h": 15.45
     },
     {
      "id": "lane_e3",
      "kind": "building",
      "pos": [
-      -80.0,
-      85.5
+      130.5,
+      110.5
      ],
      "rotY": -90.0,
      "backdrop": false,
@@ -666,234 +752,91 @@
      "id": "lane_w4",
      "kind": "building",
      "pos": [
-      -101.75,
-      94.5
+      106.5,
+      119.5
      ],
      "rotY": 90.0,
      "backdrop": false,
      "near": "art/kit/lane_w4.glb",
      "far": "art/kit/lane_w4_far.glb",
-     "h": 15.19
-    },
-    {
-     "id": "lane_e4",
-     "kind": "building",
-     "pos": [
-      -80.0,
-      94.5
-     ],
-     "rotY": -90.0,
-     "backdrop": false,
-     "near": "art/kit/lane_e4.glb",
-     "far": "art/kit/lane_e4_far.glb",
-     "h": 15.07
+     "h": 15.45
     },
     {
      "id": "lane_w5",
      "kind": "building",
      "pos": [
-      -101.75,
-      103.5
+      106.5,
+      128.5
      ],
      "rotY": 90.0,
      "backdrop": false,
      "near": "art/kit/lane_w5.glb",
      "far": "art/kit/lane_w5_far.glb",
-     "h": 15.19
-    },
-    {
-     "id": "lane_e5",
-     "kind": "building",
-     "pos": [
-      -80.0,
-      103.5
-     ],
-     "rotY": -90.0,
-     "backdrop": false,
-     "near": "art/kit/lane_e5.glb",
-     "far": "art/kit/lane_e5_far.glb",
-     "h": 15.07
+     "h": 15.45
     },
     {
      "id": "lane_w6",
      "kind": "building",
      "pos": [
-      -101.75,
-      112.5
+      106.5,
+      137.5
      ],
      "rotY": 90.0,
      "backdrop": false,
      "near": "art/kit/lane_w6.glb",
      "far": "art/kit/lane_w6_far.glb",
-     "h": 15.19
-    },
-    {
-     "id": "lane_e6",
-     "kind": "building",
-     "pos": [
-      -80.0,
-      112.5
-     ],
-     "rotY": -90.0,
-     "backdrop": false,
-     "near": "art/kit/lane_e6.glb",
-     "far": "art/kit/lane_e6_far.glb",
-     "h": 15.45
+     "h": 15.07
     },
     {
      "id": "lane_w7",
      "kind": "building",
      "pos": [
-      -101.75,
-      121.5
+      106.5,
+      146.5
      ],
      "rotY": 90.0,
      "backdrop": false,
      "near": "art/kit/lane_w7.glb",
      "far": "art/kit/lane_w7_far.glb",
-     "h": 15.07
+     "h": 15.45
     },
     {
      "id": "lane_e7",
      "kind": "building",
      "pos": [
-      -80.0,
-      121.5
+      130.5,
+      146.5
      ],
      "rotY": -90.0,
      "backdrop": false,
      "near": "art/kit/lane_e7.glb",
      "far": "art/kit/lane_e7_far.glb",
-     "h": 15.07
+     "h": 15.45
     },
     {
      "id": "lane_w8",
      "kind": "building",
      "pos": [
-      -101.75,
-      130.5
+      106.5,
+      155.5
      ],
      "rotY": 90.0,
      "backdrop": false,
      "near": "art/kit/lane_w8.glb",
      "far": "art/kit/lane_w8_far.glb",
-     "h": 15.19
+     "h": 15.45
     },
     {
      "id": "lane_e8",
      "kind": "building",
      "pos": [
-      -80.0,
-      130.5
+      130.5,
+      155.5
      ],
      "rotY": -90.0,
      "backdrop": false,
      "near": "art/kit/lane_e8.glb",
      "far": "art/kit/lane_e8_far.glb",
-     "h": 15.45
-    },
-    {
-     "id": "lane_w9",
-     "kind": "building",
-     "pos": [
-      -101.75,
-      139.5
-     ],
-     "rotY": 90.0,
-     "backdrop": true,
-     "near": null,
-     "far": "art/kit/lane_w9_far.glb",
-     "h": 15.19
-    },
-    {
-     "id": "lane_e9",
-     "kind": "building",
-     "pos": [
-      -80.0,
-      139.5
-     ],
-     "rotY": -90.0,
-     "backdrop": true,
-     "near": null,
-     "far": "art/kit/lane_e9_far.glb",
-     "h": 15.45
-    },
-    {
-     "id": "lane_w10",
-     "kind": "building",
-     "pos": [
-      -101.75,
-      148.5
-     ],
-     "rotY": 90.0,
-     "backdrop": true,
-     "near": null,
-     "far": "art/kit/lane_w10_far.glb",
-     "h": 15.19
-    },
-    {
-     "id": "lane_e10",
-     "kind": "building",
-     "pos": [
-      -80.0,
-      148.5
-     ],
-     "rotY": -90.0,
-     "backdrop": true,
-     "near": null,
-     "far": "art/kit/lane_e10_far.glb",
-     "h": 15.07
-    },
-    {
-     "id": "lane_w11",
-     "kind": "building",
-     "pos": [
-      -101.75,
-      157.5
-     ],
-     "rotY": 90.0,
-     "backdrop": true,
-     "near": null,
-     "far": "art/kit/lane_w11_far.glb",
-     "h": 15.19
-    },
-    {
-     "id": "lane_e11",
-     "kind": "building",
-     "pos": [
-      -80.0,
-      157.5
-     ],
-     "rotY": -90.0,
-     "backdrop": true,
-     "near": null,
-     "far": "art/kit/lane_e11_far.glb",
-     "h": 15.45
-    },
-    {
-     "id": "lane_w12",
-     "kind": "building",
-     "pos": [
-      -101.75,
-      166.5
-     ],
-     "rotY": 90.0,
-     "backdrop": true,
-     "near": null,
-     "far": "art/kit/lane_w12_far.glb",
-     "h": 15.07
-    },
-    {
-     "id": "lane_e12",
-     "kind": "building",
-     "pos": [
-      -80.0,
-      166.5
-     ],
-     "rotY": -90.0,
-     "backdrop": true,
-     "near": null,
-     "far": "art/kit/lane_e12_far.glb",
      "h": 15.45
     },
     {
@@ -946,7 +889,7 @@
      "backdrop": false,
      "near": "art/kit/boylston_s3.glb",
      "far": "art/kit/boylston_s3_far.glb",
-     "h": 11.01
+     "h": 11.09
     },
     {
      "id": "boylston_s4",
@@ -959,7 +902,7 @@
      "backdrop": false,
      "near": "art/kit/boylston_s4.glb",
      "far": "art/kit/boylston_s4_far.glb",
-     "h": 15.51
+     "h": 15.59
     },
     {
      "id": "boylston_s5",
@@ -1024,7 +967,7 @@
      "backdrop": false,
      "near": "art/kit/boylston_s9.glb",
      "far": "art/kit/boylston_s9_far.glb",
-     "h": 14.49
+     "h": 14.41
     },
     {
      "id": "boylston_s10",
@@ -1128,7 +1071,7 @@
      "backdrop": false,
      "near": "art/kit/boylston_s17.glb",
      "far": "art/kit/boylston_s17_far.glb",
-     "h": 7.69
+     "h": 7.61
     },
     {
      "id": "boylston_s18",
@@ -1141,7 +1084,7 @@
      "backdrop": false,
      "near": "art/kit/boylston_s18.glb",
      "far": "art/kit/boylston_s18_far.glb",
-     "h": 12.11
+     "h": 12.19
     },
     {
      "id": "boylston_s19",
@@ -1193,7 +1136,7 @@
      "backdrop": false,
      "near": "art/kit/boylston_s22.glb",
      "far": "art/kit/boylston_s22_far.glb",
-     "h": 8.79
+     "h": 8.71
     },
     {
      "id": "hotdog_shop",
@@ -1232,7 +1175,7 @@
      "backdrop": false,
      "near": "art/kit/tremont_e3.glb",
      "far": "art/kit/tremont_e3_far.glb",
-     "h": 12.11
+     "h": 12.19
     },
     {
      "id": "tremont_e4",
@@ -1258,7 +1201,7 @@
      "backdrop": false,
      "near": "art/kit/winter_n1.glb",
      "far": "art/kit/winter_n1_far.glb",
-     "h": 12.11
+     "h": 12.19
     },
     {
      "id": "winter_n2",
@@ -1287,11 +1230,154 @@
      "h": 12.19
     },
     {
+     "id": "tremont_e2",
+     "kind": "building",
+     "pos": [
+      67.25,
+      26.75
+     ],
+     "rotY": -90.0,
+     "backdrop": false,
+     "near": "art/kit/tremont_e2.glb",
+     "far": "art/kit/tremont_e2_far.glb",
+     "h": 13.54
+    },
+    {
+     "id": "tremont_e5",
+     "kind": "building",
+     "pos": [
+      67.5,
+      40.0
+     ],
+     "rotY": -90.0,
+     "backdrop": false,
+     "near": "art/kit/tremont_e5.glb",
+     "far": "art/kit/tremont_e5_far.glb",
+     "h": 12.19
+    },
+    {
+     "id": "beacon_se1",
+     "kind": "building",
+     "pos": [
+      80.75,
+      41.0
+     ],
+     "rotY": 0.0,
+     "backdrop": false,
+     "near": "art/kit/beacon_se1.glb",
+     "far": "art/kit/beacon_se1_far.glb",
+     "h": 13.54
+    },
+    {
+     "id": "beacon_ne0",
+     "kind": "building",
+     "pos": [
+      67.5,
+      70.5
+     ],
+     "rotY": 180.0,
+     "backdrop": false,
+     "near": "art/kit/beacon_ne0.glb",
+     "far": "art/kit/beacon_ne0_far.glb",
+     "h": 10.14
+    },
+    {
+     "id": "beacon_ne1",
+     "kind": "building",
+     "pos": [
+      78.5,
+      70.5
+     ],
+     "rotY": 180.0,
+     "backdrop": false,
+     "near": "art/kit/beacon_ne1.glb",
+     "far": "art/kit/beacon_ne1_far.glb",
+     "h": 10.14
+    },
+    {
+     "id": "beacon_ne2",
+     "kind": "building",
+     "pos": [
+      89.0,
+      70.5
+     ],
+     "rotY": 180.0,
+     "backdrop": false,
+     "near": "art/kit/beacon_ne2.glb",
+     "far": "art/kit/beacon_ne2_far.glb",
+     "h": 10.14
+    },
+    {
+     "id": "beacon_ne3",
+     "kind": "building",
+     "pos": [
+      99.0,
+      70.5
+     ],
+     "rotY": 180.0,
+     "backdrop": false,
+     "near": "art/kit/beacon_ne3.glb",
+     "far": "art/kit/beacon_ne3_far.glb",
+     "h": 10.14
+    },
+    {
+     "id": "beacon_ne4",
+     "kind": "building",
+     "pos": [
+      130.5,
+      70.5
+     ],
+     "rotY": 180.0,
+     "backdrop": false,
+     "near": "art/kit/beacon_ne4.glb",
+     "far": "art/kit/beacon_ne4_far.glb",
+     "h": 10.14
+    },
+    {
+     "id": "beacon_ne5",
+     "kind": "building",
+     "pos": [
+      141.5,
+      70.5
+     ],
+     "rotY": 180.0,
+     "backdrop": false,
+     "near": "art/kit/beacon_ne5.glb",
+     "far": "art/kit/beacon_ne5_far.glb",
+     "h": 10.14
+    },
+    {
+     "id": "beacon_ne6",
+     "kind": "building",
+     "pos": [
+      152.0,
+      70.5
+     ],
+     "rotY": 180.0,
+     "backdrop": false,
+     "near": "art/kit/beacon_ne6.glb",
+     "far": "art/kit/beacon_ne6_far.glb",
+     "h": 10.14
+    },
+    {
+     "id": "beacon_ne7",
+     "kind": "building",
+     "pos": [
+      161.25,
+      70.5
+     ],
+     "rotY": 180.0,
+     "backdrop": false,
+     "near": "art/kit/beacon_ne7.glb",
+     "far": "art/kit/beacon_ne7_far.glb",
+     "h": 8.71
+    },
+    {
      "id": "park_church",
      "kind": "landmark",
      "pos": [
       70.75,
-      46.75
+      86.25
      ],
      "rotY": -90.0,
      "backdrop": false,
@@ -1300,26 +1386,13 @@
      "h": 32.0
     },
     {
-     "id": "park_n1",
-     "kind": "building",
-     "pos": [
-      86.0,
-      45.75
-     ],
-     "rotY": 180.0,
-     "backdrop": false,
-     "near": "art/kit/park_n1.glb",
-     "far": "art/kit/park_n1_far.glb",
-     "h": 16.94
-    },
-    {
      "id": "state_house",
      "kind": "landmark",
      "pos": [
-      -35.06,
-      147.94
+      143.58,
+      128.28
      ],
-     "rotY": 161.0,
+     "rotY": -128.5,
      "backdrop": false,
      "near": "art/kit/state_house.glb",
      "far": "art/kit/state_house_far.glb",
@@ -1330,8 +1403,8 @@
      "id": "hill_chapel",
      "kind": "landmark",
      "pos": [
-      -92.0,
-      140.0
+      118.53,
+      169.99
      ],
      "rotY": 180,
      "backdrop": false,
@@ -1344,8 +1417,8 @@
      "id": "sky0",
      "kind": "building",
      "pos": [
-      -44.1,
-      262.4
+      255.66,
+      193.27
      ],
      "rotY": 180.0,
      "backdrop": true,
@@ -1357,8 +1430,8 @@
      "id": "sky1",
      "kind": "building",
      "pos": [
-      -190.0,
-      263.5
+      191.87,
+      266.52
      ],
      "rotY": 180.0,
      "backdrop": true,
@@ -1367,17 +1440,95 @@
      "h": 28.09
     },
     {
+     "id": "sky2",
+     "kind": "building",
+     "pos": [
+      247.44,
+      208.97
+     ],
+     "rotY": 180.0,
+     "backdrop": true,
+     "near": null,
+     "far": "art/kit/sky2_far.glb",
+     "h": 24.69
+    },
+    {
+     "id": "sky3",
+     "kind": "building",
+     "pos": [
+      204.38,
+      253.57
+     ],
+     "rotY": 180.0,
+     "backdrop": true,
+     "near": null,
+     "far": "art/kit/sky3_far.glb",
+     "h": 24.69
+    },
+    {
+     "id": "sky4",
+     "kind": "building",
+     "pos": [
+      234.94,
+      221.92
+     ],
+     "rotY": 180.0,
+     "backdrop": true,
+     "near": null,
+     "far": "art/kit/sky4_far.glb",
+     "h": 21.29
+    },
+    {
      "id": "sky5",
      "kind": "building",
      "pos": [
-      -43.0,
-      126.75
+      214.1,
+      243.5
      ],
      "rotY": 180.0,
      "backdrop": true,
      "near": null,
      "far": "art/kit/sky5_far.glb",
      "h": 21.29
+    },
+    {
+     "id": "sky6",
+     "kind": "building",
+     "pos": [
+      254.39,
+      201.78
+     ],
+     "rotY": 180.0,
+     "backdrop": true,
+     "near": null,
+     "far": "art/kit/sky6_far.glb",
+     "h": 17.89
+    },
+    {
+     "id": "sky7",
+     "kind": "building",
+     "pos": [
+      201.6,
+      256.45
+     ],
+     "rotY": 180.0,
+     "backdrop": true,
+     "near": null,
+     "far": "art/kit/sky7_far.glb",
+     "h": 17.89
+    },
+    {
+     "id": "sky8",
+     "kind": "building",
+     "pos": [
+      226.61,
+      230.55
+     ],
+     "rotY": 180.0,
+     "backdrop": true,
+     "near": null,
+     "far": "art/kit/sky8_far.glb",
+     "h": 31.49
     }
    ],
    "landmarks": [
@@ -1385,8 +1536,8 @@
      "id": "brewer_fountain",
      "file": "art/kit/lm_fountain.glb",
      "pos": [
-      18.01,
-      -23.02
+      21.51,
+      36.92
      ],
      "y": 0.15,
      "rotY": 0,
@@ -1398,11 +1549,11 @@
      "id": "gazebo",
      "file": "art/kit/lm_gazebo.glb",
      "pos": [
-      13.76,
-      6.45
+      35.01,
+      41.07
      ],
      "y": 0.75,
-     "rotY": 162.0
+     "rotY": -122.9
     }
    ]
   },
@@ -1501,245 +1652,20 @@
     {
      "m": "round",
      "p": [
-      24.59,
-      -17.74
+      21.89,
+      49.54
      ],
-     "s": 0.9,
-     "rot": 0
-    },
-    {
-     "m": "round",
-     "p": [
-      33.75,
-      -15.13
-     ],
-     "s": 1.0,
-     "rot": 47
-    },
-    {
-     "m": "round",
-     "p": [
-      32.38,
-      -24.04
-     ],
-     "s": 1.1,
-     "rot": 94
-    },
-    {
-     "m": "round",
-     "p": [
-      17.82,
-      -33.04
-     ],
-     "s": 0.9,
-     "rot": 141
-    },
-    {
-     "m": "round",
-     "p": [
-      5.96,
-      -17.05
-     ],
-     "s": 1.1,
-     "rot": 188
-    },
-    {
-     "m": "round",
-     "p": [
-      5.8,
-      -22.64
-     ],
-     "s": 1.0,
+     "s": 1.05,
      "rot": 235
     },
     {
      "m": "round",
      "p": [
-      31.55,
-      2.6
+      14.42,
+      30.65
      ],
-     "s": 1.05,
-     "rot": 282
-    },
-    {
-     "m": "round",
-     "p": [
-      -5.97,
-      -11.58
-     ],
-     "s": 1.0,
-     "rot": 329
-    },
-    {
-     "m": "deep",
-     "p": [
-      25.66,
-      16.41
-     ],
-     "s": 1.0,
-     "rot": 16
-    },
-    {
-     "m": "round",
-     "p": [
-      -0.02,
-      9.95
-     ],
-     "s": 1.1,
+     "s": 0.7,
      "rot": 63
-    },
-    {
-     "m": "round",
-     "p": [
-      -13.55,
-      5.85
-     ],
-     "s": 1.0,
-     "rot": 110
-    },
-    {
-     "m": "deep",
-     "p": [
-      14.12,
-      19.86
-     ],
-     "s": 0.9,
-     "rot": 157
-    },
-    {
-     "m": "round",
-     "p": [
-      5.33,
-      17.41
-     ],
-     "s": 1.0,
-     "rot": 204
-    },
-    {
-     "m": "round",
-     "p": [
-      29.47,
-      24.81
-     ],
-     "s": 1.0,
-     "rot": 251
-    },
-    {
-     "m": "round",
-     "p": [
-      36.71,
-      11.63
-     ],
-     "s": 1.1,
-     "rot": 298
-    },
-    {
-     "m": "round",
-     "p": [
-      26.74,
-      -9.57
-     ],
-     "s": 1.1,
-     "rot": 314
-    },
-    {
-     "m": "deep",
-     "p": [
-      25.35,
-      -3.04
-     ],
-     "s": 1.0,
-     "rot": 1
-    },
-    {
-     "m": "round",
-     "p": [
-      25.11,
-      4.57
-     ],
-     "s": 1.15,
-     "rot": 48
-    },
-    {
-     "m": "round",
-     "p": [
-      7.86,
-      -12.85
-     ],
-     "s": 1.05,
-     "rot": 95
-    },
-    {
-     "m": "round",
-     "p": [
-      4.14,
-      -9.62
-     ],
-     "s": 1.0,
-     "rot": 142
-    },
-    {
-     "m": "round",
-     "p": [
-      -1.47,
-      -2.31
-     ],
-     "s": 1.1,
-     "rot": 189
-    },
-    {
-     "m": "deep",
-     "p": [
-      -7.6,
-      2.56
-     ],
-     "s": 1.0,
-     "rot": 236
-    },
-    {
-     "m": "deep",
-     "p": [
-      17.63,
-      25.35
-     ],
-     "s": 1.0,
-     "rot": 283
-    },
-    {
-     "m": "round",
-     "p": [
-      28.7,
-      -19.69
-     ],
-     "s": 0.95,
-     "rot": 330
-    },
-    {
-     "m": "round",
-     "p": [
-      17.07,
-      -27.87
-     ],
-     "s": 1.0,
-     "rot": 17
-    },
-    {
-     "m": "deep",
-     "p": [
-      31.04,
-      16.71
-     ],
-     "s": 1.0,
-     "rot": 64
-    },
-    {
-     "m": "round",
-     "p": [
-      -5.63,
-      17.26
-     ],
-     "s": 1.0,
-     "rot": 111
     },
     {
      "m": "round",
@@ -1767,15 +1693,6 @@
      ],
      "s": 1.0,
      "rot": 142
-    },
-    {
-     "m": "round",
-     "p": [
-      -76.0,
-      -6.0
-     ],
-     "s": 1.0,
-     "rot": 213
     },
     {
      "m": "round",
@@ -1949,15 +1866,6 @@
      "rot": 122
     },
     {
-     "m": "round",
-     "p": [
-      -98.0,
-      -24.0
-     ],
-     "s": 0.95,
-     "rot": 193
-    },
-    {
      "m": "deep",
      "p": [
       -90.0,
@@ -1983,15 +1891,6 @@
      ],
      "s": 1.0,
      "rot": 46
-    },
-    {
-     "m": "round",
-     "p": [
-      -60.0,
-      -24.0
-     ],
-     "s": 1.05,
-     "rot": 117
     },
     {
      "m": "round",
@@ -2064,6 +1963,78 @@
      ],
      "s": 1.0,
      "rot": 325
+    },
+    {
+     "m": "deep",
+     "p": [
+      -100.0,
+      30.0
+     ],
+     "s": 1.0,
+     "rot": 36
+    },
+    {
+     "m": "round",
+     "p": [
+      -86.0,
+      38.0
+     ],
+     "s": 1.05,
+     "rot": 107
+    },
+    {
+     "m": "deep",
+     "p": [
+      -70.0,
+      28.0
+     ],
+     "s": 1.0,
+     "rot": 178
+    },
+    {
+     "m": "round",
+     "p": [
+      -54.0,
+      36.0
+     ],
+     "s": 1.0,
+     "rot": 249
+    },
+    {
+     "m": "round",
+     "p": [
+      -40.0,
+      30.0
+     ],
+     "s": 1.1,
+     "rot": 320
+    },
+    {
+     "m": "deep",
+     "p": [
+      -24.0,
+      40.0
+     ],
+     "s": 1.0,
+     "rot": 31
+    },
+    {
+     "m": "round",
+     "p": [
+      -10.0,
+      34.0
+     ],
+     "s": 1.0,
+     "rot": 102
+    },
+    {
+     "m": "round",
+     "p": [
+      4.0,
+      42.0
+     ],
+     "s": 1.0,
+     "rot": 173
     },
     {
      "m": "tall",
@@ -2168,7 +2139,7 @@
      "m": "tall",
      "p": [
       -100.0,
-      15.0
+      45.2
      ],
      "s": 0.9,
      "rot": 341
@@ -2177,7 +2148,7 @@
      "m": "tall",
      "p": [
       -88.0,
-      15.0
+      45.2
      ],
      "s": 0.9,
      "rot": 12
@@ -2186,7 +2157,7 @@
      "m": "tall",
      "p": [
       -76.0,
-      15.0
+      45.2
      ],
      "s": 0.9,
      "rot": 43
@@ -2194,17 +2165,8 @@
     {
      "m": "tall",
      "p": [
-      -64.0,
-      15.0
-     ],
-     "s": 0.9,
-     "rot": 74
-    },
-    {
-     "m": "tall",
-     "p": [
       -52.0,
-      15.0
+      45.2
      ],
      "s": 0.9,
      "rot": 105
@@ -2213,7 +2175,7 @@
      "m": "tall",
      "p": [
       -40.0,
-      15.0
+      45.2
      ],
      "s": 0.9,
      "rot": 136
@@ -2222,7 +2184,7 @@
      "m": "tall",
      "p": [
       -28.0,
-      15.0
+      45.2
      ],
      "s": 0.9,
      "rot": 167
@@ -2231,7 +2193,7 @@
      "m": "tall",
      "p": [
       -16.0,
-      15.0
+      45.2
      ],
      "s": 0.9,
      "rot": 198
@@ -2240,7 +2202,7 @@
      "m": "tall",
      "p": [
       -4.0,
-      15.0
+      45.2
      ],
      "s": 0.9,
      "rot": 229
@@ -2249,7 +2211,7 @@
      "m": "tall",
      "p": [
       8.0,
-      15.0
+      45.2
      ],
      "s": 0.9,
      "rot": 260
@@ -2258,19 +2220,10 @@
      "m": "tall",
      "p": [
       20.0,
-      15.0
+      45.2
      ],
      "s": 0.9,
      "rot": 291
-    },
-    {
-     "m": "tall",
-     "p": [
-      32.0,
-      15.0
-     ],
-     "s": 0.9,
-     "rot": 322
     },
     {
      "m": "tall",
@@ -2294,7 +2247,7 @@
      "m": "tall",
      "p": [
       44.6,
-      -6.0
+      18.0
      ],
      "s": 0.9,
      "rot": 55
@@ -2303,318 +2256,39 @@
      "m": "tall",
      "p": [
       44.6,
-      6.0
+      30.0
      ],
      "s": 0.9,
      "rot": 86
-    },
-    {
-     "m": "round",
-     "p": [
-      29.4,
-      -29.2
-     ],
-     "s": 0.75,
-     "rot": 40.0
-    },
-    {
-     "m": "round",
-     "p": [
-      23.9,
-      -32.1
-     ],
-     "s": 0.7,
-     "rot": 200.0
     }
    ],
    "bushes": [
     {
-     "m": "bush_lod0",
-     "p": [
-      11.45,
-      -28.83
-     ],
-     "s": 0.8,
-     "rot": 345
-    },
-    {
      "m": "bush_flowering",
      "p": [
-      21.15,
-      -17.69
-     ],
-     "s": 0.7,
-     "rot": 32
-    },
-    {
-     "m": "bush_lod0",
-     "p": [
-      11.54,
-      -17.21
-     ],
-     "s": 0.7,
-     "rot": 79
-    },
-    {
-     "m": "bush_flowering",
-     "p": [
-      27.04,
-      -24.88
-     ],
-     "s": 0.6,
-     "rot": 126
-    },
-    {
-     "m": "bush_small",
-     "p": [
-      22.05,
-      -22.23
-     ],
-     "s": 0.6,
-     "rot": 173
-    },
-    {
-     "m": "bush_small",
-     "p": [
-      1.91,
-      -1.28
-     ],
-     "s": 0.7,
-     "rot": 220
-    },
-    {
-     "m": "bush_flowering",
-     "p": [
-      24.51,
-      7.05
-     ],
-     "s": 0.7,
-     "rot": 267
-    },
-    {
-     "m": "bush_flowering",
-     "p": [
-      18.89,
-      -10.47
-     ],
-     "s": 0.75,
-     "rot": 158
-    },
-    {
-     "m": "bush_lod0",
-     "p": [
-      21.09,
-      -3.37
-     ],
-     "s": 0.8,
-     "rot": 205
-    },
-    {
-     "m": "bush_small",
-     "p": [
-      10.1,
-      -4.64
-     ],
-     "s": 0.7,
-     "rot": 252
-    },
-    {
-     "m": "bush_lod0",
-     "p": [
-      26.89,
-      -12.26
-     ],
-     "s": 0.8,
-     "rot": 299
-    },
-    {
-     "m": "bush_lod0",
-     "p": [
-      12.45,
-      -25.06
-     ],
-     "s": 0.75,
-     "rot": 346
-    },
-    {
-     "m": "bush_small",
-     "p": [
-      29.88,
-      -25.76
-     ],
-     "s": 0.7,
-     "rot": 33
-    },
-    {
-     "m": "bush_small",
-     "p": [
-      20.12,
-      -30.86
-     ],
-     "s": 0.8,
-     "rot": 80
-    },
-    {
-     "m": "bush_lod0",
-     "p": [
-      10.8,
-      12.79
-     ],
-     "s": 0.7,
-     "rot": 127
-    },
-    {
-     "m": "bush_lod0",
-     "p": [
-      4.88,
-      8.92
-     ],
-     "s": 0.7,
-     "rot": 174
-    },
-    {
-     "m": "bush_lod0",
-     "p": [
-      18.01,
-      -18.32
-     ],
-     "s": 0.55,
-     "rot": 0
-    },
-    {
-     "m": "bush_flowering",
-     "p": [
-      19.71,
-      -18.64
+      25.43,
+      36.02
      ],
      "s": 0.65,
-     "rot": 53
-    },
-    {
-     "m": "bush_flowering",
-     "p": [
-      21.18,
-      -19.55
-     ],
-     "s": 0.75,
-     "rot": 106
+     "rot": 212
     },
     {
      "m": "bush_lod0",
      "p": [
-      22.22,
-      -20.93
-     ],
-     "s": 0.55,
-     "rot": 159
-    },
-    {
-     "m": "bush_flowering",
-     "p": [
-      17.15,
-      -27.64
-     ],
-     "s": 0.55,
-     "rot": 117
-    },
-    {
-     "m": "bush_flowering",
-     "p": [
-      15.54,
-      -27.02
+      19.76,
+      40.55
      ],
      "s": 0.65,
-     "rot": 170
+     "rot": 329
     },
     {
-     "m": "bush_flowering",
+     "m": "bush_small",
      "p": [
-      14.26,
-      -25.85
-     ],
-     "s": 0.75,
-     "rot": 223
-    },
-    {
-     "m": "bush_lod0",
-     "p": [
-      14.84,
-      -19.55
-     ],
-     "s": 0.55,
-     "rot": 75
-    },
-    {
-     "m": "bush_flowering",
-     "p": [
-      16.31,
-      -18.64
-     ],
-     "s": 0.65,
-     "rot": 128
-    },
-    {
-     "m": "bush_flowering",
-     "p": [
-      33.16,
-      -21.54
-     ],
-     "s": 0.6,
-     "rot": 0
-    },
-    {
-     "m": "bush_flowering",
-     "p": [
-      20.69,
-      -8.82
-     ],
-     "s": 0.8999999999999999,
-     "rot": 74
-    },
-    {
-     "m": "bush_flowering",
-     "p": [
-      12.75,
-      -14.86
+      35.81,
+      29.52
      ],
      "s": 0.6,
      "rot": 111
-    },
-    {
-     "m": "bush_lod0",
-     "p": [
-      -3.85,
-      -7.73
-     ],
-     "s": 0.8999999999999999,
-     "rot": 185
-    },
-    {
-     "m": "bush_small",
-     "p": [
-      -1.86,
-      1.55
-     ],
-     "s": 0.6,
-     "rot": 222
-    },
-    {
-     "m": "bush_flowering",
-     "p": [
-      -2.26,
-      17.28
-     ],
-     "s": 0.8999999999999999,
-     "rot": 296
-    },
-    {
-     "m": "bush_lod0",
-     "p": [
-      25.38,
-      14.04
-     ],
-     "s": 0.75,
-     "rot": 37
     },
     {
      "m": "bush_flowering",
@@ -2653,37 +2327,37 @@
      "rot": 185
     },
     {
-     "m": "bush_flowering",
+     "m": "bush_lod0",
      "p": [
-      -55.04,
+      -55.07,
       -10.8
      ],
      "s": 0.6,
      "rot": 222
     },
     {
-     "m": "bush_lod0",
+     "m": "bush_flowering",
      "p": [
-      -38.7,
-      -9.66
+      -38.64,
+      -11.05
      ],
      "s": 0.8999999999999999,
      "rot": 296
     },
     {
-     "m": "bush_lod0",
+     "m": "bush_flowering",
      "p": [
-      -31.29,
-      -3.3
+      -32.14,
+      -3.83
      ],
      "s": 0.6,
      "rot": 333
     },
     {
-     "m": "bush_flowering",
+     "m": "bush_lod0",
      "p": [
-      -15.36,
-      -2.0
+      -19.05,
+      3.84
      ],
      "s": 0.8999999999999999,
      "rot": 47
@@ -2691,35 +2365,89 @@
     {
      "m": "bush_small",
      "p": [
-      -6.9,
-      -6.93
+      -9.33,
+      4.22
      ],
      "s": 0.6,
      "rot": 84
     },
     {
-     "m": "bush_small",
+     "m": "bush_flowering",
      "p": [
-      30.89,
-      -3.31
+      -6.71,
+      13.64
      ],
      "s": 0.75,
-     "rot": 343
+     "rot": 121
+    },
+    {
+     "m": "bush_small",
+     "p": [
+      3.03,
+      14.97
+     ],
+     "s": 0.8999999999999999,
+     "rot": 158
+    },
+    {
+     "m": "bush_small",
+     "p": [
+      3.24,
+      24.83
+     ],
+     "s": 0.6,
+     "rot": 195
+    },
+    {
+     "m": "bush_small",
+     "p": [
+      12.49,
+      28.15
+     ],
+     "s": 0.75,
+     "rot": 232
     },
     {
      "m": "bush_lod0",
      "p": [
-      32.98,
-      -4.89
+      21.62,
+      19.41
+     ],
+     "s": 0.75,
+     "rot": 37
+    },
+    {
+     "m": "bush_lod0",
+     "p": [
+      14.53,
+      12.31
+     ],
+     "s": 0.8999999999999999,
+     "rot": 74
+    },
+    {
+     "m": "bush_flowering",
+     "p": [
+      19.52,
+      3.69
      ],
      "s": 0.6,
      "rot": 111
     },
     {
-     "m": "bush_flowering",
+     "m": "bush_lod0",
      "p": [
-      33.95,
-      4.69
+      12.8,
+      -3.74
+     ],
+     "s": 0.75,
+     "rot": 148
+    },
+    {
+     "m": "bush_small",
+     "p": [
+      18.49,
+      -11.97
      ],
      "s": 0.8999999999999999,
      "rot": 185
@@ -2727,11 +2455,56 @@
     {
      "m": "bush_lod0",
      "p": [
-      40.57,
-      11.22
+      12.69,
+      -20.06
      ],
      "s": 0.6,
      "rot": 222
+    },
+    {
+     "m": "bush_small",
+     "p": [
+      19.09,
+      -27.76
+     ],
+     "s": 0.75,
+     "rot": 259
+    },
+    {
+     "m": "bush_small",
+     "p": [
+      31.61,
+      22.59
+     ],
+     "s": 0.75,
+     "rot": 37
+    },
+    {
+     "m": "bush_small",
+     "p": [
+      28.9,
+      13.07
+     ],
+     "s": 0.8999999999999999,
+     "rot": 74
+    },
+    {
+     "m": "bush_small",
+     "p": [
+      37.56,
+      8.05
+     ],
+     "s": 0.6,
+     "rot": 111
+    },
+    {
+     "m": "bush_flowering",
+     "p": [
+      40.72,
+      -4.88
+     ],
+     "s": 0.8999999999999999,
+     "rot": 185
     },
     {
      "m": "bush_small",
@@ -2799,8 +2572,8 @@
     {
      "m": "bush_lod0",
      "p": [
-      -64.86,
-      5.11
+      -64.89,
+      5.19
      ],
      "s": 0.8999999999999999,
      "rot": 185
@@ -2808,8 +2581,8 @@
     {
      "m": "bush_lod0",
      "p": [
-      -61.24,
-      14.47
+      -61.39,
+      14.45
      ],
      "s": 0.6,
      "rot": 222
@@ -2817,11 +2590,20 @@
     {
      "m": "bush_lod0",
      "p": [
-      27.0,
-      -28.2
+      -62.57,
+      29.01
      ],
-     "s": 0.8,
-     "rot": 10.0
+     "s": 0.8999999999999999,
+     "rot": 296
+    },
+    {
+     "m": "bush_flowering",
+     "p": [
+      -67.04,
+      37.93
+     ],
+     "s": 0.6,
+     "rot": 333
     }
    ]
   },
