@@ -62,6 +62,58 @@
    "skip": [
     "sob"
    ]
+  },
+  {
+   "id": "oldlady",
+   "file": "oldlady.glb",
+   "skip": [
+    "frightened"
+   ]
+  },
+  {
+   "id": "kobi",
+   "file": "kobi.glb"
+  },
+  {
+   "id": "fox",
+   "file": "fox.glb",
+   "skip": [
+    "frightened"
+   ]
+  },
+  {
+   "id": "zeev",
+   "file": "zeev.glb",
+   "skip": [
+    "sob"
+   ]
+  },
+  {
+   "id": "mazal",
+   "file": "mazal.glb",
+   "skip": [
+    "frightened"
+   ]
+  },
+  {
+   "id": "jogger",
+   "file": "jogger.glb",
+   "skip": [
+    "greet",
+    "frightened"
+   ]
+  },
+  {
+   "id": "busker",
+   "file": "busker.glb"
+  },
+  {
+   "id": "dogwalker",
+   "file": "dogwalker.glb",
+   "skip": [
+    "frightened",
+    "sob"
+   ]
   }
  ]
 }

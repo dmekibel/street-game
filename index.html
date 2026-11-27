@@ -1,14 +1,14 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta name="build" content="1795786798">
+  <meta name="build" content="1795790400">
   <script>
   // Never stuck on an old copy (David, 2026-11-27: "It hasn't updated on my phone"): deploy.sh stamps this page and
   // version.json with the same build id; a cached page with an older id reloads once, fresh.
   (function () {
     try {
       var mine = document.querySelector('meta[name=build]').content;
-      if (mine === '1795786798') return; // dev server
+      if (mine === '1795790400') return; // dev server
       fetch('version.json?t=' + Date.now(), { cache: 'no-store' }).then(function (r) { return r.json(); }).then(function (v) {
         if (v && v.build && v.build !== mine && sessionStorage.getItem('sgReloaded') !== v.build) {
           sessionStorage.setItem('sgReloaded', v.build);
@@ -73,6 +73,16 @@
     #ld .ldc { padding-top: calc(env(safe-area-inset-top, 0px) + 12px); padding-bottom: 10px; }
     #ld .ldlogo { font-size: clamp(30px, 6.5vw, 52px); } #ld .ldtag { margin-top: 14px; font-size: 14px; }
     #ld .ldlow { max-width: 420px; } #ld .ldbarwrap { padding-top: 26px; } #ld .ldrow { margin-top: 6px; } #ld .ldtip { margin-top: 6px; min-height: 1.4em; font-size: 14px; }
+  }
+  /* landscape pass (2026-11-27): a phone on its side puts the face and the name on the left, the bar and Tap to begin on the right (it fell off the bottom) */
+  @media (orientation: landscape) and (max-height: 560px) {
+    #ld .ldc { flex-direction: row; justify-content: center; align-items: center; gap: 6vw;
+      padding: calc(env(safe-area-inset-top, 0px) + 10px) calc(env(safe-area-inset-right, 0px) + 20px) calc(env(safe-area-inset-bottom, 0px) + 10px) calc(env(safe-area-inset-left, 0px) + 20px); }
+    #ld .ldc > :first-child { flex: 0 1 auto; min-width: 0; }
+    #ld .ldface { width: clamp(80px, 30vh, 150px); }
+    #ld .ldlogo { font-size: clamp(30px, 5.6vw, 56px); } #ld .ldtag { margin-top: 12px; font-size: 14px; }
+    #ld .ldlow { flex: 0 1 380px; max-width: 380px; } #ld .ldbarwrap { padding-top: 26px; }
+    #ld .ldtip { min-height: 2.6em; }
   }
   @media (prefers-reduced-motion: reduce) { #ld .ldfill::after, #ld .ldpig svg, #ld .ldleg { animation: none; } }
 </style>
@@ -455,9 +465,9 @@
   }
 </style>
 <!-- UI kit (2026-11-27): one look for every screen; loaded after the inline styles so it wins. src/ui/kit.css -->
-  <script type="module" crossorigin src="./assets/main-BidTbHlY.js"></script>
-  <link rel="modulepreload" crossorigin href="./assets/hero3d-ZGuv5klt.js">
-  <link rel="stylesheet" crossorigin href="./assets/main-DjiL6eIQ.css">
+  <script type="module" crossorigin src="./assets/main-otWR7wpD.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/hero3d-BTDRKOuj.js">
+  <link rel="stylesheet" crossorigin href="./assets/main-BBNLzmYs.css">
 </head>
 <body>
 <div id="ld" role="status" aria-live="polite" aria-label="Loading">
