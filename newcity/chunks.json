@@ -13,13 +13,32 @@
     -64,
     0
    ],
-   "tris": 2704,
-   "materials": 19,
+   "tris": 7712,
+   "materials": 14,
+   "parts": [
+    "fountain",
+    "ground",
+    "lamp",
+    "prop",
+    "tree",
+    "water"
+   ]
+  },
+  {
+   "key": "-1_-2",
+   "file": "chunk_-1_-2.glb",
+   "bounds": [
+    -64,
+    0,
+    -128,
+    -64
+   ],
+   "tris": 1380,
+   "materials": 18,
    "parts": [
     "building",
     "ground",
     "lamp",
-    "prop",
     "tree"
    ]
   },
@@ -32,11 +51,13 @@
     0,
     64
    ],
-   "tris": 4820,
-   "materials": 11,
+   "tris": 2628,
+   "materials": 20,
    "parts": [
+    "building",
     "ground",
     "lamp",
+    "prop",
     "tree"
    ]
   },
@@ -49,8 +70,57 @@
     64,
     128
    ],
-   "tris": 332,
-   "materials": 13,
+   "tris": 220,
+   "materials": 12,
+   "parts": [
+    "building",
+    "ground"
+   ]
+  },
+  {
+   "key": "-1_2",
+   "file": "chunk_-1_2.glb",
+   "bounds": [
+    -64,
+    0,
+    128,
+    192
+   ],
+   "tris": 882,
+   "materials": 15,
+   "parts": [
+    "building",
+    "chapel",
+    "ground",
+    "lamp"
+   ]
+  },
+  {
+   "key": "-1_3",
+   "file": "chunk_-1_3.glb",
+   "bounds": [
+    -64,
+    0,
+    192,
+    256
+   ],
+   "tris": 20,
+   "materials": 2,
+   "parts": [
+    "building"
+   ]
+  },
+  {
+   "key": "-1_5",
+   "file": "chunk_-1_5.glb",
+   "bounds": [
+    -64,
+    0,
+    320,
+    384
+   ],
+   "tris": 12,
+   "materials": 1,
    "parts": [
     "building"
    ]
@@ -64,13 +134,30 @@
     -64,
     0
    ],
-   "tris": 3172,
-   "materials": 18,
+   "tris": 3108,
+   "materials": 10,
+   "parts": [
+    "ground",
+    "lamp",
+    "prop",
+    "tree"
+   ]
+  },
+  {
+   "key": "-2_-2",
+   "file": "chunk_-2_-2.glb",
+   "bounds": [
+    -128,
+    -64,
+    -128,
+    -64
+   ],
+   "tris": 1040,
+   "materials": 15,
    "parts": [
     "building",
     "ground",
     "lamp",
-    "prop",
     "tree"
    ]
   },
@@ -83,12 +170,12 @@
     0,
     64
    ],
-   "tris": 2160,
-   "materials": 11,
+   "tris": 2084,
+   "materials": 21,
    "parts": [
+    "building",
     "ground",
     "lamp",
-    "prop",
     "tree"
    ]
   },
@@ -101,10 +188,9 @@
     64,
     128
    ],
-   "tris": 628,
-   "materials": 14,
+   "tris": 400,
+   "materials": 3,
    "parts": [
-    "building",
     "ground",
     "lamp"
    ]
@@ -118,7 +204,23 @@
     128,
     192
    ],
-   "tris": 296,
+   "tris": 812,
+   "materials": 3,
+   "parts": [
+    "ground",
+    "lamp"
+   ]
+  },
+  {
+   "key": "-2_3",
+   "file": "chunk_-2_3.glb",
+   "bounds": [
+    -128,
+    -64,
+    192,
+    256
+   ],
+   "tris": 116,
    "materials": 3,
    "parts": [
     "ground",
@@ -134,12 +236,31 @@
     -64,
     0
    ],
-   "tris": 3002,
-   "materials": 20,
+   "tris": 4374,
+   "materials": 15,
    "parts": [
     "building",
     "ground",
     "kiosk",
+    "lamp",
+    "prop",
+    "tree"
+   ]
+  },
+  {
+   "key": "0_-2",
+   "file": "chunk_0_-2.glb",
+   "bounds": [
+    0,
+    64,
+    -128,
+    -64
+   ],
+   "tris": 1240,
+   "materials": 18,
+   "parts": [
+    "building",
+    "ground",
     "lamp",
     "tree"
    ]
@@ -153,12 +274,11 @@
     0,
     64
    ],
-   "tris": 8682,
-   "materials": 24,
+   "tris": 8474,
+   "materials": 23,
    "parts": [
     "bench",
     "building",
-    "fountain",
     "gazebo",
     "ground",
     "island",
@@ -180,8 +300,8 @@
     64,
     128
    ],
-   "tris": 640,
-   "materials": 13,
+   "tris": 996,
+   "materials": 18,
    "parts": [
     "building",
     "ground",
@@ -197,11 +317,44 @@
     128,
     192
    ],
-   "tris": 296,
+   "tris": 1746,
+   "materials": 12,
+   "parts": [
+    "building",
+    "ground",
+    "lamp",
+    "statehouse"
+   ]
+  },
+  {
+   "key": "0_3",
+   "file": "chunk_0_3.glb",
+   "bounds": [
+    0,
+    64,
+    192,
+    256
+   ],
+   "tris": 116,
    "materials": 3,
    "parts": [
     "ground",
     "lamp"
+   ]
+  },
+  {
+   "key": "0_5",
+   "file": "chunk_0_5.glb",
+   "bounds": [
+    0,
+    64,
+    320,
+    384
+   ],
+   "tris": 36,
+   "materials": 1,
+   "parts": [
+    "building"
    ]
   },
   {
@@ -213,8 +366,25 @@
     -64,
     0
    ],
-   "tris": 1660,
-   "materials": 18,
+   "tris": 768,
+   "materials": 14,
+   "parts": [
+    "building",
+    "ground",
+    "lamp"
+   ]
+  },
+  {
+   "key": "1_-2",
+   "file": "chunk_1_-2.glb",
+   "bounds": [
+    64,
+    128,
+    -128,
+    -64
+   ],
+   "tris": 892,
+   "materials": 15,
    "parts": [
     "building",
     "ground",
@@ -230,12 +400,10 @@
     0,
     64
    ],
-   "tris": 700,
-   "materials": 13,
+   "tris": 168,
+   "materials": 7,
    "parts": [
-    "building",
-    "ground",
-    "lamp"
+    "building"
    ]
   },
   {
@@ -247,11 +415,10 @@
     64,
     128
    ],
-   "tris": 544,
-   "materials": 13,
+   "tris": 144,
+   "materials": 5,
    "parts": [
-    "building",
-    "ground"
+    "building"
    ]
   },
   {
@@ -263,11 +430,11 @@
     128,
     192
    ],
-   "tris": 306,
-   "materials": 8,
+   "tris": 508,
+   "materials": 4,
    "parts": [
-    "building",
-    "chapel"
+    "ground",
+    "lamp"
    ]
   },
   {
@@ -279,46 +446,28 @@
     -64,
     0
    ],
-   "tris": 572,
-   "materials": 10,
+   "tris": 232,
+   "materials": 3,
    "parts": [
-    "building",
     "ground",
     "lamp"
    ]
   },
   {
-   "key": "2_0",
-   "file": "chunk_2_0.glb",
+   "key": "2_-2",
+   "file": "chunk_2_-2.glb",
    "bounds": [
     128,
     192,
-    0,
-    64
+    -128,
+    -64
    ],
-   "tris": 244,
-   "materials": 4,
+   "tris": 340,
+   "materials": 9,
    "parts": [
     "building",
     "ground",
     "lamp"
-   ]
-  },
-  {
-   "key": "2_1",
-   "file": "chunk_2_1.glb",
-   "bounds": [
-    128,
-    192,
-    64,
-    128
-   ],
-   "tris": 524,
-   "materials": 12,
-   "parts": [
-    "building",
-    "ground",
-    "statehouse"
    ]
   },
   {
@@ -330,56 +479,11 @@
     128,
     192
    ],
-   "tris": 566,
-   "materials": 7,
+   "tris": 232,
+   "materials": 3,
    "parts": [
-    "building",
-    "statehouse"
-   ]
-  },
-  {
-   "key": "2_4",
-   "file": "chunk_2_4.glb",
-   "bounds": [
-    128,
-    192,
-    256,
-    320
-   ],
-   "tris": 12,
-   "materials": 1,
-   "parts": [
-    "building"
-   ]
-  },
-  {
-   "key": "3_3",
-   "file": "chunk_3_3.glb",
-   "bounds": [
-    192,
-    256,
-    192,
-    256
-   ],
-   "tris": 84,
-   "materials": 1,
-   "parts": [
-    "building"
-   ]
-  },
-  {
-   "key": "3_4",
-   "file": "chunk_3_4.glb",
-   "bounds": [
-    192,
-    256,
-    256,
-    320
-   ],
-   "tris": 12,
-   "materials": 1,
-   "parts": [
-    "building"
+    "ground",
+    "lamp"
    ]
   },
   {
@@ -396,8 +500,8 @@
    "key": "skyline",
    "file": "chunk_skyline.glb",
    "bounds": null,
-   "tris": 108,
-   "materials": 6,
+   "tris": 48,
+   "materials": 4,
    "parts": [
     "building"
    ]
@@ -428,33 +532,33 @@
      "kind": "building",
      "pos": [
       -101.0,
-      70.5
+      56.12
      ],
      "rotY": 180.0,
      "backdrop": false,
      "near": "art/kit/beacon_n0.glb",
      "far": "art/kit/beacon_n0_far.glb",
-     "h": 12.05
+     "h": 14.4
     },
     {
      "id": "beacon_n1",
      "kind": "building",
      "pos": [
       -92.5,
-      70.5
+      56.12
      ],
      "rotY": 180.0,
      "backdrop": false,
      "near": "art/kit/beacon_n1.glb",
      "far": "art/kit/beacon_n1_far.glb",
-     "h": 13.54
+     "h": 10.14
     },
     {
      "id": "beacon_n2",
      "kind": "building",
      "pos": [
       -83.5,
-      70.5
+      56.12
      ],
      "rotY": 180.0,
      "backdrop": false,
@@ -467,33 +571,33 @@
      "kind": "building",
      "pos": [
       -75.0,
-      70.5
+      56.12
      ],
      "rotY": 180.0,
      "backdrop": false,
      "near": "art/kit/beacon_n3.glb",
      "far": "art/kit/beacon_n3_far.glb",
-     "h": 10.14
+     "h": 11.01
     },
     {
      "id": "beacon_n4",
      "kind": "building",
      "pos": [
       -67.0,
-      70.5
+      56.12
      ],
      "rotY": 180.0,
      "backdrop": false,
      "near": "art/kit/beacon_n4.glb",
      "far": "art/kit/beacon_n4_far.glb",
-     "h": 15.07
+     "h": 11.68
     },
     {
      "id": "beacon_n5",
      "kind": "building",
      "pos": [
       -58.5,
-      70.5
+      56.12
      ],
      "rotY": 180.0,
      "backdrop": false,
@@ -506,20 +610,20 @@
      "kind": "building",
      "pos": [
       -49.0,
-      70.5
+      56.12
      ],
      "rotY": 180.0,
      "backdrop": false,
      "near": "art/kit/beacon_n6.glb",
      "far": "art/kit/beacon_n6_far.glb",
-     "h": 12.05
+     "h": 14.4
     },
     {
      "id": "beacon_n7",
      "kind": "building",
      "pos": [
       -39.5,
-      70.5
+      56.12
      ],
      "rotY": 180.0,
      "backdrop": false,
@@ -532,72 +636,72 @@
      "kind": "building",
      "pos": [
       -31.0,
-      70.5
+      56.12
      ],
      "rotY": 180.0,
      "backdrop": false,
      "near": "art/kit/beacon_n8.glb",
      "far": "art/kit/beacon_n8_far.glb",
-     "h": 10.14
+     "h": 15.07
     },
     {
      "id": "beacon_n9",
      "kind": "building",
      "pos": [
-      -23.0,
-      70.5
+      -22.5,
+      56.12
      ],
      "rotY": 180.0,
      "backdrop": false,
      "near": "art/kit/beacon_n9.glb",
      "far": "art/kit/beacon_n9_far.glb",
-     "h": 10.14
+     "h": 11.01
     },
     {
      "id": "beacon_n10",
      "kind": "building",
      "pos": [
-      -14.5,
-      70.5
+      -16.0,
+      68.83
      ],
      "rotY": 180.0,
      "backdrop": false,
      "near": "art/kit/beacon_n10.glb",
      "far": "art/kit/beacon_n10_far.glb",
-     "h": 10.14
+     "h": 12.05
     },
     {
      "id": "beacon_n11",
      "kind": "building",
      "pos": [
-      -5.5,
-      70.5
+      -11.0,
+      85.08
      ],
      "rotY": 180.0,
      "backdrop": false,
      "near": "art/kit/beacon_n11.glb",
      "far": "art/kit/beacon_n11_far.glb",
-     "h": 10.14
+     "h": 13.54
     },
     {
      "id": "beacon_n12",
      "kind": "building",
      "pos": [
-      3.0,
-      70.5
+      -6.0,
+      101.33
      ],
      "rotY": 180.0,
      "backdrop": false,
      "near": "art/kit/beacon_n12.glb",
      "far": "art/kit/beacon_n12_far.glb",
-     "h": 10.14
+     "h": 14.4
     },
     {
      "id": "beacon_n13",
      "kind": "building",
      "pos": [
-      11.5,
-      70.5
+      -1.0,
+      117.58
      ],
      "rotY": 180.0,
      "backdrop": false,
@@ -609,60 +713,112 @@
      "id": "beacon_n14",
      "kind": "building",
      "pos": [
-      20.5,
-      70.5
+      4.0,
+      125.33
      ],
      "rotY": 180.0,
      "backdrop": false,
      "near": "art/kit/beacon_n14.glb",
      "far": "art/kit/beacon_n14_far.glb",
-     "h": 10.14
+     "h": 15.45
     },
     {
      "id": "beacon_n15",
      "kind": "building",
      "pos": [
-      29.0,
-      70.5
+      9.0,
+      125.33
      ],
      "rotY": 180.0,
      "backdrop": false,
      "near": "art/kit/beacon_n15.glb",
      "far": "art/kit/beacon_n15_far.glb",
-     "h": 10.14
+     "h": 11.09
     },
     {
      "id": "beacon_n16",
      "kind": "building",
      "pos": [
-      37.0,
-      70.5
+      14.0,
+      106.74
      ],
      "rotY": 180.0,
      "backdrop": false,
      "near": "art/kit/beacon_n16.glb",
      "far": "art/kit/beacon_n16_far.glb",
+     "h": 12.05
+    },
+    {
+     "id": "beacon_n17",
+     "kind": "building",
+     "pos": [
+      19.0,
+      88.15
+     ],
+     "rotY": 180.0,
+     "backdrop": false,
+     "near": "art/kit/beacon_n17.glb",
+     "far": "art/kit/beacon_n17_far.glb",
+     "h": 13.54
+    },
+    {
+     "id": "beacon_n18",
+     "kind": "building",
+     "pos": [
+      24.0,
+      74.02
+     ],
+     "rotY": 180.0,
+     "backdrop": false,
+     "near": "art/kit/beacon_n18.glb",
+     "far": "art/kit/beacon_n18_far.glb",
+     "h": 14.4
+    },
+    {
+     "id": "beacon_n19",
+     "kind": "building",
+     "pos": [
+      30.0,
+      74.02
+     ],
+     "rotY": 180.0,
+     "backdrop": false,
+     "near": "art/kit/beacon_n19.glb",
+     "far": "art/kit/beacon_n19_far.glb",
      "h": 10.14
+    },
+    {
+     "id": "beacon_n20",
+     "kind": "building",
+     "pos": [
+      38.0,
+      74.02
+     ],
+     "rotY": 180.0,
+     "backdrop": false,
+     "near": "art/kit/beacon_n20.glb",
+     "far": "art/kit/beacon_n20_far.glb",
+     "h": 15.5
     },
     {
      "id": "lane_w0",
      "kind": "building",
      "pos": [
-      106.5,
-      83.5
+      -37.3,
+      161.5
      ],
      "rotY": 90.0,
      "backdrop": false,
      "near": "art/kit/lane_w0.glb",
      "far": "art/kit/lane_w0_far.glb",
-     "h": 15.45
+     "h": 15.07
     },
     {
      "id": "lane_e0",
      "kind": "building",
      "pos": [
-      130.5,
-      83.5
+      -13.3,
+      161.5
      ],
      "rotY": -90.0,
      "backdrop": false,
@@ -674,8 +830,8 @@
      "id": "lane_w1",
      "kind": "building",
      "pos": [
-      106.5,
-      92.5
+      -37.3,
+      170.5
      ],
      "rotY": 90.0,
      "backdrop": false,
@@ -687,8 +843,8 @@
      "id": "lane_e1",
      "kind": "building",
      "pos": [
-      130.5,
-      92.5
+      -13.3,
+      170.5
      ],
      "rotY": -90.0,
      "backdrop": false,
@@ -700,21 +856,21 @@
      "id": "lane_w2",
      "kind": "building",
      "pos": [
-      106.5,
-      101.5
+      -37.3,
+      179.5
      ],
      "rotY": 90.0,
      "backdrop": false,
      "near": "art/kit/lane_w2.glb",
      "far": "art/kit/lane_w2_far.glb",
-     "h": 15.07
+     "h": 15.45
     },
     {
      "id": "lane_e2",
      "kind": "building",
      "pos": [
-      130.5,
-      101.5
+      -13.3,
+      179.5
      ],
      "rotY": -90.0,
      "backdrop": false,
@@ -723,128 +879,11 @@
      "h": 15.07
     },
     {
-     "id": "lane_w3",
-     "kind": "building",
-     "pos": [
-      106.5,
-      110.5
-     ],
-     "rotY": 90.0,
-     "backdrop": false,
-     "near": "art/kit/lane_w3.glb",
-     "far": "art/kit/lane_w3_far.glb",
-     "h": 15.45
-    },
-    {
-     "id": "lane_e3",
-     "kind": "building",
-     "pos": [
-      130.5,
-      110.5
-     ],
-     "rotY": -90.0,
-     "backdrop": false,
-     "near": "art/kit/lane_e3.glb",
-     "far": "art/kit/lane_e3_far.glb",
-     "h": 15.07
-    },
-    {
-     "id": "lane_w4",
-     "kind": "building",
-     "pos": [
-      106.5,
-      119.5
-     ],
-     "rotY": 90.0,
-     "backdrop": false,
-     "near": "art/kit/lane_w4.glb",
-     "far": "art/kit/lane_w4_far.glb",
-     "h": 15.45
-    },
-    {
-     "id": "lane_w5",
-     "kind": "building",
-     "pos": [
-      106.5,
-      128.5
-     ],
-     "rotY": 90.0,
-     "backdrop": false,
-     "near": "art/kit/lane_w5.glb",
-     "far": "art/kit/lane_w5_far.glb",
-     "h": 15.45
-    },
-    {
-     "id": "lane_w6",
-     "kind": "building",
-     "pos": [
-      106.5,
-      137.5
-     ],
-     "rotY": 90.0,
-     "backdrop": false,
-     "near": "art/kit/lane_w6.glb",
-     "far": "art/kit/lane_w6_far.glb",
-     "h": 15.07
-    },
-    {
-     "id": "lane_w7",
-     "kind": "building",
-     "pos": [
-      106.5,
-      146.5
-     ],
-     "rotY": 90.0,
-     "backdrop": false,
-     "near": "art/kit/lane_w7.glb",
-     "far": "art/kit/lane_w7_far.glb",
-     "h": 15.45
-    },
-    {
-     "id": "lane_e7",
-     "kind": "building",
-     "pos": [
-      130.5,
-      146.5
-     ],
-     "rotY": -90.0,
-     "backdrop": false,
-     "near": "art/kit/lane_e7.glb",
-     "far": "art/kit/lane_e7_far.glb",
-     "h": 15.45
-    },
-    {
-     "id": "lane_w8",
-     "kind": "building",
-     "pos": [
-      106.5,
-      155.5
-     ],
-     "rotY": 90.0,
-     "backdrop": false,
-     "near": "art/kit/lane_w8.glb",
-     "far": "art/kit/lane_w8_far.glb",
-     "h": 15.45
-    },
-    {
-     "id": "lane_e8",
-     "kind": "building",
-     "pos": [
-      130.5,
-      155.5
-     ],
-     "rotY": -90.0,
-     "backdrop": false,
-     "near": "art/kit/lane_e8.glb",
-     "far": "art/kit/lane_e8_far.glb",
-     "h": 15.45
-    },
-    {
      "id": "boylston_s0",
      "kind": "building",
      "pos": [
       -100.5,
-      -61.5
+      -96.5
      ],
      "rotY": 0.0,
      "backdrop": false,
@@ -857,7 +896,7 @@
      "kind": "building",
      "pos": [
       -91.5,
-      -61.5
+      -96.5
      ],
      "rotY": 0.0,
      "backdrop": false,
@@ -870,7 +909,7 @@
      "kind": "building",
      "pos": [
       -81.5,
-      -61.5
+      -96.5
      ],
      "rotY": 0.0,
      "backdrop": false,
@@ -883,20 +922,20 @@
      "kind": "building",
      "pos": [
       -71.0,
-      -61.5
+      -96.5
      ],
      "rotY": 0.0,
      "backdrop": false,
      "near": "art/kit/boylston_s3.glb",
      "far": "art/kit/boylston_s3_far.glb",
-     "h": 11.09
+     "h": 11.01
     },
     {
      "id": "boylston_s4",
      "kind": "building",
      "pos": [
       -61.0,
-      -61.5
+      -96.5
      ],
      "rotY": 0.0,
      "backdrop": false,
@@ -909,20 +948,20 @@
      "kind": "building",
      "pos": [
       -50.5,
-      -61.5
+      -96.5
      ],
      "rotY": 0.0,
      "backdrop": false,
      "near": "art/kit/boylston_s5.glb",
      "far": "art/kit/boylston_s5_far.glb",
-     "h": 11.09
+     "h": 11.01
     },
     {
      "id": "boylston_s6",
      "kind": "building",
      "pos": [
       -41.5,
-      -61.5
+      -96.5
      ],
      "rotY": 0.0,
      "backdrop": false,
@@ -935,7 +974,7 @@
      "kind": "building",
      "pos": [
       -31.5,
-      -61.5
+      -96.5
      ],
      "rotY": 0.0,
      "backdrop": false,
@@ -948,46 +987,46 @@
      "kind": "building",
      "pos": [
       -21.0,
-      -61.5
+      -96.5
      ],
      "rotY": 0.0,
      "backdrop": false,
      "near": "art/kit/boylston_s8.glb",
      "far": "art/kit/boylston_s8_far.glb",
-     "h": 12.19
+     "h": 12.11
     },
     {
      "id": "boylston_s9",
      "kind": "building",
      "pos": [
       -11.0,
-      -61.5
+      -96.5
      ],
      "rotY": 0.0,
      "backdrop": false,
      "near": "art/kit/boylston_s9.glb",
      "far": "art/kit/boylston_s9_far.glb",
-     "h": 14.41
+     "h": 14.49
     },
     {
      "id": "boylston_s10",
      "kind": "building",
      "pos": [
       -0.5,
-      -61.5
+      -96.5
      ],
      "rotY": 0.0,
      "backdrop": false,
      "near": "art/kit/boylston_s10.glb",
      "far": "art/kit/boylston_s10_far.glb",
-     "h": 12.19
+     "h": 12.11
     },
     {
      "id": "boylston_s11",
      "kind": "building",
      "pos": [
       8.5,
-      -61.5
+      -96.5
      ],
      "rotY": 0.0,
      "backdrop": false,
@@ -1000,7 +1039,7 @@
      "kind": "building",
      "pos": [
       18.5,
-      -61.5
+      -96.5
      ],
      "rotY": 0.0,
      "backdrop": false,
@@ -1013,20 +1052,20 @@
      "kind": "building",
      "pos": [
       29.0,
-      -61.5
+      -96.5
      ],
      "rotY": 0.0,
      "backdrop": false,
      "near": "art/kit/boylston_s13.glb",
      "far": "art/kit/boylston_s13_far.glb",
-     "h": 11.09
+     "h": 11.01
     },
     {
      "id": "boylston_s14",
      "kind": "building",
      "pos": [
       67.0,
-      -61.5
+      -96.5
      ],
      "rotY": 0.0,
      "backdrop": false,
@@ -1039,7 +1078,7 @@
      "kind": "building",
      "pos": [
       77.5,
-      -61.5
+      -96.5
      ],
      "rotY": 0.0,
      "backdrop": false,
@@ -1052,7 +1091,7 @@
      "kind": "building",
      "pos": [
       86.5,
-      -61.5
+      -96.5
      ],
      "rotY": 0.0,
      "backdrop": false,
@@ -1065,33 +1104,33 @@
      "kind": "building",
      "pos": [
       96.5,
-      -61.5
+      -96.5
      ],
      "rotY": 0.0,
      "backdrop": false,
      "near": "art/kit/boylston_s17.glb",
      "far": "art/kit/boylston_s17_far.glb",
-     "h": 7.61
+     "h": 7.69
     },
     {
      "id": "boylston_s18",
      "kind": "building",
      "pos": [
       107.0,
-      -61.5
+      -96.5
      ],
      "rotY": 0.0,
      "backdrop": false,
      "near": "art/kit/boylston_s18.glb",
      "far": "art/kit/boylston_s18_far.glb",
-     "h": 12.19
+     "h": 12.11
     },
     {
      "id": "boylston_s19",
      "kind": "building",
      "pos": [
       117.0,
-      -61.5
+      -96.5
      ],
      "rotY": 0.0,
      "backdrop": false,
@@ -1104,7 +1143,7 @@
      "kind": "building",
      "pos": [
       127.5,
-      -61.5
+      -96.5
      ],
      "rotY": 0.0,
      "backdrop": false,
@@ -1117,26 +1156,26 @@
      "kind": "building",
      "pos": [
       136.5,
-      -61.5
+      -96.5
      ],
      "rotY": 0.0,
      "backdrop": false,
      "near": "art/kit/boylston_s21.glb",
      "far": "art/kit/boylston_s21_far.glb",
-     "h": 14.49
+     "h": 14.41
     },
     {
      "id": "boylston_s22",
      "kind": "building",
      "pos": [
       142.75,
-      -61.5
+      -96.5
      ],
      "rotY": 0.0,
      "backdrop": false,
      "near": "art/kit/boylston_s22.glb",
      "far": "art/kit/boylston_s22_far.glb",
-     "h": 8.71
+     "h": 8.79
     },
     {
      "id": "hotdog_shop",
@@ -1253,124 +1292,98 @@
      "backdrop": false,
      "near": "art/kit/tremont_e5.glb",
      "far": "art/kit/tremont_e5_far.glb",
-     "h": 12.19
+     "h": 12.11
     },
     {
-     "id": "beacon_se1",
-     "kind": "building",
-     "pos": [
-      80.75,
-      41.0
-     ],
-     "rotY": 0.0,
-     "backdrop": false,
-     "near": "art/kit/beacon_se1.glb",
-     "far": "art/kit/beacon_se1_far.glb",
-     "h": 13.54
-    },
-    {
-     "id": "beacon_ne0",
+     "id": "tremont_n0",
      "kind": "building",
      "pos": [
       67.5,
-      70.5
+      53.0
      ],
-     "rotY": 180.0,
+     "rotY": -90.0,
      "backdrop": false,
-     "near": "art/kit/beacon_ne0.glb",
-     "far": "art/kit/beacon_ne0_far.glb",
-     "h": 10.14
+     "near": "art/kit/tremont_n0.glb",
+     "far": "art/kit/tremont_n0_far.glb",
+     "h": 11.09
     },
     {
-     "id": "beacon_ne1",
+     "id": "tremont_n1",
      "kind": "building",
      "pos": [
-      78.5,
-      70.5
+      67.5,
+      65.0
      ],
-     "rotY": 180.0,
+     "rotY": -90.0,
      "backdrop": false,
-     "near": "art/kit/beacon_ne1.glb",
-     "far": "art/kit/beacon_ne1_far.glb",
-     "h": 10.14
+     "near": "art/kit/tremont_n1.glb",
+     "far": "art/kit/tremont_n1_far.glb",
+     "h": 16.94
     },
     {
-     "id": "beacon_ne2",
+     "id": "tremont_n2",
      "kind": "building",
      "pos": [
-      89.0,
-      70.5
+      67.5,
+      77.0
      ],
-     "rotY": 180.0,
+     "rotY": -90.0,
      "backdrop": false,
-     "near": "art/kit/beacon_ne2.glb",
-     "far": "art/kit/beacon_ne2_far.glb",
-     "h": 10.14
+     "near": "art/kit/tremont_n2.glb",
+     "far": "art/kit/tremont_n2_far.glb",
+     "h": 11.09
     },
     {
-     "id": "beacon_ne3",
+     "id": "tremont_n3",
      "kind": "building",
      "pos": [
-      99.0,
-      70.5
+      67.5,
+      89.0
      ],
-     "rotY": 180.0,
+     "rotY": -90.0,
      "backdrop": false,
-     "near": "art/kit/beacon_ne3.glb",
-     "far": "art/kit/beacon_ne3_far.glb",
-     "h": 10.14
+     "near": "art/kit/tremont_n3.glb",
+     "far": "art/kit/tremont_n3_far.glb",
+     "h": 16.94
     },
     {
-     "id": "beacon_ne4",
+     "id": "tremont_n4",
      "kind": "building",
      "pos": [
-      130.5,
-      70.5
+      67.5,
+      101.0
      ],
-     "rotY": 180.0,
+     "rotY": -90.0,
      "backdrop": false,
-     "near": "art/kit/beacon_ne4.glb",
-     "far": "art/kit/beacon_ne4_far.glb",
-     "h": 10.14
+     "near": "art/kit/tremont_n4.glb",
+     "far": "art/kit/tremont_n4_far.glb",
+     "h": 11.09
     },
     {
-     "id": "beacon_ne5",
+     "id": "tremont_n5",
      "kind": "building",
      "pos": [
-      141.5,
-      70.5
+      67.5,
+      113.0
      ],
-     "rotY": 180.0,
+     "rotY": -90.0,
      "backdrop": false,
-     "near": "art/kit/beacon_ne5.glb",
-     "far": "art/kit/beacon_ne5_far.glb",
-     "h": 10.14
+     "near": "art/kit/tremont_n5.glb",
+     "far": "art/kit/tremont_n5_far.glb",
+     "h": 16.94
     },
     {
-     "id": "beacon_ne6",
+     "id": "tremont_n6",
      "kind": "building",
      "pos": [
-      152.0,
-      70.5
+      67.5,
+      125.0
      ],
-     "rotY": 180.0,
+     "rotY": -90.0,
      "backdrop": false,
-     "near": "art/kit/beacon_ne6.glb",
-     "far": "art/kit/beacon_ne6_far.glb",
-     "h": 10.14
-    },
-    {
-     "id": "beacon_ne7",
-     "kind": "building",
-     "pos": [
-      161.25,
-      70.5
-     ],
-     "rotY": 180.0,
-     "backdrop": false,
-     "near": "art/kit/beacon_ne7.glb",
-     "far": "art/kit/beacon_ne7_far.glb",
-     "h": 8.71
+     "near": "art/kit/tremont_n6.glb",
+     "far": "art/kit/tremont_n6_far.glb",
+     "h": 11.09
     },
     {
      "id": "park_church",
@@ -1389,10 +1402,10 @@
      "id": "state_house",
      "kind": "landmark",
      "pos": [
-      143.58,
-      128.28
+      13.11,
+      168.0
      ],
-     "rotY": -128.5,
+     "rotY": -176.6,
      "backdrop": false,
      "near": "art/kit/state_house.glb",
      "far": "art/kit/state_house_far.glb",
@@ -1403,8 +1416,8 @@
      "id": "hill_chapel",
      "kind": "landmark",
      "pos": [
-      118.53,
-      169.99
+      -25.3,
+      195.11
      ],
      "rotY": 180,
      "backdrop": false,
@@ -1417,118 +1430,53 @@
      "id": "sky0",
      "kind": "building",
      "pos": [
-      255.66,
-      193.27
+      39.0,
+      346.39
      ],
      "rotY": 180.0,
      "backdrop": true,
      "near": null,
      "far": "art/kit/sky0_far.glb",
-     "h": 28.09
-    },
-    {
-     "id": "sky1",
-     "kind": "building",
-     "pos": [
-      191.87,
-      266.52
-     ],
-     "rotY": 180.0,
-     "backdrop": true,
-     "near": null,
-     "far": "art/kit/sky1_far.glb",
-     "h": 28.09
+     "h": 31.49
     },
     {
      "id": "sky2",
      "kind": "building",
      "pos": [
-      247.44,
-      208.97
+      -5.8,
+      346.39
      ],
      "rotY": 180.0,
      "backdrop": true,
      "near": null,
      "far": "art/kit/sky2_far.glb",
-     "h": 24.69
+     "h": 31.49
     },
     {
      "id": "sky3",
      "kind": "building",
      "pos": [
-      204.38,
-      253.57
+      11.2,
+      346.39
      ],
      "rotY": 180.0,
      "backdrop": true,
      "near": null,
      "far": "art/kit/sky3_far.glb",
-     "h": 24.69
-    },
-    {
-     "id": "sky4",
-     "kind": "building",
-     "pos": [
-      234.94,
-      221.92
-     ],
-     "rotY": 180.0,
-     "backdrop": true,
-     "near": null,
-     "far": "art/kit/sky4_far.glb",
-     "h": 21.29
+     "h": 28.09
     },
     {
      "id": "sky5",
      "kind": "building",
      "pos": [
-      214.1,
-      243.5
+      24.75,
+      346.39
      ],
      "rotY": 180.0,
      "backdrop": true,
      "near": null,
      "far": "art/kit/sky5_far.glb",
-     "h": 21.29
-    },
-    {
-     "id": "sky6",
-     "kind": "building",
-     "pos": [
-      254.39,
-      201.78
-     ],
-     "rotY": 180.0,
-     "backdrop": true,
-     "near": null,
-     "far": "art/kit/sky6_far.glb",
-     "h": 17.89
-    },
-    {
-     "id": "sky7",
-     "kind": "building",
-     "pos": [
-      201.6,
-      256.45
-     ],
-     "rotY": 180.0,
-     "backdrop": true,
-     "near": null,
-     "far": "art/kit/sky7_far.glb",
-     "h": 17.89
-    },
-    {
-     "id": "sky8",
-     "kind": "building",
-     "pos": [
-      226.61,
-      230.55
-     ],
-     "rotY": 180.0,
-     "backdrop": true,
-     "near": null,
-     "far": "art/kit/sky8_far.glb",
-     "h": 31.49
+     "h": 24.69
     }
    ],
    "landmarks": [
@@ -1536,8 +1484,8 @@
      "id": "brewer_fountain",
      "file": "art/kit/lm_fountain.glb",
      "pos": [
-      21.51,
-      36.92
+      -3.34,
+      -22.99
      ],
      "y": 0.15,
      "rotY": 0,
@@ -1549,11 +1497,11 @@
      "id": "gazebo",
      "file": "art/kit/lm_gazebo.glb",
      "pos": [
-      35.01,
-      41.07
+      4.99,
+      28.13
      ],
      "y": 0.75,
-     "rotY": -122.9
+     "rotY": -175.0
     }
    ]
   },
@@ -1652,15 +1600,6 @@
     {
      "m": "round",
      "p": [
-      14.28,
-      30.79
-     ],
-     "s": 0.7,
-     "rot": 47
-    },
-    {
-     "m": "round",
-     "p": [
       -100.0,
       -30.0
      ],
@@ -1677,22 +1616,13 @@
      "rot": 71
     },
     {
-     "m": "deep",
-     "p": [
-      -84.0,
-      -26.0
-     ],
-     "s": 1.0,
-     "rot": 142
-    },
-    {
      "m": "round",
      "p": [
-      -70.0,
-      -18.0
+      -76.0,
+      -6.0
      ],
-     "s": 1.05,
-     "rot": 284
+     "s": 1.0,
+     "rot": 213
     },
     {
      "m": "round",
@@ -1740,15 +1670,6 @@
      "rot": 279
     },
     {
-     "m": "round",
-     "p": [
-      -70.0,
-      8.0
-     ],
-     "s": 1.1,
-     "rot": 350
-    },
-    {
      "m": "deep",
      "p": [
       -82.0,
@@ -1756,15 +1677,6 @@
      ],
      "s": 1.0,
      "rot": 61
-    },
-    {
-     "m": "round",
-     "p": [
-      -96.0,
-      4.0
-     ],
-     "s": 1.05,
-     "rot": 132
     },
     {
      "m": "deep",
@@ -1783,15 +1695,6 @@
      ],
      "s": 0.95,
      "rot": 274
-    },
-    {
-     "m": "round",
-     "p": [
-      -38.0,
-      10.0
-     ],
-     "s": 1.0,
-     "rot": 345
     },
     {
      "m": "round",
@@ -1857,6 +1760,15 @@
      "rot": 122
     },
     {
+     "m": "round",
+     "p": [
+      -98.0,
+      -24.0
+     ],
+     "s": 0.95,
+     "rot": 193
+    },
+    {
      "m": "deep",
      "p": [
       -90.0,
@@ -1920,15 +1832,6 @@
      "rot": 41
     },
     {
-     "m": "round",
-     "p": [
-      -14.0,
-      14.0
-     ],
-     "s": 1.0,
-     "rot": 112
-    },
-    {
      "m": "deep",
      "p": [
       -10.0,
@@ -1936,24 +1839,6 @@
      ],
      "s": 1.0,
      "rot": 183
-    },
-    {
-     "m": "round",
-     "p": [
-      -4.0,
-      -16.0
-     ],
-     "s": 1.05,
-     "rot": 254
-    },
-    {
-     "m": "deep",
-     "p": [
-      2.0,
-      12.0
-     ],
-     "s": 1.0,
-     "rot": 325
     },
     {
      "m": "deep",
@@ -2010,28 +1895,10 @@
      "rot": 31
     },
     {
-     "m": "round",
-     "p": [
-      -10.0,
-      34.0
-     ],
-     "s": 1.0,
-     "rot": 102
-    },
-    {
-     "m": "round",
-     "p": [
-      4.0,
-      42.0
-     ],
-     "s": 1.0,
-     "rot": 173
-    },
-    {
      "m": "tall",
      "p": [
       -100.0,
-      -37.4
+      -72.4
      ],
      "s": 0.9,
      "rot": 0
@@ -2040,7 +1907,7 @@
      "m": "tall",
      "p": [
       -88.0,
-      -37.4
+      -72.4
      ],
      "s": 0.9,
      "rot": 31
@@ -2049,7 +1916,7 @@
      "m": "tall",
      "p": [
       -76.0,
-      -37.4
+      -72.4
      ],
      "s": 0.9,
      "rot": 62
@@ -2058,7 +1925,7 @@
      "m": "tall",
      "p": [
       -64.0,
-      -37.4
+      -72.4
      ],
      "s": 0.9,
      "rot": 93
@@ -2067,7 +1934,7 @@
      "m": "tall",
      "p": [
       -52.0,
-      -37.4
+      -72.4
      ],
      "s": 0.9,
      "rot": 124
@@ -2076,7 +1943,7 @@
      "m": "tall",
      "p": [
       -40.0,
-      -37.4
+      -72.4
      ],
      "s": 0.9,
      "rot": 155
@@ -2085,7 +1952,7 @@
      "m": "tall",
      "p": [
       -28.0,
-      -37.4
+      -72.4
      ],
      "s": 0.9,
      "rot": 186
@@ -2094,7 +1961,7 @@
      "m": "tall",
      "p": [
       -16.0,
-      -37.4
+      -72.4
      ],
      "s": 0.9,
      "rot": 217
@@ -2103,7 +1970,7 @@
      "m": "tall",
      "p": [
       -4.0,
-      -37.4
+      -72.4
      ],
      "s": 0.9,
      "rot": 248
@@ -2112,7 +1979,7 @@
      "m": "tall",
      "p": [
       8.0,
-      -37.4
+      -72.4
      ],
      "s": 0.9,
      "rot": 279
@@ -2120,8 +1987,8 @@
     {
      "m": "tall",
      "p": [
-      32.0,
-      -37.4
+      20.0,
+      -72.4
      ],
      "s": 0.9,
      "rot": 310
@@ -2129,8 +1996,8 @@
     {
      "m": "tall",
      "p": [
-      -100.0,
-      45.2
+      32.0,
+      -72.4
      ],
      "s": 0.9,
      "rot": 341
@@ -2138,8 +2005,8 @@
     {
      "m": "tall",
      "p": [
-      -88.0,
-      45.2
+      44.6,
+      -66.0
      ],
      "s": 0.9,
      "rot": 12
@@ -2147,8 +2014,8 @@
     {
      "m": "tall",
      "p": [
-      -76.0,
-      45.2
+      44.6,
+      -54.0
      ],
      "s": 0.9,
      "rot": 43
@@ -2156,65 +2023,11 @@
     {
      "m": "tall",
      "p": [
-      -52.0,
-      45.2
+      44.6,
+      -42.0
      ],
      "s": 0.9,
-     "rot": 105
-    },
-    {
-     "m": "tall",
-     "p": [
-      -40.0,
-      45.2
-     ],
-     "s": 0.9,
-     "rot": 136
-    },
-    {
-     "m": "tall",
-     "p": [
-      -28.0,
-      45.2
-     ],
-     "s": 0.9,
-     "rot": 167
-    },
-    {
-     "m": "tall",
-     "p": [
-      -16.0,
-      45.2
-     ],
-     "s": 0.9,
-     "rot": 198
-    },
-    {
-     "m": "tall",
-     "p": [
-      -4.0,
-      45.2
-     ],
-     "s": 0.9,
-     "rot": 229
-    },
-    {
-     "m": "tall",
-     "p": [
-      8.0,
-      45.2
-     ],
-     "s": 0.9,
-     "rot": 260
-    },
-    {
-     "m": "tall",
-     "p": [
-      20.0,
-      45.2
-     ],
-     "s": 0.9,
-     "rot": 291
+     "rot": 74
     },
     {
      "m": "tall",
@@ -2223,7 +2036,7 @@
       -30.0
      ],
      "s": 0.9,
-     "rot": 353
+     "rot": 105
     },
     {
      "m": "tall",
@@ -2232,7 +2045,7 @@
       -18.0
      ],
      "s": 0.9,
-     "rot": 24
+     "rot": 136
     },
     {
      "m": "tall",
@@ -2241,7 +2054,7 @@
       18.0
      ],
      "s": 0.9,
-     "rot": 55
+     "rot": 167
     },
     {
      "m": "tall",
@@ -2250,96 +2063,501 @@
       30.0
      ],
      "s": 0.9,
-     "rot": 86
+     "rot": 198
+    },
+    {
+     "m": "tall",
+     "p": [
+      44.6,
+      42.0
+     ],
+     "s": 0.9,
+     "rot": 229
+    },
+    {
+     "m": "tall",
+     "p": [
+      44.6,
+      54.0
+     ],
+     "s": 0.9,
+     "rot": 260
     },
     {
      "m": "round",
      "p": [
-      22.46,
-      29.52
+      6.4,
+      -13.61
      ],
-     "s": 1.05,
-     "rot": 259
+     "s": 0.95,
+     "rot": 40
+    },
+    {
+     "m": "round",
+     "p": [
+      5.6,
+      2.39
+     ],
+     "s": 0.95,
+     "rot": 184
+    },
+    {
+     "m": "round",
+     "p": [
+      -11.4,
+      22.39
+     ],
+     "s": 0.65,
+     "rot": 44
     },
     {
      "m": "deep",
      "p": [
-      26.73,
-      31.57
+      -100.0,
+      -64.0
      ],
-     "s": 1.05,
-     "rot": 10
+     "s": 1.1,
+     "rot": 74
+    },
+    {
+     "m": "round",
+     "p": [
+      -103.0,
+      -53.0
+     ],
+     "s": 1.0,
+     "rot": 84
+    },
+    {
+     "m": "round",
+     "p": [
+      -98.0,
+      43.0
+     ],
+     "s": 0.9,
+     "rot": 184
+    },
+    {
+     "m": "round",
+     "p": [
+      -93.0,
+      -55.0
+     ],
+     "s": 1.1,
+     "rot": 214
+    },
+    {
+     "m": "round",
+     "p": [
+      -89.0,
+      -44.0
+     ],
+     "s": 1.0,
+     "rot": 224
+    },
+    {
+     "m": "round",
+     "p": [
+      -89.0,
+      26.0
+     ],
+     "s": 0.9,
+     "rot": 294
+    },
+    {
+     "m": "round",
+     "p": [
+      -83.0,
+      -57.0
+     ],
+     "s": 0.9,
+     "rot": 344
+    },
+    {
+     "m": "round",
+     "p": [
+      -79.0,
+      -46.0
+     ],
+     "s": 1.1,
+     "rot": 354
+    },
+    {
+     "m": "round",
+     "p": [
+      -81.0,
+      -13.0
+     ],
+     "s": 1.1,
+     "rot": 24
+    },
+    {
+     "m": "deep",
+     "p": [
+      -79.0,
+      24.0
+     ],
+     "s": 1.0,
+     "rot": 64
+    },
+    {
+     "m": "deep",
+     "p": [
+      -73.0,
+      -59.0
+     ],
+     "s": 1.0,
+     "rot": 114
+    },
+    {
+     "m": "round",
+     "p": [
+      -72.0,
+      -37.0
+     ],
+     "s": 1.1,
+     "rot": 134
+    },
+    {
+     "m": "round",
+     "p": [
+      -62.0,
+      31.0
+     ],
+     "s": 1.1,
+     "rot": 334
+    },
+    {
+     "m": "round",
+     "p": [
+      -49.0,
+      -45.0
+     ],
+     "s": 1.1,
+     "rot": 24
+    },
+    {
+     "m": "deep",
+     "p": [
+      -43.0,
+      -58.0
+     ],
+     "s": 1.0,
+     "rot": 144
+    },
+    {
+     "m": "round",
+     "p": [
+      -39.0,
+      -47.0
+     ],
+     "s": 0.9,
+     "rot": 154
+    },
+    {
+     "m": "round",
+     "p": [
+      -30.0,
+      -64.0
+     ],
+     "s": 0.9,
+     "rot": 264
+    },
+    {
+     "m": "deep",
+     "p": [
+      -33.0,
+      -53.0
+     ],
+     "s": 1.1,
+     "rot": 274
+    },
+    {
+     "m": "deep",
+     "p": [
+      -32.0,
+      -38.0
+     ],
+     "s": 0.9,
+     "rot": 294
+    },
+    {
+     "m": "round",
+     "p": [
+      -31.0,
+      -16.0
+     ],
+     "s": 1.0,
+     "rot": 314
+    },
+    {
+     "m": "deep",
+     "p": [
+      -27.0,
+      -5.0
+     ],
+     "s": 0.9,
+     "rot": 324
+    },
+    {
+     "m": "round",
+     "p": [
+      -33.0,
+      17.0
+     ],
+     "s": 1.0,
+     "rot": 344
+    },
+    {
+     "m": "deep",
+     "p": [
+      -32.0,
+      32.0
+     ],
+     "s": 1.1,
+     "rot": 4
+    },
+    {
+     "m": "round",
+     "p": [
+      -23.0,
+      -55.0
+     ],
+     "s": 0.9,
+     "rot": 44
+    },
+    {
+     "m": "round",
+     "p": [
+      -18.0,
+      -29.0
+     ],
+     "s": 0.9,
+     "rot": 74
+    },
+    {
+     "m": "round",
+     "p": [
+      -17.0,
+      -7.0
+     ],
+     "s": 1.0,
+     "rot": 94
+    },
+    {
+     "m": "round",
+     "p": [
+      -19.0,
+      26.0
+     ],
+     "s": 1.0,
+     "rot": 124
+    },
+    {
+     "m": "deep",
+     "p": [
+      -11.0,
+      -13.0
+     ],
+     "s": 0.9,
+     "rot": 214
+    },
+    {
+     "m": "round",
+     "p": [
+      0.0,
+      -63.0
+     ],
+     "s": 0.9,
+     "rot": 294
+    },
+    {
+     "m": "round",
+     "p": [
+      1.0,
+      -48.0
+     ],
+     "s": 1.0,
+     "rot": 314
+    },
+    {
+     "m": "round",
+     "p": [
+      10.0,
+      -65.0
+     ],
+     "s": 1.0,
+     "rot": 64
+    },
+    {
+     "m": "round",
+     "p": [
+      7.0,
+      -54.0
+     ],
+     "s": 0.9,
+     "rot": 74
+    },
+    {
+     "m": "deep",
+     "p": [
+      12.0,
+      -28.0
+     ],
+     "s": 0.9,
+     "rot": 104
+    },
+    {
+     "m": "round",
+     "p": [
+      17.0,
+      -56.0
+     ],
+     "s": 1.0,
+     "rot": 204
+    },
+    {
+     "m": "round",
+     "p": [
+      21.0,
+      -45.0
+     ],
+     "s": 0.9,
+     "rot": 214
+    },
+    {
+     "m": "round",
+     "p": [
+      27.0,
+      -58.0
+     ],
+     "s": 1.1,
+     "rot": 334
+    },
+    {
+     "m": "deep",
+     "p": [
+      31.0,
+      -47.0
+     ],
+     "s": 1.0,
+     "rot": 344
+    },
+    {
+     "m": "deep",
+     "p": [
+      32.0,
+      45.0
+     ],
+     "s": 1.0,
+     "rot": 74
+    },
+    {
+     "m": "deep",
+     "p": [
+      37.0,
+      -53.0
+     ],
+     "s": 0.9,
+     "rot": 104
+    },
+    {
+     "m": "round",
+     "p": [
+      37.0,
+      17.0
+     ],
+     "s": 1.1,
+     "rot": 174
     }
    ],
    "bushes": [
     {
      "m": "bush_flowering",
      "p": [
-      25.43,
-      36.02
+      -1.65,
+      -18.9
      ],
      "s": 0.65,
-     "rot": 212
+     "rot": 53
     },
     {
-     "m": "bush_lod0",
+     "m": "bush_small",
      "p": [
-      19.76,
-      40.55
+      -0.21,
+      -19.86
+     ],
+     "s": 0.75,
+     "rot": 106
+    },
+    {
+     "m": "bush_flowering",
+     "p": [
+      0.75,
+      -21.3
+     ],
+     "s": 0.55,
+     "rot": 159
+    },
+    {
+     "m": "bush_small",
+     "p": [
+      -7.43,
+      -21.3
      ],
      "s": 0.65,
      "rot": 329
     },
     {
-     "m": "bush_small",
-     "p": [
-      27.18,
-      23.82
-     ],
-     "s": 0.6,
-     "rot": 0
-    },
-    {
-     "m": "bush_small",
-     "p": [
-      35.81,
-      29.52
-     ],
-     "s": 0.6,
-     "rot": 111
-    },
-    {
      "m": "bush_flowering",
      "p": [
-      -102.18,
-      -8.47
-     ],
-     "s": 0.6,
-     "rot": 0
-    },
-    {
-     "m": "bush_flowering",
-     "p": [
-      -94.86,
-      -1.99
+      -6.47,
+      -19.86
      ],
      "s": 0.75,
-     "rot": 37
+     "rot": 22
+    },
+    {
+     "m": "bush_small",
+     "p": [
+      -5.03,
+      -18.9
+     ],
+     "s": 0.55,
+     "rot": 75
+    },
+    {
+     "m": "bush_flowering",
+     "p": [
+      38.41,
+      -9.62
+     ],
+     "s": 0.6,
+     "rot": 0
     },
     {
      "m": "bush_lod0",
      "p": [
-      -78.38,
-      -1.29
+      22.8,
+      -13.19
+     ],
+     "s": 0.8999999999999999,
+     "rot": 74
+    },
+    {
+     "m": "bush_lod0",
+     "p": [
+      16.28,
+      -20.94
      ],
      "s": 0.6,
      "rot": 111
     },
     {
-     "m": "bush_small",
+     "m": "bush_lod0",
      "p": [
-      -62.35,
-      -4.23
+      1.17,
+      -14.87
      ],
      "s": 0.8999999999999999,
      "rot": 185
@@ -2347,26 +2565,26 @@
     {
      "m": "bush_lod0",
      "p": [
-      -55.07,
-      -10.8
+      4.7,
+      -7.72
      ],
      "s": 0.6,
      "rot": 222
     },
     {
-     "m": "bush_flowering",
+     "m": "bush_lod0",
      "p": [
-      -38.64,
-      -11.05
+      -0.2,
+      7.05
      ],
      "s": 0.8999999999999999,
      "rot": 296
     },
     {
-     "m": "bush_flowering",
+     "m": "bush_lod0",
      "p": [
-      -32.14,
-      -3.83
+      -7.89,
+      13.71
      ],
      "s": 0.6,
      "rot": 333
@@ -2374,8 +2592,179 @@
     {
      "m": "bush_lod0",
      "p": [
-      -19.05,
-      3.84
+      -9.31,
+      30.0
+     ],
+     "s": 0.8999999999999999,
+     "rot": 47
+    },
+    {
+     "m": "bush_lod0",
+     "p": [
+      -3.25,
+      38.11
+     ],
+     "s": 0.6,
+     "rot": 84
+    },
+    {
+     "m": "bush_small",
+     "p": [
+      16.49,
+      33.48
+     ],
+     "s": 0.75,
+     "rot": 37
+    },
+    {
+     "m": "bush_small",
+     "p": [
+      37.83,
+      39.67
+     ],
+     "s": 0.6,
+     "rot": 0
+    },
+    {
+     "m": "bush_lod0",
+     "p": [
+      36.94,
+      29.82
+     ],
+     "s": 0.75,
+     "rot": 37
+    },
+    {
+     "m": "bush_lod0",
+     "p": [
+      27.32,
+      27.59
+     ],
+     "s": 0.8999999999999999,
+     "rot": 74
+    },
+    {
+     "m": "bush_lod0",
+     "p": [
+      26.39,
+      17.74
+     ],
+     "s": 0.6,
+     "rot": 111
+    },
+    {
+     "m": "bush_flowering",
+     "p": [
+      15.49,
+      5.84
+     ],
+     "s": 0.8999999999999999,
+     "rot": 185
+    },
+    {
+     "m": "bush_flowering",
+     "p": [
+      13.25,
+      18.5
+     ],
+     "s": 0.8999999999999999,
+     "rot": 296
+    },
+    {
+     "m": "bush_flowering",
+     "p": [
+      13.06,
+      -36.27
+     ],
+     "s": 0.8999999999999999,
+     "rot": 74
+    },
+    {
+     "m": "bush_small",
+     "p": [
+      22.34,
+      -32.17
+     ],
+     "s": 0.6,
+     "rot": 111
+    },
+    {
+     "m": "bush_small",
+     "p": [
+      37.88,
+      -35.83
+     ],
+     "s": 0.8999999999999999,
+     "rot": 185
+    },
+    {
+     "m": "bush_small",
+     "p": [
+      -2.03,
+      -12.4
+     ],
+     "s": 0.6,
+     "rot": 0
+    },
+    {
+     "m": "bush_flowering",
+     "p": [
+      -9.13,
+      2.1
+     ],
+     "s": 0.8999999999999999,
+     "rot": 74
+    },
+    {
+     "m": "bush_small",
+     "p": [
+      -18.91,
+      1.34
+     ],
+     "s": 0.6,
+     "rot": 111
+    },
+    {
+     "m": "bush_lod0",
+     "p": [
+      -33.04,
+      6.41
+     ],
+     "s": 0.8999999999999999,
+     "rot": 185
+    },
+    {
+     "m": "bush_small",
+     "p": [
+      -40.46,
+      12.91
+     ],
+     "s": 0.6,
+     "rot": 222
+    },
+    {
+     "m": "bush_small",
+     "p": [
+      -56.82,
+      11.57
+     ],
+     "s": 0.8999999999999999,
+     "rot": 296
+    },
+    {
+     "m": "bush_lod0",
+     "p": [
+      -63.89,
+      4.67
+     ],
+     "s": 0.6,
+     "rot": 333
+    },
+    {
+     "m": "bush_lod0",
+     "p": [
+      -79.57,
+      1.92
      ],
      "s": 0.8999999999999999,
      "rot": 47
@@ -2383,26 +2772,26 @@
     {
      "m": "bush_small",
      "p": [
-      -9.33,
-      4.22
+      -88.53,
+      6.12
      ],
      "s": 0.6,
      "rot": 84
     },
     {
-     "m": "bush_flowering",
+     "m": "bush_lod0",
      "p": [
-      -6.71,
-      13.64
+      -95.3,
+      -1.09
      ],
      "s": 0.75,
      "rot": 121
     },
     {
-     "m": "bush_small",
+     "m": "bush_lod0",
      "p": [
-      3.03,
-      14.97
+      -104.19,
+      3.16
      ],
      "s": 0.8999999999999999,
      "rot": 158
@@ -2410,89 +2799,80 @@
     {
      "m": "bush_small",
      "p": [
-      3.24,
-      24.83
-     ],
-     "s": 0.6,
-     "rot": 195
-    },
-    {
-     "m": "bush_small",
-     "p": [
-      12.49,
-      28.15
-     ],
-     "s": 0.75,
-     "rot": 232
-    },
-    {
-     "m": "bush_lod0",
-     "p": [
-      21.62,
-      19.41
+      -7.77,
+      -40.68
      ],
      "s": 0.75,
      "rot": 37
     },
     {
-     "m": "bush_lod0",
+     "m": "bush_flowering",
      "p": [
-      14.53,
-      12.31
+      -15.14,
+      -47.29
      ],
      "s": 0.8999999999999999,
      "rot": 74
     },
     {
-     "m": "bush_flowering",
+     "m": "bush_lod0",
      "p": [
-      19.52,
-      3.69
+      -8.77,
+      -55.06
      ],
      "s": 0.6,
      "rot": 111
     },
     {
-     "m": "bush_lod0",
+     "m": "bush_small",
      "p": [
-      12.8,
-      -3.74
+      -13.84,
+      -63.67
      ],
      "s": 0.75,
      "rot": 148
     },
     {
-     "m": "bush_small",
+     "m": "bush_flowering",
      "p": [
-      18.49,
-      -11.97
+      28.62,
+      -28.7
+     ],
+     "s": 0.75,
+     "rot": 37
+    },
+    {
+     "m": "bush_lod0",
+     "p": [
+      35.45,
+      -21.57
+     ],
+     "s": 0.8999999999999999,
+     "rot": 74
+    },
+    {
+     "m": "bush_lod0",
+     "p": [
+      32.29,
+      2.2
      ],
      "s": 0.8999999999999999,
      "rot": 185
     },
     {
-     "m": "bush_lod0",
+     "m": "bush_small",
      "p": [
-      12.69,
-      -20.06
+      41.1,
+      6.95
      ],
      "s": 0.6,
      "rot": 222
     },
     {
-     "m": "bush_small",
+     "m": "bush_flowering",
      "p": [
-      19.09,
-      -27.76
-     ],
-     "s": 0.75,
-     "rot": 259
-    },
-    {
-     "m": "bush_small",
-     "p": [
-      20.17,
-      8.76
+      -101.98,
+      -37.16
      ],
      "s": 0.6,
      "rot": 0
@@ -2500,26 +2880,17 @@
     {
      "m": "bush_flowering",
      "p": [
-      29.11,
-      13.28
-     ],
-     "s": 0.75,
-     "rot": 37
-    },
-    {
-     "m": "bush_small",
-     "p": [
-      32.45,
-      4.66
+      -85.97,
+      -32.2
      ],
      "s": 0.8999999999999999,
      "rot": 74
     },
     {
-     "m": "bush_flowering",
+     "m": "bush_lod0",
      "p": [
-      37.61,
-      -1.49
+      -82.59,
+      -22.83
      ],
      "s": 0.6,
      "rot": 111
@@ -2527,8 +2898,17 @@
     {
      "m": "bush_small",
      "p": [
-      -101.91,
-      -27.06
+      -69.74,
+      -12.91
+     ],
+     "s": 0.8999999999999999,
+     "rot": 185
+    },
+    {
+     "m": "bush_small",
+     "p": [
+      -57.27,
+      -67.2
      ],
      "s": 0.6,
      "rot": 0
@@ -2536,26 +2916,26 @@
     {
      "m": "bush_small",
      "p": [
-      -95.64,
-      -19.42
+      -64.02,
+      -59.85
      ],
      "s": 0.75,
      "rot": 37
     },
     {
-     "m": "bush_small",
+     "m": "bush_flowering",
      "p": [
-      -86.18,
-      -22.39
+      -58.69,
+      -51.37
      ],
      "s": 0.8999999999999999,
      "rot": 74
     },
     {
-     "m": "bush_flowering",
+     "m": "bush_small",
      "p": [
-      -81.46,
-      -13.65
+      -65.03,
+      -43.61
      ],
      "s": 0.6,
      "rot": 111
@@ -2563,35 +2943,8 @@
     {
      "m": "bush_flowering",
      "p": [
-      -57.58,
-      -31.98
-     ],
-     "s": 0.6,
-     "rot": 0
-    },
-    {
-     "m": "bush_small",
-     "p": [
-      -64.78,
-      -25.0
-     ],
-     "s": 0.75,
-     "rot": 37
-    },
-    {
-     "m": "bush_small",
-     "p": [
-      -58.45,
-      -17.84
-     ],
-     "s": 0.8999999999999999,
-     "rot": 74
-    },
-    {
-     "m": "bush_lod0",
-     "p": [
-      -64.89,
-      5.19
+      -63.44,
+      -27.19
      ],
      "s": 0.8999999999999999,
      "rot": 185
@@ -2599,38 +2952,191 @@
     {
      "m": "bush_lod0",
      "p": [
-      -61.39,
-      14.45
+      -56.1,
+      -20.32
      ],
      "s": 0.6,
      "rot": 222
     },
     {
-     "m": "bush_lod0",
+     "m": "bush_flowering",
      "p": [
-      -62.57,
-      29.01
+      -55.77,
+      -3.27
      ],
      "s": 0.8999999999999999,
      "rot": 296
     },
     {
-     "m": "bush_flowering",
+     "m": "bush_small",
      "p": [
-      -67.04,
-      37.93
+      -63.35,
+      20.25
+     ],
+     "s": 0.8999999999999999,
+     "rot": 47
+    },
+    {
+     "m": "bush_small",
+     "p": [
+      -55.32,
+      26.36
      ],
      "s": 0.6,
-     "rot": 333
+     "rot": 84
+    },
+    {
+     "m": "bush_small",
+     "p": [
+      4.48,
+      -21.61
+     ],
+     "s": 0.8500000000000001,
+     "rot": 256
+    },
+    {
+     "m": "bush_lod0",
+     "p": [
+      -2.64,
+      -9.61
+     ],
+     "s": 0.8500000000000001,
+     "rot": 172
+    },
+    {
+     "m": "bush_lod0",
+     "p": [
+      -2.82,
+      -6.61
+     ],
+     "s": 0.8500000000000001,
+     "rot": 331
+    },
+    {
+     "m": "bush_lod0",
+     "p": [
+      7.0,
+      -3.61
+     ],
+     "s": 0.8500000000000001,
+     "rot": 130
     },
     {
      "m": "bush_flowering",
      "p": [
-      18.22,
-      30.32
+      7.42,
+      -0.61
      ],
-     "s": 0.65,
-     "rot": 318
+     "s": 0.8500000000000001,
+     "rot": 289
+    },
+    {
+     "m": "bush_lod0",
+     "p": [
+      -5.6,
+      2.39
+     ],
+     "s": 0.8500000000000001,
+     "rot": 88
+    },
+    {
+     "m": "bush_small",
+     "p": [
+      3.54,
+      5.39
+     ],
+     "s": 0.8500000000000001,
+     "rot": 247
+    },
+    {
+     "m": "bush_small",
+     "p": [
+      3.72,
+      8.39
+     ],
+     "s": 0.8500000000000001,
+     "rot": 46
+    },
+    {
+     "m": "bush_small",
+     "p": [
+      -9.1,
+      11.39
+     ],
+     "s": 0.8500000000000001,
+     "rot": 205
+    },
+    {
+     "m": "bush_flowering",
+     "p": [
+      4.08,
+      14.39
+     ],
+     "s": 0.8500000000000001,
+     "rot": 4
+    },
+    {
+     "m": "bush_lod0",
+     "p": [
+      -9.94,
+      17.39
+     ],
+     "s": 0.8500000000000001,
+     "rot": 163
+    },
+    {
+     "m": "bush_small",
+     "p": [
+      -11.2,
+      26.39
+     ],
+     "s": 0.8500000000000001,
+     "rot": 280
+    },
+    {
+     "m": "bush_small",
+     "p": [
+      -12.04,
+      32.39
+     ],
+     "s": 0.8500000000000001,
+     "rot": 238
+    },
+    {
+     "m": "bush_flowering",
+     "p": [
+      -12.46,
+      35.39
+     ],
+     "s": 0.8500000000000001,
+     "rot": 37
+    },
+    {
+     "m": "bush_small",
+     "p": [
+      12.88,
+      38.39
+     ],
+     "s": 0.8500000000000001,
+     "rot": 196
+    },
+    {
+     "m": "bush_flowering",
+     "p": [
+      -13.3,
+      41.39
+     ],
+     "s": 0.8500000000000001,
+     "rot": 355
+    },
+    {
+     "m": "bush_small",
+     "p": [
+      5.88,
+      44.39
+     ],
+     "s": 0.8500000000000001,
+     "rot": 154
     }
    ]
   },
