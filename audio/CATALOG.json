@@ -1575,6 +1575,389 @@
         "woman"
       ],
       "note": "play 1 random blip per 2-3 letters of bubble text, pitch +-8%"
+    },
+    {
+      "id": "aww",
+      "file": "sfx/aww.mp3",
+      "length": 1.72,
+      "loop": false,
+      "category": "sfx",
+      "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
+      "licence": "ElevenLabs paid-plan output, commercial use allowed",
+      "volume": 0.8,
+      "tags": [
+        "whimsy"
+      ]
+    },
+    {
+      "id": "camera_shutter",
+      "file": "sfx/camera_shutter.mp3",
+      "length": 1.0,
+      "loop": false,
+      "category": "sfx",
+      "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
+      "licence": "ElevenLabs paid-plan output, commercial use allowed",
+      "volume": 0.8,
+      "tags": [
+        "whimsy"
+      ]
+    },
+    {
+      "id": "cat_meow",
+      "file": "sfx/cat_meow.mp3",
+      "length": 1.48,
+      "loop": false,
+      "category": "sfx",
+      "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
+      "licence": "ElevenLabs paid-plan output, commercial use allowed",
+      "volume": 0.8,
+      "tags": [
+        "whimsy"
+      ]
+    },
+    {
+      "id": "chalk_scratch",
+      "file": "sfx/chalk_scratch.mp3",
+      "length": 2.0,
+      "loop": false,
+      "category": "sfx",
+      "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
+      "licence": "ElevenLabs paid-plan output, commercial use allowed",
+      "volume": 0.8,
+      "tags": [
+        "whimsy"
+      ]
+    },
+    {
+      "id": "cheer",
+      "file": "sfx/cheer.mp3",
+      "length": 2.45,
+      "loop": false,
+      "category": "sfx",
+      "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
+      "licence": "ElevenLabs paid-plan output, commercial use allowed",
+      "volume": 0.8,
+      "tags": [
+        "whimsy"
+      ]
+    },
+    {
+      "id": "conga_chant",
+      "file": "sfx/conga_chant.mp3",
+      "length": 3.0,
+      "loop": false,
+      "category": "sfx",
+      "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
+      "licence": "ElevenLabs paid-plan output, commercial use allowed",
+      "volume": 0.8,
+      "tags": [
+        "whimsy"
+      ]
+    },
+    {
+      "id": "fountain_splash",
+      "file": "sfx/fountain_splash.mp3",
+      "length": 2.48,
+      "loop": false,
+      "category": "sfx",
+      "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
+      "licence": "ElevenLabs paid-plan output, commercial use allowed",
+      "volume": 0.8,
+      "tags": [
+        "whimsy"
+      ]
+    },
+    {
+      "id": "guitar_solo",
+      "file": "sfx/guitar_solo.mp3",
+      "length": 3.82,
+      "loop": false,
+      "category": "sfx",
+      "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
+      "licence": "ElevenLabs paid-plan output, commercial use allowed",
+      "volume": 0.8,
+      "tags": [
+        "whimsy"
+      ]
+    },
+    {
+      "id": "howl",
+      "file": "sfx/howl.mp3",
+      "length": 2.17,
+      "loop": false,
+      "category": "sfx",
+      "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
+      "licence": "ElevenLabs paid-plan output, commercial use allowed",
+      "volume": 0.8,
+      "tags": [
+        "whimsy"
+      ]
+    },
+    {
+      "id": "laugh_man",
+      "file": "sfx/laugh_man.mp3",
+      "length": 1.84,
+      "loop": false,
+      "category": "sfx",
+      "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
+      "licence": "ElevenLabs paid-plan output, commercial use allowed",
+      "volume": 0.8,
+      "tags": [
+        "whimsy"
+      ]
+    },
+    {
+      "id": "leaves_crunch",
+      "file": "sfx/leaves_crunch.mp3",
+      "length": 1.36,
+      "loop": false,
+      "category": "sfx",
+      "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
+      "licence": "ElevenLabs paid-plan output, commercial use allowed",
+      "volume": 0.8,
+      "tags": [
+        "whimsy"
+      ]
+    },
+    {
+      "id": "murmur_cop",
+      "file": "voices/murmur/murmur_cop.mp3",
+      "length": 3.84,
+      "loop": false,
+      "category": "murmur",
+      "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
+      "licence": "ElevenLabs paid-plan output, commercial use allowed",
+      "volume": 0.5,
+      "tags": [
+        "murmur",
+        "voice"
+      ]
+    },
+    {
+      "id": "murmur_hero",
+      "file": "voices/murmur/murmur_hero.mp3",
+      "length": 3.94,
+      "loop": false,
+      "category": "murmur",
+      "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
+      "licence": "ElevenLabs paid-plan output, commercial use allowed",
+      "volume": 0.5,
+      "tags": [
+        "murmur",
+        "voice"
+      ]
+    },
+    {
+      "id": "murmur_man",
+      "file": "voices/murmur/murmur_man.mp3",
+      "length": 3.83,
+      "loop": false,
+      "category": "murmur",
+      "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
+      "licence": "ElevenLabs paid-plan output, commercial use allowed",
+      "volume": 0.5,
+      "tags": [
+        "murmur",
+        "voice"
+      ]
+    },
+    {
+      "id": "murmur_oldman",
+      "file": "voices/murmur/murmur_oldman.mp3",
+      "length": 4.0,
+      "loop": false,
+      "category": "murmur",
+      "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
+      "licence": "ElevenLabs paid-plan output, commercial use allowed",
+      "volume": 0.5,
+      "tags": [
+        "murmur",
+        "voice"
+      ]
+    },
+    {
+      "id": "murmur_partner",
+      "file": "voices/murmur/murmur_partner.mp3",
+      "length": 3.68,
+      "loop": false,
+      "category": "murmur",
+      "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
+      "licence": "ElevenLabs paid-plan output, commercial use allowed",
+      "volume": 0.5,
+      "tags": [
+        "murmur",
+        "voice"
+      ]
+    },
+    {
+      "id": "murmur_woman",
+      "file": "voices/murmur/murmur_woman.mp3",
+      "length": 4.0,
+      "loop": false,
+      "category": "murmur",
+      "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
+      "licence": "ElevenLabs paid-plan output, commercial use allowed",
+      "volume": 0.5,
+      "tags": [
+        "murmur",
+        "voice"
+      ]
+    },
+    {
+      "id": "shoe_slide",
+      "file": "sfx/shoe_slide.mp3",
+      "length": 1.46,
+      "loop": false,
+      "category": "sfx",
+      "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
+      "licence": "ElevenLabs paid-plan output, commercial use allowed",
+      "volume": 0.8,
+      "tags": [
+        "whimsy"
+      ]
+    },
+    {
+      "id": "sing_hum",
+      "file": "sfx/sing_hum.mp3",
+      "length": 2.35,
+      "loop": false,
+      "category": "sfx",
+      "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
+      "licence": "ElevenLabs paid-plan output, commercial use allowed",
+      "volume": 0.8,
+      "tags": [
+        "whimsy"
+      ]
+    },
+    {
+      "id": "sing_karaoke",
+      "file": "sfx/sing_karaoke.mp3",
+      "length": 3.79,
+      "loop": false,
+      "category": "sfx",
+      "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
+      "licence": "ElevenLabs paid-plan output, commercial use allowed",
+      "volume": 0.8,
+      "tags": [
+        "whimsy"
+      ]
+    },
+    {
+      "id": "sing_la",
+      "file": "sfx/sing_la.mp3",
+      "length": 2.48,
+      "loop": false,
+      "category": "sfx",
+      "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
+      "licence": "ElevenLabs paid-plan output, commercial use allowed",
+      "volume": 0.8,
+      "tags": [
+        "whimsy"
+      ]
+    },
+    {
+      "id": "sing_offkey",
+      "file": "sfx/sing_offkey.mp3",
+      "length": 3.4,
+      "loop": false,
+      "category": "sfx",
+      "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
+      "licence": "ElevenLabs paid-plan output, commercial use allowed",
+      "volume": 0.8,
+      "tags": [
+        "whimsy"
+      ]
+    },
+    {
+      "id": "snore",
+      "file": "sfx/snore.mp3",
+      "length": 2.38,
+      "loop": false,
+      "category": "sfx",
+      "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
+      "licence": "ElevenLabs paid-plan output, commercial use allowed",
+      "volume": 0.8,
+      "tags": [
+        "whimsy"
+      ]
+    },
+    {
+      "id": "sprinkler_splash",
+      "file": "sfx/sprinkler_splash.mp3",
+      "length": 2.48,
+      "loop": false,
+      "category": "sfx",
+      "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
+      "licence": "ElevenLabs paid-plan output, commercial use allowed",
+      "volume": 0.8,
+      "tags": [
+        "whimsy"
+      ]
+    },
+    {
+      "id": "sweeper_whirr",
+      "file": "sfx/sweeper_whirr.mp3",
+      "length": 2.47,
+      "loop": false,
+      "category": "sfx",
+      "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
+      "licence": "ElevenLabs paid-plan output, commercial use allowed",
+      "volume": 0.8,
+      "tags": [
+        "whimsy"
+      ]
+    },
+    {
+      "id": "sword_swish",
+      "file": "sfx/sword_swish.mp3",
+      "length": 0.37,
+      "loop": false,
+      "category": "sfx",
+      "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
+      "licence": "ElevenLabs paid-plan output, commercial use allowed",
+      "volume": 0.8,
+      "tags": [
+        "whimsy"
+      ]
+    },
+    {
+      "id": "tap_shuffle",
+      "file": "sfx/tap_shuffle.mp3",
+      "length": 2.36,
+      "loop": false,
+      "category": "sfx",
+      "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
+      "licence": "ElevenLabs paid-plan output, commercial use allowed",
+      "volume": 0.8,
+      "tags": [
+        "whimsy"
+      ]
+    },
+    {
+      "id": "wheee",
+      "file": "sfx/wheee.mp3",
+      "length": 1.66,
+      "loop": false,
+      "category": "sfx",
+      "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
+      "licence": "ElevenLabs paid-plan output, commercial use allowed",
+      "volume": 0.8,
+      "tags": [
+        "whimsy"
+      ]
+    },
+    {
+      "id": "whistle_tune",
+      "file": "sfx/whistle_tune.mp3",
+      "length": 2.73,
+      "loop": false,
+      "category": "sfx",
+      "source": "ElevenLabs Sound Effects (eleven_text_to_sound_v2), David's Creator plan",
+      "licence": "ElevenLabs paid-plan output, commercial use allowed",
+      "volume": 0.8,
+      "tags": [
+        "whimsy"
+      ]
     }
   ]
 }

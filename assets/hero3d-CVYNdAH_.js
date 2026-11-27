@@ -3880,9 +3880,9 @@ float fbm(vec2 p) { float s = 0.0, a = 0.5; for (int i = 0; i < 4; i++) { s += a
 // hour peach with lilac shadows, night dim violet lit by the moon (T08's dark wisps). Returns colour and coverage.
 vec4 cloudsAt(vec3 dir) {
   if (dir.y < 0.0 || cloudAmt <= 0.0) return vec4(0.0);
-  vec2 uv = dir.xz / (dir.y + 0.16) * 0.55 + vec2(time * 0.0045, time * 0.0016);
+  vec2 uv = dir.xz / (dir.y + 0.2) * 0.34 + vec2(time * 0.003, time * 0.0011);
   float n = fbm(uv);
-  float thr = mix(0.66, 0.36, cloudAmt);
+  float thr = mix(0.6, 0.34, cloudAmt);
   float d = smoothstep(thr, thr + 0.1, n);
   d *= smoothstep(0.015, 0.09, dir.y) * (1.0 - 0.45 * smoothstep(0.5, 1.0, dir.y)); // clear near the skyline and overhead
   if (d <= 0.001) return vec4(0.0);
@@ -4184,7 +4184,7 @@ void main() {
   // Nuance pass (#8): distance haze that fades gradually cooler and lighter (to the haze colour, which the fog
   // and the painted skyline share), starting near him; the sky near the horizon gets the same mist.
   if (hazeAmt > 0.0) {
-    float hz = isSky ? (1.0 - smoothstep(0.0, 0.16, skyE)) * 0.6 : smoothstep(hazeNear, hazeFar, dist);
+    float hz = isSky ? (1.0 - smoothstep(0.0, 0.16, skyE)) * mix(0.6, 0.3, art3) : smoothstep(hazeNear, hazeFar, dist); // art round 3: the painted skyline keeps its colours
     vec3 hcol = mix(fogCol * mix(1.12, 1.0, night * 0.3), vec3(1.0, 0.72, 0.5), golden * 0.45); // golden hour: amber air
     c = mix(c, hcol, hz * hazeAmt);
   }
