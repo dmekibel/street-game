@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Street Game Sound Test</title>
+<style>
+  :root{--bg:#16140f;--card:#221f18;--ink:#f3ead7;--dim:#a99f8a;--line:#3a3428;--warm:#f2a93b;--cold:#7f95a8;--hot:#e2574c;--ok:#7cc48a}
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.4 -apple-system,system-ui,"Segoe UI",sans-serif}
+  main{max-width:760px;margin:0 auto;padding:16px 16px 80px}
+  h1{font-size:22px;margin:4px 0 2px}
+  .sub{color:var(--dim);font-size:13px;margin:0 0 14px}
+  section{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;margin:12px 0}
+  h2{font-size:16px;margin:0 0 4px}
+  .hint{color:var(--dim);font-size:12.5px;margin:0 0 10px}
+  .grid{display:flex;flex-wrap:wrap;gap:6px}
+  button{font:inherit;font-size:13.5px;color:var(--ink);background:#2e2a21;border:1px solid var(--line);border-radius:10px;padding:9px 11px;min-height:40px;cursor:pointer;-webkit-tap-highlight-color:transparent}
+  button:active{transform:scale(.97)}
+  button.on{background:var(--warm);color:#1b1208;border-color:var(--warm)}
+  button.big{font-size:15px;padding:12px 16px}
+  button small{display:block;color:inherit;opacity:.7;font-size:11px}
+  .row{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:8px 0}
+  input[type=range]{width:100%;accent-color:var(--warm);height:34px}
+  .scale{display:flex;justify-content:space-between;font-size:12px;color:var(--dim)}
+  .meter{display:flex;gap:4px;margin-top:6px}
+  .meter span{flex:1;height:8px;border-radius:4px;background:var(--line)}
+  .meter span.lit{background:var(--warm)}
+  .tag{font-size:11px;border-radius:6px;padding:1px 6px;background:#3a3428;color:var(--dim);margin-left:4px}
+  #status{position:fixed;left:0;right:0;bottom:0;background:#0e0d0a;border-top:1px solid var(--line);padding:10px 16px calc(10px + env(safe-area-inset-bottom));font-size:13px;color:var(--dim)}
+  #status b{color:var(--ink)}
+  #start{width:100%;font-size:17px;padding:16px;background:var(--warm);color:#1b1208;border:0;border-radius:14px;font-weight:600}
+  .mood{min-width:calc(50% - 3px);text-align:left}
+  input[type=text]{font:inherit;width:100%;padding:10px;border-radius:10px;border:1px solid var(--line);background:#14120d;color:var(--ink)}
+</style>
+</head>
+<body>
+<main>
+  <h1>Sound test</h1>
+  <p class="sub">Every sound and music piece for the street game. Use headphones or the phone speaker. Tap the big button first (phones need one tap before sound works).</p>
+  <button id="start">Tap to turn sound on</button>
+
+  <section>
+    <h2>Main theme: sober ↔ drunk</h2>
+    <p class="hint">One piece in three synced layers. Slide to get him drunk: piano alone, then bass and brushes, then the whole band. "Sober filter" muffles the world when sober (the game's state filter).</p>
+    <div class="row"><button class="big" id="themePlay">▶ Play theme</button><button id="filterBtn" class="on">Sober filter</button><button id="texBtn">+ Lone-guitar texture</button><button id="tinBtn">Hangover ringing</button></div>
+    <input id="drunk" type="range" min="0" max="100" value="0">
+    <div class="scale"><span>sober</span><span>tipsy</span><span>drunk</span></div>
+  </section>
+
+  <section>
+    <h2>Whimsy builds the band</h2>
+    <p class="hint">Each whimsy combo step adds a player: drums, bass, keys, horns, then the full parade. Break the chain and they drop out.</p>
+    <div class="row"><button class="big" id="bandUp">+ Combo step</button><button class="big" id="bandBreak">Chain breaks</button></div>
+    <div class="meter" id="bandMeter"><span></span><span></span><span></span><span></span><span></span></div>
+  </section>
+
+  <section>
+    <h2>Moods</h2>
+    <p class="hint">Tap a mood: the music crossfades to it over 2.5 s. Tap again to stop. Styles: street-jazz (the band), lone-guitar (lonely, grief), dream-piano (tender, whimsical), calm-piano (exploring).</p>
+    <div class="grid" id="moods"></div>
+  </section>
+
+  <section>
+    <h2>The two of you (leitmotifs)</h2>
+    <p class="hint">His line on guitar, hers on piano, written together. Both alive = duet. One dead = only the survivor's line.</p>
+    <div class="grid" id="duets"></div>
+  </section>
+
+  <section>
+    <h2>Moments (cues)</h2>
+    <div class="grid" id="cues"></div>
+  </section>
+
+  <section>
+    <h2>Ambience</h2>
+    <p class="hint">Loops. Turn several on at once to layer them.</p>
+    <div class="grid" id="amb"></div>
+  </section>
+
+  <section>
+    <h2>Voices (mumble)</h2>
+    <p class="hint">Speech-bubble gibberish, one blip per few letters. Type a line to hear it said.</p>
+    <input type="text" id="line" value="Hey friend, got a spare coin for the bus?">
+    <div class="grid" id="voices" style="margin-top:8px"></div>
+  </section>
+
+  <section>
+    <h2>Sound effects</h2>
+    <div class="grid" id="sfx"></div>
+  </section>
+
+  <section>
+    <h2>Interface</h2>
+    <div class="grid" id="ui"></div>
+  </section>
+  <p class="sub">Music and most effects: ElevenLabs (David's plan). Some effects and all interface sounds: Kenney, CC0.</p>
+</main>
+<div id="status">Loading list…</div>
+<script>
+(() => {
+const BASE = '../audio/';
+let cat = [], byId = {};
+let ac = null, master = null, musicBus = null, filter = null;
+const bufs = new Map();          // id -> AudioBuffer (one-shots and small loops)
+const statusEl = document.getElementById('status');
+const say = (h) => statusEl.innerHTML = h;
+const $ = (id) => document.getElementById(id);
+
+function ctx() {
+  if (!ac) {
+    const C = window.AudioContext || window.webkitAudioContext;
+    ac = new C();
+    master = ac.createGain(); master.gain.value = 0.9; master.connect(ac.destination);
+    filter = ac.createBiquadFilter(); filter.type = 'lowpass'; filter.frequency.value = 20000; filter.Q.value = 0.5;
+    musicBus = ac.createGain(); musicBus.connect(filter); filter.connect(master);
+  }
+  if (ac.state !== 'running') ac.resume();
+  return ac;
+}
+async function load(id, keep = true) {
+  if (bufs.has(id)) return bufs.get(id);
+  const e = byId[id]; if (!e) throw new Error('no ' + id);
+  say('Loading <b>' + id + '</b>…');
+  const r = await fetch(BASE + e.file); const ab = await r.arrayBuffer();
+  const b = await new Promise((res, rej) => ctx().decodeAudioData(ab, res, rej));
+  if (keep) bufs.set(id, b);
+  return b;
+}
+function vol(id) { return (byId[id] && byId[id].volume) || 0.8; }
+async function shot(id, dest, rate = 1, gainMul = 1) {
+  const b = await load(id); const c = ctx();
+  const s = c.createBufferSource(); s.buffer = b; s.playbackRate.value = rate;
+  const g = c.createGain(); g.gain.value = vol(id) * gainMul;
+  s.connect(g); g.connect(dest || master); s.start();
+  const e = byId[id];
+  say('▶ <b>' + id + '</b> · ' + (e.length ? e.length + ' s' : '') + ' · ' + (e.source || ''));
+  return s;
+}
+
+/* ---------- music scenes: a set of synced looping layers ---------- */
+let scene = null; // {name, nodes:{id:{src,gain}}, out}
+const musicCache = new Map(); // keep only the current scene's music buffers (phone memory)
+async function loadMusic(ids) {
+  const out = {};
+  for (const id of ids) {
+    if (!musicCache.has(id)) musicCache.set(id, await load(id, false));
+    out[id] = musicCache.get(id);
+  }
+  return out;
+}
+function dropOtherMusic(keep) { for (const k of [...musicCache.keys()]) if (!keep.includes(k)) musicCache.delete(k); }
+async function startScene(name, ids, gains, loop = true) {
+  const c = ctx(); const b = await loadMusic(ids);
+  stopScene(2.5);
+  const out = c.createGain(); out.gain.setValueAtTime(0, c.currentTime); out.gain.linearRampToValueAtTime(1, c.currentTime + 2.5); out.connect(musicBus);
+  const t = c.currentTime + 0.05, nodes = {};
+  for (const id of ids) {
+    const s = c.createBufferSource(); s.buffer = b[id]; s.loop = loop;
+    const g = c.createGain(); g.gain.value = (gains[id] ?? 1) * vol(id);
+    s.connect(g); g.connect(out); s.start(t); nodes[id] = { src: s, gain: g };
+  }
+  scene = { name, nodes, out };
+  dropOtherMusic(ids);
+  say('♪ <b>' + name + '</b> · ' + ids.map(i => byId[i].emotion || '').filter(Boolean)[0] + ' · ' + (byId[ids[0]].style || '') + ' · ' + byId[ids[0]].length + ' s loop');
+  refreshButtons();
+}
+function stopScene(fade = 2.5) {
+  if (!scene) return; const c = ctx(); const sc = scene; scene = null;
+  sc.out.gain.cancelScheduledValues(c.currentTime); sc.out.gain.setValueAtTime(sc.out.gain.value, c.currentTime);
+  sc.out.gain.linearRampToValueAtTime(0, c.currentTime + fade);
+  for (const n of Object.values(sc.nodes)) try { n.src.stop(c.currentTime + fade + 0.1); } catch (e) {}
+  refreshButtons();
+}
+function setGain(id, v, t = 0.4) {
+  if (!scene || !scene.nodes[id]) return; const c = ctx(); const g = scene.nodes[id].gain.gain;
+  g.cancelScheduledValues(c.currentTime); g.setValueAtTime(g.value, c.currentTime); g.linearRampToValueAtTime(v * vol(id), c.currentTime + t);
+}
+
+/* theme crossfade: equal-power across sober -> tipsy -> drunk */
+const THEME = ['theme_sober', 'theme_tipsy', 'theme_drunk'];
+function themeGains(x) { // x 0..1
+  const p = x * 2; const g = { theme_sober: 0, theme_tipsy: 0, theme_drunk: 0 };
+  if (p <= 1) { g.theme_sober = Math.cos(p * Math.PI / 2); g.theme_tipsy = Math.sin(p * Math.PI / 2); }
+  else { const q = p - 1; g.theme_tipsy = Math.cos(q * Math.PI / 2); g.theme_drunk = Math.sin(q * Math.PI / 2); }
+  return g;
+}
+let filterOn = true, tex = null, tin = null;
+function applyDrunk() {
+  const x = $('drunk').value / 100;
+  if (scene && scene.name === 'theme') { const g = themeGains(x); for (const id of THEME) setGain(id, g[id], 0.3); }
+  if (ac) {
+    const f = filterOn ? 700 * Math.pow(20000 / 700, x) : 20000;   // sober = muffled, drunk = open
+    filter.frequency.setTargetAtTime(f, ac.currentTime, 0.15);
+    musicBus.gain.setTargetAtTime(filterOn ? 0.75 + 0.25 * x : 1, ac.currentTime, 0.15);
+  }
+}
+$('drunk').addEventListener('input', applyDrunk);
+$('themePlay').onclick = async () => {
+  if (scene && scene.name === 'theme') { stopScene(); return; }
+  await startScene('theme', THEME, themeGains($('drunk').value / 100)); applyDrunk();
+};
+$('filterBtn').onclick = () => { filterOn = !filterOn; $('filterBtn').classList.toggle('on', filterOn); applyDrunk(); };
+async function toggleLoopLayer(id, holder, btn, g = 1) {
+  const c = ctx();
+  if (holder.n) { holder.n.g.gain.linearRampToValueAtTime(0, c.currentTime + 1.5); holder.n.s.stop(c.currentTime + 1.6); holder.n = null; btn.classList.remove('on'); return; }
+  const b = await load(id); const s = c.createBufferSource(); s.buffer = b; s.loop = true;
+  const gn = c.createGain(); gn.gain.setValueAtTime(0, c.currentTime); gn.gain.linearRampToValueAtTime(vol(id) * g, c.currentTime + 1.5);
+  s.connect(gn); gn.connect(id === 'tinnitus' ? master : musicBus); s.start(); holder.n = { s, g: gn }; btn.classList.add('on');
+  say('▶ <b>' + id + '</b> (loop)');
+}
+const texH = {}, tinH = {};
+$('texBtn').onclick = () => toggleLoopLayer('texture_lone_guitar', texH, $('texBtn'), 0.7);
+$('tinBtn').onclick = () => toggleLoopLayer('tinnitus', tinH, $('tinBtn'));
+
+/* band builder */
+const BAND = ['band_drums', 'band_bass', 'band_keys', 'band_horns', 'theme_drunk'];
+let combo = 0;
+async function bandSet(n) {
+  combo = Math.max(0, Math.min(5, n));
+  document.querySelectorAll('#bandMeter span').forEach((s, i) => s.classList.toggle('lit', i < combo));
+  if (combo === 0) { if (scene && scene.name === 'band') stopScene(1.5); return; }
+  if (!scene || scene.name !== 'band') await startScene('band', BAND, { band_drums: 0, band_bass: 0, band_keys: 0, band_horns: 0, theme_drunk: 0 });
+  BAND.forEach((id, i) => {
+    let v = i < combo ? 1 : 0;
+    if (combo === 5) v = id === 'theme_drunk' ? 1 : 0;   // step 5 = the full parade mix
+    setGain(id, v, 0.6);
+  });
+  say('♪ band: <b>' + ['', 'drums', '+ bass', '+ keys', '+ horns', 'full parade'][combo] + '</b>');
+}
+$('bandUp').onclick = () => bandSet(combo + 1);
+$('bandBreak').onclick = () => bandSet(0);
+
+/* buttons */
+function btn(parent, label, sub, fn, cls) {
+  const b = document.createElement('button'); b.innerHTML = label + (sub ? '<small>' + sub + '</small>' : ''); if (cls) b.className = cls;
+  b.onclick = fn; parent.appendChild(b); return b;
+}
+const moodBtns = {};
+function refreshButtons() {
+  for (const [k, b] of Object.entries(moodBtns)) b.classList.toggle('on', !!scene && scene.name === k);
+  $('themePlay').classList.toggle('on', !!scene && scene.name === 'theme');
+  $('themePlay').textContent = scene && scene.name === 'theme' ? '■ Stop theme' : '▶ Play theme';
+}
+function build() {
+  const music = cat.filter(e => e.category === 'music');
+  for (const e of music.filter(e => e.loop && !e.group && e.id !== 'texture_lone_guitar')) {
+    moodBtns[e.id] = btn($('moods'), e.id.replace(/^(mood|theme)_/, '').replace(/_/g, ' '), (e.emotion || '') + ' · ' + (e.style || ''),
+      () => scene && scene.name === e.id ? stopScene() : startScene(e.id, [e.id], {}), 'mood');
+  }
+  for (const d of ['tender', 'hope', 'grief']) {
+    const ids = ['duet_' + d, 'his_' + d, 'hers_' + d];
+    if (!ids.every(i => byId[i])) continue;
+    const name = 'lm_' + d;
+    const set = (which) => async () => {
+      if (!scene || scene.name !== name) await startScene(name, ids, { ['duet_' + d]: 0, ['his_' + d]: 0, ['hers_' + d]: 0 });
+      for (const i of ids) setGain(i, i === which + '_' + d ? 1 : 0, 1.5);
+      say('♪ <b>' + d + '</b>: ' + ({ duet: 'both alive (duet)', his: 'only his guitar', hers: 'only her piano' })[which]);
+    };
+    btn($('duets'), d + ': duet', 'both alive', set('duet'), 'mood');
+    btn($('duets'), d + ': his only', 'she is gone', set('his'));
+    btn($('duets'), d + ': hers only', 'he is gone', set('hers'));
+    btn($('duets'), '■', '', () => stopScene());
+  }
+  for (const e of music.filter(e => !e.loop)) btn($('cues'), e.id.replace(/^cue_/, '').replace(/_/g, ' '), (e.emotion || '') + ' · ' + e.length + ' s', () => shot(e.id, musicBus));
+  const ambH = {};
+  for (const e of cat.filter(e => e.category === 'ambience')) {
+    const b = btn($('amb'), e.id.replace(/^amb_/, '').replace(/_/g, ' '), '', () => toggleLoopLayer(e.id, ambH[e.id] = ambH[e.id] || {}, b));
+  }
+  const loopH = {};
+  for (const e of cat.filter(e => e.category === 'sfx')) {
+    if (e.loop) { const b = btn($('sfx'), e.id.replace(/_/g, ' '), 'loop', () => toggleLoopLayer(e.id, loopH[e.id] = loopH[e.id] || {}, b)); }
+    else btn($('sfx'), e.id.replace(/_/g, ' '), '', () => shot(e.id));
+  }
+  for (const e of cat.filter(e => e.category === 'ui')) btn($('ui'), e.id.replace(/^ui_/, '').replace(/_/g, ' '), '', () => shot(e.id));
+  for (const e of cat.filter(e => e.category === 'voice')) {
+    const ch = e.id.replace('voice_', '');
+    e.files.forEach((f, i) => byId[e.id + '#' + i] = { file: f, volume: e.volume, length: null, source: e.source });
+    btn($('voices'), ch, e.files.length + ' blips', () => mumble(e, $('line').value));
+  }
+}
+async function mumble(e, text) {
+  const n = Math.max(2, Math.min(24, Math.round(text.replace(/[^a-z]/gi, '').length / 2.5)));
+  const ids = e.files.map((f, i) => e.id + '#' + i); await Promise.all(ids.map(i => load(i)));
+  const c = ctx(); let t = c.currentTime + 0.05; let last = -1;
+  for (let k = 0; k < n; k++) {
+    let i; do { i = Math.floor(Math.random() * ids.length); } while (i === last && ids.length > 1); last = i;
+    const b = bufs.get(ids[i]); const s = c.createBufferSource(); s.buffer = b;
+    s.playbackRate.value = 1 + (Math.random() * 0.16 - 0.08);
+    const g = c.createGain(); g.gain.value = e.volume; s.connect(g); g.connect(master); s.start(t);
+    t += Math.min(b.duration, 0.22) * 0.85 + 0.03 + (/[,.?!]/.test(text[Math.floor(k / n * text.length)]) ? 0.12 : 0);
+  }
+  say('💬 <b>' + e.id.replace('voice_', '') + '</b>: “' + text + '”');
+}
+$('start').onclick = () => { ctx(); $('start').textContent = 'Sound is on'; $('start').disabled = true; $('start').style.opacity = .5; applyDrunk(); };
+fetch(BASE + 'CATALOG.json').then(r => r.json()).then(j => {
+  cat = j.sounds; cat.forEach(e => byId[e.id] = e); build();
+  say('<b>' + cat.length + '</b> sounds ready. Files load when you tap them.');
+}).catch(err => say('Could not load the sound list: ' + err));
+})();
+</script>
+</body>
+</html>
