@@ -269,6 +269,10 @@
   /* ---------- polish pass: title screen over a live dusk scene ---------- */
   body.title #hud, body.title #minimap, body.title #camReset, body.title #stick, body.title #thumbs, body.title #stam,
   body.title #toast, body.title #skipTut, body.title #bubbles, body.title #talk, body.title #todo, body.title #dbg { display: none !important; }
+  /* opening (2026-11-27): the HUD fades in as the fly-in camera lands (main.ts flyEnd) */
+  @keyframes sgHudIn { from { opacity: 0; } to { opacity: 1; } }
+  body.hudIn #hud, body.hudIn #minimap, body.hudIn #camReset, body.hudIn #stick, body.hudIn #thumbs, body.hudIn #stam, body.hudIn #todo, body.hudIn #skipTut, body.hudIn #cityhud { animation: sgHudIn .6s ease-out both; }
+  body.title #cityhud { display: none !important; }
   body.title #screen { background: linear-gradient(#0000 0 55%, #1a142099 75%, #1a1420dd); justify-content: space-between;
     padding: calc(var(--st) + 36px) 20px calc(var(--sb) + 22px); }
   .logo { font: 900 64px/1 "Arial Black", Impact, system-ui; letter-spacing: .06em; color: #ffd84a;
@@ -387,8 +391,8 @@
   }
 </style>
 <!-- UI kit (2026-11-27): one look for every screen; loaded after the inline styles so it wins. src/ui/kit.css -->
-  <script type="module" crossorigin src="./assets/main-CyUBRwA5.js"></script>
-  <link rel="modulepreload" crossorigin href="./assets/hero3d-D0_MHi48.js">
+  <script type="module" crossorigin src="./assets/main-B5F38z41.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/hero3d-CsytE-nZ.js">
   <link rel="stylesheet" crossorigin href="./assets/main-vprXT9xX.css">
 </head>
 <body>
