@@ -1,6 +1,23 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <meta name="build" content="1795786086">
+  <script>
+  // Never stuck on an old copy (David, 2026-11-27: "It hasn't updated on my phone"): deploy.sh stamps this page and
+  // version.json with the same build id; a cached page with an older id reloads once, fresh.
+  (function () {
+    try {
+      var mine = document.querySelector('meta[name=build]').content;
+      if (mine === '1795786086') return; // dev server
+      fetch('version.json?t=' + Date.now(), { cache: 'no-store' }).then(function (r) { return r.json(); }).then(function (v) {
+        if (v && v.build && v.build !== mine && sessionStorage.getItem('sgReloaded') !== v.build) {
+          sessionStorage.setItem('sgReloaded', v.build);
+          location.replace(location.pathname + '?v=' + v.build + location.hash);
+        }
+      }).catch(function () {});
+    } catch (e) {}
+  })();
+  </script>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -11,10 +28,12 @@
 <link rel="apple-touch-icon" href="icon-180.png" />
 <meta name="theme-color" content="#111" />
 <title>Street prototype</title>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 8 8%22%3E%3Crect width=%228%22 height=%228%22 fill=%22%231a1420%22/%3E%3Crect x=%222%22 y=%221%22 width=%224%22 height=%223%22 fill=%22%23d8342c%22/%3E%3C/svg%3E">
+<link rel="icon" type="image/png" href="favicon-64.png">
+<link rel="preload" href="logo-face.jpg" as="image">
 <link rel="preload" as="image" href="loading-bg.jpg" />
 <!-- Loading screen (2026-11-27): inline so it paints before the JS bundle. Its logic is between the LDLOGIC markers (tests/loadprog.test.ts runs that block). -->
 <style id="ldcss">
+  .ldface{display:block;width:clamp(96px,26vmin,150px);height:auto;margin:0 auto 10px;border-radius:24%;box-shadow:0 6px 0 rgba(60,30,20,.55),0 10px 24px rgba(0,0,0,.45);border:3px solid #4a2a1c}
   #ld { position: fixed; inset: 0; z-index: 99999; background: #1a1420 url(loading-bg.jpg) center 30% / cover no-repeat; color: #4a2e1e; overflow: hidden;
     font-family: "Fredoka", "Arial Rounded MT Bold", "Trebuchet MS", system-ui, sans-serif; font-weight: 700; opacity: 1; transition: opacity .55s ease; }
   #ld.out { opacity: 0; pointer-events: none; }
@@ -437,14 +456,14 @@
   }
 </style>
 <!-- UI kit (2026-11-27): one look for every screen; loaded after the inline styles so it wins. src/ui/kit.css -->
-  <script type="module" crossorigin src="./assets/main-Cai69cgS.js"></script>
-  <link rel="modulepreload" crossorigin href="./assets/hero3d-DOgabwFg.js">
+  <script type="module" crossorigin src="./assets/main-D4GGnMJD.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/hero3d-DIutWoAH.js">
   <link rel="stylesheet" crossorigin href="./assets/main-Drlg9O5-.css">
 </head>
 <body>
 <div id="ld" role="status" aria-live="polite" aria-label="Loading">
   <div class="ldc">
-    <div><div class="ldlogo">STREET</div><div class="ldtag">Hustle sober. Get high. Don't die.</div></div>
+    <div><img class="ldface" src="logo-face.jpg" alt="" width="150" height="150"><div class="ldlogo">STREET</div><div class="ldtag">Hustle sober. Get high. Don't die.</div></div>
     <div class="ldlow">
       <div class="ldbarwrap">
         <div class="ldpig" id="ldpig"><svg viewBox="0 0 34 30" aria-hidden="true">
