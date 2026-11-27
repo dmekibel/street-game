@@ -1,0 +1,11 @@
+{
+  "about": "Cars round 2026-11-27: six Tripo HD v3.1 cars from David's approved sheet (art/cars-sheet-2026-11-27/carsheet-1.png). Processed in Blender (art/cars-sheet-2026-11-27/tools/process.py): centred, wheels on y=0, front +Z, 512 JPEG texture. Wheels are fused into the body (not separate), so they do not spin. Kinds and lamp heights live in src/models.ts CAR_KINDS.",
+  "cars": [
+    { "kind": 0, "name": "sedan", "file": "sedan.glb", "length": 3.8, "tint": true },
+    { "kind": 1, "name": "taxi", "file": "taxi.glb", "length": 3.9, "tint": false },
+    { "kind": 2, "name": "van", "file": "van.glb", "length": 4.1, "tint": true },
+    { "kind": 3, "name": "compact", "file": "compact.glb", "length": 3.4, "tint": true },
+    { "kind": 4, "name": "police", "file": "police.glb", "length": 3.9, "tint": false },
+    { "kind": 5, "name": "bus", "file": "bus.glb", "length": 9.0, "width": 2.5, "height": 3.0, "tint": false }
+  ]
+}
