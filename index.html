@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta name="build" content="1795883268">
+  <meta name="build" content="1795886189">
   <script>
   // Home Screen app short viewport (MISTAKES #26, v11 on David's 16 Pro Max: "this version moved everything up"). iOS can
   // report the layout viewport short by the status bar (innerHeight = screen.height - inset top) while the page owns the
@@ -90,8 +90,8 @@
     } catch (e) {}
   });
   </script>
-<meta name="ver" content="v17">
-<meta name="verdate" content="28 Nov 18:27">
+<meta name="ver" content="v18">
+<meta name="verdate" content="28 Nov 19:16">
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -103,8 +103,8 @@
 <meta name="theme-color" content="#111" />
 <title>Hobomaxxing</title>
 <link rel="icon" type="image/png" href="favicon-64.png">
-<link rel="preload" href="loading/poster-p.jpg" as="image" media="(orientation: portrait)">
-<link rel="preload" href="loading/poster-l.jpg" as="image" media="(orientation: landscape)">
+<link rel="preload" href="loading/poster-p-hd.jpg" as="image" media="(orientation: portrait)">
+<link rel="preload" href="loading/poster-l-hd.jpg" as="image" media="(orientation: landscape)">
 <!-- Loading screen (2026-11-27): inline so it paints before the JS bundle. Its logic is between the LDLOGIC markers (tests/loadprog.test.ts runs that block). -->
 <style id="ldcss">
   /* Loading screen v3 (2026-11-28, David: "a very subtle animation ... a pre-existing animation", "I don't like how there's
@@ -112,7 +112,7 @@
      fountain, the pigeons, the z's), full screen in both orientations; the poster (its first frame) paints before the
      video. No card: the logo big over the top, a hairline progress line on the very bottom with a pigeon walking it,
      the tip small above it, and "Tap to begin" takes that same spot when ready. */
-  #ld { position: fixed; inset: 0; z-index: 99999; background: #1d2233 url(loading/poster-p.jpg) 50% 50% / cover no-repeat; color: #fff6e2; overflow: hidden;
+  #ld { position: fixed; inset: 0; z-index: 99999; background: #1d2233 url(loading/poster-p-hd.jpg) 50% 50% / cover no-repeat; color: #fff6e2; overflow: hidden;
     font-family: "Fredoka", "Arial Rounded MT Bold", "Trebuchet MS", system-ui, sans-serif; font-weight: 700; opacity: 1; transition: opacity .55s ease; }
   #ld.out { opacity: 0; pointer-events: none; }
   #ld .ldvid { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity .4s; pointer-events: none; }
@@ -160,7 +160,7 @@
   #ld.ready .ldtip, #ld.ready .ldrow, #ld.ready .ldbarwrap, #ld.ready .ldslow { display: none; }
   /* a phone on its side: the same scene, the logo smaller over the sky, the line along the bottom */
   @media (orientation: landscape) {
-    #ld { background-image: url(loading/poster-l.jpg); }
+    #ld { background-image: url(loading/poster-l-hd.jpg); }
     #ld .ldc { padding-top: calc(env(safe-area-inset-top, 0px) + 4vh); }
     #ld .ldlogo { font-size: clamp(32px, min(6.6vw, 13vh), 84px); }
     #ld .ldtag { margin-top: 16px; font-size: 12px; }
@@ -656,7 +656,7 @@ var LD = {
   var vid = $('ldvid'), still = false; try { still = matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (e) {}
   function setVid() {
     if (!vid || still) return; var land = innerWidth > innerHeight, ext = vid.canPlayType('video/mp4; codecs="avc1.42E01E"') ? 'mp4' : 'webm';
-    var src = 'loading/loop-' + (land ? 'l' : 'p') + '.' + ext; if (vid.getAttribute('src') === src) return;
+    var src = 'loading/loop-' + (land ? 'l' : 'p') + '-hd.' + ext; /* -hd: the game's own sharpness */ if (vid.getAttribute('src') === src) return;
     vid.classList.remove('on'); vid.setAttribute('src', src); var pr = vid.play(); if (pr && pr.catch) pr.catch(function () {});
   }
   if (vid) { vid.addEventListener('playing', function () { vid.classList.add('on'); }); setVid(); window.addEventListener('resize', setVid); }
