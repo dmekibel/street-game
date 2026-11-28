@@ -13,7 +13,7 @@
     -64,
     0
    ],
-   "tris": 15710,
+   "tris": 15638,
    "materials": 16,
    "parts": [
     "feat_column",
@@ -300,7 +300,7 @@
     -64,
     0
    ],
-   "tris": 13134,
+   "tris": 13098,
    "materials": 19,
    "parts": [
     "building",
@@ -342,7 +342,7 @@
     0,
     64
    ],
-   "tris": 15038,
+   "tris": 14990,
    "materials": 30,
    "parts": [
     "bench",
@@ -5607,22 +5607,24 @@
    ],
    "bushes": [
     {
-     "m": "bush_flowering",
+     "m": "bush_small",
      "p": [
-      -2.96,
-      -20.91
+      3.15,
+      -31.53
      ],
-     "s": 0.55,
-     "rot": 0
+     "s": 2.2,
+     "rot": 188,
+     "nofade": true
     },
     {
      "m": "bush_flowering",
      "p": [
-      -1.24,
-      -21.23
+      2.75,
+      -30.82
      ],
-     "s": 0.65,
-     "rot": 53
+     "s": 1.6,
+     "rot": 282,
+     "nofade": true
     },
     {
      "m": "bush_small",
@@ -6743,31 +6745,11 @@
     {
      "m": "bush_lod0",
      "p": [
-      3.92,
-      -32.9
-     ],
-     "s": 2.2,
-     "rot": 188,
-     "nofade": true
-    },
-    {
-     "m": "bush_lod0",
-     "p": [
       -3.17,
       -31.45
      ],
      "s": 2.2,
      "rot": 235,
-     "nofade": true
-    },
-    {
-     "m": "bush_flowering",
-     "p": [
-      3.7,
-      -32.51
-     ],
-     "s": 1.6,
-     "rot": 282,
      "nofade": true
     },
     {
