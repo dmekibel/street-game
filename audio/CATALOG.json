@@ -2031,6 +2031,47 @@
       "note": "lab night_A + 15 s of silence baked in (one pass, then the night); replaces theme_night + texture on night walks",
       "source": "ElevenLabs Eleven Music (music_v2_5), David's Creator plan; music lab take picked by David (ledger L480)",
       "licence": "Eleven Music terms: Creator = online/offline commercial use except film/TV/radio/Studio Games; an Indie Game (<$500k revenue) is allowed; no attribution required"
+    },
+    {
+      "id": "title_A2_loop",
+      "file": "music/title_A2_loop.mp3",
+      "length": 28.0,
+      "loop": true,
+      "category": "music",
+      "volume": 0.5,
+      "emotion": "sleep",
+      "style": "lone-guitar",
+      "tags": [
+        "title",
+        "asleep",
+        "bench",
+        "pick"
+      ],
+      "note": "lab title_A2 (Dead Man take 2) + 8 s of silence, level matched to title_A (audio/make_loops.py); the title alternates it with title_A_loop take by take",
+      "source": "ElevenLabs Eleven Music (music_v2_5), David's Creator plan; music lab take picked by David (ledger 2026-11-28 round 2)",
+      "licence": "Eleven Music terms: Creator = online/offline commercial use except film/TV/radio/Studio Games; an Indie Game (<$500k revenue) is allowed; no attribution required"
+    },
+    {
+      "id": "danger_A3_loop",
+      "file": "music/danger_A3_loop.mp3",
+      "length": 13.53,
+      "loop": true,
+      "loopStart": 5.28,
+      "loopEnd": 13.2793,
+      "category": "music",
+      "volume": 0.42,
+      "emotion": "tension",
+      "style": "lone-guitar",
+      "tags": [
+        "chase",
+        "cops",
+        "fight",
+        "traffic",
+        "pick"
+      ],
+      "note": "lab danger_A3 (Dead Man take 3): its build plays once, then four bars (loopStart..loopEnd) loop with an evened, crossfaded seam (audio/make_loops.py); volume matches mood_tension's loudness; replaces mood_tension",
+      "source": "ElevenLabs Eleven Music (music_v2_5), David's Creator plan; music lab take picked by David (ledger 2026-11-28 round 2)",
+      "licence": "Eleven Music terms: Creator = online/offline commercial use except film/TV/radio/Studio Games; an Indie Game (<$500k revenue) is allowed; no attribution required"
     }
   ]
 }
