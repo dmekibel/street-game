@@ -1,14 +1,14 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta name="build" content="1795857198">
+  <meta name="build" content="1795862705">
   <script>
   // Never stuck on an old copy (David, 2026-11-27: "It hasn't updated on my phone"): deploy.sh stamps this page and
   // version.json with the same build id; a cached page with an older id reloads once, fresh.
   (function () {
     try {
       var mine = document.querySelector('meta[name=build]').content;
-      if (mine === '1795857198') return; // dev server
+      if (mine === '1795862705') return; // dev server
       fetch('version.json?t=' + Date.now(), { cache: 'no-store' }).then(function (r) { return r.json(); }).then(function (v) {
         if (v && v.build && v.build !== mine && sessionStorage.getItem('sgReloaded') !== v.build) {
           sessionStorage.setItem('sgReloaded', v.build);
@@ -18,7 +18,7 @@
     } catch (e) {}
   })();
   // Visible version label (David, 2026-11-28: "add a v number on every build so I can easily see"): deploy.sh stamps
-  // v4 (v1, v2, ...) and 28 Nov 11:13; shown small in the bottom-left corner on every screen, never blocks taps.
+  // v5 (v1, v2, ...) and 28 Nov 12:45; shown small in the bottom-left corner on every screen, never blocks taps.
   document.addEventListener('DOMContentLoaded', function () {
     try {
       var ver = document.querySelector('meta[name=ver]').content, when = document.querySelector('meta[name=verdate]').content;
@@ -29,8 +29,8 @@
     } catch (e) {}
   });
   </script>
-<meta name="ver" content="v4">
-<meta name="verdate" content="28 Nov 11:13">
+<meta name="ver" content="v5">
+<meta name="verdate" content="28 Nov 12:45">
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -492,9 +492,9 @@
   }
 </style>
 <!-- UI kit (2026-11-27): one look for every screen; loaded after the inline styles so it wins. src/ui/kit.css -->
-  <script type="module" crossorigin src="./assets/main-BrEBkVVo.js"></script>
+  <script type="module" crossorigin src="./assets/main-By_ndNQj.js"></script>
   <link rel="modulepreload" crossorigin href="./assets/look-BAj-4LNi.js">
-  <link rel="modulepreload" crossorigin href="./assets/propmodels-D7aQW3w1.js">
+  <link rel="modulepreload" crossorigin href="./assets/propmodels-BYBfXmwP.js">
   <link rel="modulepreload" crossorigin href="./assets/hero3d-DckaKtWw.js">
   <link rel="stylesheet" crossorigin href="./assets/main-D_sE-Qiu.css">
 </head>
