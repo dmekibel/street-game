@@ -12,7 +12,7 @@
       fetch('version.json?t=' + Date.now(), { cache: 'no-store' }).then(function (r) { return r.json(); }).then(function (v) {
         if (v && v.build && v.build !== mine && sessionStorage.getItem('sgReloaded') !== v.build) {
           sessionStorage.setItem('sgReloaded', v.build);
-          location.replace(location.pathname + '?v=' + v.build + location.hash);
+          var p = new URLSearchParams(location.search); p.set('v', v.build); location.replace(location.pathname + '?' + p.toString() + location.hash); // keep ?city=new etc.
         }
       }).catch(function () {});
     } catch (e) {}
