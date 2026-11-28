@@ -1,14 +1,14 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta name="build" content="1795855652">
+  <meta name="build" content="1795855899">
   <script>
   // Never stuck on an old copy (David, 2026-11-27: "It hasn't updated on my phone"): deploy.sh stamps this page and
   // version.json with the same build id; a cached page with an older id reloads once, fresh.
   (function () {
     try {
       var mine = document.querySelector('meta[name=build]').content;
-      if (mine === '1795855652') return; // dev server
+      if (mine === '1795855899') return; // dev server
       fetch('version.json?t=' + Date.now(), { cache: 'no-store' }).then(function (r) { return r.json(); }).then(function (v) {
         if (v && v.build && v.build !== mine && sessionStorage.getItem('sgReloaded') !== v.build) {
           sessionStorage.setItem('sgReloaded', v.build);
@@ -17,7 +17,20 @@
       }).catch(function () {});
     } catch (e) {}
   })();
+  // Visible version label (David, 2026-11-28: "add a v number on every build so I can easily see"): deploy.sh stamps
+  // v1 (v1, v2, ...) and 28 Nov 10:51; shown small in the bottom-left corner on every screen, never blocks taps.
+  document.addEventListener('DOMContentLoaded', function () {
+    try {
+      var ver = document.querySelector('meta[name=ver]').content, when = document.querySelector('meta[name=verdate]').content;
+      var el = document.createElement('div'); el.id = 'verlabel';
+      el.textContent = ver === 'v1' ? 'dev' : ver + ' · ' + when;
+      el.style.cssText = 'position:fixed;left:calc(6px + env(safe-area-inset-left));bottom:calc(4px + env(safe-area-inset-bottom));z-index:99999;font:600 10px/1 -apple-system,system-ui,sans-serif;color:#fff;opacity:.55;text-shadow:0 1px 2px #000;pointer-events:none;letter-spacing:.02em';
+      document.body.appendChild(el);
+    } catch (e) {}
+  });
   </script>
+<meta name="ver" content="v1">
+<meta name="verdate" content="28 Nov 10:51">
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
