@@ -36,7 +36,7 @@
     -64
    ],
    "tris": 16092,
-   "materials": 17,
+   "materials": 18,
    "parts": [
     "building",
     "feat_garden",
@@ -74,7 +74,7 @@
     0,
     64
    ],
-   "tris": 5982,
+   "tris": 5978,
    "materials": 21,
    "parts": [
     "building",
@@ -94,11 +94,11 @@
     64,
     128
    ],
-   "tris": 264,
-   "materials": 5,
+   "tris": 146,
+   "materials": 4,
    "parts": [
     "building",
-    "statehouse"
+    "chapel"
    ]
   },
   {
@@ -180,7 +180,7 @@
     -64
    ],
    "tris": 6016,
-   "materials": 17,
+   "materials": 16,
    "parts": [
     "building",
     "feat_garden",
@@ -377,8 +377,8 @@
     64,
     128
    ],
-   "tris": 1386,
-   "materials": 12,
+   "tris": 1362,
+   "materials": 10,
    "parts": [
     "building",
     "ground",
@@ -591,8 +591,8 @@
    "key": "skyline",
    "file": "chunk_skyline.glb",
    "bounds": null,
-   "tris": 396,
-   "materials": 6,
+   "tris": 348,
+   "materials": 7,
    "parts": [
     "building"
    ]
@@ -770,27 +770,27 @@
      "backdrop": false,
      "near": "art/kit/vee_left3.glb",
      "far": "art/kit/vee_left3_far.glb",
-     "h": 8.79
+     "h": 5.31
     },
     {
      "id": "vee_right0",
      "kind": "building",
      "pos": [
-      1.84,
-      93.37
+      -8.78,
+      71.02
      ],
      "rotY": 115.42,
      "backdrop": false,
      "near": "art/kit/vee_right0.glb",
      "far": "art/kit/vee_right0_far.glb",
-     "h": 5.39
+     "h": 4.29
     },
     {
      "id": "vee_right1",
      "kind": "building",
      "pos": [
-      -3.31,
-      82.53
+      -13.72,
+      60.63
      ],
      "rotY": 115.42,
      "backdrop": false,
@@ -802,82 +802,17 @@
      "id": "vee_right2",
      "kind": "building",
      "pos": [
-      -8.78,
-      71.02
-     ],
-     "rotY": 115.42,
-     "backdrop": false,
-     "near": "art/kit/vee_right2.glb",
-     "far": "art/kit/vee_right2_far.glb",
-     "h": 6.79
-    },
-    {
-     "id": "vee_rightb0",
-     "kind": "building",
-     "pos": [
-      -14.8,
-      97.96
-     ],
-     "rotY": 115.42,
-     "backdrop": true,
-     "near": null,
-     "far": "art/kit/vee_rightb0_far.glb",
-     "h": 14.41
-    },
-    {
-     "id": "vee_right3",
-     "kind": "building",
-     "pos": [
-      -13.72,
-      60.63
-     ],
-     "rotY": 115.42,
-     "backdrop": false,
-     "near": "art/kit/vee_right3.glb",
-     "far": "art/kit/vee_right3_far.glb",
-     "h": 12.19
-    },
-    {
-     "id": "vee_rightb1",
-     "kind": "building",
-     "pos": [
-      -20.27,
-      86.44
-     ],
-     "rotY": 115.42,
-     "backdrop": true,
-     "near": null,
-     "far": "art/kit/vee_rightb1_far.glb",
-     "h": 11.09
-    },
-    {
-     "id": "vee_rightbb0",
-     "kind": "building",
-     "pos": [
-      -26.72,
-      112.48
-     ],
-     "rotY": 115.42,
-     "backdrop": true,
-     "near": null,
-     "far": "art/kit/vee_rightbb0_far.glb",
-     "h": 11.09
-    },
-    {
-     "id": "vee_right4",
-     "kind": "building",
-     "pos": [
       -18.87,
       49.79
      ],
      "rotY": 115.42,
      "backdrop": false,
-     "near": "art/kit/vee_right4.glb",
-     "far": "art/kit/vee_right4_far.glb",
-     "h": 7.61
+     "near": "art/kit/vee_right2.glb",
+     "far": "art/kit/vee_right2_far.glb",
+     "h": 12.05
     },
     {
-     "id": "vee_rightb2",
+     "id": "vee_rightb0",
      "kind": "building",
      "pos": [
       -25.21,
@@ -886,37 +821,11 @@
      "rotY": 115.42,
      "backdrop": true,
      "near": null,
-     "far": "art/kit/vee_rightb2_far.glb",
-     "h": 11.09
+     "far": "art/kit/vee_rightb0_far.glb",
+     "h": 4.29
     },
     {
-     "id": "vee_rightbb1",
-     "kind": "building",
-     "pos": [
-      -32.19,
-      100.97
-     ],
-     "rotY": 115.42,
-     "backdrop": true,
-     "near": null,
-     "far": "art/kit/vee_rightbb1_far.glb",
-     "h": 11.09
-    },
-    {
-     "id": "vee_rightbb2",
-     "kind": "building",
-     "pos": [
-      -37.13,
-      90.58
-     ],
-     "rotY": 115.42,
-     "backdrop": true,
-     "near": null,
-     "far": "art/kit/vee_rightbb2_far.glb",
-     "h": 14.49
-    },
-    {
-     "id": "vee_rightb3",
+     "id": "vee_rightb1",
      "kind": "building",
      "pos": [
       -30.36,
@@ -925,11 +834,11 @@
      "rotY": 115.42,
      "backdrop": true,
      "near": null,
-     "far": "art/kit/vee_rightb3_far.glb",
-     "h": 14.49
+     "far": "art/kit/vee_rightb1_far.glb",
+     "h": 4.29
     },
     {
-     "id": "vee_right5",
+     "id": "vee_right3",
      "kind": "building",
      "pos": [
       -24.56,
@@ -937,12 +846,12 @@
      ],
      "rotY": 115.42,
      "backdrop": false,
-     "near": "art/kit/vee_right5.glb",
-     "far": "art/kit/vee_right5_far.glb",
-     "h": 12.19
+     "near": "art/kit/vee_right3.glb",
+     "far": "art/kit/vee_right3_far.glb",
+     "h": 8.71
     },
     {
-     "id": "vee_rightbb3",
+     "id": "vee_rightbb0",
      "kind": "building",
      "pos": [
       -42.28,
@@ -951,11 +860,11 @@
      "rotY": 115.42,
      "backdrop": true,
      "near": null,
-     "far": "art/kit/vee_rightbb3_far.glb",
+     "far": "art/kit/vee_rightbb0_far.glb",
      "h": 11.09
     },
     {
-     "id": "vee_rightb4",
+     "id": "vee_rightb2",
      "kind": "building",
      "pos": [
       -36.05,
@@ -964,11 +873,11 @@
      "rotY": 115.42,
      "backdrop": true,
      "near": null,
-     "far": "art/kit/vee_rightb4_far.glb",
-     "h": 11.09
+     "far": "art/kit/vee_rightb2_far.glb",
+     "h": 11.01
     },
     {
-     "id": "vee_rightbb4",
+     "id": "vee_rightbb1",
      "kind": "building",
      "pos": [
       -47.97,
@@ -977,11 +886,11 @@
      "rotY": 115.42,
      "backdrop": true,
      "near": null,
-     "far": "art/kit/vee_rightbb4_far.glb",
+     "far": "art/kit/vee_rightbb1_far.glb",
      "h": 11.09
     },
     {
-     "id": "vee_rightb5",
+     "id": "vee_rightb3",
      "kind": "building",
      "pos": [
       -40.99,
@@ -990,11 +899,11 @@
      "rotY": 115.42,
      "backdrop": true,
      "near": null,
-     "far": "art/kit/vee_rightb5_far.glb",
-     "h": 11.09
+     "far": "art/kit/vee_rightb3_far.glb",
+     "h": 14.49
     },
     {
-     "id": "vee_rightbb5",
+     "id": "vee_rightbb2",
      "kind": "building",
      "pos": [
       -52.91,
@@ -1003,11 +912,11 @@
      "rotY": 115.42,
      "backdrop": true,
      "near": null,
-     "far": "art/kit/vee_rightbb5_far.glb",
-     "h": 14.49
+     "far": "art/kit/vee_rightbb2_far.glb",
+     "h": 14.41
     },
     {
-     "id": "vee_rightb6",
+     "id": "vee_rightb4",
      "kind": "building",
      "pos": [
       -45.255,
@@ -1016,8 +925,8 @@
      "rotY": 115.42,
      "backdrop": true,
      "near": null,
-     "far": "art/kit/vee_rightb6_far.glb",
-     "h": 14.49
+     "far": "art/kit/vee_rightb4_far.glb",
+     "h": 11.09
     },
     {
      "id": "beacon_wbb0",
@@ -1033,7 +942,7 @@
      "h": 14.49
     },
     {
-     "id": "vee_rightbb6",
+     "id": "vee_rightbb3",
      "kind": "building",
      "pos": [
       -58.06,
@@ -1042,7 +951,7 @@
      "rotY": 115.42,
      "backdrop": true,
      "near": null,
-     "far": "art/kit/vee_rightbb6_far.glb",
+     "far": "art/kit/vee_rightbb3_far.glb",
      "h": 11.09
     },
     {
@@ -1121,7 +1030,7 @@
      "backdrop": false,
      "near": "art/kit/beacon_w1.glb",
      "far": "art/kit/beacon_w1_far.glb",
-     "h": 12.19
+     "h": 12.11
     },
     {
      "id": "beacon_wb1",
@@ -1160,7 +1069,7 @@
      "backdrop": false,
      "near": "art/kit/beacon_w2.glb",
      "far": "art/kit/beacon_w2_far.glb",
-     "h": 12.11
+     "h": 12.19
     },
     {
      "id": "beacon_w3",
@@ -1186,7 +1095,7 @@
      "backdrop": false,
      "near": "art/kit/lane_w0.glb",
      "far": "art/kit/lane_w0_far.glb",
-     "h": 15.07
+     "h": 15.45
     },
     {
      "id": "lane_e0",
@@ -1238,7 +1147,7 @@
      "backdrop": false,
      "near": "art/kit/lane_w2.glb",
      "far": "art/kit/lane_w2_far.glb",
-     "h": 15.45
+     "h": 15.07
     },
     {
      "id": "lane_e2",
@@ -1264,7 +1173,7 @@
      "backdrop": false,
      "near": "art/kit/lane_w3.glb",
      "far": "art/kit/lane_w3_far.glb",
-     "h": 15.07
+     "h": 15.45
     },
     {
      "id": "lane_e3",
@@ -1303,7 +1212,7 @@
      "backdrop": false,
      "near": "art/kit/boylston_s1.glb",
      "far": "art/kit/boylston_s1_far.glb",
-     "h": 14.49
+     "h": 14.41
     },
     {
      "id": "boylston_s2",
@@ -1316,7 +1225,7 @@
      "backdrop": false,
      "near": "art/kit/boylston_s2.glb",
      "far": "art/kit/boylston_s2_far.glb",
-     "h": 8.79
+     "h": 8.71
     },
     {
      "id": "boylston_s3",
@@ -1342,7 +1251,7 @@
      "backdrop": false,
      "near": "art/kit/boylston_s4.glb",
      "far": "art/kit/boylston_s4_far.glb",
-     "h": 15.59
+     "h": 15.51
     },
     {
      "id": "boylston_s5",
@@ -1420,7 +1329,7 @@
      "backdrop": false,
      "near": "art/kit/boylston_s10.glb",
      "far": "art/kit/boylston_s10_far.glb",
-     "h": 12.11
+     "h": 12.19
     },
     {
      "id": "boylston_s11",
@@ -1459,7 +1368,7 @@
      "backdrop": false,
      "near": "art/kit/boylston_s13.glb",
      "far": "art/kit/boylston_s13_far.glb",
-     "h": 11.01
+     "h": 11.09
     },
     {
      "id": "boylston_s14",
@@ -1485,7 +1394,7 @@
      "backdrop": false,
      "near": "art/kit/boylston_s15.glb",
      "far": "art/kit/boylston_s15_far.glb",
-     "h": 11.09
+     "h": 11.01
     },
     {
      "id": "hotdog_shop",
@@ -1524,7 +1433,7 @@
      "backdrop": false,
      "near": "art/kit/tremont_e3.glb",
      "far": "art/kit/tremont_e3_far.glb",
-     "h": 12.19
+     "h": 12.11
     },
     {
      "id": "tremont_e4",
@@ -1693,7 +1602,7 @@
      "backdrop": false,
      "near": "art/kit/tremont_n6.glb",
      "far": "art/kit/tremont_n6_far.glb",
-     "h": 11.09
+     "h": 11.01
     },
     {
      "id": "park_church",
@@ -1723,6 +1632,20 @@
      "s": 0.9
     },
     {
+     "id": "common_church",
+     "kind": "landmark",
+     "pos": [
+      -21.12,
+      103.19
+     ],
+     "rotY": 180,
+     "backdrop": true,
+     "near": null,
+     "far": "art/kit/common_church_far.glb",
+     "h": 21.41,
+     "s": 0.669
+    },
+    {
      "id": "sky0",
      "kind": "building",
      "pos": [
@@ -1733,7 +1656,7 @@
      "backdrop": true,
      "near": null,
      "far": "art/kit/sky0_far.glb",
-     "h": 34.89
+     "h": 34.81
     },
     {
      "id": "sky1",
@@ -1785,7 +1708,7 @@
      "backdrop": true,
      "near": null,
      "far": "art/kit/sky6_far.glb",
-     "h": 28.01
+     "h": 28.09
     }
    ],
    "landmarks": [
@@ -1818,12 +1741,12 @@
      "id": "state_house",
      "file": "art/landmarks/state_house.glb",
      "pos": [
-      3.01,
-      113.3
+      11.23,
+      80.38
      ],
      "y": 0.0,
-     "rotY": -178.9,
-     "s": 0.814,
+     "rotY": -174.7,
+     "s": 0.761,
      "own": true
     },
     {

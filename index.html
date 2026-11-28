@@ -1,14 +1,14 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta name="build" content="1795841830">
+  <meta name="build" content="1795842000">
   <script>
   // Never stuck on an old copy (David, 2026-11-27: "It hasn't updated on my phone"): deploy.sh stamps this page and
   // version.json with the same build id; a cached page with an older id reloads once, fresh.
   (function () {
     try {
       var mine = document.querySelector('meta[name=build]').content;
-      if (mine === '1795841830') return; // dev server
+      if (mine === '1795842000') return; // dev server
       fetch('version.json?t=' + Date.now(), { cache: 'no-store' }).then(function (r) { return r.json(); }).then(function (v) {
         if (v && v.build && v.build !== mine && sessionStorage.getItem('sgReloaded') !== v.build) {
           sessionStorage.setItem('sgReloaded', v.build);
@@ -477,9 +477,9 @@
   }
 </style>
 <!-- UI kit (2026-11-27): one look for every screen; loaded after the inline styles so it wins. src/ui/kit.css -->
-  <script type="module" crossorigin src="./assets/main-BvTh7tZw.js"></script>
+  <script type="module" crossorigin src="./assets/main-JzX8tyx7.js"></script>
   <link rel="modulepreload" crossorigin href="./assets/look-BKxJxGtu.js">
-  <link rel="modulepreload" crossorigin href="./assets/propmodels-BOxNT7Zl.js">
+  <link rel="modulepreload" crossorigin href="./assets/propmodels-DeVDzE4B.js">
   <link rel="modulepreload" crossorigin href="./assets/hero3d-Chf7Nz8R.js">
   <link rel="stylesheet" crossorigin href="./assets/main-BBNLzmYs.css">
 </head>
