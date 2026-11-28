@@ -1,0 +1,6 @@
+{
+ "note": "Street crew (2026-11-28): Tripo multiview -> Tripo rig (mixamo) -> tools/street2glb.py. The arena (fightlab/labbody.ts) loads these as opponent bodies playing David's clips (castclips retarget). tall = height against the hero (1 = his).",
+ "crew": [
+  { "id": "lady-lightning", "file": "lady-lightning.glb", "name": "Lady Lightning", "tall": 0.97 }
+ ]
+}

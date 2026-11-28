@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta name="build" content="1795886189">
+  <meta name="build" content="1795889630">
   <script>
   // Home Screen app short viewport (MISTAKES #26, v11 on David's 16 Pro Max: "this version moved everything up"). iOS can
   // report the layout viewport short by the status bar (innerHeight = screen.height - inset top) while the page owns the
@@ -90,8 +90,8 @@
     } catch (e) {}
   });
   </script>
-<meta name="ver" content="v18">
-<meta name="verdate" content="28 Nov 19:16">
+<meta name="ver" content="v19">
+<meta name="verdate" content="28 Nov 20:13">
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -585,14 +585,14 @@
   }
 </style>
 <!-- UI kit (2026-11-27): one look for every screen; loaded after the inline styles so it wins. src/ui/kit.css -->
-  <script type="module" crossorigin src="./assets/main-C5KDLBj5.js"></script>
-  <link rel="modulepreload" crossorigin href="./assets/city-B-l83lrf.js">
-  <link rel="modulepreload" crossorigin href="./assets/rules-DjauYQSv.js">
-  <link rel="modulepreload" crossorigin href="./assets/look-CJqYmkcl.js">
-  <link rel="modulepreload" crossorigin href="./assets/propmodels-C1k6j9A6.js">
+  <script type="module" crossorigin src="./assets/main-CmHNXYPH.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/GLTFLoader-CAMQGA0J.js">
+  <link rel="modulepreload" crossorigin href="./assets/lampmodel-DhjMRdp3.js">
+  <link rel="modulepreload" crossorigin href="./assets/look-UL-EG60o.js">
+  <link rel="modulepreload" crossorigin href="./assets/propmodels-B0lB-bDD.js">
   <link rel="modulepreload" crossorigin href="./assets/SkeletonUtils-BCVmgslc.js">
-  <link rel="modulepreload" crossorigin href="./assets/hero3d-C0q8IXF7.js">
-  <link rel="modulepreload" crossorigin href="./assets/fightpad-BeomIFzu.js">
+  <link rel="modulepreload" crossorigin href="./assets/hero3d-C8gFcOWy.js">
+  <link rel="modulepreload" crossorigin href="./assets/coopnet-BghP-4yy.js">
   <link rel="stylesheet" crossorigin href="./assets/main-D_sE-Qiu.css">
 </head>
 <body>
@@ -673,6 +673,7 @@ var LD = {
     if (hold) input = hold; // held: the debug bar sits exactly there
     if (!done && !hold && elapsed > 2) input = Math.max(input, Math.min(0.9, elapsed * 0.004)); // a slow trickle so a quiet network never looks frozen
     LD.step(st, input, dt, done && !hold);
+    if (quick && done) { st.shown = 1; st.finished = true; } // back from the Arena: no easing out
     var p = st.shown;
     fill.style.transform = 'scaleX(' + p.toFixed(4) + ')';
     pig.style.transform = 'translate(' + Math.max(0, Math.min(p, 1) * bar.offsetWidth - 30).toFixed(1) + 'px,0)'; // his beak leads the gold line
@@ -686,6 +687,10 @@ var LD = {
     requestAnimationFrame(frame);
   }
   var tapCb = null, auto = /[?&](notap|nopause|nofly)\b/.test(location.search); // debug and test pages skip the tap
+  // back from the Arena by a plain load (no back-forward cache; src/fightlab/backnav.ts sets the flag): no tap, no slow
+  // bar, straight to the title menu (David 2026-11-28: "After arena, game should take you back to home without loading")
+  var quick = false; try { var fa = +sessionStorage.getItem('sgFromArena'); sessionStorage.removeItem('sgFromArena'); quick = fa > 0 && Date.now() - fa < 15000; } catch (e) {}
+  if (quick) { auto = true; el.classList.add('quick'); }
   function ready() {
     if (auto) { if (tapCb) try { tapCb(); } catch (e) {} return finish(); }
     el.classList.add('ready'); stat.textContent = 'Ready.';
@@ -695,6 +700,18 @@ var LD = {
   }
   function finish() { el.classList.add('out'); clearInterval(tipTimer); window.removeEventListener('resize', setVid); setTimeout(function () { gone = true; if (el.parentNode) el.parentNode.removeChild(el); var c = document.getElementById('ldcss'); if (c) c.parentNode.removeChild(c); }, 650); }
   requestAnimationFrame(function (n) { last = n; requestAnimationFrame(frame); });
+  // the Arena loads fast: once the game is up and idle, its page and scripts go into the HTTP cache (built site only)
+  (function () {
+    try { if (document.querySelector('meta[name=build]').content.charAt(0) === '_') return; } catch (e) { return; }
+    var tries = 0, t = setInterval(function () {
+      if (!gone && ++tries < 120) return; clearInterval(t);
+      setTimeout(function () {
+        fetch('fightlab.html').then(function (r) { return r.text(); }).then(function (h) {
+          var re = /(?:src|href)="(\.\/assets\/[^"]+\.js)"/g, m; while ((m = re.exec(h))) fetch(m[1]).catch(function () {});
+        }).catch(function () {});
+      }, 3000);
+    }, 1000);
+  })();
   window.__splash = {
     /** main.ts calls this once the title is built and the frame loop has been asked for; two frames later the splash can fade. */
     done: function (cb) { tapCb = cb || null; requestAnimationFrame(function () { requestAnimationFrame(function () { done = true; }); }); },

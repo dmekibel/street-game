@@ -1,4 +1,4 @@
-import{ak as T,ad as b,u as P,am as Q,V as k,al as H,r as g,g as U,w as E,aB as G,bC as R,bA as I,a as y,bn as j,o as se,bD as ie,_ as v,bs as B,aw as S}from"./city-B-l83lrf.js";const W=typeof location<"u"&&!/[?&]art3=0\b/.test(location.search),F={uWindT:{value:0},uWind:{value:.55}},D={time:0,atmos:null,cam:null,tier:2};function le(l,t,e,a=2){D.time=l,D.atmos=t,D.cam=e,D.tier=a,F.uWindT.value=l;const i=t?t.wind:.55;F.uWind.value+=(i-F.uWind.value)*.02}function Se(l,t,e){return`
+import{ap as T,am as b,a3 as P,ar as Q,V as k,aq as H,j as g,c as U,P as E,aF as G,bF as R,H as I,C as y,br as j,r as se,bG as ie,aa as v,bw as B,aB as S}from"./GLTFLoader-CAMQGA0J.js";const W=typeof location<"u"&&!/[?&]art3=0\b/.test(location.search),F={uWindT:{value:0},uWind:{value:.55}},D={time:0,atmos:null,cam:null,tier:2};function le(l,t,e,a=2){D.time=l,D.atmos=t,D.cam=e,D.tier=a,F.uWindT.value=l;const i=t?t.wind:.55;F.uWind.value+=(i-F.uWind.value)*.02}function Se(l,t,e){return`
   {
     vec3 ip = vec3(instanceMatrix[3][0], 0.0, instanceMatrix[3][2]);
     float ph = ip.x * 0.31 + ip.z * 0.17;
