@@ -1,24 +1,31 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta name="build" content="1795862705">
+  <meta name="build" content="1795862991">
   <script>
   // Never stuck on an old copy (David, 2026-11-27: "It hasn't updated on my phone"): deploy.sh stamps this page and
   // version.json with the same build id; a cached page with an older id reloads once, fresh.
+  // 2026-11-28 fix (David: "It's still v4"): deploy.sh's sed also rewrote the dev-server check on this line, so the check
+  // returned early on EVERY deployed build and never updated. No placeholder text may appear in this script. Also re-check
+  // whenever the Home Screen app comes back to the front (iOS keeps it suspended, so a page load alone is not enough).
   (function () {
-    try {
-      var mine = document.querySelector('meta[name=build]').content;
-      if (mine === '1795862705') return; // dev server
-      fetch('version.json?t=' + Date.now(), { cache: 'no-store' }).then(function (r) { return r.json(); }).then(function (v) {
-        if (v && v.build && v.build !== mine && sessionStorage.getItem('sgReloaded') !== v.build) {
-          sessionStorage.setItem('sgReloaded', v.build);
-          var p = new URLSearchParams(location.search); p.set('v', v.build); location.replace(location.pathname + '?' + p.toString() + location.hash); // keep ?city=new etc.
-        }
-      }).catch(function () {});
-    } catch (e) {}
+    function check() {
+      try {
+        var mine = document.querySelector('meta[name=build]').content;
+        if (mine.charAt(0) === '_') return; // dev server (unstamped)
+        fetch('version.json?t=' + Date.now(), { cache: 'no-store' }).then(function (r) { return r.json(); }).then(function (v) {
+          if (v && v.build && v.build !== mine && sessionStorage.getItem('sgReloaded') !== v.build) {
+            sessionStorage.setItem('sgReloaded', v.build);
+            var p = new URLSearchParams(location.search); p.set('v', v.build); location.replace(location.pathname + '?' + p.toString() + location.hash); // keep ?city=new etc.
+          }
+        }).catch(function () {});
+      } catch (e) {}
+    }
+    check();
+    document.addEventListener('visibilitychange', function () { if (document.visibilityState === 'visible') check(); });
   })();
   // Visible version label (David, 2026-11-28: "add a v number on every build so I can easily see"): deploy.sh stamps
-  // v5 (v1, v2, ...) and 28 Nov 12:45; shown small in the bottom-left corner on every screen, never blocks taps.
+  // the ver and verdate metas (v1, v2, ...); shown small in the bottom-left corner on every screen, never blocks taps.
   document.addEventListener('DOMContentLoaded', function () {
     try {
       var ver = document.querySelector('meta[name=ver]').content, when = document.querySelector('meta[name=verdate]').content;
@@ -29,8 +36,8 @@
     } catch (e) {}
   });
   </script>
-<meta name="ver" content="v5">
-<meta name="verdate" content="28 Nov 12:45">
+<meta name="ver" content="v6">
+<meta name="verdate" content="28 Nov 12:49">
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
