@@ -1,8 +1,30 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta name="build" content="1795878203">
+  <meta name="build" content="1795878849">
   <script>
+  // Home Screen app short viewport (MISTAKES #26, v11 on David's 16 Pro Max: "this version moved everything up"). iOS can
+  // report the layout viewport short by the status bar (innerHeight = screen.height - inset top) while the page owns the
+  // whole screen, so inset:0 / bottom-anchored things ended ~60 px above the real bottom over a #111 band. --gap is that
+  // missing strip; the loader reaches down by it and --sb (the bottom inset every HUD control uses) drops by it.
+  // Same rule as viewsize.ts (the canvas): only in the iOS app, width = the screen's, a strip of 140 px or less.
+  (function () {
+    function fit() {
+      try {
+        var g = 0;
+        if (navigator.standalone === true) {
+          var L = Math.max(screen.width, screen.height), S = Math.min(screen.width, screen.height), w = innerWidth, h = innerHeight;
+          var tw = w > h ? L : S, th = w > h ? S : L;
+          if (Math.abs(w - tw) <= 2 && th > h && th - h <= 140) g = th - h;
+        }
+        document.documentElement.style.setProperty('--gap', g + 'px');
+      } catch (e) {}
+    }
+    fit();
+    addEventListener('resize', fit); addEventListener('pageshow', fit);
+    addEventListener('orientationchange', function () { fit(); setTimeout(fit, 300); });
+    if (window.visualViewport) visualViewport.addEventListener('resize', fit);
+  })();
   // Never stuck on an old copy (David, 2026-11-27: "It hasn't updated on my phone"): deploy.sh stamps this page and
   // version.json with the same build id; a cached page with an older id reloads once, fresh.
   // 2026-11-28 fix (David: "It's still v4"): deploy.sh's sed also rewrote the dev-server check on this line, so the check
@@ -31,13 +53,13 @@
       var ver = document.querySelector('meta[name=ver]').content, when = document.querySelector('meta[name=verdate]').content;
       var el = document.createElement('div'); el.id = 'verlabel';
       el.textContent = ver.charAt(0) === '_' ? 'dev' : ver + ' · ' + when; // (no placeholder text here: deploy.sh's sed would rewrite it)
-      el.style.cssText = 'position:fixed;left:calc(6px + env(safe-area-inset-left));bottom:calc(4px + env(safe-area-inset-bottom));z-index:99999;font:600 10px/1 -apple-system,system-ui,sans-serif;color:#fff;opacity:.55;text-shadow:0 1px 2px #000;pointer-events:none;letter-spacing:.02em';
+      el.style.cssText = 'position:fixed;left:calc(6px + env(safe-area-inset-left));bottom:calc(4px + var(--sb, env(safe-area-inset-bottom)));z-index:99999;font:600 10px/1 -apple-system,system-ui,sans-serif;color:#fff;opacity:.55;text-shadow:0 1px 2px #000;pointer-events:none;letter-spacing:.02em';
       document.body.appendChild(el);
     } catch (e) {}
   });
   </script>
-<meta name="ver" content="v11">
-<meta name="verdate" content="28 Nov 17:03">
+<meta name="ver" content="v12">
+<meta name="verdate" content="28 Nov 17:14">
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -58,7 +80,7 @@
      fountain, the pigeons, the z's), full screen in both orientations; the poster (its first frame) paints before the
      video. No card: the logo big over the top, a hairline progress line on the very bottom with a pigeon walking it,
      the tip small above it, and "Tap to begin" takes that same spot when ready. */
-  #ld { position: fixed; inset: 0; z-index: 99999; background: #1d2233 url(loading/poster-p.jpg) 50% 50% / cover no-repeat; color: #fff6e2; overflow: hidden;
+  #ld { position: fixed; inset: 0; bottom: calc(0px - var(--gap, 0px)); z-index: 99999; background: #1d2233 url(loading/poster-p.jpg) 50% 50% / cover no-repeat; color: #fff6e2; overflow: hidden;
     font-family: "Fredoka", "Arial Rounded MT Bold", "Trebuchet MS", system-ui, sans-serif; font-weight: 700; opacity: 1; transition: opacity .55s ease; }
   #ld.out { opacity: 0; pointer-events: none; }
   #ld .ldvid { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity .4s; pointer-events: none; }
@@ -121,7 +143,7 @@
   @media (prefers-reduced-motion: reduce) { #ld .ldpig svg, #ld .ldleg, #ld .ldgo { animation: none; } }
 </style>
 <style>
-  :root { --st: env(safe-area-inset-top, 0px); --sb: env(safe-area-inset-bottom, 0px); --sl: env(safe-area-inset-left, 0px); --sr: env(safe-area-inset-right, 0px); }
+  :root { --st: env(safe-area-inset-top, 0px); --sb: calc(env(safe-area-inset-bottom, 0px) - var(--gap, 0px)); --sl: env(safe-area-inset-left, 0px); --sr: env(safe-area-inset-right, 0px); }
   html, body { margin: 0; height: 100%; overflow: hidden; background: #111; color: #f4f0e8;
     font: 15px/1.25 -apple-system, system-ui, sans-serif; touch-action: none; user-select: none; -webkit-user-select: none;
     -webkit-touch-callout: none; -webkit-tap-highlight-color: transparent; }
