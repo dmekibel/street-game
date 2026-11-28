@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta name="build" content="1795879927">
+  <meta name="build" content="1795880444">
   <script>
   // Home Screen app short viewport (MISTAKES #26, v11 on David's 16 Pro Max: "this version moved everything up"). iOS can
   // report the layout viewport short by the status bar (innerHeight = screen.height - inset top) while the page owns the
@@ -34,22 +34,23 @@
       try {
         var ld = document.getElementById('ld');
         var box = document.getElementById('vpdbg'), strip = document.getElementById('vpstrip');
-        if (!always && (!ld || ld.classList.contains('out'))) { if (box) box.remove(); if (strip) strip.remove(); return; }
+        if (!always && (!ld || ld.classList.contains('out'))) { if (box) box.remove(); if (strip) strip.remove(); var ab0 = document.getElementById('vpabs'); if (ab0) ab0.remove(); return; }
         if (!box) { box = document.createElement('div'); box.id = 'vpdbg'; box.style.cssText = 'position:fixed;left:8px;right:8px;top:44%;z-index:100001;font:600 10px/1.35 ui-monospace,Menlo,monospace;color:#fff;background:#000b;padding:6px 8px;border-radius:6px;pointer-events:none;white-space:pre-wrap;word-break:break-all'; document.body.appendChild(box); }
-        if (!strip) { strip = document.createElement('div'); strip.id = 'vpstrip'; strip.style.cssText = 'position:fixed;left:0;right:0;top:100%;height:40px;z-index:100001;background:#ff00cc;pointer-events:none;font:700 12px system-ui;color:#000;text-align:center;line-height:20px'; strip.textContent = 'PAINT BELOW innerHeight'; document.body.appendChild(strip); }
+        if (!strip) { strip = document.createElement('div'); strip.id = 'vpstrip'; strip.style.cssText = 'position:fixed;left:50%;right:0;top:100%;height:62px;z-index:100001;background:#ff00cc;pointer-events:none;font:700 12px system-ui;color:#000;text-align:center;line-height:20px'; strip.textContent = 'FIXED BELOW'; document.body.appendChild(strip); }
+        if (!document.getElementById('vpabs')) { var ab = document.createElement('div'); ab.id = 'vpabs'; ab.style.cssText = 'position:absolute;left:0;width:50%;top:100svh;height:62px;z-index:100001;background:#7dff3a;pointer-events:none;font:700 12px system-ui;color:#000;text-align:center;line-height:20px'; ab.textContent = 'ABS BELOW'; document.body.appendChild(ab); }
         var vv = window.visualViewport, de = document.documentElement, cs = getComputedStyle(de);
         var h = function (u) { return Math.round(probe('height:' + u).height * 10) / 10; };
         var st = probe('height:env(safe-area-inset-top,0px)').height, sb = probe('height:env(safe-area-inset-bottom,0px)').height;
         var dm = ['fullscreen', 'standalone', 'minimal-ui', 'browser'].filter(function (m) { try { return matchMedia('(display-mode: ' + m + ')').matches; } catch (e) { return false; } }).join(',');
         var ldb = ld ? Math.round(ld.getBoundingClientRect().bottom) : '-';
-        var cv = document.querySelector('canvas'), cvb = cv ? Math.round(cv.getBoundingClientRect().bottom) : '-';
+        var cv = document.querySelector('body > canvas'), cvb = cv ? Math.round(cv.getBoundingClientRect().bottom) : '-';
         box.textContent = 'VP ' + (document.querySelector('meta[name=ver]') || {}).content +
           ' inner ' + innerWidth + 'x' + innerHeight + ' outer ' + outerWidth + 'x' + outerHeight + ' screen ' + screen.width + 'x' + screen.height + ' avail ' + screen.availHeight +
           '\nvv ' + (vv ? Math.round(vv.width) + 'x' + Math.round(vv.height) + ' top ' + vv.offsetTop + ' pageTop ' + vv.pageTop + ' scale ' + vv.scale : 'none') +
           ' clientH ' + de.clientHeight + ' bodyH ' + document.body.clientHeight +
           '\nvh ' + h('100vh') + ' lvh ' + h('100lvh') + ' svh ' + h('100svh') + ' dvh ' + h('100dvh') + ' fill ' + h('-webkit-fill-available') + ' pct ' + h('100%') +
           '\nsafe top ' + st + ' bottom ' + sb + ' standalone ' + navigator.standalone + ' mode ' + (dm || '?') +
-          '\n--gap ' + cs.getPropertyValue('--gap') + ' dpr ' + devicePixelRatio + ' ld.bottom ' + ldb + ' canvas.bottom ' + cvb + ' orient ' + (screen.orientation ? screen.orientation.type : '?');
+          '\n--gap ' + cs.getPropertyValue('--gap') + ' dpr ' + devicePixelRatio + ' ld.bottom ' + ldb + ' canvas.bottom ' + cvb + ' body.bottom ' + Math.round(document.body.getBoundingClientRect().bottom) + ' abs.top ' + Math.round(document.getElementById('vpabs').getBoundingClientRect().top) + ' orient ' + (screen.orientation ? screen.orientation.type : '?');
       } catch (e) { try { document.getElementById('vpdbg').textContent = 'vpdebug error ' + e; } catch (e2) {} }
     }
     document.addEventListener('DOMContentLoaded', function () { show(); var n = 0, t = setInterval(function () { show(); if (++n > 240 && !always) clearInterval(t); }, 500); });
@@ -88,8 +89,8 @@
     } catch (e) {}
   });
   </script>
-<meta name="ver" content="v13">
-<meta name="verdate" content="28 Nov 17:32">
+<meta name="ver" content="v14">
+<meta name="verdate" content="28 Nov 17:40">
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -171,6 +172,17 @@
   }
   @media (orientation: portrait) and (max-height: 640px) { #ld .ldtip { font-size: 14px; } #ld .ldtag { margin-top: 16px; } }
   @media (prefers-reduced-motion: reduce) { #ld .ldpig svg, #ld .ldleg, #ld .ldgo { animation: none; } }
+</style>
+<style id="vp14">
+  /* v14 (MISTAKES #28): in the Home Screen app iOS clips position:fixed boxes to a layout viewport 62 px short of the
+     screen (svh 894 vs vh 956 on the 16 Pro Max) but paints the root there. So in the app the page is 100vh tall and the
+     loader and the game canvas are absolute boxes of that height, not fixed ones. */
+  @media (display-mode: fullscreen), (display-mode: standalone) {
+    html, body { height: 100vh !important; }
+    body { position: relative; }
+    #ld { position: absolute !important; top: 0 !important; left: 0 !important; right: 0 !important; bottom: auto !important; height: 100vh !important; }
+    body > canvas { position: absolute !important; top: 0 !important; left: 0 !important; height: 100vh !important; }
+  }
 </style>
 <style>
   :root { --st: env(safe-area-inset-top, 0px); --sb: max(0px, calc(env(safe-area-inset-bottom, 0px) - var(--gap, 0px))); --sl: env(safe-area-inset-left, 0px); --sr: env(safe-area-inset-right, 0px); }
