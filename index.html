@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta name="build" content="1795880444">
+  <meta name="build" content="1795880859">
   <script>
   // Home Screen app short viewport (MISTAKES #26, v11 on David's 16 Pro Max: "this version moved everything up"). iOS can
   // report the layout viewport short by the status bar (innerHeight = screen.height - inset top) while the page owns the
@@ -29,6 +29,7 @@
   // just below innerHeight: if it shows in the bottom band on the phone, the page can paint there.
   (function () {
     var always = /[?&]vpdebug=1/.test(location.search);
+    if (!always) return; // v15: the readout and the test strips only with ?vpdebug=1
     function probe(css) { var e = document.createElement('div'); e.style.cssText = 'position:fixed;left:0;top:0;width:1px;visibility:hidden;pointer-events:none;' + css; document.body.appendChild(e); var h = e.getBoundingClientRect(); e.remove(); return h; }
     function show() {
       try {
@@ -89,8 +90,8 @@
     } catch (e) {}
   });
   </script>
-<meta name="ver" content="v14">
-<meta name="verdate" content="28 Nov 17:40">
+<meta name="ver" content="v15">
+<meta name="verdate" content="28 Nov 17:47">
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
