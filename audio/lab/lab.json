@@ -1,0 +1,126 @@
+{
+ "version": 1,
+ "note": "Music lab takes. Not wired into the game.",
+ "takes": [
+  {
+   "id": "title_A",
+   "moment": "title",
+   "direction": "A",
+   "influences": "Neil Young (Dead Man), Gustavo Santaolalla, Ry Cooder (Paris, Texas)",
+   "desc": "One reverb guitar note at a time over an organ drone; the theme half-asleep.",
+   "prompt": "Night, a man asleep on a park bench under a blanket. Solo electric guitar with deep spring reverb and slow tremolo, one note at a time with long silences between, a soft pump organ drone on D underneath, distant and dusty. 60 BPM, D minor. Built on one simple, singable, wistful original melody: it rises F, A, C and falls gently back to G. Played very slowly and left unfinished. Hushed, dignified, sleepy. Steady from the first second, no intro and no fade ending, so it can loop as video game background music. Instrumental, no vocals, original melody.",
+   "file": "lab/title_A.mp3",
+   "secs": 20,
+   "credits": 276,
+   "date": "2026-11-28"
+  },
+  {
+   "id": "death_A",
+   "moment": "death",
+   "direction": "A",
+   "influences": "Neil Young (Dead Man), Gustavo Santaolalla, Ry Cooder (Paris, Texas)",
+   "desc": "Three notes F, A, C; the last note never comes. Feedback fades.",
+   "prompt": "A short instrumental video game cue, no vocals, original melody. A death on the street: a single reverb electric guitar plays three slow notes, F, A, C, and stops before the last note; the feedback rings out and fades into silence over a low organ drone in D minor. Quiet, dignified.",
+   "file": "lab/death_A.mp3",
+   "secs": 10,
+   "credits": 138,
+   "date": "2026-11-28"
+  },
+  {
+   "id": "title_B",
+   "moment": "title",
+   "direction": "B",
+   "influences": "Jon Brion (Eternal Sunshine, Punch-Drunk Love), Mark Mothersbaugh, Yann Tiersen",
+   "desc": "Music-box lullaby with a felt piano answering, slightly out of tune.",
+   "prompt": "A lullaby for a man asleep on a park bench: a music box and celesta play a slow, slightly out-of-tune melody, a felt-muted upright piano answers, soft bowed glass hums underneath. 3/4 waltz at 66 BPM, F major. Built on one simple, singable, wistful original melody: it rises F, A, C and falls gently back to G. Dreamy, tender, a little sad. Steady from the first second, no intro and no fade ending, so it can loop as video game background music. Instrumental, no vocals, original melody.",
+   "file": "lab/title_B.mp3",
+   "secs": 20,
+   "credits": 276,
+   "date": "2026-11-28"
+  },
+  {
+   "id": "wake_A",
+   "moment": "waking",
+   "direction": "A",
+   "influences": "Neil Young (Dead Man), Gustavo Santaolalla, Ry Cooder (Paris, Texas)",
+   "desc": "The theme said once, awake: guitar swell as the light comes up.",
+   "prompt": "Morning, a homeless man wakes up on a bench and stands up. A reverb electric guitar plays a slow rising phrase, then a long feedback swell as the light comes up, a dusty acoustic guitar strum joins, open and wide, 70 BPM, D major. Built on one simple, singable, wistful original melody: it rises F, A, C and falls gently back to G. Raw, open, a wide sky. Steady from the first second, no intro and no fade ending, so it can loop as video game background music. Instrumental, no vocals, original melody.",
+   "file": "lab/wake_A.mp3",
+   "secs": 15,
+   "credits": 207,
+   "date": "2026-11-28"
+  },
+  {
+   "id": "sober_C",
+   "moment": "sober",
+   "direction": "C",
+   "influences": "C418 (Minecraft), Erik Satie, Lena Raine, Olafur Arnalds",
+   "desc": "Calm Minecraft-style piano over a pad; somber exploring.",
+   "prompt": "Exploring the city by day: calm solo piano with a light steady left hand, a warm soft synth pad, an occasional soft bell, unhurried, 76 BPM, F major. Built on one simple, singable, wistful original melody: it rises F, A, C and falls gently back to G. Somber, reflective, peaceful loneliness. Steady from the first second, no intro and no fade ending, so it can loop as video game background music. Instrumental, no vocals, original melody.",
+   "file": "lab/sober_C.mp3",
+   "secs": 15,
+   "credits": 207,
+   "date": "2026-11-28"
+  },
+  {
+   "id": "swig_B",
+   "moment": "first-drink",
+   "direction": "B",
+   "influences": "Jon Brion (Eternal Sunshine, Punch-Drunk Love), Mark Mothersbaugh, Yann Tiersen",
+   "desc": "Celesta glissando, strings swell, grey turns to colour.",
+   "prompt": "A short instrumental video game cue, no vocals, original melody. The first sip of beer turns the grey world to colour: a celesta and music box glissando rises, strings swell in, a bright suspended chord with a B natural, warm and magical, time slowing, ending on a held shimmering chord.",
+   "file": "lab/swig_B.mp3",
+   "secs": 10,
+   "credits": 138,
+   "date": "2026-11-28"
+  },
+  {
+   "id": "swig_C",
+   "moment": "first-drink",
+   "direction": "C",
+   "influences": "C418 (Minecraft), Erik Satie, Lena Raine, Olafur Arnalds",
+   "desc": "Ambient bloom: sub swell and a piano chord opening like sunlight.",
+   "prompt": "A short instrumental video game cue, no vocals, original melody. A slow-motion moment of bliss: a deep sub swell, a soft piano chord with long reverb tails, a warm ambient pad opening like sunlight, F Lydian, floating, ending held.",
+   "file": "lab/swig_C.mp3",
+   "secs": 10,
+   "credits": 138,
+   "date": "2026-11-28"
+  },
+  {
+   "id": "drunk_D",
+   "moment": "drunk",
+   "direction": "D",
+   "influences": "Tom Waits (Rain Dogs), Nino Rota (Fellini), Goran Bregovic (Kusturica films)",
+   "desc": "Wild Balkan brass party: trumpets, tuba, accordion racing.",
+   "prompt": "A wild drunk brass-band party on the street: trumpets and tuba racing, accordion and clarinet trading licks, stomping drum and crashing cymbal, a dizzy fast groove, D minor turning to F major. Built on one simple, singable, wistful original melody: it rises F, A, C and falls gently back to G. Reckless, joyful, chaotic. Steady from the first second, no intro and no fade ending, so it can loop as video game background music. Instrumental, no vocals, original melody.",
+   "file": "lab/drunk_D.mp3",
+   "secs": 15,
+   "credits": 207,
+   "date": "2026-11-28"
+  },
+  {
+   "id": "night_B",
+   "moment": "night",
+   "direction": "B",
+   "influences": "Jon Brion (Eternal Sunshine, Punch-Drunk Love), Mark Mothersbaugh, Yann Tiersen",
+   "desc": "Nylon guitar and soft piano under a streetlight, celesta like stars.",
+   "prompt": "Night, alone under a streetlight: a slow nylon guitar and soft piano duet, a celesta far away like stars, a gentle bowed bass, 3/4 at 70 BPM, D minor to F major. Built on one simple, singable, wistful original melody: it rises F, A, C and falls gently back to G. Tender, lonely, beautiful. Steady from the first second, no intro and no fade ending, so it can loop as video game background music. Instrumental, no vocals, original melody.",
+   "file": "lab/night_B.mp3",
+   "secs": 15,
+   "credits": 207,
+   "date": "2026-11-28"
+  },
+  {
+   "id": "death_B",
+   "moment": "death",
+   "direction": "B",
+   "influences": "Jon Brion (Eternal Sunshine, Punch-Drunk Love), Mark Mothersbaugh, Yann Tiersen",
+   "desc": "A music box plays the theme, winds down and stops mid-phrase.",
+   "prompt": "A short instrumental video game cue, no vocals, original melody. A gentle farewell: a music box plays a simple melody that rises F, A, C, slower and slower, winding down and stopping mid-phrase, a soft low piano note underneath. Tender, not tragic.",
+   "file": "lab/death_B.mp3",
+   "secs": 10,
+   "credits": 138,
+   "date": "2026-11-28"
+  }
+ ]
+}
