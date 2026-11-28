@@ -74,8 +74,8 @@
     0,
     64
    ],
-   "tris": 5978,
-   "materials": 21,
+   "tris": 5982,
+   "materials": 20,
    "parts": [
     "building",
     "feat_bandstand",
@@ -770,7 +770,7 @@
      "backdrop": false,
      "near": "art/kit/vee_left3.glb",
      "far": "art/kit/vee_left3_far.glb",
-     "h": 5.31
+     "h": 8.79
     },
     {
      "id": "vee_right0",
@@ -809,7 +809,7 @@
      "backdrop": false,
      "near": "art/kit/vee_right2.glb",
      "far": "art/kit/vee_right2_far.glb",
-     "h": 12.05
+     "h": 6.74
     },
     {
      "id": "vee_rightb0",
@@ -848,7 +848,7 @@
      "backdrop": false,
      "near": "art/kit/vee_right3.glb",
      "far": "art/kit/vee_right3_far.glb",
-     "h": 8.71
+     "h": 5.31
     },
     {
      "id": "vee_rightbb0",
@@ -1635,7 +1635,7 @@
      "id": "common_church",
      "kind": "landmark",
      "pos": [
-      -21.12,
+      -22.03,
       103.19
      ],
      "rotY": 180,
