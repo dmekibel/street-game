@@ -36,7 +36,7 @@
     -64
    ],
    "tris": 16092,
-   "materials": 18,
+   "materials": 17,
    "parts": [
     "building",
     "feat_garden",
@@ -75,7 +75,7 @@
     64
    ],
    "tris": 5982,
-   "materials": 20,
+   "materials": 19,
    "parts": [
     "building",
     "feat_bandstand",
@@ -180,7 +180,7 @@
     -64
    ],
    "tris": 6016,
-   "materials": 16,
+   "materials": 17,
    "parts": [
     "building",
     "feat_garden",
@@ -1030,7 +1030,7 @@
      "backdrop": false,
      "near": "art/kit/beacon_w1.glb",
      "far": "art/kit/beacon_w1_far.glb",
-     "h": 12.11
+     "h": 12.19
     },
     {
      "id": "beacon_wb1",
@@ -1069,7 +1069,7 @@
      "backdrop": false,
      "near": "art/kit/beacon_w2.glb",
      "far": "art/kit/beacon_w2_far.glb",
-     "h": 12.19
+     "h": 12.11
     },
     {
      "id": "beacon_w3",
@@ -1095,7 +1095,7 @@
      "backdrop": false,
      "near": "art/kit/lane_w0.glb",
      "far": "art/kit/lane_w0_far.glb",
-     "h": 15.45
+     "h": 15.07
     },
     {
      "id": "lane_e0",
@@ -1147,7 +1147,7 @@
      "backdrop": false,
      "near": "art/kit/lane_w2.glb",
      "far": "art/kit/lane_w2_far.glb",
-     "h": 15.07
+     "h": 15.45
     },
     {
      "id": "lane_e2",
@@ -1173,7 +1173,7 @@
      "backdrop": false,
      "near": "art/kit/lane_w3.glb",
      "far": "art/kit/lane_w3_far.glb",
-     "h": 15.45
+     "h": 15.07
     },
     {
      "id": "lane_e3",
@@ -1212,7 +1212,7 @@
      "backdrop": false,
      "near": "art/kit/boylston_s1.glb",
      "far": "art/kit/boylston_s1_far.glb",
-     "h": 14.41
+     "h": 14.49
     },
     {
      "id": "boylston_s2",
@@ -1225,7 +1225,7 @@
      "backdrop": false,
      "near": "art/kit/boylston_s2.glb",
      "far": "art/kit/boylston_s2_far.glb",
-     "h": 8.71
+     "h": 8.79
     },
     {
      "id": "boylston_s3",
@@ -1251,7 +1251,7 @@
      "backdrop": false,
      "near": "art/kit/boylston_s4.glb",
      "far": "art/kit/boylston_s4_far.glb",
-     "h": 15.51
+     "h": 15.59
     },
     {
      "id": "boylston_s5",
@@ -1329,7 +1329,7 @@
      "backdrop": false,
      "near": "art/kit/boylston_s10.glb",
      "far": "art/kit/boylston_s10_far.glb",
-     "h": 12.19
+     "h": 12.11
     },
     {
      "id": "boylston_s11",
@@ -1368,7 +1368,7 @@
      "backdrop": false,
      "near": "art/kit/boylston_s13.glb",
      "far": "art/kit/boylston_s13_far.glb",
-     "h": 11.09
+     "h": 11.01
     },
     {
      "id": "boylston_s14",
@@ -1394,7 +1394,7 @@
      "backdrop": false,
      "near": "art/kit/boylston_s15.glb",
      "far": "art/kit/boylston_s15_far.glb",
-     "h": 11.01
+     "h": 11.09
     },
     {
      "id": "hotdog_shop",
@@ -1433,7 +1433,7 @@
      "backdrop": false,
      "near": "art/kit/tremont_e3.glb",
      "far": "art/kit/tremont_e3_far.glb",
-     "h": 12.11
+     "h": 12.19
     },
     {
      "id": "tremont_e4",
@@ -1602,7 +1602,7 @@
      "backdrop": false,
      "near": "art/kit/tremont_n6.glb",
      "far": "art/kit/tremont_n6_far.glb",
-     "h": 11.01
+     "h": 11.09
     },
     {
      "id": "park_church",
@@ -1656,7 +1656,7 @@
      "backdrop": true,
      "near": null,
      "far": "art/kit/sky0_far.glb",
-     "h": 34.81
+     "h": 34.89
     },
     {
      "id": "sky1",
@@ -1708,7 +1708,7 @@
      "backdrop": true,
      "near": null,
      "far": "art/kit/sky6_far.glb",
-     "h": 28.09
+     "h": 28.01
     }
    ],
    "landmarks": [
