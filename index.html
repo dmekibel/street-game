@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta name="build" content="1795880859">
+  <meta name="build" content="1795882981">
   <script>
   // Home Screen app short viewport (MISTAKES #26, v11 on David's 16 Pro Max: "this version moved everything up"). iOS can
   // report the layout viewport short by the status bar (innerHeight = screen.height - inset top) while the page owns the
@@ -90,8 +90,8 @@
     } catch (e) {}
   });
   </script>
-<meta name="ver" content="v15">
-<meta name="verdate" content="28 Nov 17:47">
+<meta name="ver" content="v16">
+<meta name="verdate" content="28 Nov 18:23">
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -141,11 +141,11 @@
   #ld .ldbar { position: relative; height: 3px; border-radius: 2px; background: #fff6e22e; overflow: hidden; }
   #ld .ldfill { position: absolute; left: 0; top: 0; bottom: 0; width: 100%; transform-origin: 0 50%; transform: scaleX(0); border-radius: 2px;
     background: linear-gradient(90deg, #f6c443, #ffe27a); box-shadow: 0 0 8px #ffd86099; }
-  #ld .ldpig { position: absolute; left: 0; bottom: 2px; width: 26px; height: 23px; will-change: transform; filter: drop-shadow(0 1px 1px #0008); }
-  #ld .ldpig svg { width: 26px; height: 23px; overflow: visible; animation: ldbob .42s ease-in-out infinite; }
-  @keyframes ldbob { 50% { transform: translateY(-1.5px) rotate(-3deg); } }
-  #ld .ldleg { transform-origin: 50% 0; animation: ldleg .42s linear infinite; } #ld .ldleg.b { animation-delay: -.21s; }
-  @keyframes ldleg { 0%, 100% { transform: rotate(-22deg); } 50% { transform: rotate(22deg); } }
+  /* the game's own pigeon (David 2026-11-28: "Make the pigeon look like the other pigeons not clip art"): 4 frames of its
+     walk head-bob rendered from models/props/pigeon.glb on the PigeonRig, game light (tools/pigeonsprite.mjs), 6x for @3x */
+  #ld .ldpig { position: absolute; left: 0; bottom: -4px; width: 34px; height: 30px; will-change: transform; filter: drop-shadow(0 1px 1px #0008); }
+  #ld .ldspr { width: 34px; height: 30px; background: url(loading/pigeon-walk.png) 0 0 / 136px 30px no-repeat; animation: ldwalk .5s steps(4) infinite; }
+  @keyframes ldwalk { to { background-position: -136px 0; } }
   #ld .ldslow { margin-top: 8px; font-size: 13px; text-align: center; color: #ff9cc6; text-shadow: 0 1px 0 #000a; display: none; }
   #ld .ldslow.on { display: block; }
   #ld .ldretry { display: none; margin: 10px auto 0; min-height: 44px; padding: 0 26px; font: inherit; font-size: 18px; color: #fff; cursor: pointer; border: 3px solid #5b3a26; border-radius: 14px;
@@ -172,7 +172,7 @@
     #ld .ldgo { min-height: 46px; font-size: 26px; }
   }
   @media (orientation: portrait) and (max-height: 640px) { #ld .ldtip { font-size: 14px; } #ld .ldtag { margin-top: 16px; } }
-  @media (prefers-reduced-motion: reduce) { #ld .ldpig svg, #ld .ldleg, #ld .ldgo { animation: none; } }
+  @media (prefers-reduced-motion: reduce) { #ld .ldspr, #ld .ldgo { animation: none; } }
 </style>
 <style id="vp14">
   /* v14 (MISTAKES #28): in the Home Screen app iOS clips position:fixed boxes to a layout viewport 62 px short of the
@@ -585,14 +585,14 @@
   }
 </style>
 <!-- UI kit (2026-11-27): one look for every screen; loaded after the inline styles so it wins. src/ui/kit.css -->
-  <script type="module" crossorigin src="./assets/main-DVi9Zb9Y.js"></script>
-  <link rel="modulepreload" crossorigin href="./assets/city-C0Rx1N3K.js">
-  <link rel="modulepreload" crossorigin href="./assets/rules-3nFByKiL.js">
-  <link rel="modulepreload" crossorigin href="./assets/look-DQIue_iY.js">
-  <link rel="modulepreload" crossorigin href="./assets/propmodels-D0zIg1B1.js">
+  <script type="module" crossorigin src="./assets/main-DEpGe8jp.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/city-B-l83lrf.js">
+  <link rel="modulepreload" crossorigin href="./assets/rules-DjauYQSv.js">
+  <link rel="modulepreload" crossorigin href="./assets/look-CJqYmkcl.js">
+  <link rel="modulepreload" crossorigin href="./assets/propmodels-C1k6j9A6.js">
   <link rel="modulepreload" crossorigin href="./assets/SkeletonUtils-BCVmgslc.js">
-  <link rel="modulepreload" crossorigin href="./assets/hero3d-D64J8Tf5.js">
-  <link rel="modulepreload" crossorigin href="./assets/fightpad-CBi3b9KJ.js">
+  <link rel="modulepreload" crossorigin href="./assets/hero3d-C0q8IXF7.js">
+  <link rel="modulepreload" crossorigin href="./assets/fightpad-BeomIFzu.js">
   <link rel="stylesheet" crossorigin href="./assets/main-D_sE-Qiu.css">
 </head>
 <body>
@@ -604,17 +604,7 @@
       <div class="ldtip" id="ldtip"></div>
       <div class="ldrow"><span id="ldstat">Waking the pigeons...</span><span class="ldmb" id="ldmb"></span></div>
       <div class="ldbarwrap">
-        <div class="ldpig" id="ldpig"><svg viewBox="0 0 34 30" aria-hidden="true">
-          <g class="ldleg"><path d="M17 20v7m0 0l-3 1m3-1l3 1" stroke="#e0728a" stroke-width="2" stroke-linecap="round" fill="none"/></g>
-          <g class="ldleg b"><path d="M22 20v7m0 0l-3 1m3-1l3 1" stroke="#e0728a" stroke-width="2" stroke-linecap="round" fill="none"/></g>
-          <ellipse cx="16" cy="16" rx="11" ry="8" fill="#9aa3b5" stroke="#5b3a26" stroke-width="2"/>
-          <path d="M8 15q8 6 17 0" fill="#7d8799" opacity=".7"/>
-          <circle cx="26" cy="9" r="5.5" fill="#aab3c4" stroke="#5b3a26" stroke-width="2"/>
-          <path d="M23 12.5q4 3 8 0" fill="none" stroke="#7bd88f" stroke-width="2.2" stroke-linecap="round"/>
-          <path d="M31 8l3 1.5-3 1z" fill="#f6c443" stroke="#5b3a26" stroke-width="1.2" stroke-linejoin="round"/>
-          <circle cx="27.6" cy="8" r="1.2" fill="#5b3a26"/>
-          <path d="M5 15l-4-3 1 6z" fill="#7d8799" stroke="#5b3a26" stroke-width="1.6" stroke-linejoin="round"/>
-        </svg></div>
+        <div class="ldpig" id="ldpig"><div class="ldspr" aria-hidden="true"></div></div>
         <div class="ldbar"><div class="ldfill" id="ldfill"></div></div>
       </div>
       <div class="ldslow" id="ldslow">Still loading, slow connection...</div>
@@ -685,7 +675,7 @@ var LD = {
     LD.step(st, input, dt, done && !hold);
     var p = st.shown;
     fill.style.transform = 'scaleX(' + p.toFixed(4) + ')';
-    pig.style.transform = 'translate(' + Math.max(0, Math.min(p, 1) * bar.offsetWidth - 22).toFixed(1) + 'px,0)'; // his beak leads the gold line
+    pig.style.transform = 'translate(' + Math.max(0, Math.min(p, 1) * bar.offsetWidth - 30).toFixed(1) + 'px,0)'; // his beak leads the gold line
     stat.textContent = failed ? stat.textContent : (p >= 0.999 ? 'Here we go!' : LD.status(p));
     var tot = Math.max(LD.EXPECTED, bytes);
     var shownBytes = hold ? hold * LD.EXPECTED : (p >= 0.999 ? tot : Math.min(bytes, tot * p));
