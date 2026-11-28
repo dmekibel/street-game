@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<script>
+  // The fly view is the new city: its modules read ?city=new at load, so add it before any module runs.
+  (function () {
+    try {
+      if (!/[?&]city=new\b/.test(location.search)) history.replaceState(null, '', location.pathname + (location.search ? location.search + '&' : '?') + 'city=new' + location.hash);
+    } catch (e) {}
+  })();
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="theme-color" content="#111" />
+<title>Fly the map</title>
+<style>
+  :root { --st: env(safe-area-inset-top, 0px); --sb: env(safe-area-inset-bottom, 0px); --sl: env(safe-area-inset-left, 0px); --sr: env(safe-area-inset-right, 0px);
+    --panel: #221a2ce8; --ink: #fff; --muted: #d8cfe4; --accent: #ffb84a; --bad: #ff5c6a; --love: #4fd0a0; }
+  html, body { margin: 0; height: 100%; overflow: hidden; background: #8cc8f0; color: var(--ink);
+    font: 15px/1.3 -apple-system, system-ui, sans-serif; touch-action: none; user-select: none; -webkit-user-select: none; -webkit-tap-highlight-color: transparent; overscroll-behavior: none; }
+  canvas { display: block; position: fixed; inset: 0; width: 100vw; height: 100vh; height: 100dvh; touch-action: none; }
+  button { font: inherit; color: inherit; cursor: pointer; }
+  #top { position: fixed; top: calc(var(--st) + 8px); left: calc(var(--sl) + 8px); right: calc(var(--sr) + 8px); display: flex; gap: 6px; align-items: center; pointer-events: none; }
+  #top a, #top button { pointer-events: auto; }
+  #hint { flex: 1; min-width: 0; background: #0008; border-radius: 10px; padding: 6px 10px; font-size: 12px; color: var(--muted); }
+  .chip { min-height: 36px; padding: 0 10px; border-radius: 10px; border: 1px solid #fff4; background: var(--panel); font-size: 13px; font-weight: 700; text-decoration: none; color: var(--ink); display: inline-flex; align-items: center; }
+  #bar { position: fixed; left: calc(var(--sl) + 10px); right: calc(var(--sr) + 10px); bottom: calc(var(--sb) + 12px); display: flex; gap: 8px; justify-content: center; }
+  #bar button { flex: 1; max-width: 140px; min-height: 54px; border-radius: 14px; border: 2px solid #fff5; background: var(--panel); font-weight: 800; font-size: 17px; }
+  #bar button.on { background: var(--accent); color: #1a1420; border-color: #ffe0a0; }
+  #pins { position: fixed; inset: 0; pointer-events: none; }
+  .pin { position: absolute; left: 0; top: 0; margin: -38px 0 0 -16px; width: 32px; height: 32px; border-radius: 50% 50% 50% 0; transform-origin: 0 0;
+    background: var(--accent); color: #1a1420; border: 2px solid #fff; font-weight: 800; font-size: 14px; pointer-events: auto; padding: 0;
+    box-shadow: 0 2px 6px #0007; }
+  .pin::after { content: ""; position: absolute; left: 12px; top: 34px; width: 4px; height: 4px; border-radius: 50%; background: #fff; }
+  .pin.broken { background: var(--bad); color: #fff; }
+  .pin.love { background: var(--love); }
+  .sheet { position: fixed; left: 0; right: 0; bottom: 0; transform: translateY(105%); transition: transform .22s ease; background: #1c1524f5; border-radius: 18px 18px 0 0;
+    padding: 14px calc(var(--sr) + 14px) calc(var(--sb) + 14px) calc(var(--sl) + 14px); box-shadow: 0 -6px 24px #0008; max-height: 82vh; overflow: auto; touch-action: pan-y; user-select: text; -webkit-user-select: text; }
+  .sheet.open { transform: none; }
+  .sheet h3 { margin: 0 0 10px; font-size: 15px; color: var(--muted); font-weight: 600; }
+  .row { display: flex; gap: 8px; flex-wrap: wrap; margin: 8px 0; }
+  .row button { flex: 1; min-height: 46px; border-radius: 12px; border: 1px solid #fff4; background: #352a42; font-weight: 700; }
+  .tag.on.broken { background: var(--bad); border-color: #fff; }
+  .tag.on.wrong { background: var(--accent); color: #1a1420; border-color: #fff; }
+  .tag.on.love { background: var(--love); color: #1a1420; border-color: #fff; }
+  button.primary { background: var(--accent); color: #1a1420; border-color: #ffe0a0; }
+  button.danger { color: #ffb0b8; }
+  textarea { width: 100%; box-sizing: border-box; min-height: 74px; border-radius: 12px; border: 1px solid #fff4; background: #0006; color: #fff; padding: 10px; font: 16px/1.35 -apple-system, system-ui, sans-serif; resize: vertical; }
+  #sendText { min-height: 180px; font: 12px/1.4 ui-monospace, Menlo, monospace; }
+  #shot { max-width: 120px; border-radius: 8px; float: right; margin: 0 0 6px 8px; }
+  #toast { position: fixed; left: 50%; top: calc(var(--st) + 56px); transform: translateX(-50%); background: #000c; padding: 8px 14px; border-radius: 10px; font-weight: 700; opacity: 0; transition: opacity .3s; pointer-events: none; z-index: 9; }
+  #busy { position: fixed; inset: 0; display: grid; place-items: center; font: 600 16px -apple-system, system-ui, sans-serif; pointer-events: none; color: #1a1420; text-shadow: 0 1px 0 #fff8; }
+</style>
+  <script type="module" crossorigin src="./assets/fly-CD2iNi0a.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/look-BKxJxGtu.js">
+  <link rel="modulepreload" crossorigin href="./assets/propmodels-BOxNT7Zl.js">
+</head>
+<body>
+<div id="pins"></div>
+<div id="top">
+  <div id="hint"></div>
+  <button id="home" class="chip">Reset</button>
+  <button id="qual" class="chip">High</button>
+  <a class="chip" href="./?city=new">Game</a>
+</div>
+<div id="bar">
+  <button id="pinMode">Pin</button>
+  <button id="areaMode">Area</button>
+  <button id="send">Send (0)</button>
+</div>
+<div id="sheet" class="sheet">
+  <img id="shot" alt="" />
+  <h3 id="sheetTitle">#1</h3>
+  <div id="tags" class="row"></div>
+  <textarea id="note" placeholder="What is wrong, or what you like (optional)"></textarea>
+  <div class="row">
+    <button id="save" class="primary">Save</button>
+    <button id="goto">View</button>
+    <button id="del" class="danger">Delete</button>
+    <button id="cancel">Close</button>
+  </div>
+</div>
+<div id="sendSheet" class="sheet">
+  <h3>Copied. Paste it into your chat (or share it)</h3>
+  <textarea id="sendText" readonly></textarea>
+  <div class="row">
+    <button id="copyAgain" class="primary">Copy again</button>
+    <button id="clearAll" class="danger">Clear all pins</button>
+    <button id="closeSend">Close</button>
+  </div>
+</div>
+<div id="toast"></div>
+<div id="busy">loading...</div>
+</body>
+</html>

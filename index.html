@@ -1,14 +1,14 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta name="build" content="1795840648">
+  <meta name="build" content="1795841479">
   <script>
   // Never stuck on an old copy (David, 2026-11-27: "It hasn't updated on my phone"): deploy.sh stamps this page and
   // version.json with the same build id; a cached page with an older id reloads once, fresh.
   (function () {
     try {
       var mine = document.querySelector('meta[name=build]').content;
-      if (mine === '1795840648') return; // dev server
+      if (mine === '1795841479') return; // dev server
       fetch('version.json?t=' + Date.now(), { cache: 'no-store' }).then(function (r) { return r.json(); }).then(function (v) {
         if (v && v.build && v.build !== mine && sessionStorage.getItem('sgReloaded') !== v.build) {
           sessionStorage.setItem('sgReloaded', v.build);
@@ -29,24 +29,39 @@
 <meta name="theme-color" content="#111" />
 <title>Hobomaxxing</title>
 <link rel="icon" type="image/png" href="favicon-64.png">
-<link rel="preload" href="logo-face.jpg" as="image">
+<link rel="preload" href="load-art.webp" as="image">
 <!-- Loading screen (2026-11-27): inline so it paints before the JS bundle. Its logic is between the LDLOGIC markers (tests/loadprog.test.ts runs that block). -->
 <style id="ldcss">
-  .ldface{display:block;width:clamp(120px,36vmin,190px);height:auto;margin:0 auto 10px;border-radius:24%;box-shadow:0 6px 0 rgba(60,30,20,.55),0 10px 24px rgba(0,0,0,.45);border:3px solid #4a2a1c}
-  #ld { position: fixed; inset: 0; z-index: 99999; background: radial-gradient(120% 80% at 50% 38%, #4a2a5e 0%, #2b1a3a 55%, #170f20 100%); color: #4a2e1e; overflow: hidden;
+  /* Loading screen v2 (2026-11-28, David: "a bunch of empty space and is ugly"). Built from references:
+     Animal Crossing Pocket Camp: one full-bleed cosy key-art scene behind everything, the logo big over its sky.
+     Untitled Goose Game: the joke lives in the picture (the hero conducting the pigeon choir), not in the chrome.
+     Brawl Stars: chunky outlined progress bar pinned to the bottom, with the number beside it.
+     Stardew Valley: the text sits in a cream dialogue box with a dark wood border, never loose over the art.
+     Overcooked: the tip wears a small label tab, so it reads as a tip and not as a status line. */
+  #ld { position: fixed; inset: 0; z-index: 99999; background: #170f20; color: #5b3a26; overflow: hidden;
     font-family: "Fredoka", "Arial Rounded MT Bold", "Trebuchet MS", system-ui, sans-serif; font-weight: 700; opacity: 1; transition: opacity .55s ease; }
   #ld.out { opacity: 0; pointer-events: none; }
-  #ld::before { content: ""; position: absolute; inset: 0; background: radial-gradient(60% 40% at 50% 34%, #ffb86b33 0%, #ffb86b00 70%); }
-  #ld .ldc { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: space-between;
-    padding: calc(env(safe-area-inset-top, 0px) + 7vh) 22px calc(env(safe-area-inset-bottom, 0px) + 6vh); box-sizing: border-box; }
-  #ld .ldlogo { font-size: clamp(34px, 10.5vw, 76px); line-height: .95; letter-spacing: .02em; color: #ffd860; text-align: center;
+  #ld .ldart { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 34% 100%; transform-origin: 34% 70%;
+    animation: ldken 24s ease-in-out infinite alternate; }
+  @keyframes ldken { to { transform: scale(1.06); } }
+  #ld::before { content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none;
+    background: linear-gradient(#170f20e6 0%, #170f2099 14%, #170f2000 34%), linear-gradient(0deg, #170f20f0 0%, #170f20a0 16%, #170f2000 36%); }
+  #ld .ldc { position: absolute; inset: 0; z-index: 2; display: flex; flex-direction: column; align-items: center; justify-content: space-between;
+    padding: calc(env(safe-area-inset-top, 0px) + 4.5vh) calc(env(safe-area-inset-right, 0px) + 16px) calc(env(safe-area-inset-bottom, 0px) + 16px) calc(env(safe-area-inset-left, 0px) + 16px); box-sizing: border-box; }
+  #ld .ldhead { display: flex; flex-direction: column; align-items: center; }
+  #ld .ldlogo { font-size: clamp(40px, 12.6vw, 84px); line-height: .95; letter-spacing: .01em; color: #ffd860; text-align: center; white-space: nowrap;
     text-shadow: 0 5px 0 #5b3a26, 4px 0 0 #5b3a26, -4px 0 0 #5b3a26, 0 -4px 0 #5b3a26, 3px 3px 0 #5b3a26, -3px 3px 0 #5b3a26, 3px -3px 0 #5b3a26, -3px -3px 0 #5b3a26,
-      0 10px 0 #f2559c, 0 13px 0 #5b3a26, 0 16px 14px #0006; }
-  #ld .ldtag { margin-top: 22px; font-size: 17px; line-height: 1.2; color: #fff; text-align: center; text-shadow: 0 2px 0 #5b3a26, 1.5px 0 0 #5b3a26, -1.5px 0 0 #5b3a26; }
-  #ld .ldlow { width: 100%; max-width: 360px; display: flex; flex-direction: column; align-items: stretch; }
+      0 10px 0 #f2559c, 0 13px 0 #5b3a26, 0 18px 18px #000a; }
+  #ld .ldtag { margin-top: 20px; padding: 6px 16px 7px; font-size: clamp(14px, 4.2vw, 18px); line-height: 1.15; color: #fff; text-align: center; white-space: nowrap;
+    background: linear-gradient(#ff7aa8, #f2559c 55%, #e03d86); border: 3px solid #5b3a26; border-radius: 999px; box-shadow: 0 3px 0 #5b3a26, 0 6px 14px #0007; text-shadow: 0 2px 0 #5b3a2699; }
+  #ld .ldlow { position: relative; width: 100%; max-width: 400px; display: flex; flex-direction: column; align-items: stretch; box-sizing: border-box;
+    padding: 16px 16px 14px; background: #fff6e2; border: 3px solid #5b3a26; border-radius: 20px;
+    box-shadow: 0 5px 0 #5b3a26, 0 14px 30px #000a, inset 0 -5px 0 #e9d6ae, inset 0 3px 0 #fff; }
+  #ld .ldpill { position: absolute; top: -15px; left: 16px; padding: 3px 11px 4px; font-size: 12px; letter-spacing: .08em; color: #5b3a26;
+    background: linear-gradient(#ffe27a, #f6c443 55%, #e9a92a); border: 3px solid #5b3a26; border-radius: 10px; box-shadow: 0 2px 0 #5b3a26; }
   #ld .ldbarwrap { position: relative; padding-top: 0; }
-  #ld .ldbar { position: relative; height: 24px; border-radius: 14px; background: #fff6e2; border: 3px solid #5b3a26; box-shadow: 0 3px 0 #5b3a2655, 0 5px 12px #2a160a66, inset 0 3px 0 #5b3a261f; overflow: hidden; }
-  #ld .ldfill { position: absolute; left: 0; top: 0; bottom: 0; width: 100%; transform-origin: 0 50%; transform: scaleX(0); border-radius: 11px;
+  #ld .ldbar { position: relative; height: 22px; border-radius: 13px; background: #4a2e1e; border: 3px solid #5b3a26; box-shadow: inset 0 3px 0 #0005; overflow: hidden; }
+  #ld .ldfill { position: absolute; left: 0; top: 0; bottom: 0; width: 100%; transform-origin: 0 50%; transform: scaleX(0); border-radius: 10px;
     background: linear-gradient(#ffe27a 0%, #f6c443 48%, #e9a92a 52%, #f6c443 100%); box-shadow: inset 0 -4px 0 #00000026, inset 0 3px 0 #ffffff80; }
   #ld .ldfill::after { content: ""; position: absolute; top: 0; bottom: 0; width: 40%; left: -40%; background: linear-gradient(90deg, #fff0, #ffffff88, #fff0); animation: ldshine 1.6s linear infinite; }
   @keyframes ldshine { to { left: 110%; } }
@@ -55,36 +70,33 @@
   @keyframes ldbob { 50% { transform: translateY(-2px) rotate(-3deg); } }
   #ld .ldleg { transform-origin: 50% 0; animation: ldleg .42s linear infinite; } #ld .ldleg.b { animation-delay: -.21s; }
   @keyframes ldleg { 0%, 100% { transform: rotate(-22deg); } 50% { transform: rotate(22deg); } }
-  #ld .ldrow { display: flex; justify-content: space-between; align-items: baseline; margin-top: 10px; font-size: 16px; color: #fff; text-shadow: 0 2px 0 #5b3a26, 1.5px 0 0 #5b3a26, -1.5px 0 0 #5b3a26; }
-  #ld .ldmb { font-size: 13px; opacity: .9; font-variant-numeric: tabular-nums; }
-  #ld .ldtip { margin-top: 14px; min-height: 2.6em; font-size: 15px; line-height: 1.3; text-align: center; color: #fff6e2; text-shadow: 0 2px 0 #5b3a26, 1.5px 0 0 #5b3a26, -1.5px 0 0 #5b3a26; transition: opacity .35s; }
+  #ld .ldrow { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; margin-top: 8px; font-size: 15px; color: #5b3a26; }
+  #ld .ldmb { font-size: 12px; color: #8a6a4e; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  #ld .ldtip { margin-top: 10px; padding-top: 10px; border-top: 2px dashed #e0c99c; min-height: 2.6em; font-size: 15px; line-height: 1.3; text-align: center; color: #4a2e1e; font-weight: 600; transition: opacity .35s; }
   #ld .ldtip.hid { opacity: 0; }
-  #ld .ldslow { margin-top: 8px; min-height: 1.3em; font-size: 14px; text-align: center; color: #ffd860; text-shadow: 0 2px 0 #5b3a26; opacity: 0; transition: opacity .5s; }
-  #ld .ldslow.on { opacity: 1; }
-  #ld .ldretry { display: none; margin: 12px auto 0; min-height: 48px; padding: 0 28px; font: inherit; font-size: 20px; color: #fff; cursor: pointer; border: 3px solid #5b3a26; border-radius: 16px;
+  #ld .ldslow { margin-top: 4px; font-size: 13px; text-align: center; color: #e03d86; display: none; }
+  #ld .ldslow.on { display: block; }
+  #ld .ldretry { display: none; margin: 10px auto 0; min-height: 48px; padding: 0 28px; font: inherit; font-size: 20px; color: #fff; cursor: pointer; border: 3px solid #5b3a26; border-radius: 16px;
     background: linear-gradient(#ff7aa8, #f2559c 50%, #e03d86 52%, #f2559c); box-shadow: 0 3px 0 #5b3a26, inset 0 -4px 0 #00000026, inset 0 3px 0 #ffffff70; text-shadow: 0 2px 0 #00000045; }
   #ld.err .ldretry { display: block; }
-  #ld .ldgo { display: none; margin: 14px auto 0; min-height: 58px; padding: 0 40px; font: inherit; font-size: 24px; color: #fff; cursor: pointer; border: 3px solid #5b3a26; border-radius: 20px;
-    background: linear-gradient(#8ae668, #62c93f 50%, #4fb02f 52%, #62c93f); box-shadow: 0 4px 0 #5b3a26, 0 8px 16px #0006, inset 0 -5px 0 #00000026, inset 0 3px 0 #ffffff80; text-shadow: 0 2px 0 #00000055;
+  #ld .ldgo { display: none; width: 100%; margin: 12px 0 2px; min-height: 60px; padding: 0 24px; font: inherit; font-size: 26px; color: #fff; cursor: pointer; border: 3px solid #5b3a26; border-radius: 18px;
+    background: linear-gradient(#8ae668, #62c93f 50%, #4fb02f 52%, #62c93f); box-shadow: 0 5px 0 #5b3a26, 0 10px 18px #0005, inset 0 -5px 0 #00000026, inset 0 3px 0 #ffffff80; text-shadow: 0 2px 0 #00000055;
     animation: ldpulse 1.3s ease-in-out infinite; }
-  @keyframes ldpulse { 50% { transform: scale(1.06); } }
-  #ld.ready .ldgo { display: block; } #ld.ready .ldtip { display: none; }
-  @media (max-height: 480px) {
-    #ld .ldc { padding-top: calc(env(safe-area-inset-top, 0px) + 12px); padding-bottom: 10px; }
-    #ld .ldlogo { font-size: clamp(30px, 6.5vw, 52px); } #ld .ldtag { margin-top: 14px; font-size: 14px; }
-    #ld .ldlow { max-width: 420px; } #ld .ldbarwrap { padding-top: 26px; } #ld .ldrow { margin-top: 6px; } #ld .ldtip { margin-top: 6px; min-height: 1.4em; font-size: 14px; }
-  }
-  /* landscape pass (2026-11-27): a phone on its side puts the face and the name on the left, the bar and Tap to begin on the right (it fell off the bottom) */
+  @keyframes ldpulse { 50% { transform: scale(1.04); } }
+  #ld.ready .ldgo { display: block; } #ld.ready .ldtip, #ld.ready .ldpill { display: none; }
+  /* a phone on its side: the hero and his pigeon choir on the left, the name and the card in a column on the right */
   @media (orientation: landscape) and (max-height: 560px) {
-    #ld .ldc { flex-direction: row; justify-content: center; align-items: center; gap: 6vw;
-      padding: calc(env(safe-area-inset-top, 0px) + 10px) calc(env(safe-area-inset-right, 0px) + 20px) calc(env(safe-area-inset-bottom, 0px) + 10px) calc(env(safe-area-inset-left, 0px) + 20px); }
-    #ld .ldc > :first-child { flex: 0 1 auto; min-width: 0; }
-    #ld .ldface { width: clamp(80px, 30vh, 150px); }
-    #ld .ldlogo { font-size: clamp(30px, 5.6vw, 56px); } #ld .ldtag { margin-top: 12px; font-size: 14px; }
-    #ld .ldlow { flex: 0 1 380px; max-width: 380px; } #ld .ldbarwrap { padding-top: 26px; }
-    #ld .ldtip { min-height: 2.6em; }
+    #ld .ldart { object-position: 30% 70%; transform-origin: 30% 70%; }
+    #ld::before { background: linear-gradient(270deg, #170f20f2 0%, #170f20c0 30%, #170f2000 56%); }
+    #ld .ldc { align-items: flex-end; justify-content: center; gap: 16px;
+      padding: calc(env(safe-area-inset-top, 0px) + 12px) calc(env(safe-area-inset-right, 0px) + 20px) calc(env(safe-area-inset-bottom, 0px) + 12px) calc(env(safe-area-inset-left, 0px) + 20px); }
+    #ld .ldhead, #ld .ldlow { width: min(400px, 48vw); }
+    #ld .ldlogo { font-size: clamp(30px, 5.2vw, 50px); } #ld .ldtag { margin-top: 14px; font-size: 14px; padding: 4px 12px 5px; }
+    #ld .ldlow { padding: 14px 14px 10px; } #ld .ldtip { min-height: 2.6em; font-size: 14px; margin-top: 8px; padding-top: 8px; }
+    #ld .ldgo { min-height: 52px; font-size: 22px; margin-top: 10px; }
   }
-  @media (prefers-reduced-motion: reduce) { #ld .ldfill::after, #ld .ldpig svg, #ld .ldleg { animation: none; } }
+  @media (orientation: portrait) and (max-height: 640px) { #ld .ldtip { font-size: 14px; } #ld .ldtag { margin-top: 14px; } }
+  @media (prefers-reduced-motion: reduce) { #ld .ldart, #ld .ldfill::after, #ld .ldpig svg, #ld .ldleg, #ld .ldgo { animation: none; } }
 </style>
 <style>
   :root { --st: env(safe-area-inset-top, 0px); --sb: env(safe-area-inset-bottom, 0px); --sl: env(safe-area-inset-left, 0px); --sr: env(safe-area-inset-right, 0px); }
@@ -465,15 +477,19 @@
   }
 </style>
 <!-- UI kit (2026-11-27): one look for every screen; loaded after the inline styles so it wins. src/ui/kit.css -->
-  <script type="module" crossorigin src="./assets/main-DioGLxZp.js"></script>
-  <link rel="modulepreload" crossorigin href="./assets/hero3d-kX8nv-lY.js">
+  <script type="module" crossorigin src="./assets/main-C9ntjb9_.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/look-BKxJxGtu.js">
+  <link rel="modulepreload" crossorigin href="./assets/propmodels-BOxNT7Zl.js">
+  <link rel="modulepreload" crossorigin href="./assets/hero3d-Chf7Nz8R.js">
   <link rel="stylesheet" crossorigin href="./assets/main-BBNLzmYs.css">
 </head>
 <body>
 <div id="ld" role="status" aria-live="polite" aria-label="Loading">
+  <img class="ldart" src="load-art.webp" alt="" width="990" height="1760" decoding="async">
   <div class="ldc">
-    <div><img class="ldface" src="logo-face.jpg" alt="" width="150" height="150"><div class="ldlogo">HOBOMAXXING</div><div class="ldtag">Hustle sober. Get high. Don't die.</div></div>
+    <div class="ldhead"><div class="ldlogo">HOBOMAXXING</div><div class="ldtag">Hustle sober. Get high. Don't die.</div></div>
     <div class="ldlow">
+      <div class="ldpill" aria-hidden="true">STREET WISDOM</div>
       <div class="ldbarwrap">
         <div class="ldpig" id="ldpig"><svg viewBox="0 0 34 30" aria-hidden="true">
           <g class="ldleg"><path d="M17 20v7m0 0l-3 1m3-1l3 1" stroke="#e0728a" stroke-width="2" stroke-linecap="round" fill="none"/></g>
