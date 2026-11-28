@@ -1958,6 +1958,79 @@
       "tags": [
         "whimsy"
       ]
+    },
+    {
+      "id": "title_A_loop",
+      "file": "music/title_A_loop.mp3",
+      "length": 28.0,
+      "loop": true,
+      "category": "music",
+      "volume": 0.5,
+      "emotion": "sleep",
+      "style": "lone-guitar",
+      "tags": [
+        "title",
+        "asleep",
+        "bench",
+        "pick"
+      ],
+      "note": "lab title_A (Dead Man Walking) + 8 s of silence baked in, so the title breathes between passes",
+      "source": "ElevenLabs Eleven Music (music_v2_5), David's Creator plan; music lab take picked by David (ledger L480)",
+      "licence": "Eleven Music terms: Creator = online/offline commercial use except film/TV/radio/Studio Games; an Indie Game (<$500k revenue) is allowed; no attribution required"
+    },
+    {
+      "id": "wake_A",
+      "file": "music/wake_A.mp3",
+      "length": 15.02,
+      "loop": false,
+      "category": "music",
+      "volume": 1.0,
+      "emotion": "hope",
+      "style": "lone-guitar",
+      "tags": [
+        "cue",
+        "waking",
+        "pick"
+      ],
+      "note": "lab wake_A: plays alone at waking (the bed is silent under it)",
+      "source": "ElevenLabs Eleven Music (music_v2_5), David's Creator plan; music lab take picked by David (ledger L480)",
+      "licence": "Eleven Music terms: Creator = online/offline commercial use except film/TV/radio/Studio Games; an Indie Game (<$500k revenue) is allowed; no attribution required"
+    },
+    {
+      "id": "swig_A",
+      "file": "music/swig_A.mp3",
+      "length": 10.03,
+      "loop": false,
+      "category": "music",
+      "volume": 0.8,
+      "emotion": "joy",
+      "style": "lone-guitar",
+      "tags": [
+        "cue",
+        "first-drink",
+        "pick"
+      ],
+      "note": "lab swig_A: the first drink of the day, on the drop; replaces cue_first_swig",
+      "source": "ElevenLabs Eleven Music (music_v2_5), David's Creator plan; music lab take picked by David (ledger L480)",
+      "licence": "Eleven Music terms: Creator = online/offline commercial use except film/TV/radio/Studio Games; an Indie Game (<$500k revenue) is allowed; no attribution required"
+    },
+    {
+      "id": "night_A_loop",
+      "file": "music/night_A_loop.mp3",
+      "length": 30.0,
+      "loop": true,
+      "category": "music",
+      "volume": 0.9,
+      "emotion": "lonely",
+      "style": "lone-guitar",
+      "tags": [
+        "night",
+        "walk",
+        "pick"
+      ],
+      "note": "lab night_A + 15 s of silence baked in (one pass, then the night); replaces theme_night + texture on night walks",
+      "source": "ElevenLabs Eleven Music (music_v2_5), David's Creator plan; music lab take picked by David (ledger L480)",
+      "licence": "Eleven Music terms: Creator = online/offline commercial use except film/TV/radio/Studio Games; an Indie Game (<$500k revenue) is allowed; no attribution required"
     }
   ]
 }

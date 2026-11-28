@@ -13,15 +13,16 @@
     -64,
     0
    ],
-   "tris": 15638,
+   "tris": 16298,
    "materials": 16,
    "parts": [
+    "bin",
     "feat_column",
     "feat_hill",
     "fountain",
     "ground",
     "lamp",
-    "prop",
+    "sign",
     "tree",
     "water"
    ]
@@ -35,15 +36,15 @@
     -128,
     -64
    ],
-   "tris": 16092,
+   "tris": 16180,
    "materials": 17,
    "parts": [
+    "bin",
     "building",
     "feat_garden",
     "feat_gate",
     "ground",
     "lamp",
-    "prop",
     "tree",
     "water"
    ]
@@ -77,11 +78,11 @@
    "tris": 5982,
    "materials": 19,
    "parts": [
+    "bin",
     "building",
     "feat_bandstand",
     "ground",
     "lamp",
-    "prop",
     "tree"
    ]
   },
@@ -161,12 +162,12 @@
    "tris": 6864,
    "materials": 14,
    "parts": [
+    "bin",
     "feat_cafe",
     "feat_gate",
     "feat_tennis",
     "ground",
     "lamp",
-    "prop",
     "tree"
    ]
   },
@@ -219,11 +220,11 @@
    "tris": 4084,
    "materials": 21,
    "parts": [
+    "bin",
     "building",
     "feat_tennis",
     "ground",
     "lamp",
-    "prop",
     "tree"
    ]
   },
@@ -300,9 +301,10 @@
     -64,
     0
    ],
-   "tris": 13098,
+   "tris": 14566,
    "materials": 19,
    "parts": [
+    "bin",
     "building",
     "feat_cemetery",
     "feat_gate",
@@ -310,7 +312,6 @@
     "ground",
     "kiosk",
     "lamp",
-    "prop",
     "tree"
    ]
   },
@@ -323,7 +324,7 @@
     -128,
     -64
    ],
-   "tris": 1792,
+   "tris": 1932,
    "materials": 20,
    "parts": [
     "building",
@@ -342,10 +343,11 @@
     0,
     64
    ],
-   "tris": 14990,
+   "tris": 15630,
    "materials": 30,
    "parts": [
     "bench",
+    "bin",
     "building",
     "feat_ballfield",
     "feat_bandstand",
@@ -362,7 +364,7 @@
     "kiosk",
     "lamp",
     "mascot",
-    "prop",
+    "sign",
     "statehouse",
     "tree",
     "water"
@@ -612,6 +614,9 @@
    "tree",
    "lamp",
    "bench",
+   "kiosk",
+   "bin",
+   "sign",
    "feat_garden",
    "feat_tennis",
    "feat_bandstand",
@@ -1735,7 +1740,8 @@
      "y": 0.75,
      "rotY": -173.2,
      "s": 1.0,
-     "own": true
+     "own": true,
+     "walk": true
     },
     {
      "id": "state_house",
@@ -2171,19 +2177,19 @@
     },
     {
      "id": "bandstand",
-     "file": "art/features/bandstand.glb",
+     "file": "art/features/bandstand_kit.glb",
      "pos": [
       -58.0,
       7.0
      ],
      "y": 0.15,
-     "rotY": 90.0,
+     "rotY": 0.0,
      "feat": true,
-     "own": true
+     "walk": true
     },
     {
      "id": "monument_hill_monument",
-     "file": "art/features/monument.glb",
+     "file": "art/features/monument_kit.glb",
      "pos": [
       -36.0,
       -20.0
@@ -2191,11 +2197,11 @@
      "y": 3.333,
      "rotY": 0.0,
      "feat": true,
-     "own": true
+     "walk": true
     },
     {
      "id": "ballfield_diamond",
-     "file": "art/features/ballfield_diamond.glb",
+     "file": "art/features/ballfield_diamond_v2.glb",
      "pos": [
       26.742,
       4.458
@@ -2219,12 +2225,12 @@
     },
     {
      "id": "ballfield_bleachers0",
-     "file": "art/features/ballfield_bleachers.glb",
+     "file": "art/features/ballfield_bleachers_v2.glb",
      "pos": [
       32.5,
       6.2
      ],
-     "y": 0.15,
+     "y": 0.12,
      "rotY": -90.0,
      "feat": true,
      "s": 0.6
@@ -3140,15 +3146,14 @@
     },
     {
      "id": "playground",
-     "file": "art/features/playground.glb",
+     "file": "art/features/playground_kit.glb",
      "pos": [
       31.5,
       -60.0
      ],
      "y": 0.15,
      "rotY": -90.0,
-     "feat": true,
-     "own": true
+     "feat": true
     },
     {
      "id": "cafe_kiosk",
@@ -4508,11 +4513,374 @@
      "y": 0.15,
      "rotY": -90.0,
      "feat": true,
+     "walk": true,
      "s3": [
       1.0,
-      1.12,
+      0.85,
       1.3106
      ]
+    },
+    {
+     "id": "market_truck",
+     "file": "art/features/foodtruck.glb",
+     "pos": [
+      2.5,
+      -59.9
+     ],
+     "y": 0.15,
+     "rotY": 0.0,
+     "feat": true,
+     "own": true
+    },
+    {
+     "id": "market_cart",
+     "file": "art/features/hotdog.glb",
+     "pos": [
+      -1.1,
+      -59.3
+     ],
+     "y": 0.15,
+     "rotY": 20.0,
+     "feat": true,
+     "own": true
+    },
+    {
+     "id": "market_stall0",
+     "file": "art/features/market_stall_1.glb",
+     "pos": [
+      6.76,
+      -57.98
+     ],
+     "y": 0.15,
+     "rotY": 305.0,
+     "feat": true
+    },
+    {
+     "id": "market_stall1",
+     "file": "art/features/market_stall_2.glb",
+     "pos": [
+      -1.76,
+      -57.98
+     ],
+     "y": 0.15,
+     "rotY": 55.0,
+     "feat": true
+    },
+    {
+     "id": "market_stall2",
+     "file": "art/features/market_stall_3.glb",
+     "pos": [
+      -2.39,
+      -53.22
+     ],
+     "y": 0.15,
+     "rotY": 110.0,
+     "feat": true
+    },
+    {
+     "id": "market_chess0",
+     "file": "art/features/chess_table.glb",
+     "pos": [
+      0.8,
+      -54.0
+     ],
+     "y": 0.15,
+     "rotY": 0.0,
+     "feat": true
+    },
+    {
+     "id": "market_chess1",
+     "file": "art/features/chess_table.glb",
+     "pos": [
+      0.8,
+      -51.4
+     ],
+     "y": 0.15,
+     "rotY": 90.0,
+     "feat": true
+    },
+    {
+     "id": "market_chess2",
+     "file": "art/features/chess_table.glb",
+     "pos": [
+      4.2,
+      -54.0
+     ],
+     "y": 0.15,
+     "rotY": 0.0,
+     "feat": true
+    },
+    {
+     "id": "market_chess3",
+     "file": "art/features/chess_table.glb",
+     "pos": [
+      4.2,
+      -51.4
+     ],
+     "y": 0.15,
+     "rotY": 90.0,
+     "feat": true
+    },
+    {
+     "id": "gazebo_bridge",
+     "file": "art/features/island_bridge.glb",
+     "pos": [
+      10.375,
+      12.075
+     ],
+     "y": -0.15,
+     "rotY": -120.06,
+     "feat": true,
+     "walk": true,
+     "s3": [
+      1.0,
+      1.0,
+      0.8228
+     ]
+    },
+    {
+     "id": "bin0",
+     "file": "art/features/park_bin.glb",
+     "pos": [
+      4.4,
+      -30.0
+     ],
+     "y": 0.15,
+     "rotY": 315.0,
+     "feat": true
+    },
+    {
+     "id": "bin1",
+     "file": "art/features/park_bin.glb",
+     "pos": [
+      -8.69,
+      28.7
+     ],
+     "y": 0.15,
+     "rotY": 270.0,
+     "feat": true
+    },
+    {
+     "id": "bin2",
+     "file": "art/features/park_bin.glb",
+     "pos": [
+      13.57,
+      16.89
+     ],
+     "y": 0.15,
+     "rotY": 225.0,
+     "feat": true
+    },
+    {
+     "id": "bin3",
+     "file": "art/features/park_bin.glb",
+     "pos": [
+      15.77,
+      -13.3
+     ],
+     "y": 0.15,
+     "rotY": 180.0,
+     "feat": true
+    },
+    {
+     "id": "bin4",
+     "file": "art/features/park_bin.glb",
+     "pos": [
+      40.35,
+      -11.78
+     ],
+     "y": 0.15,
+     "rotY": 135.0,
+     "feat": true
+    },
+    {
+     "id": "bin5",
+     "file": "art/features/park_bin.glb",
+     "pos": [
+      42.94,
+      10.17
+     ],
+     "y": 0.15,
+     "rotY": 90.0,
+     "feat": true
+    },
+    {
+     "id": "bin6",
+     "file": "art/features/park_bin.glb",
+     "pos": [
+      -71.33,
+      -19.79
+     ],
+     "y": 0.15,
+     "rotY": 45.0,
+     "feat": true
+    },
+    {
+     "id": "bin7",
+     "file": "art/features/park_bin.glb",
+     "pos": [
+      -23.79,
+      -40.57
+     ],
+     "y": 0.15,
+     "rotY": 0.0,
+     "feat": true
+    },
+    {
+     "id": "bin8",
+     "file": "art/features/park_bin.glb",
+     "pos": [
+      -25.44,
+      -7.21
+     ],
+     "y": 0.15,
+     "rotY": 315.0,
+     "feat": true
+    },
+    {
+     "id": "bin9",
+     "file": "art/features/park_bin.glb",
+     "pos": [
+      -72.35,
+      3.33
+     ],
+     "y": 0.15,
+     "rotY": 270.0,
+     "feat": true
+    },
+    {
+     "id": "bin10",
+     "file": "art/features/park_bin.glb",
+     "pos": [
+      -52.1,
+      -96.64
+     ],
+     "y": 0.15,
+     "rotY": 0.0,
+     "feat": true
+    },
+    {
+     "id": "bin11",
+     "file": "art/features/park_bin.glb",
+     "pos": [
+      -6.97,
+      9.78
+     ],
+     "y": 0.15,
+     "rotY": 45.0,
+     "feat": true
+    },
+    {
+     "id": "bin12",
+     "file": "art/features/park_bin.glb",
+     "pos": [
+      -71.54,
+      -51.96
+     ],
+     "y": 0.15,
+     "rotY": 90.0,
+     "feat": true
+    },
+    {
+     "id": "bin13",
+     "file": "art/features/park_bin.glb",
+     "pos": [
+      17.61,
+      -37.2
+     ],
+     "y": 0.15,
+     "rotY": 135.0,
+     "feat": true
+    },
+    {
+     "id": "bin14",
+     "file": "art/features/park_bin.glb",
+     "pos": [
+      -40.1,
+      -107.69
+     ],
+     "y": 0.15,
+     "rotY": 180.0,
+     "feat": true
+    },
+    {
+     "id": "bin15",
+     "file": "art/features/park_bin.glb",
+     "pos": [
+      -1.41,
+      -49.81
+     ],
+     "y": 0.15,
+     "rotY": 225.0,
+     "feat": true
+    },
+    {
+     "id": "bin16",
+     "file": "art/features/park_bin.glb",
+     "pos": [
+      6.41,
+      -49.81
+     ],
+     "y": 0.15,
+     "rotY": 270.0,
+     "feat": true
+    },
+    {
+     "id": "bin17",
+     "file": "art/features/park_bin.glb",
+     "pos": [
+      35.96,
+      34.79
+     ],
+     "y": 0.15,
+     "rotY": 315.0,
+     "feat": true
+    },
+    {
+     "id": "sign0",
+     "file": "art/features/park_sign.glb",
+     "pos": [
+      -1.13,
+      -14.35
+     ],
+     "y": 0.15,
+     "rotY": 180.0,
+     "feat": true
+    },
+    {
+     "id": "sign1",
+     "file": "art/features/park_sign.glb",
+     "pos": [
+      -1.88,
+      -14.35
+     ],
+     "y": 0.15,
+     "rotY": 180.0,
+     "feat": true
+    },
+    {
+     "id": "table0",
+     "file": "art/features/chess_table.glb",
+     "pos": [
+      33.86,
+      33.47
+     ],
+     "y": 0.15,
+     "rotY": -101.49,
+     "feat": true
+    },
+    {
+     "id": "park_st_kiosk",
+     "file": "art/features/kiosk_clean.glb",
+     "pos": [
+      38.5,
+      0.0
+     ],
+     "y": 0.15,
+     "rotY": 180,
+     "feat": true,
+     "own": true,
+     "fill": 0.3
     }
    ]
   },
@@ -5470,6 +5838,42 @@
      "y": -1.47
     },
     {
+     "m": "tall",
+     "p": [
+      13.31,
+      -51.07
+     ],
+     "s": 0.85,
+     "rot": 0
+    },
+    {
+     "m": "round",
+     "p": [
+      14.43,
+      -59.34
+     ],
+     "s": 0.95,
+     "rot": 47
+    },
+    {
+     "m": "deep",
+     "p": [
+      8.25,
+      -64.96
+     ],
+     "s": 1.05,
+     "rot": 94
+    },
+    {
+     "m": "tall",
+     "p": [
+      2.5,
+      -67.7
+     ],
+     "s": 0.85,
+     "rot": 141
+    },
+    {
      "m": "round",
      "p": [
       -12.31,
@@ -5603,6 +6007,42 @@
      ],
      "s": 0.85,
      "rot": 0
+    },
+    {
+     "m": "round",
+     "p": [
+      -3.25,
+      -64.96
+     ],
+     "s": 0.95,
+     "rot": 188
+    },
+    {
+     "m": "tall",
+     "p": [
+      -8.31,
+      -51.07
+     ],
+     "s": 0.85,
+     "rot": 282
+    },
+    {
+     "m": "tall",
+     "p": [
+      28.92,
+      31.76
+     ],
+     "s": 0.85,
+     "rot": 0
+    },
+    {
+     "m": "tall",
+     "p": [
+      32.04,
+      31.76
+     ],
+     "s": 0.85,
+     "rot": 83
     }
    ],
    "bushes": [
@@ -5807,13 +6247,13 @@
      "rot": 74
     },
     {
-     "m": "bush_flowering",
+     "m": "bush_lod0",
      "p": [
-      -9.89,
-      -56.7
+      -9.4,
+      -57.51
      ],
      "s": 0.6,
-     "rot": 111
+     "rot": 0
     },
     {
      "m": "bush_flowering",
@@ -6800,15 +7240,6 @@
      "rot": 122
     },
     {
-     "m": "bush_small",
-     "p": [
-      14.29,
-      15.36
-     ],
-     "s": 0.85,
-     "rot": 244
-    },
-    {
      "m": "bush_flowering",
      "p": [
       15.53,
@@ -6843,56 +7274,6 @@
      ],
      "s": 0.55,
      "rot": 0,
-     "y": 0.71
-    },
-    {
-     "m": "bush_lod0",
-     "p": [
-      6.03,
-      11.88
-     ],
-     "s": 0.65,
-     "rot": 37,
-     "y": 0.71
-    },
-    {
-     "m": "bush_lod0",
-     "p": [
-      7.27,
-      10.89
-     ],
-     "s": 0.75,
-     "rot": 74,
-     "y": 0.71
-    },
-    {
-     "m": "bush_flowering",
-     "p": [
-      7.95,
-      9.47
-     ],
-     "s": 0.55,
-     "rot": 111,
-     "y": 0.71
-    },
-    {
-     "m": "bush_flowering",
-     "p": [
-      7.95,
-      7.89
-     ],
-     "s": 0.65,
-     "rot": 148,
-     "y": 0.71
-    },
-    {
-     "m": "bush_lod0",
-     "p": [
-      7.27,
-      6.47
-     ],
-     "s": 0.75,
-     "rot": 185,
      "y": 0.71
     },
     {
@@ -11219,6 +11600,60 @@
      ],
      "s": 0.54,
      "rot": 346
+    },
+    {
+     "m": "bush_lod0",
+     "p": [
+      11.26,
+      -56.55
+     ],
+     "s": 0.7,
+     "rot": 0
+    },
+    {
+     "m": "bush_lod0",
+     "p": [
+      5.54,
+      -63.36
+     ],
+     "s": 0.7,
+     "rot": 61
+    },
+    {
+     "m": "bush_small",
+     "p": [
+      -0.54,
+      -63.36
+     ],
+     "s": 0.7,
+     "rot": 122
+    },
+    {
+     "m": "bush_flowering",
+     "p": [
+      31.9,
+      37.39
+     ],
+     "s": 0.75,
+     "rot": 0
+    },
+    {
+     "m": "bush_flowering",
+     "p": [
+      29.83,
+      36.46
+     ],
+     "s": 0.75,
+     "rot": 61
+    },
+    {
+     "m": "bush_small",
+     "p": [
+      27.76,
+      35.52
+     ],
+     "s": 0.75,
+     "rot": 122
     }
    ]
   },
